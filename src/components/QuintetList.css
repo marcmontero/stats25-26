@@ -1,53 +1,189 @@
 .quintet-list {
-    text-align: center;
-    margin: 20px auto;
-    width: 80%;
-    background: #f8f9fa;
-    border-radius: 10px;
-    padding: 20px;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  margin: 30px auto;
+  width: 95%;
+  max-width: 1000px;
+  background: white;
+  border-radius: 15px;
+  padding: 30px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+  border-top: 5px solid #c41230;
+  position: relative;
+  overflow: hidden;
+}
+
+.quintet-list::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 5px;
+  background: linear-gradient(90deg, #c41230 0%, #a00f26 50%, #c41230 100%);
+  background-size: 200% 100%;
+  animation: gradientShift 3s ease infinite;
+}
+
+@keyframes gradientShift {
+  0%, 100% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+}
+
+.quintet-list h2 {
+  color: #1a1a1a;
+  font-size: 28px;
+  font-weight: 700;
+  margin-bottom: 30px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  position: relative;
+  padding-bottom: 15px;
+}
+
+.quintet-list h2::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 3px;
+  background: #c41230;
+  border-radius: 2px;
+}
+
+.quintet {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 20px 25px;
+  margin: 15px 0;
+  border-radius: 12px;
+  font-size: 15px;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  position: relative;
+  overflow: hidden;
+}
+
+.quintet::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 5px;
+}
+
+.quintet:hover {
+  transform: translateX(5px) scale(1.02);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+}
+
+.quintet.positive {
+  background: linear-gradient(135deg, #28A745 0%, #218838 100%);
+  color: white;
+  border-left: 5px solid #1c7c2d;
+}
+
+.quintet.positive::before {
+  background: #1c7c2d;
+}
+
+.quintet.negative {
+  background: linear-gradient(135deg, #c41230 0%, #a00f26 100%);
+  color: white;
+  border-left: 5px solid #8c1b12;
+}
+
+.quintet.negative::before {
+  background: #8c1b12;
+}
+
+.quintet p {
+  margin: 8px 0;
+  line-height: 1.6;
+  width: 100%;
+}
+
+.quintet strong {
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  font-size: 13px;
+}
+
+.quintet p:first-child {
+  font-size: 16px;
+}
+
+.quintet p:last-child {
+  font-size: 18px;
+  font-weight: 700;
+  margin-top: 5px;
+}
+
+/* Mensaje cuando no hay datos */
+.quintet-list > p {
+  color: #666;
+  font-size: 16px;
+  font-style: italic;
+  padding: 20px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .quintet-list {
+    width: 98%;
+    padding: 20px 15px;
   }
-  
+
+  .quintet-list h2 {
+    font-size: 22px;
+  }
+
   .quintet {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    padding: 15px;
-    margin: 10px 0;
-    border-radius: 8px;
+    padding: 16px 18px;
+    font-size: 14px;
+  }
+
+  .quintet p:first-child {
+    font-size: 15px;
+  }
+
+  .quintet p:last-child {
     font-size: 16px;
-    text-align: left;
-    transition: transform 0.2s ease-in-out;
   }
-  
-  .quintet:hover {
-    transform: scale(1.03);
-  }
-  
-  .quintet.positive {
-    background: linear-gradient(to right, #28A745, #218838);
-    color: white;
-    border-left: 5px solid #1c7c2d;
-  }
-  
-  .quintet.negative {
-    background: linear-gradient(to right, #E44D26, #C12D1F);
-    color: white;
-    border-left: 5px solid #8c1b12;
-  }
-  
-  .quintet p {
-    margin: 5px 0;
-  }
-  
+
   .quintet strong {
-    font-weight: bold;
+    font-size: 12px;
   }
-  
-  @media (max-width: 768px) {
-    .quintet-list {
-      width: 95%;
-    }
+}
+
+@media (max-width: 480px) {
+  .quintet-list {
+    padding: 15px 10px;
   }
-  
+
+  .quintet-list h2 {
+    font-size: 18px;
+  }
+
+  .quintet {
+    padding: 14px 15px;
+    font-size: 13px;
+    margin: 10px 0;
+  }
+
+  .quintet p:first-child {
+    font-size: 14px;
+  }
+
+  .quintet p:last-child {
+    font-size: 15px;
+  }
+
+  .quintet strong {
+    font-size: 11px;
+  }
+}

@@ -1,44 +1,127 @@
-.match-grid {
+.match-selector {
+  margin: 30px auto;
+  width: 95%;
+  max-width: 1200px;
+}
+
+.button-container {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 15px;
-  padding: 20px;
-  justify-items: center;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 20px;
+  padding: 10px;
 }
 
 .match-button {
-  background-color: #007bff;
-  color: white;
-  border: none;
-  padding: 15px;
-  border-radius: 10px;
-  width: 220px;
-  text-align: center;
-  font-size: 14px;
-  font-weight: bold;
+  background: white !important;
+  color: #1a1a1a !important;
+  border: 2px solid #e0e0e0 !important;
+  border-radius: 12px !important;
+  padding: 25px 20px !important;
   cursor: pointer;
   display: flex;
   flex-direction: column;
   align-items: center;
-  transition: 0.3s;
+  gap: 15px;
+  transition: all 0.3s ease;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08) !important;
+  position: relative;
+  overflow: hidden;
+}
+
+.match-button::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: #c41230;
 }
 
 .match-button:hover {
-  background-color: #0056b3;
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(196, 18, 48, 0.2);
+  border-color: #c41230;
 }
 
 .match-day {
-  font-size: 12px;
-  color: #ffcc00;
-  margin-bottom: 5px;
+  font-size: 11px;
+  color: white;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  background: #c41230;
+  padding: 6px 18px;
+  border-radius: 20px;
 }
 
 .match-result {
-  font-size: 16px;
-  font-weight: bold;
-  margin: 5px 0;
+  font-size: 18px;
+  font-weight: 700;
+  color: #1a1a1a;
+  text-align: center;
+  line-height: 1.6;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif;
+  padding: 5px 10px;
 }
 
 .team-name {
   font-size: 14px;
+  color: #666;
+  font-weight: 500;
+  text-align: center;
+  line-height: 1.4;
+  font-style: italic;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .match-selector {
+    width: 98%;
+  }
+
+  .button-container {
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 15px;
+  }
+
+  .match-button {
+    padding: 20px 15px;
+  }
+
+  .match-day {
+    font-size: 10px;
+    padding: 5px 14px;
+  }
+
+  .match-result {
+    font-size: 16px;
+  }
+
+  .team-name {
+    font-size: 13px;
+  }
+}
+
+@media (max-width: 480px) {
+  .button-container {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  .match-button {
+    padding: 20px 15px;
+  }
+
+  .match-day {
+    font-size: 10px;
+  }
+
+  .match-result {
+    font-size: 15px;
+  }
+
+  .team-name {
+    font-size: 12px;
+  }
 }

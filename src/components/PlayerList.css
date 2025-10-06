@@ -6,7 +6,7 @@
   border-radius: 10px;
   box-shadow: 0 4px 12px rgba(0,0,0,0.15);
   padding: 20px;
-  border-top: 4px solid #c41230; /* Rojo Dimonis */
+  border-top: 4px solid #c41230;
 }
 
 .player-stats-table {
@@ -19,7 +19,7 @@
 
 /* Header con colores del club */
 .player-stats-table thead {
-  background: linear-gradient(135deg, #c41230 0%, #a00f26 100%); /* Rojo degradado */
+  background: linear-gradient(135deg, #c41230 0%, #a00f26 100%);
   color: white;
 }
 
@@ -35,7 +35,8 @@
 }
 
 .player-stats-table th:first-child {
-  width: 40px;
+  width: 50px;
+  min-width: 50px;
 }
 
 .player-stats-table th:nth-child(2) {
@@ -107,8 +108,8 @@
   font-weight: bold;
   font-size: 15px;
   background: linear-gradient(135deg, #c41230 0%, #a00f26 100%);
-  color: white;
-  text-shadow: 0 1px 2px rgba(0,0,0,0.2);
+  color: white !important;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
 }
 
 /* Nombre */
@@ -153,17 +154,19 @@
   font-weight: 500;
 }
 
-/* Plus/Minus con rojo/negro */
+/* Plus/Minus - VERDE y ROJO solo en texto */
 .positive {
-  color: #c41230;
+  color: #28a745 !important;
   font-weight: bold;
   font-size: 14px;
+  background: transparent !important;
 }
 
 .negative {
-  color: #1a1a1a;
+  color: #dc3545 !important;
   font-weight: bold;
   font-size: 14px;
+  background: transparent !important;
 }
 
 /* Intervalos */

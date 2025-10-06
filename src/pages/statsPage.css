@@ -1,30 +1,192 @@
 .stats-page {
-    text-align: center;
-    margin: 20px auto;
-    width: 90%;
-    background: #f8f9fa;
-    border-radius: 10px;
-    padding: 20px;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  margin: 30px auto;
+  width: 95%;
+  max-width: 1200px;
+  background: white;
+  border-radius: 15px;
+  padding: 30px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+  border-top: 5px solid #c41230;
+  position: relative;
+}
+
+.stats-page::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 5px;
+  background: linear-gradient(90deg, #c41230 0%, #a00f26 50%, #c41230 100%);
+  background-size: 200% 100%;
+  animation: gradientShift 3s ease infinite;
+}
+
+@keyframes gradientShift {
+  0%, 100% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+}
+
+.stats-page h2 {
+  color: #1a1a1a;
+  font-size: 28px;
+  font-weight: 700;
+  margin-bottom: 30px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  position: relative;
+  padding-bottom: 15px;
+}
+
+.stats-page h2::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 3px;
+  background: #c41230;
+  border-radius: 2px;
+}
+
+table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  margin-top: 25px;
+  overflow: hidden;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+th {
+  background: linear-gradient(135deg, #c41230 0%, #a00f26 100%);
+  color: white;
+  padding: 16px 12px;
+  font-weight: 700;
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  border: none;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+th:first-child {
+  border-top-left-radius: 10px;
+}
+
+th:last-child {
+  border-top-right-radius: 10px;
+}
+
+td {
+  padding: 14px 12px;
+  border-bottom: 1px solid #e8e8e8;
+  font-size: 14px;
+  color: #333;
+  transition: background-color 0.2s ease;
+}
+
+tbody tr {
+  transition: all 0.3s ease;
+}
+
+tbody tr:nth-child(even) {
+  background-color: #fafafa;
+}
+
+tbody tr:hover {
+  background-color: #fff5f5;
+  transform: scale(1.01);
+  box-shadow: 0 2px 8px rgba(196, 18, 48, 0.1);
+  cursor: pointer;
+}
+
+tbody tr:last-child td:first-child {
+  border-bottom-left-radius: 10px;
+}
+
+tbody tr:last-child td:last-child {
+  border-bottom-right-radius: 10px;
+}
+
+tbody tr:last-child td {
+  border-bottom: none;
+}
+
+/* Columna de jugadora destacada */
+td:first-child {
+  font-weight: 600;
+  color: #1a1a1a;
+  text-align: left;
+  padding-left: 20px;
+}
+
+/* Columnas de números centradas */
+td:not(:first-child) {
+  text-align: center;
+  font-family: 'Courier New', monospace;
+  font-weight: 500;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .stats-page {
+    width: 98%;
+    padding: 20px 15px;
   }
-  
+
+  .stats-page h2 {
+    font-size: 22px;
+  }
+
   table {
-    width: 100%;
-    border-collapse: collapse;
-    margin-top: 20px;
+    font-size: 12px;
   }
-  
-  th, td {
-    padding: 10px;
-    border-bottom: 1px solid #ddd;
-  }
-  
+
   th {
-    background-color: #007bff;
-    color: white;
+    padding: 12px 8px;
+    font-size: 12px;
   }
-  
-  tr:hover {
-    background-color: #f1f1f1;
+
+  td {
+    padding: 10px 8px;
+    font-size: 12px;
   }
-  
+
+  td:first-child {
+    padding-left: 12px;
+  }
+}
+
+@media (max-width: 480px) {
+  .stats-page {
+    padding: 15px 10px;
+  }
+
+  .stats-page h2 {
+    font-size: 18px;
+  }
+
+  table {
+    font-size: 11px;
+  }
+
+  th {
+    padding: 10px 6px;
+    font-size: 11px;
+  }
+
+  td {
+    padding: 8px 6px;
+    font-size: 11px;
+  }
+
+  td:first-child {
+    padding-left: 8px;
+  }
+}
