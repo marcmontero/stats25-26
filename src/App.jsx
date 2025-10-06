@@ -14,7 +14,7 @@ const TEAMS_CONFIG = {
     name: 'SENIOR A MASC',
     icon: '🏀',
     color: '#007bff',
-    keywords: ['badalones'],
+    keywords: ['badalones', 'corbacho'],
     urls: [
       'https://msstats.optimalwayconsulting.com/v1/fcbq/getJsonWithMatchStats/68d837bf74669700015de350?currentSeason=true',
       'https://msstats.optimalwayconsulting.com/v1/fcbq/getJsonWithMatchStats/68e2a8ac1c33a20001316262?currentSeason=true',
@@ -24,7 +24,7 @@ const TEAMS_CONFIG = {
     name: 'SENIOR FEM',
     icon: '🏀',
     color: '#e83e8b',
-    keywords: ['badalones'],
+    keywords: ['badalones', 'corbacho'],
     urls: [
       'https://msstats.optimalwayconsulting.com/v1/fcbq/getJsonWithMatchMoves/68d92b028c9c3a0001345470?currentSeason=true',
       'https://msstats.optimalwayconsulting.com/v1/fcbq/getJsonWithMatchStats/68e2bd419163a800012e059a?currentSeason=true'
@@ -34,7 +34,7 @@ const TEAMS_CONFIG = {
     name: 'SENIOR B MASC',
     icon: '🏀',
     color: '#28a745',
-    keywords: ['badalones'],
+    keywords: ['badalones', 'corbacho'],
     urls: [
       'https://msstats.optimalwayconsulting.com/v1/fcbq/getJsonWithMatchMoves/68d96f2574669700015e123d?currentSeason=true',
       'https://msstats.optimalwayconsulting.com/v1/fcbq/getJsonWithMatchStats/68e1732f1c33a200013122ab?currentSeason=true',
