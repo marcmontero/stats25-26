@@ -14,10 +14,10 @@ const TEAMS_CONFIG = {
     name: 'SENIOR A MASC',
     icon: '🏀',
     color: '#007bff',
-    keywords: ['badalones', 'corbacho', 'senior a'],
+    keywords: ['badalones', 'corbacho'],
     urls: [
       'https://msstats.optimalwayconsulting.com/v1/fcbq/getJsonWithMatchStats/68d837bf74669700015de350?currentSeason=true',
-      'https://msstats.optimalwayconsulting.com/v1/fcbq/getJsonWithMatchStats/68e2a8ac1c33a20001316262?currentSeason=true',
+      'https://msstats.optimalwayconsulting.com/v1/fcbq/getJsonWithMatchStats/68e2a8ac1c33a20001316262?currentSeason=true'
     ]
   },
   'senior-fem': {
@@ -26,7 +26,7 @@ const TEAMS_CONFIG = {
     color: '#e83e8b',
     keywords: ['badalones', 'corbacho'],
     urls: [
-      'https://msstats.optimalwayconsulting.com/v1/fcbq/getJsonWithMatchMoves/68d92b028c9c3a0001345470?currentSeason=true',
+      'https://msstats.optimalwayconsulting.com/v1/fcbq/getJsonWithMatchStats/68d92b028c9c3a0001345470?currentSeason=true',
       'https://msstats.optimalwayconsulting.com/v1/fcbq/getJsonWithMatchStats/68e2bd419163a800012e059a?currentSeason=true'
     ]
   },
@@ -36,34 +36,36 @@ const TEAMS_CONFIG = {
     color: '#28a745',
     keywords: ['badalones', 'corbacho'],
     urls: [
-      'https://msstats.optimalwayconsulting.com/v1/fcbq/getJsonWithMatchMoves/68d96f2574669700015e123d?currentSeason=true',
-      'https://msstats.optimalwayconsulting.com/v1/fcbq/getJsonWithMatchStats/68e1732f1c33a200013122ab?currentSeason=true',
-
+      'https://msstats.optimalwayconsulting.com/v1/fcbq/getJsonWithMatchStats/68d96f2574669700015e123d?currentSeason=true',
+      'https://msstats.optimalwayconsulting.com/v1/fcbq/getJsonWithMatchStats/68e1732f1c33a200013122ab?currentSeason=true'
+  
     ]
   },
   'senior-c-masc': {
     name: 'SENIOR C MASC',
     icon: '🏀',
     color: '#17a2b8',
-    keywords: ['senior c', 'masculí'],
+    keywords: ['badalones', 'corbacho'],
     urls: [
-      // Añadir URLs aquí
+      'https://msstats.optimalwayconsulting.com/v1/fcbq/getJsonWithMatchStats/68d9554874669700015e0a3f?currentSeason=true',
+      'https://msstats.optimalwayconsulting.com/v1/fcbq/getJsonWithMatchStats/68e1416d9163a800012d9bdf?currentSeason=true'
     ]
   },
   'u20-masc': {
     name: 'U20 MASC',
     icon: '🏀',
     color: '#ffc107',
-    keywords: ['u20', 'sub 20'],
+    keywords: ['badalones', 'corbacho'],
     urls: [
-      // Añadir URLs aquí
+      'https://msstats.optimalwayconsulting.com/v1/fcbq/getJsonWithMatchStats/68d977198c9c3a000134679d?currentSeason=true',
+      'https://msstats.optimalwayconsulting.com/v1/fcbq/getJsonWithMatchStats/68e15c079163a800012da843?currentSeason=true'
     ]
   },
   'cadet-a-masc': {
     name: 'CADET A MASC',
     icon: '🏀',
     color: '#6f42c1',
-    keywords: ['cadet a', 'masculí'],
+    keywords: ['badalones', 'corbacho'],
     urls: [
       // Añadir URLs aquí
     ]
@@ -72,7 +74,7 @@ const TEAMS_CONFIG = {
     name: 'CADET B MASC',
     icon: '🏀',
     color: '#fd7e14',
-    keywords: ['cadet b', 'masculí'],
+    keywords: ['badalones', 'corbacho'],
     urls: [
       // Añadir URLs aquí
     ]
@@ -120,8 +122,10 @@ const App = () => {
     setSelectedMatch(null);
 
     try {
-      const data = await fetchStats(team.urls);
+      // Pasar las keywords del equipo al fetchStats
+      const data = await fetchStats(team.urls, team.keywords);
       setMatches(data);
+      console.log(`📊 ${data.length} partidos cargados para ${team.name}`);
     } catch (error) {
       console.error('Error al cargar equipo:', error);
       alert('Error al cargar los partidos');
