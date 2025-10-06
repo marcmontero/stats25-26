@@ -1,11 +1,12 @@
 import React, { useEffect, useState } from 'react';
-import PlayerList from './components/PlayerList.jsx';
-import MatchSelector from './components/MatchSelector.jsx';
-import QuintetList from './components/QuintetList.jsx';
-import StatsTable from "./components/StatsTables.jsx";
-import PlayerStatsByMatch from "./components/PlayerStatsByMatch.jsx";
 import { fetchStats } from './api/fechStats.js';
+import PlayerList from './components/playerList.jsx';
+import MatchSelector from './components/matchSelector.jsx';
+import QuintetList from './components/QuintetList.jsx';
 import { getQuintetStats } from './utils/QuintetStats.jsx';
+import StatsTable from "./components/StatsTables.jsx";
+import TopQuintets from "./components/TopQuintets.jsx";
+import PlayerStatsByMatch from "./components/PlayerStatsByMatch.jsx";
 import './App.css';
 
 const App = () => {
