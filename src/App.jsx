@@ -67,7 +67,7 @@ const TEAMS_CONFIG = {
     color: '#6f42c1',
     keywords: ['badalones', 'corbacho'],
     urls: [
-      // Añadir URLs aquí
+      'https://msstats.optimalwayconsulting.com/v1/fcbq/getJsonWithMatchStats/68e109131c33a2000130eb71?currentSeason=true'
     ]
   },
   'cadet-b-masc': {
@@ -76,7 +76,7 @@ const TEAMS_CONFIG = {
     color: '#fd7e14',
     keywords: ['badalones', 'corbacho'],
     urls: [
-      // Añadir URLs aquí
+      'https://msstats.optimalwayconsulting.com/v1/fcbq/getJsonWithMatchStats/68e2464d1c33a20001313d9d?currentSeason=true'
     ]
   }
 };
