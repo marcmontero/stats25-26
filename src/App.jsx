@@ -14,7 +14,7 @@ const TEAMS_CONFIG = {
     name: 'SENIOR A MASC',
     icon: '🏀',
     color: '#007bff',
-    keywords: ['badalones', 'corbacho'],
+    keywords: ['badalones', 'corbacho', 'senior a'],
     urls: [
       'https://msstats.optimalwayconsulting.com/v1/fcbq/getJsonWithMatchStats/68d837bf74669700015de350?currentSeason=true',
       'https://msstats.optimalwayconsulting.com/v1/fcbq/getJsonWithMatchStats/68e2a8ac1c33a20001316262?currentSeason=true',
