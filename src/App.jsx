@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { fetchStats } from './api/fechStats';
-import PlayerList from './components/playerList';
-import MatchSelector from './components/matchSelector';
+import PlayerList from './components/PlayerList';
+import MatchSelector from './components/MatchSelector';
 import QuintetList from './components/QuintetList';
 import { getQuintetStats } from './utils/QuintetStats.jsx';
 import StatsTable from "./components/StatsTables.jsx";

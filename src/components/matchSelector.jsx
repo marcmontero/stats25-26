@@ -1,5 +1,5 @@
 import React from "react";
-import "./MatchSelector.css";
+import "./matchSelector.css";
 
 const MatchSelector = ({ matches, onSelectMatch }) => {
   // Función para formatear el nombre del equipo
