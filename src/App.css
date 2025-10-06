@@ -1,56 +1,256 @@
-/* Login Wrapper */
+/* ========== COLORES DEL CLUB ========== */
+:root {
+  --badalones-red: #c41230;
+  --badalones-red-dark: #a00f26;
+  --badalones-red-light: #e6153a;
+  --badalones-black: #1a1a1a;
+  --badalones-white: #ffffff;
+  --badalones-gray: #f5f5f5;
+}
+
+/* Reset y estilos base */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Helvetica', 'Arial', sans-serif;
+  background: linear-gradient(135deg, #f5f5f5 0%, #e8e8e8 100%);
+  min-height: 100vh;
+}
+
+.app {
+  min-height: 100vh;
+  padding: 20px;
+}
+
+/* ========== HEADER PRINCIPAL ========== */
+.app h1 {
+  text-align: center;
+  color: var(--badalones-black);
+  font-size: 32px;
+  font-weight: 700;
+  margin-bottom: 30px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  position: relative;
+  padding-bottom: 15px;
+}
+
+.app h1::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100px;
+  height: 4px;
+  background: linear-gradient(90deg, var(--badalones-red), var(--badalones-red-dark));
+  border-radius: 2px;
+}
+
+/* ========== LOGO DEL CLUB ========== */
+.club-logo {
+  display: block;
+  margin: 0 auto 20px;
+  max-width: 120px;
+  height: auto;
+  filter: drop-shadow(0 2px 8px rgba(196, 18, 48, 0.3));
+}
+
+/* ========== LOGIN ========== */
 .login-wrapper {
   display: flex;
   justify-content: center;
   align-items: center;
   min-height: 100vh;
-  background-color: #f7f7f7;
+  background: linear-gradient(135deg, var(--badalones-red) 0%, var(--badalones-red-dark) 100%);
+  padding: 20px;
 }
 
-/* Login Container */
 .login-container {
-  background-color: #ffffff;
-  padding: 2rem;
-  border-radius: 8px;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-  width: 300px;
+  background: white;
+  padding: 40px;
+  border-radius: 15px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+  width: 100%;
+  max-width: 400px;
   text-align: center;
 }
 
-/* Input Groups */
+.login-container h1 {
+  color: var(--badalones-red);
+  margin-bottom: 30px;
+  font-size: 28px;
+  font-weight: 700;
+}
+
 .input-group {
-  margin-bottom: 1rem;
+  margin-bottom: 20px;
   text-align: left;
 }
 
 .input-group label {
   display: block;
-  margin-bottom: 0.5rem;
-  font-weight: bold;
-  color: #333;
+  margin-bottom: 8px;
+  font-weight: 600;
+  color: var(--badalones-black);
+  font-size: 14px;
 }
 
 .input-group input {
   width: 100%;
-  padding: 0.5rem;
-  border: 1px solid #ddd;
-  border-radius: 4px;
-  font-size: 1rem;
+  padding: 12px 15px;
+  border: 2px solid #e0e0e0;
+  border-radius: 8px;
+  font-size: 15px;
+  transition: all 0.3s;
 }
 
-/* Login Button */
+.input-group input:focus {
+  outline: none;
+  border-color: var(--badalones-red);
+  box-shadow: 0 0 0 3px rgba(196, 18, 48, 0.1);
+}
+
 .login-button {
-  background-color: #00ff48;
-  color: #fff;
+  background: linear-gradient(135deg, var(--badalones-red) 0%, var(--badalones-red-dark) 100%);
+  color: white;
   border: none;
-  border-radius: 4px;
-  padding: 0.75rem;
+  border-radius: 8px;
+  padding: 14px;
   width: 100%;
-  font-size: 1rem;
+  font-size: 16px;
+  font-weight: 600;
   cursor: pointer;
-  transition: background-color 0.3s ease;
+  transition: all 0.3s;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
 }
 
 .login-button:hover {
-  background-color: #ff0000;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(196, 18, 48, 0.4);
+}
+
+/* ========== BOTONES PRINCIPALES ========== */
+.buttons-container {
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+  margin: 30px auto;
+  flex-wrap: wrap;
+  max-width: 800px;
+}
+
+.stats-button,
+.player-stats-button {
+  padding: 14px 28px;
+  border: none;
+  border-radius: 10px;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.stats-button {
+  background: linear-gradient(135deg, var(--badalones-red) 0%, var(--badalones-red-dark) 100%);
+  color: white;
+}
+
+.player-stats-button {
+  background: linear-gradient(135deg, var(--badalones-black) 0%, #2a2a2a 100%);
+  color: white;
+}
+
+.stats-button:hover,
+.player-stats-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25);
+}
+
+/* ========== MATCH TITLE ========== */
+.match-title-container {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  margin: 20px auto;
+  max-width: 900px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  border-top: 4px solid var(--badalones-red);
+}
+
+.match-title-container h2 {
+  color: var(--badalones-black);
+  font-size: 22px;
+  font-weight: 700;
+  text-align: center;
+  margin: 0;
+}
+
+/* ========== BACK BUTTON ========== */
+.back-button {
+  display: inline-block;
+  padding: 12px 24px;
+  background: var(--badalones-black);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  margin: 20px auto;
+  display: block;
+  max-width: 200px;
+  transition: all 0.3s;
+}
+
+.back-button:hover {
+  background: var(--badalones-red);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(196, 18, 48, 0.3);
+}
+
+/* ========== RESPONSIVE ========== */
+@media (max-width: 768px) {
+  .app h1 {
+    font-size: 24px;
+  }
+  
+  .club-logo {
+    max-width: 100px;
+  }
+  
+  .login-container {
+    padding: 30px 25px;
+  }
+  
+  .buttons-container {
+    flex-direction: column;
+    max-width: 300px;
+  }
+  
+  .match-title-container h2 {
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 480px) {
+  .app {
+    padding: 15px;
+  }
+  
+  .app h1 {
+    font-size: 20px;
+  }
+  
+  .club-logo {
+    max-width: 80px;
+  }
 }

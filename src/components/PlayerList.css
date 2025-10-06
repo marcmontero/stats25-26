@@ -1,41 +1,279 @@
-.player-list {
-    text-align: center;
-    margin: 20px auto;
-    width: 90%;
-    background: #f8f9fa;
-    border-radius: 10px;
-    padding: 20px;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+.player-list-container {
+  margin: 20px auto;
+  max-width: 950px;
+  overflow-x: auto;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  padding: 20px;
+  border-top: 4px solid #c41230; /* Rojo Dimonis */
+}
+
+.player-stats-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 14px;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif;
+  table-layout: fixed;
+}
+
+/* Header con colores del club */
+.player-stats-table thead {
+  background: linear-gradient(135deg, #c41230 0%, #a00f26 100%); /* Rojo degradado */
+  color: white;
+}
+
+.player-stats-table th {
+  padding: 10px 5px;
+  text-align: center;
+  font-weight: 600;
+  font-size: 13px;
+  border-right: 1px solid rgba(255,255,255,0.2);
+  white-space: nowrap;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.player-stats-table th:first-child {
+  width: 40px;
+}
+
+.player-stats-table th:nth-child(2) {
+  width: 35%;
+  text-align: left;
+}
+
+.player-stats-table th:nth-child(3) {
+  width: 30px;
+}
+
+.player-stats-table th:nth-child(4) {
+  width: 50px;
+}
+
+.player-stats-table th:nth-child(5) {
+  width: 40px;
+}
+
+.player-stats-table th:nth-child(6),
+.player-stats-table th:nth-child(7),
+.player-stats-table th:nth-child(8) {
+  width: 50px;
+}
+
+.player-stats-table th:nth-child(9),
+.player-stats-table th:nth-child(10) {
+  width: 50px;
+}
+
+.player-stats-table th:last-child {
+  border-right: none;
+}
+
+/* Celdas */
+.player-stats-table td {
+  padding: 8px 5px;
+  text-align: center;
+  border-bottom: 1px solid #e5e5e5;
+  white-space: nowrap;
+  font-size: 13px;
+}
+
+/* Zebra striping con tonos rojos sutiles */
+.player-stats-table tbody tr:not(.intervals-row):nth-child(4n+1) {
+  background-color: #fff5f5;
+}
+
+.player-stats-table tbody tr:not(.intervals-row):nth-child(4n+3) {
+  background-color: white;
+}
+
+/* Hover */
+.player-stats-table tbody tr:not(.intervals-row):hover {
+  background-color: #ffe5e5;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+/* Titular */
+.titular-row {
+  font-weight: 600;
+  background-color: #fff0f0 !important;
+  border-left: 3px solid #c41230;
+}
+
+/* Dorsal con colores del club */
+.dorsal-cell {
+  font-weight: bold;
+  font-size: 15px;
+  background: linear-gradient(135deg, #c41230 0%, #a00f26 100%);
+  color: white;
+  text-shadow: 0 1px 2px rgba(0,0,0,0.2);
+}
+
+/* Nombre */
+.player-name {
+  text-align: left;
+  padding-left: 10px;
+  font-weight: 600;
+  font-size: 14px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  color: #1a1a1a;
+}
+
+/* Titular indicator */
+.titular-cell {
+  font-weight: bold;
+  color: #c41230;
+  font-size: 14px;
+}
+
+/* Minutos */
+.minutes-cell {
+  font-family: 'Courier New', monospace;
+  font-weight: 600;
+  font-size: 13px;
+  color: #333;
+}
+
+/* Puntos destacados */
+.points-cell {
+  font-weight: bold;
+  font-size: 16px;
+  color: #c41230;
+  background-color: #fff5f5;
+}
+
+/* Tiros */
+.shots-cell {
+  font-family: 'Courier New', monospace;
+  font-size: 12px;
+  color: #333;
+  font-weight: 500;
+}
+
+/* Plus/Minus con rojo/negro */
+.positive {
+  color: #c41230;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.negative {
+  color: #1a1a1a;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+/* Intervalos */
+.intervals-row {
+  background-color: #f8f8f8 !important;
+  border-bottom: 2px solid #e0e0e0 !important;
+}
+
+.intervals-cell {
+  text-align: center !important;
+  font-family: 'Courier New', monospace;
+  font-size: 11px;
+  color: #666;
+  padding: 5px 6px !important;
+  line-height: 1.4;
+  word-wrap: break-word;
+}
+
+/* ========== RESPONSIVE ========== */
+
+/* Tablet (768px - 1024px) */
+@media (max-width: 1024px) {
+  .player-list-container {
+    max-width: 100%;
+    margin: 15px;
+    padding: 15px;
   }
   
-  table {
-    width: 100%;
-    border-collapse: collapse;
-    margin-top: 20px;
+  .player-stats-table {
+    font-size: 13px;
   }
   
-  th, td {
+  .player-stats-table th {
+    font-size: 12px;
+    padding: 8px 4px;
+  }
+  
+  .player-stats-table td {
+    padding: 6px 4px;
+    font-size: 12px;
+  }
+  
+  .player-name {
+    font-size: 13px;
+  }
+  
+  .dorsal-cell,
+  .points-cell {
+    font-size: 14px;
+  }
+}
+
+/* Móvil (max 767px) */
+@media (max-width: 767px) {
+  .player-list-container {
+    margin: 10px;
     padding: 10px;
-    border-bottom: 1px solid #ddd;
   }
   
-  th {
-    background-color: #007bff;
-    color: white;
+  .player-stats-table {
+    font-size: 11px;
   }
   
-  tr:hover {
-    background-color: #f1f1f1;
+  .player-stats-table th {
+    font-size: 10px;
+    padding: 6px 3px;
   }
   
-  /* 🔹 Colorear el más/menos */
-  .positive {
-    color: #28a745;
-    font-weight: bold;
+  .player-stats-table th:nth-child(2) {
+    width: 30%;
   }
   
-  .negative {
-    color: #dc3545;
-    font-weight: bold;
+  .player-stats-table td {
+    padding: 5px 3px;
+    font-size: 11px;
   }
   
+  .player-name {
+    font-size: 11px;
+  }
+  
+  .dorsal-cell,
+  .points-cell {
+    font-size: 13px;
+  }
+  
+  .shots-cell {
+    font-size: 10px;
+  }
+  
+  .intervals-cell {
+    font-size: 9px;
+  }
+}
+
+/* Móvil pequeño (max 480px) */
+@media (max-width: 480px) {
+  .player-stats-table {
+    font-size: 10px;
+  }
+  
+  .player-stats-table th {
+    font-size: 9px;
+  }
+  
+  .player-stats-table td {
+    font-size: 10px;
+  }
+  
+  .intervals-cell {
+    font-size: 8px;
+  }
+}
