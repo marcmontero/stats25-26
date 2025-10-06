@@ -1,0 +1,27 @@
+.top-quintets {
+    text-align: center;
+    margin: 20px auto;
+    width: 80%;
+    background: #f8f9fa;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .quintet {
+    padding: 15px;
+    margin: 10px 0;
+    border-radius: 8px;
+    font-size: 16px;
+  }
+  
+  .positive {
+    background-color: #28A745;
+    color: white;
+  }
+  
+  .negative {
+    background-color: #E44D26;
+    color: white;
+  }
+  
