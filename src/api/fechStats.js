@@ -18,7 +18,7 @@ export const fetchStats = async (urls) => {
           .normalize("NFD")
           .replace(/[\u0300-\u036f]/g, "");
 
-        return ["maristes", "badalones", "cultural"].some((word) => text.includes(word));
+        return ["maristes"].some((word) => text.includes(word));
       });
 
       // Obtener equipos local y visitante

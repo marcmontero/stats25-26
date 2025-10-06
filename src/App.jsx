@@ -11,13 +11,8 @@ import './App.css';
 
 const App = () => {
   const matchUrls = [
-'https://msstats.optimalwayconsulting.com/v1/fcbq/getJsonWithMatchStats/68e255d19163a800012ddbbc?currentSeason=true',
-'https://msstats.optimalwayconsulting.com/v1/fcbq/getJsonWithMatchStats/68e1732f1c33a200013122ab?currentSeason=true',
-'https://msstats.optimalwayconsulting.com/v1/fcbq/getJsonWithMatchStats/68e1416d9163a800012d9bdf?currentSeason=true',
-'https://msstats.optimalwayconsulting.com/v1/fcbq/getJsonWithMatchStats/68e2bd419163a800012e059a?currentSeason=true',
-'https://msstats.optimalwayconsulting.com/v1/fcbq/getJsonWithMatchStats/68e2464d1c33a20001313d9d?currentSeason=true',
-'https://msstats.optimalwayconsulting.com/v1/fcbq/getJsonWithMatchStats/68e2a8ac1c33a20001316262?currentSeason=true'
-
+'https://msstats.optimalwayconsulting.com/v1/fcbq/getJsonWithMatchStats/68d9717d8c9c3a000134658d?currentSeason=true',
+'https://msstats.optimalwayconsulting.com/v1/fcbq/getJsonWithMatchStats/68e2bd419163a800012e059a?currentSeason=true'
 ]
   
   // Estados para login
@@ -38,7 +33,7 @@ const App = () => {
   // Función simple de autenticación (usuario: "admin", contraseña: "1234")
   const handleLogin = (e) => {
     e.preventDefault();
-    if (username === "admin" && password === "1234") {
+    if (username === "Ari" && password === "Cegata") {
       setIsAuthenticated(true);
     } else {
       alert("Credenciales incorrectas");
@@ -105,7 +100,7 @@ const App = () => {
 
   return (
     <div className="app">
-      <h1>Estadístiques Senior Fem 2024-2025</h1>
+      <h1>Estadístiques Senior Fem Maristes 2025-2026</h1>
 
       {/* Mostrar botones de opciones solo si no se ha seleccionado un partido */}
       {!selectedMatch && (
