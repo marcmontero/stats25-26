@@ -11,65 +11,14 @@ import TopQuintetsAnalysis from "./components/TopQuintetsAnalysis.jsx";
 import './App.css';
 
 const TEAMS_CONFIG = {
-  'senior-a-masc': {
-    name: 'Senior A Masculí',
-    icon: '🏀',
-    keywords: ['badalones', 'corbacho'],
-    urls: [
-      'https://msstats.optimalwayconsulting.com/v1/fcbq/getJsonWithMatchStats/68d837bf74669700015de350?currentSeason=true',
-      'https://msstats.optimalwayconsulting.com/v1/fcbq/getJsonWithMatchStats/68e2a8ac1c33a20001316262?currentSeason=true'
-    ]
-  },
+  
   'senior-fem': {
     name: 'Senior Femení',
     icon: '🏀',
     keywords: ['badalones', 'corbacho'],
     urls: [
-      'https://msstats.optimalwayconsulting.com/v1/fcbq/getJsonWithMatchStats/68d92b028c9c3a0001345470?currentSeason=true',
+      'https://msstats.optimalwayconsulting.com/v1/fcbq/getJsonWithMatchStats/68d9717d8c9c3a000134658d?currentSeason=true',
       'https://msstats.optimalwayconsulting.com/v1/fcbq/getJsonWithMatchStats/68e2bd419163a800012e059a?currentSeason=true'
-    ]
-  },
-  'senior-b-masc': {
-    name: 'Senior B Masculí',
-    icon: '🏀',
-    keywords: ['badalones', 'corbacho'],
-    urls: [
-      'https://msstats.optimalwayconsulting.com/v1/fcbq/getJsonWithMatchStats/68d96f2574669700015e123d?currentSeason=true',
-      'https://msstats.optimalwayconsulting.com/v1/fcbq/getJsonWithMatchStats/68e1732f1c33a200013122ab?currentSeason=true'
-    ]
-  },
-  'senior-c-masc': {
-    name: 'Senior C Masculí',
-    icon: '🏀',
-    keywords: ['badalones', 'corbacho'],
-    urls: [
-      'https://msstats.optimalwayconsulting.com/v1/fcbq/getJsonWithMatchStats/68d9554874669700015e0a3f?currentSeason=true',
-      'https://msstats.optimalwayconsulting.com/v1/fcbq/getJsonWithMatchStats/68e1416d9163a800012d9bdf?currentSeason=true'
-    ]
-  },
-  'u20-masc': {
-    name: 'U20 Masculí',
-    icon: '🏀',
-    keywords: ['badalones', 'corbacho'],
-    urls: [
-      'https://msstats.optimalwayconsulting.com/v1/fcbq/getJsonWithMatchStats/68d977198c9c3a000134679d?currentSeason=true',
-      'https://msstats.optimalwayconsulting.com/v1/fcbq/getJsonWithMatchStats/68e15c079163a800012da843?currentSeason=true'
-    ]
-  },
-  'cadet-a-masc': {
-    name: 'Cadet A Masculí',
-    icon: '🏀',
-    keywords: ['badalones', 'corbacho'],
-    urls: [
-      'https://msstats.optimalwayconsulting.com/v1/fcbq/getJsonWithMatchStats/68e109131c33a2000130eb71?currentSeason=true'
-    ]
-  },
-  'cadet-b-masc': {
-    name: 'Cadet B Masculí',
-    icon: '🏀',
-    keywords: ['badalones', 'corbacho'],
-    urls: [
-      'https://msstats.optimalwayconsulting.com/v1/fcbq/getJsonWithMatchStats/68e2464d1c33a20001313d9d?currentSeason=true'
     ]
   }
 };
