@@ -29,15 +29,6 @@ const PlayerEvolutionCharts = ({ matches }) => {
         plusMinusPerMin: playerData?.timePlayed > 0 
           ? (playerData.inOut / playerData.timePlayed).toFixed(2) 
           : 0,
-        tlPercentage: playerData?.data?.shotsOfOneAttempted > 0
-          ? ((playerData?.data?.shotsOfOneSuccessful / playerData?.data?.shotsOfOneAttempted) * 100).toFixed(1)
-          : 0,
-        t2Percentage: playerData?.data?.shotsOfTwoAttempted > 0
-          ? ((playerData?.data?.shootingOfTwoSuccessfulPoint?.length / playerData?.data?.shotsOfTwoAttempted) * 100).toFixed(1)
-          : 0,
-        t3Percentage: playerData?.data?.shotsOfThreeAttempted > 0
-          ? ((playerData?.data?.shootingOfThreeSuccessfulPoint?.length / playerData?.data?.shotsOfThreeAttempted) * 100).toFixed(1)
-          : 0,
       };
     });
   };
@@ -52,9 +43,6 @@ const PlayerEvolutionCharts = ({ matches }) => {
     tl: { label: "Tirs Lliures Anotats", dataKey: "tl", color: "#fd7e14" },
     t2: { label: "Tirs de 2 Anotats", dataKey: "t2", color: "#6f42c1" },
     t3: { label: "Triples Anotats", dataKey: "t3", color: "#e83e8b" },
-    tlPercentage: { label: "% Tirs Lliures", dataKey: "tlPercentage", color: "#fd7e14" },
-    t2Percentage: { label: "% Tirs de 2", dataKey: "t2Percentage", color: "#6f42c1" },
-    t3Percentage: { label: "% Triples", dataKey: "t3Percentage", color: "#e83e8b" },
   };
 
   const currentMetric = metrics[selectedMetric];
@@ -87,9 +75,6 @@ const PlayerEvolutionCharts = ({ matches }) => {
               <option value="tl">Tirs Lliures</option>
               <option value="t2">Tirs de 2</option>
               <option value="t3">Triples</option>
-              <option value="tlPercentage">% TL</option>
-              <option value="t2Percentage">% T2</option>
-              <option value="t3Percentage">% T3</option>
             </select>
           </div>
         )}

@@ -253,25 +253,33 @@ const App = () => {
 
       {!selectedMatch && (
         <div className="buttons-container">
-          <button className="stats-button" onClick={() => setShowStats(!showStats)}>
-            {showStats ? "Ocultar Mitjana Stats" : "Mostrar Mitjana Stats"}
-          </button>
+          <h3 className="menu-title">Opcions d'Anàlisi</h3>
+          <div className="menu-options">
+            <button className="stats-button" onClick={() => setShowStats(!showStats)}>
+              <span className="menu-icon">📊</span>
+              <span>{showStats ? "Ocultar Mitjana Stats" : "Mitjana Stats"}</span>
+            </button>
 
-          <button className="player-stats-button" onClick={() => setShowPlayerStats(!showPlayerStats)}>
-            {showPlayerStats ? "Ocultar Stats per Jugadora" : "Mostrar Stats per Jugadora"}
-          </button>
+            <button className="player-stats-button" onClick={() => setShowPlayerStats(!showPlayerStats)}>
+              <span className="menu-icon">👤</span>
+              <span>{showPlayerStats ? "Ocultar Stats Jugadora" : "Stats per Jugadora"}</span>
+            </button>
 
-          <button className="stats-button" onClick={() => setShowEvolution(!showEvolution)}>
-            {showEvolution ? "Ocultar Gràfics" : "Mostrar Gràfics d'Evolució"}
-          </button>
+            <button className="stats-button" onClick={() => setShowEvolution(!showEvolution)}>
+              <span className="menu-icon">📈</span>
+              <span>{showEvolution ? "Ocultar Gràfics" : "Gràfics d'Evolució"}</span>
+            </button>
 
-          <button className="player-stats-button" onClick={() => setShowTopQuintets(!showTopQuintets)}>
-            {showTopQuintets ? "Ocultar Top Quintets" : "Mostrar Top Quintets"}
-          </button>
+            <button className="player-stats-button" onClick={() => setShowTopQuintets(!showTopQuintets)}>
+              <span className="menu-icon">🏆</span>
+              <span>{showTopQuintets ? "Ocultar Top Quintets" : "Top Quintets"}</span>
+            </button>
 
-          <button className="stats-button" onClick={() => setShowExport(!showExport)}>
-            {showExport ? "Ocultar Exportació" : "Exportar Informes"}
-          </button>
+            <button className="stats-button" onClick={() => setShowExport(!showExport)}>
+              <span className="menu-icon">📥</span>
+              <span>{showExport ? "Ocultar Exportació" : "Exportar Informes"}</span>
+            </button>
+          </div>
         </div>
       )}
 
