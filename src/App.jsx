@@ -7,6 +7,7 @@ import { getQuintetStats } from './utils/QuintetStats.jsx';
 import StatsTable from "./components/StatsTables.jsx";
 import PlayerStatsByMatch from "./components/PlayerStatsByMatch.jsx";
 import PlayerEvolutionCharts from "./components/PlayerEvolutionCharts.jsx";
+import TopQuintetsAnalysis from "./components/TopQuintetsAnalysis.jsx";
 import './App.css';
 
 const TEAMS_CONFIG = {
@@ -84,6 +85,7 @@ const App = () => {
   const [showPlayerStats, setShowPlayerStats] = useState(false);
   const [showStats, setShowStats] = useState(false);
   const [showEvolution, setShowEvolution] = useState(false);
+  const [showTopQuintets, setShowTopQuintets] = useState(false);
 
   const handleLogin = (e) => {
     e.preventDefault();
@@ -107,6 +109,7 @@ const App = () => {
     setShowPlayerStats(false);
     setShowStats(false);
     setShowEvolution(false);
+    setShowTopQuintets(false);
     setSelectedMatch(null);
 
     try {
@@ -128,6 +131,7 @@ const App = () => {
     setShowPlayerStats(false);
     setShowStats(false);
     setShowEvolution(false);
+    setShowTopQuintets(false);
   };
 
   const handleBackToMatches = () => {
@@ -135,6 +139,7 @@ const App = () => {
     setShowStats(false);
     setShowPlayerStats(false);
     setShowEvolution(false);
+    setShowTopQuintets(false);
   };
 
   if (!isAuthenticated) {
@@ -179,7 +184,7 @@ const App = () => {
     return (
       <div className="app">
         <img 
-            src="https://i.imghippo.com/files/XfcX1130LYo.png" 
+          src="https://i.imghippo.com/files/XfcX1130LYo.png" 
           alt="AE Badalonès" 
           className="club-logo"
         />
@@ -254,12 +259,17 @@ const App = () => {
           <button className="stats-button" onClick={() => setShowEvolution(!showEvolution)}>
             {showEvolution ? "Ocultar Gràfics" : "Mostrar Gràfics d'Evolució"}
           </button>
+
+          <button className="player-stats-button" onClick={() => setShowTopQuintets(!showTopQuintets)}>
+            {showTopQuintets ? "Ocultar Top Quintets" : "Mostrar Top Quintets"}
+          </button>
         </div>
       )}
 
       {showStats && <StatsTable matches={matches} />}
       {showPlayerStats && <PlayerStatsByMatch matches={matches} />}
       {showEvolution && <PlayerEvolutionCharts matches={matches} />}
+      {showTopQuintets && <TopQuintetsAnalysis matches={matches} />}
 
       {!selectedMatch ? (
         <MatchSelector matches={matches} onSelectMatch={setSelectedMatch} />
