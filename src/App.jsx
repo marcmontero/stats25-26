@@ -15,7 +15,7 @@ const TEAMS_CONFIG = {
   'senior-fem': {
     name: 'Senior Femení',
     icon: '🏀',
-    keywords: ['badalones', 'corbacho'],
+    keywords: ['maristes', 'ademar'],
     urls: [
       'https://msstats.optimalwayconsulting.com/v1/fcbq/getJsonWithMatchStats/68d9717d8c9c3a000134658d?currentSeason=true',
       'https://msstats.optimalwayconsulting.com/v1/fcbq/getJsonWithMatchStats/68e2bd419163a800012e059a?currentSeason=true'
