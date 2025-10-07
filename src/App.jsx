@@ -6,6 +6,7 @@ import QuintetList from './components/QuintetList.jsx';
 import { getQuintetStats } from './utils/QuintetStats.jsx';
 import StatsTable from "./components/StatsTables.jsx";
 import PlayerStatsByMatch from "./components/PlayerStatsByMatch.jsx";
+import PlayerEvolutionCharts from "./components/PlayerEvolutionCharts.jsx";
 import './App.css';
 
 const TEAMS_CONFIG = {
@@ -82,6 +83,7 @@ const App = () => {
   const [loading, setLoading] = useState(false);
   const [showPlayerStats, setShowPlayerStats] = useState(false);
   const [showStats, setShowStats] = useState(false);
+  const [showEvolution, setShowEvolution] = useState(false);
 
   const handleLogin = (e) => {
     e.preventDefault();
@@ -104,6 +106,7 @@ const App = () => {
     setLoading(true);
     setShowPlayerStats(false);
     setShowStats(false);
+    setShowEvolution(false);
     setSelectedMatch(null);
 
     try {
@@ -124,12 +127,14 @@ const App = () => {
     setMatches([]);
     setShowPlayerStats(false);
     setShowStats(false);
+    setShowEvolution(false);
   };
 
   const handleBackToMatches = () => {
     setSelectedMatch(null);
     setShowStats(false);
     setShowPlayerStats(false);
+    setShowEvolution(false);
   };
 
   if (!isAuthenticated) {
@@ -137,7 +142,7 @@ const App = () => {
       <div className="login-wrapper">
         <div className="login-container">
           <img 
-            src="https://www.aebadalones.com/wp-content/uploads/2024/06/AE-Badalones-Vermell.png" 
+            src="https://i.imghippo.com/files/XfcX1130LYo.png" 
             alt="AE Badalonès" 
             className="club-logo"
           />
@@ -174,7 +179,7 @@ const App = () => {
     return (
       <div className="app">
         <img 
-          src="https://www.aebadalones.com/wp-content/uploads/2024/06/AE-Badalones-Vermell.png" 
+            src="https://i.imghippo.com/files/XfcX1130LYo.png" 
           alt="AE Badalonès" 
           className="club-logo"
         />
@@ -238,24 +243,23 @@ const App = () => {
 
       {!selectedMatch && (
         <div className="buttons-container">
-          <button 
-            className="stats-button" 
-            onClick={() => setShowStats(!showStats)}
-          >
+          <button className="stats-button" onClick={() => setShowStats(!showStats)}>
             {showStats ? "Ocultar Mitjana Stats" : "Mostrar Mitjana Stats"}
           </button>
 
-          <button 
-            className="player-stats-button" 
-            onClick={() => setShowPlayerStats(!showPlayerStats)}
-          >
+          <button className="player-stats-button" onClick={() => setShowPlayerStats(!showPlayerStats)}>
             {showPlayerStats ? "Ocultar Stats per Jugadora" : "Mostrar Stats per Jugadora"}
+          </button>
+
+          <button className="stats-button" onClick={() => setShowEvolution(!showEvolution)}>
+            {showEvolution ? "Ocultar Gràfics" : "Mostrar Gràfics d'Evolució"}
           </button>
         </div>
       )}
 
       {showStats && <StatsTable matches={matches} />}
       {showPlayerStats && <PlayerStatsByMatch matches={matches} />}
+      {showEvolution && <PlayerEvolutionCharts matches={matches} />}
 
       {!selectedMatch ? (
         <MatchSelector matches={matches} onSelectMatch={setSelectedMatch} />
