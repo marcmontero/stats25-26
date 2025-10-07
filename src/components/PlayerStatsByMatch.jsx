@@ -17,8 +17,8 @@ const PlayerStatsByMatch = ({ matches }) => {
           match: match.matchResult,
           minutes: playerData?.timePlayed || 0,
           points: playerData?.data?.score || 0,
-          freeThrowsMade: playerData?.data?.shotsOfOneSuccessful ?? 0, // ✅ Corrección TL anotados
-          freeThrowsAttempted: playerData?.data?.shotsOfOneAttempted ?? 0, // ✅ Corrección TL intentados
+          freeThrowsMade: playerData?.data?.shotsOfOneSuccessful ?? 0,
+          freeThrowsAttempted: playerData?.data?.shotsOfOneAttempted ?? 0,
           twoPointers: playerData?.data?.shootingOfTwoSuccessfulPoint?.length || 0,
           threePointers: playerData?.data?.shootingOfThreeSuccessfulPoint?.length || 0,
           plusMinus: playerData?.inOut || 0,
@@ -70,8 +70,8 @@ const PlayerStatsByMatch = ({ matches }) => {
         <table className="player-stats-table">
           <thead>
             <tr>
-              <th>Partit</th>
-              <th>Min</th>
+              <th className="partit-column">Partit</th>
+              <th className="min-column">Min</th>
               <th>Punts</th>
               <th>TL</th>
               <th>T2</th>
@@ -83,10 +83,10 @@ const PlayerStatsByMatch = ({ matches }) => {
           <tbody>
             {filteredStats.map((stat, index) => (
               <tr key={index}>
-                <td>{stat.match}</td>
-                <td>{stat.minutes}</td>
+                <td className="partit-column">{stat.match}</td>
+                <td className="min-column">{stat.minutes}</td>
                 <td>{stat.points}</td>
-                <td>{`${stat.freeThrowsMade}/${stat.freeThrowsAttempted}`}</td> {/* ✅ Mostrar TL correctamente */}
+                <td>{`${stat.freeThrowsMade}/${stat.freeThrowsAttempted}`}</td>
                 <td>{stat.twoPointers}</td>
                 <td>{stat.threePointers}</td>
                 <td className={stat.plusMinus >= 0 ? "positive" : "negative"}>
@@ -98,13 +98,13 @@ const PlayerStatsByMatch = ({ matches }) => {
               </tr>
             ))}
 
-            {/* 🔹 Fila de Promedio */}
+            {/* Fila de Promedio */}
             {averageStats && (
               <tr className="average-row">
-                <td>{averageStats.match}</td>
-                <td>{averageStats.minutes}</td>
+                <td className="partit-column">{averageStats.match}</td>
+                <td className="min-column">{averageStats.minutes}</td>
                 <td>{averageStats.points}</td>
-                <td>{`${averageStats.freeThrowsMade}/${averageStats.freeThrowsAttempted}`}</td> {/* ✅ Mostrar TL promedio */}
+                <td>{`${averageStats.freeThrowsMade}/${averageStats.freeThrowsAttempted}`}</td>
                 <td>{averageStats.twoPointers}</td>
                 <td>{averageStats.threePointers}</td>
                 <td className={averageStats.plusMinus >= 0 ? "positive" : "negative"}>
