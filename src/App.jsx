@@ -8,6 +8,7 @@ import StatsTable from "./components/StatsTables.jsx";
 import PlayerStatsByMatch from "./components/PlayerStatsByMatch.jsx";
 import PlayerEvolutionCharts from "./components/PlayerEvolutionCharts.jsx";
 import TopQuintetsAnalysis from "./components/TopQuintetsAnalysis.jsx";
+import ExportReports from "./components/ExportReports.jsx";
 import './App.css';
 
 const TEAMS_CONFIG = {
@@ -86,6 +87,7 @@ const App = () => {
   const [showStats, setShowStats] = useState(false);
   const [showEvolution, setShowEvolution] = useState(false);
   const [showTopQuintets, setShowTopQuintets] = useState(false);
+  const [showExport, setShowExport] = useState(false);
 
   const handleLogin = (e) => {
     e.preventDefault();
@@ -110,6 +112,7 @@ const App = () => {
     setShowStats(false);
     setShowEvolution(false);
     setShowTopQuintets(false);
+    setShowExport(false);
     setSelectedMatch(null);
 
     try {
@@ -132,6 +135,7 @@ const App = () => {
     setShowStats(false);
     setShowEvolution(false);
     setShowTopQuintets(false);
+    setShowExport(false);
   };
 
   const handleBackToMatches = () => {
@@ -140,6 +144,7 @@ const App = () => {
     setShowPlayerStats(false);
     setShowEvolution(false);
     setShowTopQuintets(false);
+    setShowExport(false);
   };
 
   if (!isAuthenticated) {
@@ -263,6 +268,10 @@ const App = () => {
           <button className="player-stats-button" onClick={() => setShowTopQuintets(!showTopQuintets)}>
             {showTopQuintets ? "Ocultar Top Quintets" : "Mostrar Top Quintets"}
           </button>
+
+          <button className="stats-button" onClick={() => setShowExport(!showExport)}>
+            {showExport ? "Ocultar Exportació" : "Exportar Informes"}
+          </button>
         </div>
       )}
 
@@ -270,6 +279,7 @@ const App = () => {
       {showPlayerStats && <PlayerStatsByMatch matches={matches} />}
       {showEvolution && <PlayerEvolutionCharts matches={matches} />}
       {showTopQuintets && <TopQuintetsAnalysis matches={matches} />}
+      {showExport && <ExportReports matches={matches} teamName={currentTeam.name} />}
 
       {!selectedMatch ? (
         <MatchSelector matches={matches} onSelectMatch={setSelectedMatch} />
