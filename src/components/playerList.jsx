@@ -12,7 +12,7 @@ const formatMinutesSeconds = (decimalMinutes) => {
 // Formatear intervalos de tiempo absoluto
 const formatIntervals = (inOutsList = []) => {
   if (!inOutsList || inOutsList.length === 0) return "-";
-  
+
   const events = [...inOutsList].sort(
     (a, b) => (a.minuteAbsolut ?? 0) - (b.minuteAbsolut ?? 0)
   );
@@ -24,18 +24,22 @@ const formatIntervals = (inOutsList = []) => {
     const minute = ev.minuteAbsolut ?? 0;
     if (ev.type === "IN_TYPE") {
       if (openIn !== null) {
-        intervals.push(`${formatMinutesSeconds(openIn)}-${formatMinutesSeconds(minute)}`);
+        intervals.push(
+          `${formatMinutesSeconds(openIn)}-${formatMinutesSeconds(minute)}`
+        );
       }
       openIn = minute;
     } else if (ev.type === "OUT_TYPE") {
       if (openIn !== null) {
-        intervals.push(`${formatMinutesSeconds(openIn)}-${formatMinutesSeconds(minute)}`);
+        intervals.push(
+          `${formatMinutesSeconds(openIn)}-${formatMinutesSeconds(minute)}`
+        );
         openIn = null;
       }
     }
   }
 
-  return intervals.length ? intervals.map(i => `[${i}]`).join(" ") : "-";
+  return intervals.length ? intervals.map((i) => `[${i}]`).join(" ") : "-";
 };
 
 const PlayerList = ({ players }) => {
@@ -48,7 +52,8 @@ const PlayerList = ({ players }) => {
 
   return (
     <div className="player-list-container">
-      <table className="player-stats-table">
+      <table className="player-list-table">
+        {" "}
         <thead>
           <tr>
             <th>Nº</th>
@@ -68,7 +73,9 @@ const PlayerList = ({ players }) => {
             const plusMinus = player.inOut ?? 0;
             const minutesPlayed = player.timePlayed || 0;
             const plusMinusPerMinute =
-              minutesPlayed > 0 ? (plusMinus / minutesPlayed).toFixed(2) : "0.00";
+              minutesPlayed > 0
+                ? (plusMinus / minutesPlayed).toFixed(2)
+                : "0.00";
 
             // Tiros libres
             const tlMade = player.data?.shotsOfOneSuccessful ?? 0;
@@ -95,7 +102,9 @@ const PlayerList = ({ players }) => {
                   <td className="dorsal-cell">{player.dorsal}</td>
                   <td className="player-name">{player.name}</td>
                   <td className="titular-cell">{player.starting ? "X" : ""}</td>
-                  <td className="minutes-cell">{formatMinutesSeconds(minutesPlayed)}</td>
+                  <td className="minutes-cell">
+                    {formatMinutesSeconds(minutesPlayed)}
+                  </td>
                   <td className="points-cell">{player.data?.score || 0}</td>
                   <td className="shots-cell">{tlText}</td>
                   <td className="shots-cell">{t2Text}</td>
@@ -103,7 +112,11 @@ const PlayerList = ({ players }) => {
                   <td className={plusMinus >= 0 ? "positive" : "negative"}>
                     {plusMinus > 0 ? `+${plusMinus}` : plusMinus}
                   </td>
-                  <td className={plusMinusPerMinute >= 0 ? "positive" : "negative"}>
+                  <td
+                    className={
+                      plusMinusPerMinute >= 0 ? "positive" : "negative"
+                    }
+                  >
                     {plusMinusPerMinute}
                   </td>
                 </tr>
