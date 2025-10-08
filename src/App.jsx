@@ -440,7 +440,7 @@ const App = () => {
           alt="AE Badalonès" 
           className="club-logo"
         />
-        <h1>Estadístiques AE Badalonès 2024-2025</h1>
+        <h1>Estadístiques AE Badalonès 2025-2026</h1>
         
         <div className="teams-grid">
           {Object.entries(availableTeams).map(([teamId, team]) => (
