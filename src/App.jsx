@@ -12,6 +12,15 @@ import TopQuintetsAnalysis from "./components/TopQuintetsAnalysis.jsx";
 import ExportReports from "./components/ExportReports.jsx";
 import './App.css';
 
+//imports imgs
+import funtaimg from "../public/img/funtane.png";
+import juliimg from "../public/img/juli.png";
+import teixidoimg from "../public/img/teixido.png";
+import entrenaimg from "../public/img/entrena.png";
+import manelimg from "../public/img/manel.png";
+import aleximg from "../public/img/alex.png";
+
+
 // Importar imatges de perfil (si estan a src/img/)
 // Si les imatges NO existeixen, comenta aquestes línies
 
@@ -23,7 +32,7 @@ const USERS_CONFIG = {
     name: 'Uri Entrena',
     role: 'admin',
     position: 'Director Tècnic',
-    profileImage: '', // Importada des de src/img/
+    profileImage: entrenaimg, // Importada des de src/img/
     teams: 'all'
   },
   'juli.jimenez': {
@@ -31,7 +40,7 @@ const USERS_CONFIG = {
     name: 'Juli Jimenez',
     role: 'coach',
     position: 'Entrenador Senior A Masculí',
-    profileImage: '',
+    profileImage: juliimg,
     teams: ['senior-a-masc', 'senior-b-masc']
   },
   'lluis.carreras': {
@@ -39,7 +48,7 @@ const USERS_CONFIG = {
     name: 'Lluis Carreras',
     role: 'coach',
     position: 'Ajudant Senior A Masculí',
-    profileImage: '',
+    profileImage: "",
     teams: ['senior-a-masc', 'senior-b-masc']
   },
   'manel.padilla': {
@@ -47,7 +56,7 @@ const USERS_CONFIG = {
     name: 'Manel Padilla',
     role: 'coach',
     position: 'Entrenador Senior Femení, U20 Masculí i Cadet A Masculí',
-    profileImage: '',
+    profileImage: manelimg,
     teams: ['senior-c-masc', 'u20-masc', 'senior-fem', 'cadet-a-masc']
   },
   'marc.funtane': {
@@ -55,7 +64,7 @@ const USERS_CONFIG = {
     name: 'Marc Funtané',
     role: 'coach',
     position: 'Entrenador Senior B Masculí',
-    profileImage: '',
+    profileImage: funtaimg,
     teams: ['senior-a-masc', 'senior-b-masc', 'senior-c-masc']
   },
   'jordi.serra': {
@@ -71,7 +80,7 @@ const USERS_CONFIG = {
     name: 'Carles Teixidó',
     role: 'coach',
     position: 'Entrenador Senior C Masculí',
-    profileImage: '',
+    profileImage: teixidoimg,
     teams: ['senior-b-masc', 'senior-c-masc', 'u20-masc']
   },
   'alex.medialdea': {
@@ -79,7 +88,7 @@ const USERS_CONFIG = {
     name: 'Alex Medialdea',
     role: 'coach',
     position: 'Entrenador Cadet B Masculí',
-    profileImage: '',
+    profileImage: aleximg,
     teams: ['cadet-b-masc']
   }
 };

@@ -20,16 +20,48 @@ const BasicMatchView = ({ match }) => {
   const playedInQuarter = (player, quarterNumber) => {
     if (!player.inOutsList || player.inOutsList.length === 0) return false;
 
-    // Cada quart són aproximadament 5 minuts (40 min / 8 quarts)
-    const quarterDuration = 5;
+    // Duració del partit en minuts (48 minuts per categories base)
+    const totalMinutes = 48;
+    // Cada quart dura: 48 minuts / 8 quarts = 6 minuts
+    const quarterDuration = totalMinutes / maxQuarters;
+    
+    // Temps d'inici i final del quart
     const quarterStart = (quarterNumber - 1) * quarterDuration;
     const quarterEnd = quarterNumber * quarterDuration;
 
-    // Comprovar si el jugador estava a pista durant aquest quart
-    return player.inOutsList.some(event => {
+    // Ordenar events per temps
+    const sortedEvents = [...player.inOutsList].sort((a, b) => 
+      (a.minuteAbsolut || 0) - (b.minuteAbsolut || 0)
+    );
+
+    // Comprovar si el jugador estava dins de la pista durant aquest quart
+    let isOnCourt = false;
+    
+    for (const event of sortedEvents) {
       const eventTime = event.minuteAbsolut || 0;
-      return event.type === "IN_TYPE" && eventTime >= quarterStart && eventTime < quarterEnd;
-    });
+      
+      // Si l'event és abans del quart, només actualitzem l'estat
+      if (eventTime < quarterStart) {
+        isOnCourt = event.type === "IN_TYPE";
+        continue;
+      }
+      
+      // Si l'event és dins del quart
+      if (eventTime >= quarterStart && eventTime < quarterEnd) {
+        if (event.type === "IN_TYPE") {
+          return true; // Va entrar durant aquest quart
+        }
+        isOnCourt = event.type === "IN_TYPE";
+      }
+      
+      // Si l'event és després del quart, parem
+      if (eventTime >= quarterEnd) {
+        break;
+      }
+    }
+    
+    // Si estava a pista abans del quart i no va sortir durant el quart
+    return isOnCourt;
   };
 
   // Determinar si és capità
@@ -99,26 +131,29 @@ const BasicMatchView = ({ match }) => {
               </tr>
             </thead>
             <tbody>
-              {sortedPlayers.map((player, index) => (
-                <tr key={index}>
-                  <td className="player-name-cell">
-                    {player.name} {isCaptain(player) && <span className="captain-badge">C</span>}
-                  </td>
-                  <td className="dorsal-cell-grid">{player.dorsal}</td>
-                  {Array.from({ length: maxQuarters }, (_, quarterIndex) => {
-                    const played = playedInQuarter(player, quarterIndex + 1);
-                    return (
-                      <td key={quarterIndex} className="quarter-cell">
-                        {played ? (
-                          <span className="played-mark">✕</span>
-                        ) : (
-                          <span className="not-played"></span>
-                        )}
-                      </td>
-                    );
-                  })}
-                </tr>
-              ))}
+              {sortedPlayers.map((player, index) => {
+                const isPlayerCaptain = isCaptain(player);
+                return (
+                  <tr key={index}>
+                    <td className="player-name-cell-grid">
+                      {player.name} {isPlayerCaptain && <span className="captain-badge">C</span>}
+                    </td>
+                    <td className="dorsal-cell-grid">{player.dorsal}</td>
+                    {Array.from({ length: maxQuarters }, (_, quarterIndex) => {
+                      const played = playedInQuarter(player, quarterIndex + 1);
+                      return (
+                        <td key={quarterIndex} className="quarter-cell">
+                          {played ? (
+                            <span className="played-mark">✕</span>
+                          ) : (
+                            <span className="not-played"></span>
+                          )}
+                        </td>
+                      );
+                    })}
+                  </tr>
+                );
+              })}
             </tbody>
           </table>
         </div>

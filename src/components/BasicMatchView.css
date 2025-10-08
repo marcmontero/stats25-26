@@ -153,6 +153,16 @@
   white-space: nowrap;
 }
 
+.player-name-cell-grid {
+  text-align: left !important;
+  padding-left: 20px !important;
+  font-weight: 600;
+  color: #1a1a1a;
+  font-size: 14px;
+  white-space: nowrap;
+  min-width: 200px;
+}
+
 /* ========== BADGE CAPITÀ ========== */
 .captain-badge {
   display: inline-block;
