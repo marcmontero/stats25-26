@@ -11,6 +11,17 @@ import TopQuintetsAnalysis from "./components/TopQuintetsAnalysis.jsx";
 import ExportReports from "./components/ExportReports.jsx";
 import './App.css';
 
+// Importar imatges de perfil (si estan a src/img/)
+// Si les imatges NO existeixen, comenta aquestes línies
+import entrenaImg from './img/entrena.png';
+import jimenezImg from './img/jimenez.png';
+import carrerasImg from './img/carreras.png';
+import padillaImg from './img/padilla.png';
+import funtaneImg from './img/funtane.png';
+import serraImg from './img/serra.png';
+import teixidoImg from './img/teixido.png';
+import medialdeaImg from './img/medialdea.png';
+
 // ========== CONFIGURACIÓ D'USUARIS I PERMISOS ==========
 const USERS_CONFIG = {
   'uri.entrena': {
@@ -18,15 +29,15 @@ const USERS_CONFIG = {
     name: 'Uri Entrena',
     role: 'admin',
     position: 'Director Tècnic',
-    profileImage: '', // Afegeix la URL aquí
-    teams: 'all' // Accés a tots els equips
+    profileImage: entrenaImg, // Importada des de src/img/
+    teams: 'all'
   },
   'juli.jimenez': {
     password: 'juli2025',
     name: 'Juli Jimenez',
     role: 'coach',
     position: 'Entrenador Senior A Masculí',
-    profileImage: '', // Afegeix la URL aquí
+    profileImage: jimenezImg,
     teams: ['senior-a-masc', 'senior-b-masc']
   },
   'lluis.carreras': {
@@ -34,7 +45,7 @@ const USERS_CONFIG = {
     name: 'Lluis Carreras',
     role: 'coach',
     position: 'Ajudant Senior A Masculí',
-    profileImage: '', // Afegeix la URL aquí
+    profileImage: carrerasImg,
     teams: ['senior-a-masc', 'senior-b-masc']
   },
   'manel.padilla': {
@@ -42,7 +53,7 @@ const USERS_CONFIG = {
     name: 'Manel Padilla',
     role: 'coach',
     position: 'Entrenador Senior Femení, U20 Masculí i Cadet A Masculí',
-    profileImage: '', // Afegeix la URL aquí
+    profileImage: padillaImg,
     teams: ['senior-c-masc', 'u20-masc', 'senior-fem', 'cadet-a-masc']
   },
   'marc.funtane': {
@@ -50,7 +61,7 @@ const USERS_CONFIG = {
     name: 'Marc Funtané',
     role: 'coach',
     position: 'Entrenador Senior B Masculí',
-    profileImage: '/img/funtane.png', // Afegeix la URL aquí
+    profileImage: funtaneImg,
     teams: ['senior-a-masc', 'senior-b-masc', 'senior-c-masc']
   },
   'jordi.serra': {
@@ -58,7 +69,7 @@ const USERS_CONFIG = {
     name: 'Jordi Serra',
     role: 'coach',
     position: 'Ajudant Senior B Masculí i Senior C Masculí',
-    profileImage: '', // Afegeix la URL aquí
+    profileImage: serraImg,
     teams: ['senior-a-masc', 'senior-b-masc', 'senior-c-masc', 'u20-masc']
   },
   'carles.teixido': {
@@ -66,7 +77,7 @@ const USERS_CONFIG = {
     name: 'Carles Teixidó',
     role: 'coach',
     position: 'Entrenador Senior C Masculí',
-    profileImage: '', // Afegeix la URL aquí
+    profileImage: teixidoImg,
     teams: ['senior-b-masc', 'senior-c-masc', 'u20-masc']
   },
   'alex.medialdea': {
@@ -74,7 +85,7 @@ const USERS_CONFIG = {
     name: 'Alex Medialdea',
     role: 'coach',
     position: 'Entrenador Cadet B Masculí',
-    profileImage: '', // Afegeix la URL aquí
+    profileImage: medialdeaImg,
     teams: ['cadet-b-masc']
   }
 };
@@ -84,6 +95,7 @@ const TEAMS_CONFIG = {
     name: 'Senior A Masculí',
     icon: '🏀',
     keywords: ['badalones', 'corbacho'],
+    statsType: 'advanced', // Stats completes amb quintets
     urls: [
       'https://msstats.optimalwayconsulting.com/v1/fcbq/getJsonWithMatchStats/68d837bf74669700015de350?currentSeason=true',
       'https://msstats.optimalwayconsulting.com/v1/fcbq/getJsonWithMatchStats/68e2a8ac1c33a20001316262?currentSeason=true'
@@ -93,6 +105,7 @@ const TEAMS_CONFIG = {
     name: 'Senior Femení',
     icon: '🏀',
     keywords: ['badalones', 'corbacho'],
+    statsType: 'advanced',
     urls: [
       'https://msstats.optimalwayconsulting.com/v1/fcbq/getJsonWithMatchStats/68d92b028c9c3a0001345470?currentSeason=true',
       'https://msstats.optimalwayconsulting.com/v1/fcbq/getJsonWithMatchStats/68e2bd419163a800012e059a?currentSeason=true'
@@ -102,6 +115,7 @@ const TEAMS_CONFIG = {
     name: 'Senior B Masculí',
     icon: '🏀',
     keywords: ['badalones', 'corbacho'],
+    statsType: 'advanced',
     urls: [
       'https://msstats.optimalwayconsulting.com/v1/fcbq/getJsonWithMatchStats/68d96f2574669700015e123d?currentSeason=true',
       'https://msstats.optimalwayconsulting.com/v1/fcbq/getJsonWithMatchStats/68e1732f1c33a200013122ab?currentSeason=true'
@@ -111,6 +125,7 @@ const TEAMS_CONFIG = {
     name: 'Senior C Masculí',
     icon: '🏀',
     keywords: ['badalones', 'corbacho'],
+    statsType: 'advanced',
     urls: [
       'https://msstats.optimalwayconsulting.com/v1/fcbq/getJsonWithMatchStats/68d9554874669700015e0a3f?currentSeason=true',
       'https://msstats.optimalwayconsulting.com/v1/fcbq/getJsonWithMatchStats/68e1416d9163a800012d9bdf?currentSeason=true'
@@ -120,6 +135,7 @@ const TEAMS_CONFIG = {
     name: 'U20 Masculí',
     icon: '🏀',
     keywords: ['badalones', 'corbacho'],
+    statsType: 'advanced',
     urls: [
       'https://msstats.optimalwayconsulting.com/v1/fcbq/getJsonWithMatchStats/68d977198c9c3a000134679d?currentSeason=true',
       'https://msstats.optimalwayconsulting.com/v1/fcbq/getJsonWithMatchStats/68e15c079163a800012da843?currentSeason=true'
@@ -129,6 +145,7 @@ const TEAMS_CONFIG = {
     name: 'Cadet A Masculí',
     icon: '🏀',
     keywords: ['badalones', 'corbacho'],
+    statsType: 'advanced',
     urls: [
       'https://msstats.optimalwayconsulting.com/v1/fcbq/getJsonWithMatchStats/68e109131c33a2000130eb71?currentSeason=true'
     ]
@@ -137,9 +154,68 @@ const TEAMS_CONFIG = {
     name: 'Cadet B Masculí',
     icon: '🏀',
     keywords: ['badalones', 'corbacho'],
+    statsType: 'advanced',
     urls: [
       'https://msstats.optimalwayconsulting.com/v1/fcbq/getJsonWithMatchStats/68e2464d1c33a20001313d9d?currentSeason=true'
     ]
+  },
+  'infantil-fem': {
+    name: 'Infantil Femení',
+    icon: '🏀',
+    keywords: ['badalones', 'corbacho'],
+    statsType: 'basic', // Stats simplificades per categories de base
+    urls: []
+  },
+  'preinfantil-masc': {
+    name: 'Preinfantil Masculí',
+    icon: '⛹️',
+    keywords: ['badalones', 'corbacho'],
+    statsType: 'basic',
+    urls: [
+      'https://msstats.optimalwayconsulting.com/v1/fcbq/getJsonWithMatchStats/68e0f1e19163a800012d6fe2?currentSeason=true'
+    ]
+  },
+  'mini-negre-fem': {
+    name: 'Mini Negre Femení',
+    icon: '🏀',
+    keywords: ['badalones', 'corbacho'],
+    statsType: 'basic',
+    urls: []
+  },
+  'mini-vermell-fem': {
+    name: 'Mini Vermell Femení',
+    icon: '🏀',
+    keywords: ['badalones', 'corbacho'],
+    statsType: 'basic',
+    urls: []
+  },
+  'mini-masc': {
+    name: 'Mini Masculí',
+    icon: '⛹️',
+    keywords: ['badalones', 'corbacho'],
+    statsType: 'basic',
+    urls: []
+  },
+  'premini-negre-masc': {
+    name: 'Pre-Mini Negre Masculí',
+    icon: '🏀',
+    keywords: ['badalones', 'corbacho'],
+    statsType: 'basic',
+    urls: []
+  },
+  'premini-vermell-masc': {
+    name: 'Pre-Mini Vermell Masculí',
+    icon: '🏀',
+    keywords: ['badalones', 'corbacho'],
+    statsType: 'basic',
+    urls: []
+  },
+  'premini-fem': {
+    name: 'Pre-Mini Femení',
+    icon: '⛹️',
+    keywords: ['badalones', 'corbacho'],
+    statsType: 'basic',
+    urls: []
   }
 };
 
@@ -191,6 +267,7 @@ const App = () => {
         name: user.name,
         role: user.role,
         position: user.position,
+        profileImage: user.profileImage,
         teams: user.teams
       };
       
@@ -404,17 +481,52 @@ const App = () => {
           borderRadius: '10px',
           boxShadow: '0 2px 8px rgba(0,0,0,0.1)'
         }}>
-          <div>
-            <div style={{ fontSize: '18px', fontWeight: '700', color: '#1a1a1a' }}>
-              Benvingut, {currentUser.name}
-            </div>
-            <div style={{ 
-              fontSize: '13px', 
-              color: '#666', 
-              marginTop: '3px',
-              lineHeight: '1.4'
-            }}>
-              {currentUser.position}
+          <div style={{ display: 'flex', alignItems: 'center', gap: '15px' }}>
+            {currentUser.profileImage ? (
+              <img 
+                src={currentUser.profileImage} 
+                alt={currentUser.name}
+                style={{
+                  width: '60px',
+                  height: '60px',
+                  borderRadius: '50%',
+                  objectFit: 'cover',
+                  border: '3px solid #c41230',
+                  boxShadow: '0 2px 8px rgba(196, 18, 48, 0.3)'
+                }}
+                onError={(e) => {
+                  e.target.style.display = 'none';
+                }}
+              />
+            ) : (
+              <div style={{
+                width: '60px',
+                height: '60px',
+                borderRadius: '50%',
+                background: 'linear-gradient(135deg, #c41230 0%, #a00f26 100%)',
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'center',
+                color: 'white',
+                fontSize: '24px',
+                fontWeight: '700',
+                boxShadow: '0 2px 8px rgba(196, 18, 48, 0.3)'
+              }}>
+                {currentUser.name.charAt(0)}
+              </div>
+            )}
+            <div>
+              <div style={{ fontSize: '18px', fontWeight: '700', color: '#1a1a1a' }}>
+                Benvingut, {currentUser.name}
+              </div>
+              <div style={{ 
+                fontSize: '13px', 
+                color: '#666', 
+                marginTop: '3px',
+                lineHeight: '1.4'
+              }}>
+                {currentUser.position}
+              </div>
             </div>
           </div>
           <button
@@ -440,7 +552,7 @@ const App = () => {
           alt="AE Badalonès" 
           className="club-logo"
         />
-        <h1>Estadístiques AE Badalonès 2025-2026</h1>
+        <h1>Estadístiques AE Badalonès 2024-2025</h1>
         
         <div className="teams-grid">
           {Object.entries(availableTeams).map(([teamId, team]) => (
@@ -535,10 +647,13 @@ const App = () => {
               <span>{showEvolution ? "Ocultar Gràfics" : "Gràfics d'Evolució"}</span>
             </button>
 
-            <button className="player-stats-button" onClick={() => setShowTopQuintets(!showTopQuintets)}>
-              <span className="menu-icon">🏆</span>
-              <span>{showTopQuintets ? "Ocultar Top Quintets" : "Top Quintets"}</span>
-            </button>
+            {/* Només mostrar Top Quintets per equips amb statsType 'advanced' */}
+            {currentTeam.statsType === 'advanced' && (
+              <button className="player-stats-button" onClick={() => setShowTopQuintets(!showTopQuintets)}>
+                <span className="menu-icon">🏆</span>
+                <span>{showTopQuintets ? "Ocultar Top Quintets" : "Top Quintets"}</span>
+              </button>
+            )}
 
             <button className="stats-button" onClick={() => setShowExport(!showExport)}>
               <span className="menu-icon">📥</span>
@@ -551,7 +666,7 @@ const App = () => {
       {showStats && <StatsTable matches={matches} />}
       {showPlayerStats && <PlayerStatsByMatch matches={matches} />}
       {showEvolution && <PlayerEvolutionCharts matches={matches} />}
-      {showTopQuintets && <TopQuintetsAnalysis matches={matches} />}
+      {showTopQuintets && currentTeam.statsType === 'advanced' && <TopQuintetsAnalysis matches={matches} />}
       {showExport && <ExportReports matches={matches} teamName={currentTeam.name} />}
 
       {!selectedMatch ? (
@@ -565,7 +680,9 @@ const App = () => {
             Tornar a Partits
           </button>
           <PlayerList players={selectedMatch.players} />
-          <QuintetList quintetStats={getQuintetStats(selectedMatch)} />
+          {currentTeam.statsType === 'advanced' && (
+            <QuintetList quintetStats={getQuintetStats(selectedMatch)} />
+          )}
         </>
       )}
     </div>
