@@ -11,6 +11,58 @@ import TopQuintetsAnalysis from "./components/TopQuintetsAnalysis.jsx";
 import ExportReports from "./components/ExportReports.jsx";
 import './App.css';
 
+// ========== CONFIGURACIÓ D'USUARIS I PERMISOS ==========
+const USERS_CONFIG = {
+  'uri.entrena': {
+    password: 'uri2025',
+    name: 'Uri Entrena',
+    role: 'admin',
+    teams: 'all' // Accés a tots els equips
+  },
+  'juli.jimenez': {
+    password: 'juli2025',
+    name: 'Juli Jimenez',
+    role: 'coach',
+    teams: ['senior-a-masc', 'senior-b-masc']
+  },
+  'lluis.carreras': {
+    password: 'lluis2025',
+    name: 'Lluis Carreras',
+    role: 'coach',
+    teams: ['senior-a-masc', 'senior-b-masc']
+  },
+  'manel.padilla': {
+    password: 'manel2025',
+    name: 'Manel Padilla',
+    role: 'coach',
+    teams: ['senior-c-masc', 'u20-masc', 'senior-fem', 'cadet-a-masc']
+  },
+  'marc.funtane': {
+    password: 'marc2025',
+    name: 'Marc Funtané',
+    role: 'coach',
+    teams: ['senior-a-masc', 'senior-b-masc', 'senior-c-masc']
+  },
+  'jordi.serra': {
+    password: 'jordi2025',
+    name: 'Jordi Serra',
+    role: 'coach',
+    teams: ['senior-a-masc', 'senior-b-masc', 'senior-c-masc', 'u20-masc']
+  },
+  'carles.teixido': {
+    password: 'carles2025',
+    name: 'Carles Teixidó',
+    role: 'coach',
+    teams: ['senior-b-masc', 'senior-c-masc', 'u20-masc']
+  },
+  'alex.medialdea': {
+    password: 'alex2025',
+    name: 'Alex Medialdea',
+    role: 'coach',
+    teams: ['cadet-b-masc']
+  }
+};
+
 const TEAMS_CONFIG = {
   'senior-a-masc': {
     name: 'Senior A Masculí',
@@ -76,9 +128,14 @@ const TEAMS_CONFIG = {
 };
 
 const App = () => {
+  // Estats d'autenticació
   const [isAuthenticated, setIsAuthenticated] = useState(false);
+  const [currentUser, setCurrentUser] = useState(null);
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
+  const [loginError, setLoginError] = useState("");
+
+  // Estats de l'aplicació
   const [selectedTeam, setSelectedTeam] = useState(null);
   const [matches, setMatches] = useState([]);
   const [selectedMatch, setSelectedMatch] = useState(null);
@@ -89,16 +146,68 @@ const App = () => {
   const [showTopQuintets, setShowTopQuintets] = useState(false);
   const [showExport, setShowExport] = useState(false);
 
+  // ========== FUNCIONS D'AUTENTICACIÓ ==========
   const handleLogin = (e) => {
     e.preventDefault();
-    if (username === "admin" && password === "1234") {
+    setLoginError("");
+
+    const user = USERS_CONFIG[username.toLowerCase().trim()];
+
+    if (user && user.password === password) {
       setIsAuthenticated(true);
+      setCurrentUser({
+        username: username.toLowerCase().trim(),
+        name: user.name,
+        role: user.role,
+        teams: user.teams
+      });
     } else {
-      alert("Credencials incorrectes");
+      setLoginError("Usuari o contrasenya incorrectes");
     }
   };
 
+  const handleLogout = () => {
+    setIsAuthenticated(false);
+    setCurrentUser(null);
+    setUsername("");
+    setPassword("");
+    setSelectedTeam(null);
+    setSelectedMatch(null);
+    setMatches([]);
+    setShowPlayerStats(false);
+    setShowStats(false);
+    setShowEvolution(false);
+    setShowTopQuintets(false);
+    setShowExport(false);
+  };
+
+  // ========== CONTROL D'ACCÉS ==========
+  const hasAccessToTeam = (teamId) => {
+    if (!currentUser) return false;
+    if (currentUser.teams === 'all') return true;
+    return currentUser.teams.includes(teamId);
+  };
+
+  const getAvailableTeams = () => {
+    if (!currentUser) return {};
+    if (currentUser.teams === 'all') return TEAMS_CONFIG;
+
+    const availableTeams = {};
+    currentUser.teams.forEach(teamId => {
+      if (TEAMS_CONFIG[teamId]) {
+        availableTeams[teamId] = TEAMS_CONFIG[teamId];
+      }
+    });
+    return availableTeams;
+  };
+
+  // ========== HANDLERS ==========
   const handleSelectTeam = async (teamId) => {
+    if (!hasAccessToTeam(teamId)) {
+      alert('No tens accés a aquest equip');
+      return;
+    }
+
     const team = TEAMS_CONFIG[teamId];
     
     if (team.urls.length === 0) {
@@ -147,6 +256,7 @@ const App = () => {
     setShowExport(false);
   };
 
+  // ========== PANTALLA DE LOGIN ==========
   if (!isAuthenticated) {
     return (
       <div className="login-wrapper">
@@ -163,8 +273,12 @@ const App = () => {
               <input
                 type="text"
                 value={username}
-                onChange={(e) => setUsername(e.target.value)}
-                placeholder="Escriu el teu usuari"
+                onChange={(e) => {
+                  setUsername(e.target.value);
+                  setLoginError("");
+                }}
+                placeholder="nom.cognom"
+                autoComplete="username"
               />
             </div>
             <div className="input-group">
@@ -172,10 +286,25 @@ const App = () => {
               <input
                 type="password"
                 value={password}
-                onChange={(e) => setPassword(e.target.value)}
+                onChange={(e) => {
+                  setPassword(e.target.value);
+                  setLoginError("");
+                }}
                 placeholder="Escriu la contrasenya"
+                autoComplete="current-password"
               />
             </div>
+            {loginError && (
+              <div style={{
+                color: '#c41230',
+                fontSize: '14px',
+                marginTop: '10px',
+                textAlign: 'center',
+                fontWeight: '600'
+              }}>
+                {loginError}
+              </div>
+            )}
             <button className="login-button" type="submit">
               Entrar
             </button>
@@ -185,9 +314,48 @@ const App = () => {
     );
   }
 
+  const availableTeams = getAvailableTeams();
+
+  // ========== PANTALLA DE SELECCIÓ D'EQUIPS ==========
   if (!selectedTeam) {
     return (
       <div className="app">
+        <div style={{
+          display: 'flex',
+          justifyContent: 'space-between',
+          alignItems: 'center',
+          marginBottom: '20px',
+          padding: '15px 20px',
+          background: 'white',
+          borderRadius: '10px',
+          boxShadow: '0 2px 8px rgba(0,0,0,0.1)'
+        }}>
+          <div>
+            <div style={{ fontSize: '18px', fontWeight: '700', color: '#1a1a1a' }}>
+              {currentUser.name}
+            </div>
+            <div style={{ fontSize: '13px', color: '#666', marginTop: '3px' }}>
+              {currentUser.role === 'admin' ? 'Administrador' : 'Entrenador'}
+            </div>
+          </div>
+          <button
+            onClick={handleLogout}
+            style={{
+              padding: '10px 20px',
+              background: '#c41230',
+              color: 'white',
+              border: 'none',
+              borderRadius: '8px',
+              cursor: 'pointer',
+              fontSize: '14px',
+              fontWeight: '600',
+              transition: 'all 0.3s'
+            }}
+          >
+            Tancar Sessió
+          </button>
+        </div>
+
         <img 
           src="https://i.imghippo.com/files/XfcX1130LYo.png" 
           alt="AE Badalonès" 
@@ -196,7 +364,7 @@ const App = () => {
         <h1>Estadístiques AE Badalonès 2024-2025</h1>
         
         <div className="teams-grid">
-          {Object.entries(TEAMS_CONFIG).map(([teamId, team]) => (
+          {Object.entries(availableTeams).map(([teamId, team]) => (
             <button
               key={teamId}
               onClick={() => handleSelectTeam(teamId)}
@@ -217,12 +385,24 @@ const App = () => {
             </button>
           ))}
         </div>
+
+        {Object.keys(availableTeams).length === 0 && (
+          <div style={{
+            textAlign: 'center',
+            padding: '40px',
+            color: '#666',
+            fontSize: '16px'
+          }}>
+            No tens accés a cap equip
+          </div>
+        )}
       </div>
     );
   }
 
   const currentTeam = TEAMS_CONFIG[selectedTeam];
 
+  // ========== PANTALLA DE LOADING ==========
   if (loading) {
     return (
       <div className="app">
@@ -234,6 +414,7 @@ const App = () => {
     );
   }
 
+  // ========== PANTALLA PRINCIPAL AMB ESTADÍSTIQUES ==========
   return (
     <div className="app">
       <div className="team-header">
@@ -248,7 +429,12 @@ const App = () => {
           />
           {currentTeam.name}
         </h1>
-        <div className="team-header-spacer"></div>
+        <button
+          onClick={handleLogout}
+          className="team-header-button"
+        >
+          Tancar Sessió
+        </button>
       </div>
 
       {!selectedMatch && (
