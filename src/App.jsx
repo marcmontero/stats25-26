@@ -18,6 +18,7 @@ const USERS_CONFIG = {
     name: 'Uri Entrena',
     role: 'admin',
     position: 'Director Tècnic',
+    profileImage: '', // Afegeix la URL aquí
     teams: 'all' // Accés a tots els equips
   },
   'juli.jimenez': {
@@ -25,6 +26,7 @@ const USERS_CONFIG = {
     name: 'Juli Jimenez',
     role: 'coach',
     position: 'Entrenador Senior A Masculí',
+    profileImage: '', // Afegeix la URL aquí
     teams: ['senior-a-masc', 'senior-b-masc']
   },
   'lluis.carreras': {
@@ -32,6 +34,7 @@ const USERS_CONFIG = {
     name: 'Lluis Carreras',
     role: 'coach',
     position: 'Ajudant Senior A Masculí',
+    profileImage: '', // Afegeix la URL aquí
     teams: ['senior-a-masc', 'senior-b-masc']
   },
   'manel.padilla': {
@@ -39,6 +42,7 @@ const USERS_CONFIG = {
     name: 'Manel Padilla',
     role: 'coach',
     position: 'Entrenador Senior Femení, U20 Masculí i Cadet A Masculí',
+    profileImage: '', // Afegeix la URL aquí
     teams: ['senior-c-masc', 'u20-masc', 'senior-fem', 'cadet-a-masc']
   },
   'marc.funtane': {
@@ -46,6 +50,7 @@ const USERS_CONFIG = {
     name: 'Marc Funtané',
     role: 'coach',
     position: 'Entrenador Senior B Masculí',
+    profileImage: '/img/funtane.png', // Afegeix la URL aquí
     teams: ['senior-a-masc', 'senior-b-masc', 'senior-c-masc']
   },
   'jordi.serra': {
@@ -53,6 +58,7 @@ const USERS_CONFIG = {
     name: 'Jordi Serra',
     role: 'coach',
     position: 'Ajudant Senior B Masculí i Senior C Masculí',
+    profileImage: '', // Afegeix la URL aquí
     teams: ['senior-a-masc', 'senior-b-masc', 'senior-c-masc', 'u20-masc']
   },
   'carles.teixido': {
@@ -60,6 +66,7 @@ const USERS_CONFIG = {
     name: 'Carles Teixidó',
     role: 'coach',
     position: 'Entrenador Senior C Masculí',
+    profileImage: '', // Afegeix la URL aquí
     teams: ['senior-b-masc', 'senior-c-masc', 'u20-masc']
   },
   'alex.medialdea': {
@@ -67,6 +74,7 @@ const USERS_CONFIG = {
     name: 'Alex Medialdea',
     role: 'coach',
     position: 'Entrenador Cadet B Masculí',
+    profileImage: '', // Afegeix la URL aquí
     teams: ['cadet-b-masc']
   }
 };
@@ -519,7 +527,7 @@ const App = () => {
 
             <button className="player-stats-button" onClick={() => setShowPlayerStats(!showPlayerStats)}>
               <span className="menu-icon">👤</span>
-              <span>{showPlayerStats ? "Ocultar Stats Jugador" : "Stats per Jugador"}</span>
+              <span>{showPlayerStats ? "Ocultar Stats Jugadora" : "Stats per Jugadora"}</span>
             </button>
 
             <button className="stats-button" onClick={() => setShowEvolution(!showEvolution)}>
