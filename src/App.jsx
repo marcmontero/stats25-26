@@ -14,14 +14,7 @@ import './App.css';
 
 // Importar imatges de perfil (si estan a src/img/)
 // Si les imatges NO existeixen, comenta aquestes línies
-import entrenaImg from './img/entrena.png';
-import jimenezImg from './img/jimenez.png';
-import carrerasImg from './img/carreras.png';
-import padillaImg from './img/padilla.png';
-import funtaneImg from './img/funtane.png';
-import serraImg from './img/serra.png';
-import teixidoImg from './img/teixido.png';
-import medialdeaImg from './img/medialdea.png';
+
 
 // ========== CONFIGURACIÓ D'USUARIS I PERMISOS ==========
 const USERS_CONFIG = {
@@ -30,7 +23,7 @@ const USERS_CONFIG = {
     name: 'Uri Entrena',
     role: 'admin',
     position: 'Director Tècnic',
-    profileImage: entrenaImg, // Importada des de src/img/
+    profileImage: '', // Importada des de src/img/
     teams: 'all'
   },
   'juli.jimenez': {
@@ -38,7 +31,7 @@ const USERS_CONFIG = {
     name: 'Juli Jimenez',
     role: 'coach',
     position: 'Entrenador Senior A Masculí',
-    profileImage: jimenezImg,
+    profileImage: '',
     teams: ['senior-a-masc', 'senior-b-masc']
   },
   'lluis.carreras': {
@@ -46,7 +39,7 @@ const USERS_CONFIG = {
     name: 'Lluis Carreras',
     role: 'coach',
     position: 'Ajudant Senior A Masculí',
-    profileImage: carrerasImg,
+    profileImage: '',
     teams: ['senior-a-masc', 'senior-b-masc']
   },
   'manel.padilla': {
@@ -54,7 +47,7 @@ const USERS_CONFIG = {
     name: 'Manel Padilla',
     role: 'coach',
     position: 'Entrenador Senior Femení, U20 Masculí i Cadet A Masculí',
-    profileImage: padillaImg,
+    profileImage: '',
     teams: ['senior-c-masc', 'u20-masc', 'senior-fem', 'cadet-a-masc']
   },
   'marc.funtane': {
@@ -62,7 +55,7 @@ const USERS_CONFIG = {
     name: 'Marc Funtané',
     role: 'coach',
     position: 'Entrenador Senior B Masculí',
-    profileImage: funtaneImg,
+    profileImage: '',
     teams: ['senior-a-masc', 'senior-b-masc', 'senior-c-masc']
   },
   'jordi.serra': {
@@ -70,7 +63,7 @@ const USERS_CONFIG = {
     name: 'Jordi Serra',
     role: 'coach',
     position: 'Ajudant Senior B Masculí i Senior C Masculí',
-    profileImage: serraImg,
+    profileImage: '',
     teams: ['senior-a-masc', 'senior-b-masc', 'senior-c-masc', 'u20-masc']
   },
   'carles.teixido': {
@@ -78,7 +71,7 @@ const USERS_CONFIG = {
     name: 'Carles Teixidó',
     role: 'coach',
     position: 'Entrenador Senior C Masculí',
-    profileImage: teixidoImg,
+    profileImage: '',
     teams: ['senior-b-masc', 'senior-c-masc', 'u20-masc']
   },
   'alex.medialdea': {
@@ -86,7 +79,7 @@ const USERS_CONFIG = {
     name: 'Alex Medialdea',
     role: 'coach',
     position: 'Entrenador Cadet B Masculí',
-    profileImage: medialdeaImg,
+    profileImage: '',
     teams: ['cadet-b-masc']
   }
 };
