@@ -519,7 +519,7 @@ const App = () => {
 
             <button className="player-stats-button" onClick={() => setShowPlayerStats(!showPlayerStats)}>
               <span className="menu-icon">👤</span>
-              <span>{showPlayerStats ? "Ocultar Stats Jugadora" : "Stats per Jugadora"}</span>
+              <span>{showPlayerStats ? "Ocultar Stats Jugador" : "Stats per Jugador"}</span>
             </button>
 
             <button className="stats-button" onClick={() => setShowEvolution(!showEvolution)}>
