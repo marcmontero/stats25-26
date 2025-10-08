@@ -3,6 +3,7 @@ import { fetchStats } from './api/fechStats.js';
 import PlayerList from './components/playerList.jsx';
 import MatchSelector from './components/matchSelector.jsx';
 import QuintetList from './components/QuintetList.jsx';
+import BasicMatchView from './components/BasicMatchView.jsx';
 import { getQuintetStats } from './utils/QuintetStats.jsx';
 import StatsTable from "./components/StatsTables.jsx";
 import PlayerStatsByMatch from "./components/PlayerStatsByMatch.jsx";

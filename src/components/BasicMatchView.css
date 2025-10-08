@@ -1,0 +1,299 @@
+/* ========== CONTENIDOR PRINCIPAL ========== */
+.basic-match-container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* ========== SECCIONS ========== */
+.boxscore-section,
+.quarters-grid-section {
+  background: white;
+  border-radius: 12px;
+  padding: 30px;
+  margin-bottom: 30px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  border-top: 4px solid #c41230;
+}
+
+.boxscore-section h2,
+.quarters-grid-section h2 {
+  color: #1a1a1a;
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: 25px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* ========== WRAPPERS PER SCROLL ========== */
+.boxscore-table-wrapper,
+.quarters-table-wrapper {
+  overflow-x: auto;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+/* ========== TAULES - ESTIL BASE ========== */
+.boxscore-table,
+.quarters-table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif;
+  font-size: 14px;
+}
+
+/* ========== HEADERS ========== */
+.boxscore-table thead,
+.quarters-table thead {
+  background: linear-gradient(135deg, #c41230 0%, #a00f26 100%);
+  color: white;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.boxscore-table th,
+.quarters-table th {
+  padding: 12px 10px;
+  text-align: center;
+  font-weight: 700;
+  font-size: 13px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  border-right: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.boxscore-table th:first-child,
+.quarters-table th:first-child {
+  border-top-left-radius: 8px;
+}
+
+.boxscore-table th:last-child,
+.quarters-table th:last-child {
+  border-top-right-radius: 8px;
+  border-right: none;
+}
+
+/* ========== COLUMNES ESPECÍFIQUES ========== */
+.player-column {
+  text-align: left !important;
+  min-width: 200px;
+  padding-left: 20px !important;
+}
+
+.dorsal-column {
+  min-width: 80px;
+}
+
+.quarter-column {
+  min-width: 50px;
+  width: 50px;
+}
+
+/* ========== FILES DE DADES ========== */
+.boxscore-table tbody tr,
+.quarters-table tbody tr {
+  border-bottom: 1px solid #e5e5e5;
+  transition: all 0.2s ease;
+}
+
+.boxscore-table tbody tr:hover,
+.quarters-table tbody tr:hover {
+  background-color: #fff5f5;
+  cursor: pointer;
+}
+
+.boxscore-table tbody tr:nth-child(even),
+.quarters-table tbody tr:nth-child(even) {
+  background-color: #fafafa;
+}
+
+.boxscore-table tbody tr:nth-child(even):hover,
+.quarters-table tbody tr:nth-child(even):hover {
+  background-color: #fff5f5;
+}
+
+/* ========== CEL·LES ========== */
+.boxscore-table td,
+.quarters-table td {
+  padding: 10px;
+  text-align: center;
+  font-size: 13px;
+  color: #333;
+  border-bottom: 1px solid #e5e5e5;
+}
+
+/* ========== DORSAL ========== */
+.dorsal-cell {
+  font-weight: bold;
+  font-size: 15px;
+  background: linear-gradient(135deg, #c41230 0%, #a00f26 100%);
+  color: white !important;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+  min-width: 60px;
+  width: 60px;
+}
+
+.dorsal-cell-grid {
+  font-weight: 700;
+  font-size: 16px;
+  color: #c41230;
+  min-width: 80px;
+}
+
+/* ========== NOM DEL JUGADOR ========== */
+.player-name-cell {
+  text-align: left !important;
+  padding-left: 15px !important;
+  font-weight: 600;
+  color: #1a1a1a;
+  font-size: 14px;
+  white-space: nowrap;
+}
+
+/* ========== BADGE CAPITÀ ========== */
+.captain-badge {
+  display: inline-block;
+  background: #c41230;
+  color: white;
+  font-size: 10px;
+  font-weight: 700;
+  padding: 2px 6px;
+  border-radius: 4px;
+  margin-left: 8px;
+  vertical-align: middle;
+}
+
+/* ========== PUNTS DESTACATS ========== */
+.points-cell {
+  font-weight: 700;
+  font-size: 16px;
+  color: #c41230;
+  background-color: #fff5f5;
+}
+
+/* ========== TITULAR ========== */
+.titular-row {
+  background-color: #fff0f0 !important;
+  border-left: 4px solid #c41230;
+  font-weight: 600;
+}
+
+.titular-row:hover {
+  background-color: #ffe5e5 !important;
+}
+
+/* ========== GRAELLA DE QUARTS ========== */
+.quarter-cell {
+  font-size: 18px;
+  font-weight: 700;
+  padding: 8px !important;
+  width: 50px;
+  min-width: 50px;
+  max-width: 50px;
+}
+
+.played-mark {
+  color: #c41230;
+  font-size: 20px;
+  font-weight: 700;
+  display: inline-block;
+}
+
+.not-played {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+}
+
+/* ========== RESPONSIVE ========== */
+@media (max-width: 1024px) {
+  .basic-match-container {
+    padding: 15px;
+  }
+
+  .boxscore-section,
+  .quarters-grid-section {
+    padding: 20px 15px;
+    overflow-x: auto;
+  }
+
+  .boxscore-table,
+  .quarters-table {
+    min-width: 800px;
+  }
+}
+
+@media (max-width: 768px) {
+  .basic-match-container {
+    padding: 10px;
+  }
+
+  .boxscore-section h2,
+  .quarters-grid-section h2 {
+    font-size: 20px;
+  }
+
+  .boxscore-table,
+  .quarters-table {
+    font-size: 12px;
+  }
+
+  .boxscore-table th,
+  .quarters-table th {
+    font-size: 11px;
+    padding: 10px 6px;
+  }
+
+  .boxscore-table td,
+  .quarters-table td {
+    font-size: 12px;
+    padding: 8px 5px;
+  }
+
+  .player-name-cell {
+    font-size: 12px;
+  }
+
+  .quarter-column {
+    min-width: 40px;
+    width: 40px;
+  }
+
+  .quarter-cell {
+    width: 40px;
+    min-width: 40px;
+    max-width: 40px;
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .boxscore-section,
+  .quarters-grid-section {
+    padding: 15px 10px;
+  }
+
+  .boxscore-section h2,
+  .quarters-grid-section h2 {
+    font-size: 18px;
+  }
+
+  .boxscore-table,
+  .quarters-table {
+    font-size: 11px;
+  }
+
+  .quarter-column {
+    min-width: 35px;
+    width: 35px;
+  }
+
+  .quarter-cell {
+    width: 35px;
+    min-width: 35px;
+    max-width: 35px;
+  }
+}
