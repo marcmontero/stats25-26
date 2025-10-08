@@ -490,8 +490,8 @@ const App = () => {
                 src={currentUser.profileImage} 
                 alt={currentUser.name}
                 style={{
-                  width: '60px',
-                  height: '60px',
+                  width: '100px',
+                  height: '100px',
                   borderRadius: '50%',
                   objectFit: 'cover',
                   border: '3px solid #c41230',
