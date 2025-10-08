@@ -17,48 +17,56 @@ const USERS_CONFIG = {
     password: 'uri2025',
     name: 'Uri Entrena',
     role: 'admin',
+    position: 'Director Tècnic',
     teams: 'all' // Accés a tots els equips
   },
   'juli.jimenez': {
     password: 'juli2025',
     name: 'Juli Jimenez',
     role: 'coach',
+    position: 'Entrenador Senior A Masculí',
     teams: ['senior-a-masc', 'senior-b-masc']
   },
   'lluis.carreras': {
     password: 'lluis2025',
     name: 'Lluis Carreras',
     role: 'coach',
+    position: 'Ajudant Senior A Masculí',
     teams: ['senior-a-masc', 'senior-b-masc']
   },
   'manel.padilla': {
     password: 'manel2025',
     name: 'Manel Padilla',
     role: 'coach',
+    position: 'Entrenador Senior Femení, U20 Masculí i Cadet A Masculí',
     teams: ['senior-c-masc', 'u20-masc', 'senior-fem', 'cadet-a-masc']
   },
   'marc.funtane': {
     password: 'marc2025',
     name: 'Marc Funtané',
     role: 'coach',
+    position: 'Entrenador Senior B Masculí',
     teams: ['senior-a-masc', 'senior-b-masc', 'senior-c-masc']
   },
   'jordi.serra': {
     password: 'jordi2025',
     name: 'Jordi Serra',
     role: 'coach',
+    position: 'Ajudant Senior B Masculí i Senior C Masculí',
     teams: ['senior-a-masc', 'senior-b-masc', 'senior-c-masc', 'u20-masc']
   },
   'carles.teixido': {
     password: 'carles2025',
     name: 'Carles Teixidó',
     role: 'coach',
+    position: 'Entrenador Senior C Masculí',
     teams: ['senior-b-masc', 'senior-c-masc', 'u20-masc']
   },
   'alex.medialdea': {
     password: 'alex2025',
     name: 'Alex Medialdea',
     role: 'coach',
+    position: 'Entrenador Cadet B Masculí',
     teams: ['cadet-b-masc']
   }
 };
@@ -134,6 +142,7 @@ const App = () => {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
   const [loginError, setLoginError] = useState("");
+  const [rememberMe, setRememberMe] = useState(false);
 
   // Estats de l'aplicació
   const [selectedTeam, setSelectedTeam] = useState(null);
@@ -146,6 +155,21 @@ const App = () => {
   const [showTopQuintets, setShowTopQuintets] = useState(false);
   const [showExport, setShowExport] = useState(false);
 
+  // ========== EFECTE PER RECUPERAR SESSIÓ ==========
+  React.useEffect(() => {
+    const savedUser = localStorage.getItem('badalones_user');
+    if (savedUser) {
+      try {
+        const userData = JSON.parse(savedUser);
+        setIsAuthenticated(true);
+        setCurrentUser(userData);
+      } catch (error) {
+        console.error('Error al recuperar sessió:', error);
+        localStorage.removeItem('badalones_user');
+      }
+    }
+  }, []);
+
   // ========== FUNCIONS D'AUTENTICACIÓ ==========
   const handleLogin = (e) => {
     e.preventDefault();
@@ -154,13 +178,21 @@ const App = () => {
     const user = USERS_CONFIG[username.toLowerCase().trim()];
 
     if (user && user.password === password) {
-      setIsAuthenticated(true);
-      setCurrentUser({
+      const userData = {
         username: username.toLowerCase().trim(),
         name: user.name,
         role: user.role,
+        position: user.position,
         teams: user.teams
-      });
+      };
+      
+      setIsAuthenticated(true);
+      setCurrentUser(userData);
+      
+      // Guardar a localStorage si l'usuari ha marcat "Recordar-me"
+      if (rememberMe) {
+        localStorage.setItem('badalones_user', JSON.stringify(userData));
+      }
     } else {
       setLoginError("Usuari o contrasenya incorrectes");
     }
@@ -179,6 +211,9 @@ const App = () => {
     setShowEvolution(false);
     setShowTopQuintets(false);
     setShowExport(false);
+    
+    // Eliminar de localStorage
+    localStorage.removeItem('badalones_user');
   };
 
   // ========== CONTROL D'ACCÉS ==========
@@ -294,6 +329,37 @@ const App = () => {
                 autoComplete="current-password"
               />
             </div>
+            <div style={{
+              display: 'flex',
+              alignItems: 'center',
+              gap: '8px',
+              marginTop: '15px',
+              marginBottom: '10px'
+            }}>
+              <input
+                type="checkbox"
+                id="rememberMe"
+                checked={rememberMe}
+                onChange={(e) => setRememberMe(e.target.checked)}
+                style={{
+                  width: '18px',
+                  height: '18px',
+                  cursor: 'pointer',
+                  accentColor: '#c41230'
+                }}
+              />
+              <label 
+                htmlFor="rememberMe"
+                style={{
+                  fontSize: '14px',
+                  color: '#555',
+                  cursor: 'pointer',
+                  userSelect: 'none'
+                }}
+              >
+                Recordar la meva sessió
+              </label>
+            </div>
             {loginError && (
               <div style={{
                 color: '#c41230',
@@ -332,10 +398,15 @@ const App = () => {
         }}>
           <div>
             <div style={{ fontSize: '18px', fontWeight: '700', color: '#1a1a1a' }}>
-              {currentUser.name}
+              Benvingut, {currentUser.name}
             </div>
-            <div style={{ fontSize: '13px', color: '#666', marginTop: '3px' }}>
-              {currentUser.role === 'admin' ? 'Administrador' : 'Entrenador'}
+            <div style={{ 
+              fontSize: '13px', 
+              color: '#666', 
+              marginTop: '3px',
+              lineHeight: '1.4'
+            }}>
+              {currentUser.position}
             </div>
           </div>
           <button
