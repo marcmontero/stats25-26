@@ -102,7 +102,7 @@ const TEAMS_CONFIG = {
     urls: [
       'https://msstats.optimalwayconsulting.com/v1/fcbq/getJsonWithMatchStats/68d837bf74669700015de350?currentSeason=true',
       'https://msstats.optimalwayconsulting.com/v1/fcbq/getJsonWithMatchStats/68e2a8ac1c33a20001316262?currentSeason=true',
-      'https://msstats.optimalwayconsulting.com/v1/fcbq/getJsonWithMatchMoves/68eaad84891381000122f075?currentSeason=true'
+      'https://msstats.optimalwayconsulting.com/v1/fcbq/getJsonWithMatchStats/68eaad84891381000122f075?currentSeason=true'
     ]
   },
   'senior-fem': {
@@ -123,7 +123,7 @@ const TEAMS_CONFIG = {
     urls: [
       'https://msstats.optimalwayconsulting.com/v1/fcbq/getJsonWithMatchStats/68d96f2574669700015e123d?currentSeason=true',
       'https://msstats.optimalwayconsulting.com/v1/fcbq/getJsonWithMatchStats/68e1732f1c33a200013122ab?currentSeason=true',
-      'https://msstats.optimalwayconsulting.com/v1/fcbq/getJsonWithMatchMoves/68ebe3fc941d0d00012ab2a6?currentSeason=true'
+      'https://msstats.optimalwayconsulting.com/v1/fcbq/getJsonWithMatchStats/68ebe3fc941d0d00012ab2a6?currentSeason=true'
     ]
   },
   'senior-c-masc': {
@@ -134,7 +134,7 @@ const TEAMS_CONFIG = {
     urls: [
       'https://msstats.optimalwayconsulting.com/v1/fcbq/getJsonWithMatchStats/68d9554874669700015e0a3f?currentSeason=true',
       'https://msstats.optimalwayconsulting.com/v1/fcbq/getJsonWithMatchStats/68e1416d9163a800012d9bdf?currentSeason=true',
-      'https://msstats.optimalwayconsulting.com/v1/fcbq/getJsonWithMatchMoves/68ebca032ea75e0001d073d7?currentSeason=true'
+      'https://msstats.optimalwayconsulting.com/v1/fcbq/getJsonWithMatchStats/68ebca032ea75e0001d073d7?currentSeason=true'
     ]
   },
   'u20-masc': {
