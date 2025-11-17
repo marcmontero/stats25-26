@@ -105,7 +105,8 @@ const TEAMS_CONFIG = {
       'https://msstats.optimalwayconsulting.com/v1/fcbq/getJsonWithMatchStats/68eaad84891381000122f075?currentSeason=true',
       'https://msstats.optimalwayconsulting.com/v1/fcbq/getJsonWithMatchStats/68f3f2c39ebdaf000182d13a?currentSeason=true',
       'https://msstats.optimalwayconsulting.com/v1/fcbq/getJsonWithMatchStats/68fd22f101d7c6000167d505?currentSeason=true',
-      'https://msstats.optimalwayconsulting.com/v1/fcbq/getJsonWithMatchStats/6910d6b3530d2e0001540b97?currentSeason=true'
+      'https://msstats.optimalwayconsulting.com/v1/fcbq/getJsonWithMatchStats/6910d6b3530d2e0001540b97?currentSeason=true',
+      'https://msstats.optimalwayconsulting.com/v1/fcbq/getJsonWithMatchStats/6918e1e05ac4ad0001771ed0?currentSeason=true'
     ]
   },
   'senior-fem': {
@@ -133,7 +134,8 @@ const TEAMS_CONFIG = {
       'https://msstats.optimalwayconsulting.com/v1/fcbq/getJsonWithMatchStats/68ebe3fc941d0d00012ab2a6?currentSeason=true',
       'https://msstats.optimalwayconsulting.com/v1/fcbq/getJsonWithMatchStats/68f400f9104e420001aea222?currentSeason=true',
       'https://msstats.optimalwayconsulting.com/v1/fcbq/getJsonWithMatchStats/68fe665201d7c6000112137d?currentSeason=true',
-      'https://msstats.optimalwayconsulting.com/v1/fcbq/getJsonWithMatchStats/690f839c530d2e000153a090?currentSeason=true'
+      'https://msstats.optimalwayconsulting.com/v1/fcbq/getJsonWithMatchStats/690f839c530d2e000153a090?currentSeason=true',
+      'https://msstats.optimalwayconsulting.com/v1/fcbq/getJsonWithMatchStats/691a14f1edca8300012f183f?currentSeason=true'
     ]
   },
   'senior-c-masc': {
@@ -146,7 +148,8 @@ const TEAMS_CONFIG = {
       'https://msstats.optimalwayconsulting.com/v1/fcbq/getJsonWithMatchStats/68e1416d9163a800012d9bdf?currentSeason=true',
       'https://msstats.optimalwayconsulting.com/v1/fcbq/getJsonWithMatchStats/68ebca032ea75e0001d073d7?currentSeason=true',
       'https://msstats.optimalwayconsulting.com/v1/fcbq/getJsonWithMatchStats/68fe4bf81497f2000188f646?currentSeason=true',
-      'https://msstats.optimalwayconsulting.com/v1/fcbq/getJsonWithMatchStats/690fa80cfa539d0001a23769?currentSeason=true'
+      'https://msstats.optimalwayconsulting.com/v1/fcbq/getJsonWithMatchStats/690fa80cfa539d0001a23769?currentSeason=true',
+      'https://msstats.optimalwayconsulting.com/v1/fcbq/getJsonWithMatchStats/6918dc705ac4ad0001771baa?currentSeason=true'
     ]
   },
   'u20-masc': {
@@ -191,7 +194,9 @@ const TEAMS_CONFIG = {
     keywords: ['badalones', 'corbacho'],
     statsType: 'basic',
     urls: [
-      'https://msstats.optimalwayconsulting.com/v1/fcbq/getJsonWithMatchStats/68e0f1e19163a800012d6fe2?currentSeason=true'
+      'https://msstats.optimalwayconsulting.com/v1/fcbq/getJsonWithMatchStats/68e0f1e19163a800012d6fe2?currentSeason=true',
+      'https://msstats.optimalwayconsulting.com/v1/fcbq/getJsonWithMatchStats/6919adfc5ac4ad000177450e?currentSeason=true',
+      'https://msstats.optimalwayconsulting.com/v1/fcbq/getJsonWithMatchStats/6919cbc75ac4ad0001775f3f?currentSeason=true'
     ]
   },
   'mini-negre-fem': {
