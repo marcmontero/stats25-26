@@ -106,7 +106,8 @@ const TEAMS_CONFIG = {
       'https://msstats.optimalwayconsulting.com/v1/fcbq/getJsonWithMatchStats/68f3f2c39ebdaf000182d13a?currentSeason=true',
       'https://msstats.optimalwayconsulting.com/v1/fcbq/getJsonWithMatchStats/68fd22f101d7c6000167d505?currentSeason=true',
       'https://msstats.optimalwayconsulting.com/v1/fcbq/getJsonWithMatchStats/6910d6b3530d2e0001540b97?currentSeason=true',
-      'https://msstats.optimalwayconsulting.com/v1/fcbq/getJsonWithMatchStats/6918e1e05ac4ad0001771ed0?currentSeason=true'
+      'https://msstats.optimalwayconsulting.com/v1/fcbq/getJsonWithMatchStats/6918e1e05ac4ad0001771ed0?currentSeason=true',
+      'https://msstats.optimalwayconsulting.com/v1/fcbq/getJsonWithMatchStats/69236e1b5ac4ad0001792697?currentSeason=true'
     ]
   },
   'senior-fem': {
