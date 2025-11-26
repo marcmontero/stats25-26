@@ -1,0 +1,371 @@
+/* ========== CONTENIDOR PRINCIPAL ========== */
+.quarters-analysis-container {
+  text-align: center;
+  margin: 30px auto;
+  width: 95%;
+  max-width: 1400px;
+  background: white;
+  border-radius: 12px;
+  padding: 35px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  border-top: 4px solid #c41230;
+}
+
+.quarters-analysis-container h2 {
+  color: #1a1a1a;
+  font-size: 26px;
+  font-weight: 700;
+  margin-bottom: 30px;
+  text-transform: uppercase;
+  letter-spacing: 1.2px;
+  position: relative;
+  padding-bottom: 15px;
+}
+
+.quarters-analysis-container h2::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60px;
+  height: 3px;
+  background: #c41230;
+  border-radius: 2px;
+}
+
+/* ========== RESUM SUPERIOR ========== */
+.quarters-summary-top {
+  background: linear-gradient(135deg, #f8f8f8 0%, #f0f0f0 100%);
+  border-radius: 12px;
+  padding: 25px;
+  margin-bottom: 35px;
+  border-left: 5px solid #c41230;
+}
+
+.summary-row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.summary-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+}
+
+.summary-item-label {
+  font-size: 12px;
+  color: #666;
+  text-transform: uppercase;
+  font-weight: 600;
+  letter-spacing: 0.8px;
+}
+
+.summary-item-value {
+  font-size: 32px;
+  font-weight: 700;
+  font-family: 'Courier New', monospace;
+  color: #1a1a1a;
+}
+
+.summary-item-value.positive {
+  color: #ffffff;
+}
+
+.summary-item-value.negative {
+  color: #ffffff;
+}
+
+.summary-divider {
+  width: 2px;
+  height: 60px;
+  background: #d0d0d0;
+}
+
+/* ========== GRID DE QUARTS ========== */
+.quarters-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  margin-bottom: 0;
+}
+
+/* ========== TARGETA DE CADA QUART ========== */
+.quarter-card {
+  background: white;
+  border: 2px solid #e0e0e0;
+  border-radius: 12px;
+  padding: 20px 15px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.quarter-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: #c41230;
+}
+
+.quarter-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 20px rgba(196, 18, 48, 0.15);
+  border-color: #c41230;
+}
+
+/* ========== HEADER DEL QUART ========== */
+.quarter-header {
+  text-align: center;
+  margin-bottom: 18px;
+  padding-bottom: 15px;
+  border-bottom: 2px solid #f0f0f0;
+}
+
+.quarter-header h3 {
+  color: #1a1a1a;
+  font-size: 16px;
+  font-weight: 700;
+  margin: 0 0 12px 0;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+}
+
+/* ========== PUNTUACIÓ DEL QUART ========== */
+.quarter-score {
+  display: inline-block;
+  font-size: 20px;
+  font-weight: 700;
+  padding: 10px 20px;
+  border-radius: 8px;
+  font-family: 'Courier New', monospace;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  letter-spacing: 1px;
+}
+
+.quarter-score.positive {
+  background: linear-gradient(135deg, #28a745 0%, #20c997 100%);
+  color: white;
+}
+
+.quarter-score.negative {
+  background: linear-gradient(135deg, #dc3545 0%, #e74c3c 100%);
+  color: white;
+}
+
+/* ========== MÉS/MENYS DEL QUART ========== */
+.quarter-plus-minus {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  margin: 15px 0;
+  padding: 10px;
+  background: #f8f8f8;
+  border-radius: 8px;
+}
+
+.pm-icon {
+  font-size: 18px;
+}
+
+.pm-label {
+  font-size: 12px;
+  color: #666;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.pm-value {
+  font-size: 22px;
+  font-weight: 700;
+  font-family: 'Courier New', monospace;
+}
+
+.pm-value.positive {
+  color: #ffffff;
+}
+
+.pm-value.negative {
+  color: #ffffff;
+}
+
+/* ========== JUGADORES DEL QUART ========== */
+.quarter-players {
+  margin-top: 18px;
+}
+
+.quarter-players h4 {
+  color: #666;
+  font-size: 11px;
+  font-weight: 600;
+  margin-bottom: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  text-align: center;
+}
+
+.players-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  justify-content: center;
+}
+
+/* ========== BADGES DE JUGADORES ========== */
+.player-badge-quarter {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: linear-gradient(135deg, #c41230 0%, #a00f26 100%);
+  color: white;
+  padding: 6px 10px;
+  border-radius: 6px;
+  font-size: 12px;
+  font-weight: 700;
+  transition: all 0.2s ease;
+  box-shadow: 0 2px 6px rgba(196, 18, 48, 0.3);
+  white-space: nowrap;
+}
+
+.player-badge-quarter:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 10px rgba(196, 18, 48, 0.4);
+}
+
+.player-dorsal-badge {
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.3px;
+}
+
+.player-name-badge {
+  font-size: 11px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.3px;
+}
+
+.no-players {
+  color: #999;
+  font-style: italic;
+  font-size: 12px;
+  margin: 15px 0;
+  text-align: center;
+}
+
+/* ========== RESPONSIVE ========== */
+@media (max-width: 1200px) {
+  .quarters-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .quarters-analysis-container {
+    width: 98%;
+    padding: 20px 15px;
+  }
+
+  .quarters-analysis-container h2 {
+    font-size: 22px;
+  }
+
+  .quarters-grid {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+
+  .quarter-card {
+    padding: 18px 12px;
+  }
+
+  .quarter-header h3 {
+    font-size: 14px;
+  }
+
+  .quarter-score {
+    font-size: 18px;
+    padding: 8px 16px;
+  }
+
+  .pm-value {
+    font-size: 20px;
+  }
+
+  .summary-row {
+    gap: 25px;
+  }
+
+  .summary-divider {
+    height: 50px;
+  }
+
+  .summary-item-value {
+    font-size: 28px;
+  }
+}
+
+@media (max-width: 480px) {
+  .quarters-analysis-container {
+    padding: 15px 10px;
+  }
+
+  .quarters-analysis-container h2 {
+    font-size: 18px;
+  }
+
+  .quarter-card {
+    padding: 15px 10px;
+  }
+
+  .quarter-header h3 {
+    font-size: 13px;
+  }
+
+  .quarter-score {
+    font-size: 16px;
+    padding: 6px 12px;
+  }
+
+  .pm-value {
+    font-size: 18px;
+  }
+
+  .player-badge-quarter {
+    font-size: 11px;
+    padding: 5px 8px;
+    gap: 5px;
+  }
+
+  .player-dorsal-badge {
+    font-size: 12px;
+  }
+
+  .player-name-badge {
+    font-size: 10px;
+  }
+
+  .summary-row {
+    gap: 20px;
+    flex-direction: column;
+  }
+
+  .summary-divider {
+    display: none;
+  }
+
+  .summary-item-value {
+    font-size: 24px;
+  }
+}

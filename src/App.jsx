@@ -10,6 +10,7 @@ import PlayerStatsByMatch from "./components/PlayerStatsByMatch.jsx";
 import PlayerEvolutionCharts from "./components/PlayerEvolutionCharts.jsx";
 import TopQuintetsAnalysis from "./components/TopQuintetsAnalysis.jsx";
 import ExportReports from "./components/ExportReports.jsx";
+import QuartersAnalysis from './components/QuartersAnalysis.jsx';
 import './App.css';
 
 //imports imgs
@@ -325,7 +326,6 @@ const App = () => {
       setIsAuthenticated(true);
       setCurrentUser(userData);
       
-      // Guardar a localStorage si l'usuari ha marcat "Recordar-me"
       if (rememberMe) {
         localStorage.setItem('badalones_user', JSON.stringify(userData));
       }
@@ -348,7 +348,6 @@ const App = () => {
     setShowTopQuintets(false);
     setShowExport(false);
     
-    // Eliminar de localStorage
     localStorage.removeItem('badalones_user');
   };
 
@@ -699,7 +698,7 @@ const App = () => {
               <span>{showEvolution ? "Ocultar Gràfics" : "Gràfics d'Evolució"}</span>
             </button>
 
-            {/* Només mostrar Top Quintets per equips amb statsType 'advanced' */}
+            {/* OPCIONS PER STATSTYPE ADVANCED */}
             {currentTeam.statsType === 'advanced' && (
               <button className="player-stats-button" onClick={() => setShowTopQuintets(!showTopQuintets)}>
                 <span className="menu-icon">🏆</span>
@@ -731,9 +730,18 @@ const App = () => {
           <button className="back-button" onClick={handleBackToMatches}>
             Tornar a Partits
           </button>
-          <PlayerList players={selectedMatch.players} />
-          {currentTeam.statsType === 'advanced' && (
-            <QuintetList quintetStats={getQuintetStats(selectedMatch)} />
+          
+          {/* Mostrar vistes segons statsType */}
+          {currentTeam.statsType === 'basic' ? (
+            <>
+              <QuartersAnalysis match={selectedMatch} />
+              <BasicMatchView match={selectedMatch} />
+            </>
+          ) : (
+            <>
+              <PlayerList players={selectedMatch.players} />
+              <QuintetList quintetStats={getQuintetStats(selectedMatch)} />
+            </>
           )}
         </>
       )}

@@ -60,11 +60,22 @@ export const fetchStats = async (urls, keywords = null) => {
 
       const matchResult = `${localTeam.name} ${localScore} - ${visitScore} ${visitTeam.name}`;
 
+      // 🔥 RETORNAR TOTES LES DADES NECESSÀRIES
       return {
         matchId: `Partido ${index + 1}`,
         matchResult,
         idTeam: targetTeam ? targetTeam.teamIdIntern : null,
         players: targetTeam ? targetTeam.players : [],
+        
+        // 🆕 Afegir dades per QuartersAnalysis
+        score: response.data.score || [],
+        teams: response.data.teams || [],
+        localId: response.data.localId,
+        visitId: response.data.visitId,
+        
+        // 🆕 Guardar també les dades originals per si de cas
+        teamA: localTeam,
+        teamB: visitTeam,
       };
     });
   } catch (error) {
