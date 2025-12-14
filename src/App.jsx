@@ -108,7 +108,8 @@ const TEAMS_CONFIG = {
       'https://msstats.optimalwayconsulting.com/v1/fcbq/getJsonWithMatchStats/68fd22f101d7c6000167d505?currentSeason=true',
       'https://msstats.optimalwayconsulting.com/v1/fcbq/getJsonWithMatchStats/6910d6b3530d2e0001540b97?currentSeason=true',
       'https://msstats.optimalwayconsulting.com/v1/fcbq/getJsonWithMatchStats/6918e1e05ac4ad0001771ed0?currentSeason=true',
-      'https://msstats.optimalwayconsulting.com/v1/fcbq/getJsonWithMatchStats/69236e1b5ac4ad0001792697?currentSeason=true'
+      'https://msstats.optimalwayconsulting.com/v1/fcbq/getJsonWithMatchStats/69236e1b5ac4ad0001792697?currentSeason=true',
+      'https://msstats.optimalwayconsulting.com/v1/fcbq/getJsonWithMatchStats/693eb6d14741c10001404c6a?currentSeason=true'
     ]
   },
   'senior-fem': {
@@ -139,7 +140,8 @@ const TEAMS_CONFIG = {
       'https://msstats.optimalwayconsulting.com/v1/fcbq/getJsonWithMatchStats/68fe665201d7c6000112137d?currentSeason=true',
       'https://msstats.optimalwayconsulting.com/v1/fcbq/getJsonWithMatchStats/690f839c530d2e000153a090?currentSeason=true',
       'https://msstats.optimalwayconsulting.com/v1/fcbq/getJsonWithMatchStats/691a14f1edca8300012f183f?currentSeason=true',
-      'https://msstats.optimalwayconsulting.com/v1/fcbq/getJsonWithMatchStats/69230a705ac4ad000178fe99?currentSeason=true'
+      'https://msstats.optimalwayconsulting.com/v1/fcbq/getJsonWithMatchStats/69230a705ac4ad000178fe99?currentSeason=true',
+      'https://msstats.optimalwayconsulting.com/v1/fcbq/getJsonWithMatchStats/693d9412161a7100013846b3?currentSeason=true'
     ]
   },
   'senior-c-masc': {
@@ -223,7 +225,8 @@ const TEAMS_CONFIG = {
       'https://msstats.optimalwayconsulting.com/v1/fcbq/getJsonWithMatchStats/68f4b6dc454224000114adad?currentSeason=true',
       'https://msstats.optimalwayconsulting.com/v1/fcbq/getJsonWithMatchStats/68fc8c7d45422400012a9469?currentSeason=true',
       'https://msstats.optimalwayconsulting.com/v1/fcbq/getJsonWithMatchStats/69106472fa539d0001a2529e?currentSeason=true',
-      'https://msstats.optimalwayconsulting.com/v1/fcbq/getJsonWithMatchStats/6919adfc5ac4ad000177450e?currentSeason=true'
+      'https://msstats.optimalwayconsulting.com/v1/fcbq/getJsonWithMatchStats/6919adfc5ac4ad000177450e?currentSeason=true',
+      'https://msstats.optimalwayconsulting.com/v1/fcbq/getJsonWithMatchStats/693e97fa4741c10001403543?currentSeason=true'
       
     ]
   },
