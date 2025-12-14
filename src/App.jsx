@@ -249,7 +249,9 @@ const TEAMS_CONFIG = {
     icon: '⛹️',
     keywords: ['badalones', 'corbacho'],
     statsType: 'basic',
-    urls: []
+    urls: [
+      'https://msstats.optimalwayconsulting.com/v1/fcbq/getJsonWithMatchStats/693e95734741c100014032fc?currentSeason=true'
+    ]
   },
   'premini-negre-masc': {
     name: 'Pre-Mini Negre Masculí',
