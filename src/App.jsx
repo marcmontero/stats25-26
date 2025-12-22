@@ -26,7 +26,8 @@ const TEAMS_CONFIG = {
       'https://msstats.optimalwayconsulting.com/v1/fcbq/getJsonWithMatchStats/6919fbed5ac4ad0001776fed?currentSeason=true',
       'https://msstats.optimalwayconsulting.com/v1/fcbq/getJsonWithMatchStats/692332c05ac4ad0001790807?currentSeason=true',
       'https://msstats.optimalwayconsulting.com/v1/fcbq/getJsonWithMatchStats/692c888325810800013c40a4?currentSeason=true',
-      'https://msstats.optimalwayconsulting.com/v1/fcbq/getJsonWithMatchStats/693dae769e24f90001bbe719?currentSeason=true'
+      'https://msstats.optimalwayconsulting.com/v1/fcbq/getJsonWithMatchStats/693dae769e24f90001bbe719?currentSeason=true',
+      'https://msstats.optimalwayconsulting.com/v1/fcbq/getJsonWithMatchStats/694838003416690001a6b0d4?currentSeason=true'
     ]
   }
 };
