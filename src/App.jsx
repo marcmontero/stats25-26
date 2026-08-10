@@ -1,108 +1,77 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { fetchStats } from './api/fechStats.js';
 import PlayerList from './components/playerList.jsx';
 import MatchSelector from './components/matchSelector.jsx';
 import QuintetList from './components/QuintetList.jsx';
 import { getQuintetStats } from './utils/QuintetStats.jsx';
+import { getTopQuintets } from './utils/getTopQuintets.jsx';
 import StatsTable from "./components/StatsTables.jsx";
+import TopQuintets from "./components/TopQuintets.jsx";
 import PlayerStatsByMatch from "./components/PlayerStatsByMatch.jsx";
-import PlayerEvolutionCharts from "./components/PlayerEvolutionCharts.jsx";
-import TopQuintetsAnalysis from "./components/TopQuintetsAnalysis.jsx";
 import './App.css';
 
-const TEAMS_CONFIG = {
-  
-  'senior-fem': {
-    name: 'Senior Femení',
-    icon: '🏀',
-    keywords: ['maristes', 'ademar'],
-    urls: [
-      'https://msstats.optimalwayconsulting.com/v1/fcbq/getJsonWithMatchStats/68d9717d8c9c3a000134658d?currentSeason=true',
-      'https://msstats.optimalwayconsulting.com/v1/fcbq/getJsonWithMatchStats/68e2bd419163a800012e059a?currentSeason=true',
-      'https://msstats.optimalwayconsulting.com/v1/fcbq/getJsonWithMatchStats/68ebe2472ea75e0001d07eb8?currentSeason=true',
-      'https://msstats.optimalwayconsulting.com/v1/fcbq/getJsonWithMatchStats/68f4cbdb454224000114bbdb?currentSeason=true',
-      'https://msstats.optimalwayconsulting.com/v1/fcbq/getJsonWithMatchStats/68fe650b1497f20001890556?currentSeason=true',
-      'https://msstats.optimalwayconsulting.com/v1/fcbq/getJsonWithMatchStats/69106658fa539d0001a25409?currentSeason=true',
-      'https://msstats.optimalwayconsulting.com/v1/fcbq/getJsonWithMatchStats/6919fbed5ac4ad0001776fed?currentSeason=true',
-      'https://msstats.optimalwayconsulting.com/v1/fcbq/getJsonWithMatchStats/692332c05ac4ad0001790807?currentSeason=true',
-      'https://msstats.optimalwayconsulting.com/v1/fcbq/getJsonWithMatchStats/692c888325810800013c40a4?currentSeason=true',
-      'https://msstats.optimalwayconsulting.com/v1/fcbq/getJsonWithMatchStats/693dae769e24f90001bbe719?currentSeason=true',
-      'https://msstats.optimalwayconsulting.com/v1/fcbq/getJsonWithMatchStats/694838003416690001a6b0d4?currentSeason=true',
-      'https://msstats.optimalwayconsulting.com/v1/fcbq/getJsonWithMatchStats/6963e98d2264680001925b0a?currentSeason=true',
-      'https://msstats.optimalwayconsulting.com/v1/fcbq/getJsonWithMatchStats/69750d642baa680001617330?currentSeason=true',
-      'https://msstats.optimalwayconsulting.com/v1/fcbq/getJsonWithMatchStats/6988d08ef9430b000196a5b8?currentSeason=true',
-      'https://msstats.optimalwayconsulting.com/v1/fcbq/getJsonWithMatchStats/69920f374d61c500019241ff?currentSeason=true',
-      'https://msstats.optimalwayconsulting.com/v1/fcbq/getJsonWithMatchStats/69a4a08e5213ba0001ee4394?currentSeason=true',
-      'https://msstats.optimalwayconsulting.com/v1/fcbq/getJsonWithMatchStats/69add7b82b84b00001f00f39?currentSeason=true'
-    ]
-  }
-};
-
 const App = () => {
+  // Estados para login
   const [isAuthenticated, setIsAuthenticated] = useState(false);
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
-  const [selectedTeam, setSelectedTeam] = useState(null);
+
+  // Otros estados de la app
   const [matches, setMatches] = useState([]);
   const [selectedMatch, setSelectedMatch] = useState(null);
-  const [loading, setLoading] = useState(false);
   const [showPlayerStats, setShowPlayerStats] = useState(false);
   const [showStats, setShowStats] = useState(false);
-  const [showEvolution, setShowEvolution] = useState(false);
   const [showTopQuintets, setShowTopQuintets] = useState(false);
+  const [topQuintets, setTopQuintets] = useState({ best: [], worst: [] });
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(null);
 
+  // Función simple de autenticación (usuario: "admin", contraseña: "1234")
   const handleLogin = (e) => {
     e.preventDefault();
-    if (username === "admin" && password === "1234") {
+    if (username === "Ari" && password === "Cegata") {
       setIsAuthenticated(true);
     } else {
-      alert("Credencials incorrectes");
+      alert("Credenciales incorrectas");
     }
   };
 
-  const handleSelectTeam = async (teamId) => {
-    const team = TEAMS_CONFIG[teamId];
-    
-    if (team.urls.length === 0) {
-      alert(`No hi ha partits configurats per ${team.name}`);
-      return;
+  useEffect(() => {
+    if (isAuthenticated) {
+      const getStats = async () => {
+        try {
+          // Els partits d'avui es descobreixen automàticament (veure
+          // projecte calendari-fcbq-sync) i es guarden en aquest fitxer.
+          // El "cache-busting" (?t=...) evita que el navegador ens serveixi
+          // una còpia antiga en cache.
+          const listResponse = await fetch(`/matchUrls.json?t=${Date.now()}`);
+          const { urls: matchUrls } = await listResponse.json();
+
+          if (!matchUrls || matchUrls.length === 0) {
+            setMatches([]);
+            setTopQuintets({ best: [], worst: [] });
+            setLoading(false);
+            return;
+          }
+
+          const data = await fetchStats(matchUrls);
+          setMatches(data);
+          setTopQuintets(getTopQuintets(data));
+          setLoading(false);
+        } catch (error) {
+          setError(error);
+          setLoading(false);
+        }
+      };
+
+      getStats();
     }
+  }, [isAuthenticated]);
 
-    setSelectedTeam(teamId);
-    setLoading(true);
-    setShowPlayerStats(false);
-    setShowStats(false);
-    setShowEvolution(false);
-    setShowTopQuintets(false);
-    setSelectedMatch(null);
-
-    try {
-      const data = await fetchStats(team.urls, team.keywords);
-      setMatches(data);
-      console.log(`📊 ${data.length} partits carregats per ${team.name}`);
-    } catch (error) {
-      console.error('Error al carregar equip:', error);
-      alert('Error al carregar els partits');
-    } finally {
-      setLoading(false);
-    }
-  };
-
-  const handleBackToTeams = () => {
-    setSelectedTeam(null);
-    setSelectedMatch(null);
-    setMatches([]);
-    setShowPlayerStats(false);
-    setShowStats(false);
-    setShowEvolution(false);
-    setShowTopQuintets(false);
-  };
-
-  const handleBackToMatches = () => {
+  const handleBack = () => {
     setSelectedMatch(null);
     setShowStats(false);
     setShowPlayerStats(false);
-    setShowEvolution(false);
     setShowTopQuintets(false);
   };
 
@@ -110,11 +79,6 @@ const App = () => {
     return (
       <div className="login-wrapper">
         <div className="login-container">
-          <img 
-            src="https://i.imghippo.com/files/XfcX1130LYo.png" 
-            alt="AE Badalonès" 
-            className="club-logo"
-          />
           <h1>Inicia Sessió</h1>
           <form onSubmit={handleLogin}>
             <div className="input-group">
@@ -132,7 +96,7 @@ const App = () => {
                 type="password"
                 value={password}
                 onChange={(e) => setPassword(e.target.value)}
-                placeholder="Escriu la contrasenya"
+                placeholder="Escriu la contrasenyaa"
               />
             </div>
             <button className="login-button" type="submit">
@@ -144,97 +108,30 @@ const App = () => {
     );
   }
 
-  if (!selectedTeam) {
-    return (
-      <div className="app">
-        <img 
-          src="https://i.imghippo.com/files/XfcX1130LYo.png" 
-          alt="AE Badalonès" 
-          className="club-logo"
-        />
-        <h1>Estadístiques AE Badalonès 2024-2025</h1>
-        
-        <div className="teams-grid">
-          {Object.entries(TEAMS_CONFIG).map(([teamId, team]) => (
-            <button
-              key={teamId}
-              onClick={() => handleSelectTeam(teamId)}
-              disabled={team.urls.length === 0}
-              className="team-card"
-            >
-              <span className="team-card-icon">{team.icon}</span>
-              <span className="team-card-name">{team.name}</span>
-              {team.urls.length > 0 ? (
-                <span className="team-card-matches">
-                  {team.urls.length} {team.urls.length === 1 ? 'partit' : 'partits'}
-                </span>
-              ) : (
-                <span className="team-card-matches" style={{ color: '#999' }}>
-                  Sense partits
-                </span>
-              )}
-            </button>
-          ))}
-        </div>
-      </div>
-    );
-  }
-
-  const currentTeam = TEAMS_CONFIG[selectedTeam];
-
-  if (loading) {
-    return (
-      <div className="app">
-        <div className="loading-container">
-          <div className="loading-spinner"></div>
-          <h2 className="loading-text">Carregant {currentTeam.name}...</h2>
-        </div>
-      </div>
-    );
-  }
-
   return (
     <div className="app">
-      <div className="team-header">
-        <button onClick={handleBackToTeams} className="team-header-button">
-          Tornar a Equips
-        </button>
-        <h1 className="team-header-title">
-          <img 
-            src="https://i.imghippo.com/files/Wnel8089NE.png" 
-            alt="AE Badalonès" 
-            className="team-logo"
-          />
-          {currentTeam.name}
-        </h1>
-        <div className="team-header-spacer"></div>
-      </div>
+      <h1>Estadístiques Senior Fem Maristes 2025-2026</h1>
 
+      {/* Mostrar botones de opciones solo si no se ha seleccionado un partido */}
       {!selectedMatch && (
         <div className="buttons-container">
           <button className="stats-button" onClick={() => setShowStats(!showStats)}>
-            {showStats ? "Ocultar Mitjana Stats" : "Mostrar Mitjana Stats"}
+            {showStats ? "❌ Ocultar mitjana stats" : "📊 Mostrar mitjana stats"}
           </button>
 
           <button className="player-stats-button" onClick={() => setShowPlayerStats(!showPlayerStats)}>
-            {showPlayerStats ? "Ocultar Stats per Jugadora" : "Mostrar Stats per Jugadora"}
-          </button>
-
-          <button className="stats-button" onClick={() => setShowEvolution(!showEvolution)}>
-            {showEvolution ? "Ocultar Gràfics" : "Mostrar Gràfics d'Evolució"}
-          </button>
-
-          <button className="player-stats-button" onClick={() => setShowTopQuintets(!showTopQuintets)}>
-            {showTopQuintets ? "Ocultar Top Quintets" : "Mostrar Top Quintets"}
+            {showPlayerStats ? "❌ Ocultar stats per jugadora" : "👤 Mostrar Stats per jugadora"}
           </button>
         </div>
       )}
 
+      {/* Mostrar Stats Medias */}
       {showStats && <StatsTable matches={matches} />}
-      {showPlayerStats && <PlayerStatsByMatch matches={matches} />}
-      {showEvolution && <PlayerEvolutionCharts matches={matches} />}
-      {showTopQuintets && <TopQuintetsAnalysis matches={matches} />}
 
+      {/* Mostrar Stats individuales por jugadora */}
+      {showPlayerStats && <PlayerStatsByMatch matches={matches} />}
+
+      {/* Mostrar selector de partidos o el partido seleccionado */}
       {!selectedMatch ? (
         <MatchSelector matches={matches} onSelectMatch={setSelectedMatch} />
       ) : (
@@ -242,8 +139,8 @@ const App = () => {
           <div className="match-title-container">
             <h2>{selectedMatch?.matchResult}</h2>
           </div>
-          <button className="back-button" onClick={handleBackToMatches}>
-            Tornar a Partits
+          <button className="back-button" onClick={handleBack}>
+            🔙 Volver a Partidos
           </button>
           <PlayerList players={selectedMatch.players} />
           <QuintetList quintetStats={getQuintetStats(selectedMatch)} />
