@@ -1,24 +1,26 @@
 .top-quintets-container {
   text-align: center;
-  margin: 30px auto;
-  width: 95%;
+  margin: 0 auto 24px;
+  width: 100%;
   max-width: 1400px;
-  background: white;
-  border-radius: 12px;
-  padding: 35px;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-  border-top: 4px solid #c41230;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-top: 2px solid var(--badalones-red);
+  border-radius: 6px;
+  padding: 26px;
+  box-shadow: none;
 }
 
 .top-quintets-container h2 {
-  color: #1a1a1a;
-  font-size: 26px;
+  color: var(--chalk);
+  font-family: var(--font-display);
+  font-size: 24px;
   font-weight: 700;
-  margin-bottom: 30px;
+  margin-bottom: 24px;
   text-transform: uppercase;
-  letter-spacing: 1.2px;
+  letter-spacing: 0.01em;
   position: relative;
-  padding-bottom: 15px;
+  padding-bottom: 14px;
 }
 
 .top-quintets-container h2::after {
@@ -29,7 +31,7 @@
   transform: translateX(-50%);
   width: 60px;
   height: 3px;
-  background: #c41230;
+  background: var(--badalones-red);
   border-radius: 2px;
 }
 
@@ -42,20 +44,20 @@
 }
 
 .summary-card {
-  background: linear-gradient(135deg, #f8f8f8 0%, #f0f0f0 100%);
+  background: linear-gradient(135deg, var(--surface-raised) 0%, var(--line) 100%);
   padding: 20px 40px;
-  border-radius: 10px;
+  border-radius: 6px;
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 8px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
-  border-left: 4px solid #c41230;
+  box-shadow: none;
+  border-left: 4px solid var(--badalones-red);
 }
 
 .summary-label {
   font-size: 13px;
-  color: #666;
+  color: var(--chalk-dim);
   text-transform: uppercase;
   letter-spacing: 0.5px;
   font-weight: 600;
@@ -63,9 +65,9 @@
 
 .summary-value {
   font-size: 32px;
-  color: #c41230;
+  color: var(--badalones-red);
   font-weight: 700;
-  font-family: 'Courier New', monospace;
+  font-family: var(--font-mono);
 }
 
 .quintets-sections {
@@ -77,7 +79,7 @@
 
 .quintets-section {
   background: #fafafa;
-  border-radius: 10px;
+  border-radius: 6px;
   padding: 25px;
 }
 
@@ -92,13 +94,13 @@
 }
 
 .section-title.best {
-  color: #28a745;
-  border-color: #28a745;
+  color: #6fbf8a;
+  border-color: #6fbf8a;
 }
 
 .section-title.worst {
-  color: #dc3545;
-  border-color: #dc3545;
+  color: #e0637a;
+  border-color: #e0637a;
 }
 
 .quintets-list {
@@ -108,13 +110,13 @@
 }
 
 .quintet-card {
-  background: white;
-  border-radius: 12px;
+  background: var(--surface);
+  border-radius: 6px;
   padding: 20px;
   display: flex;
   gap: 20px;
   align-items: center;
-  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.1);
+  box-shadow: none;
   transition: all 0.3s ease;
   border-left: 6px solid;
   position: relative;
@@ -133,11 +135,11 @@
 }
 
 .quintet-card.best::before {
-  background: linear-gradient(90deg, #28a745 0%, #20c997 100%);
+  background: linear-gradient(90deg, #6fbf8a 0%, #20c997 100%);
 }
 
 .quintet-card.worst::before {
-  background: linear-gradient(90deg, #dc3545 0%, #e74c3c 100%);
+  background: linear-gradient(90deg, #e0637a 0%, #e74c3c 100%);
 }
 
 .quintet-card:hover::before {
@@ -145,30 +147,30 @@
 }
 
 .quintet-card.best {
-  border-left-color: #28a745;
+  border-left-color: #6fbf8a;
 }
 
 .quintet-card.worst {
-  border-left-color: #dc3545;
+  border-left-color: #e0637a;
 }
 
 .quintet-card:hover {
-  transform: translateY(-5px) scale(1.01);
-  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+  filter: brightness(1.05);
+  box-shadow: none;
 }
 
 .quintet-card .quintet-rank {
   font-size: 28px;
   font-weight: 700;
-  background: linear-gradient(135deg, #c41230 0%, #a00f26 100%);
+  background: var(--badalones-red);
   color: white !important;
   min-width: 50px;
   height: 50px;
   display: flex;
   align-items: center;
   justify-content: center;
-  border-radius: 10px;
-  box-shadow: 0 2px 8px rgba(196, 18, 48, 0.3);
+  border-radius: 6px;
+  box-shadow: none;
   text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
 }
 
@@ -186,7 +188,7 @@
 }
 
 .player-badge {
-  background: linear-gradient(135deg, #c41230 0%, #a00f26 100%);
+  background: var(--badalones-red);
   color: white;
   padding: 8px 14px;
   border-radius: 8px;
@@ -194,13 +196,13 @@
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 0.5px;
-  box-shadow: 0 2px 6px rgba(196, 18, 48, 0.3);
+  box-shadow: none;
   transition: all 0.2s ease;
 }
 
 .quintet-card:hover .player-badge {
-  transform: translateY(-2px);
-  box-shadow: 0 4px 10px rgba(196, 18, 48, 0.4);
+  filter: brightness(1.05);
+  box-shadow: none;
 }
 
 .quintet-stats {
@@ -214,16 +216,16 @@
   flex-direction: column;
   align-items: center;
   gap: 5px;
-  background: linear-gradient(135deg, #f8f8f8 0%, #f0f0f0 100%);
+  background: linear-gradient(135deg, var(--surface-raised) 0%, var(--line) 100%);
   padding: 12px 18px;
   border-radius: 8px;
   min-width: 80px;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+  box-shadow: none;
 }
 
 .stat-label {
   font-size: 11px;
-  color: #999;
+  color: var(--chalk-faint);
   text-transform: uppercase;
   font-weight: 600;
   letter-spacing: 0.5px;
@@ -232,8 +234,8 @@
 .stat-value {
   font-size: 20px;
   font-weight: 700;
-  font-family: 'Courier New', monospace;
-  color: #1a1a1a;
+  font-family: var(--font-mono);
+  color: var(--chalk);
 }
 
 .stat-value.positive {

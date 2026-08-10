@@ -1,24 +1,26 @@
 .evolution-charts-container {
   text-align: center;
-  margin: 30px auto;
-  width: 95%;
+  margin: 0 auto 24px;
+  width: 100%;
   max-width: 1400px;
-  background: white;
-  border-radius: 12px;
-  padding: 35px;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-  border-top: 4px solid #c41230;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-top: 2px solid var(--badalones-red);
+  border-radius: 6px;
+  padding: 26px;
+  box-shadow: none;
 }
 
 .evolution-charts-container h2 {
-  color: #1a1a1a;
-  font-size: 26px;
+  color: var(--chalk);
+  font-family: var(--font-display);
+  font-size: 24px;
   font-weight: 700;
-  margin-bottom: 30px;
+  margin-bottom: 24px;
   text-transform: uppercase;
-  letter-spacing: 1.2px;
+  letter-spacing: 0.01em;
   position: relative;
-  padding-bottom: 15px;
+  padding-bottom: 14px;
 }
 
 .evolution-charts-container h2::after {
@@ -29,7 +31,7 @@
   transform: translateX(-50%);
   width: 60px;
   height: 3px;
-  background: #c41230;
+  background: var(--badalones-red);
   border-radius: 2px;
 }
 
@@ -51,7 +53,7 @@
 .control-group label {
   font-size: 15px;
   font-weight: 600;
-  color: #1a1a1a;
+  color: var(--chalk);
   text-transform: uppercase;
   letter-spacing: 0.8px;
 }
@@ -59,24 +61,24 @@
 .control-group select {
   padding: 12px 24px;
   font-size: 15px;
-  border: 2px solid #e0e0e0;
+  border: 2px solid var(--line);
   border-radius: 8px;
-  background: white;
-  color: #1a1a1a;
+  background: var(--surface);
+  color: var(--chalk);
   cursor: pointer;
   transition: all 0.3s ease;
   min-width: 250px;
   font-weight: 500;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  box-shadow: none;
   outline: none;
 }
 
 .control-group select:hover {
-  border-color: #c41230;
+  border-color: var(--badalones-red);
 }
 
 .control-group select:focus {
-  border-color: #c41230;
+  border-color: var(--badalones-red);
   box-shadow: 0 0 0 3px rgba(196, 18, 48, 0.1);
 }
 
@@ -85,7 +87,7 @@
 }
 
 .chart-wrapper h3 {
-  color: #1a1a1a;
+  color: var(--chalk);
   font-size: 20px;
   font-weight: 600;
   margin-bottom: 20px;
@@ -101,21 +103,21 @@
 }
 
 .stat-card {
-  background: linear-gradient(135deg, #f8f8f8 0%, #f0f0f0 100%);
+  background: linear-gradient(135deg, var(--surface-raised) 0%, var(--line) 100%);
   padding: 20px 30px;
-  border-radius: 10px;
+  border-radius: 6px;
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 8px;
   min-width: 120px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
-  border-left: 4px solid #c41230;
+  box-shadow: none;
+  border-left: 4px solid var(--badalones-red);
 }
 
 .stat-label {
   font-size: 13px;
-  color: #666;
+  color: var(--chalk-dim);
   text-transform: uppercase;
   letter-spacing: 0.5px;
   font-weight: 600;
@@ -123,14 +125,14 @@
 
 .stat-value {
   font-size: 28px;
-  color: #c41230;
+  color: var(--badalones-red);
   font-weight: 700;
-  font-family: 'Courier New', monospace;
+  font-family: var(--font-mono);
 }
 
 .empty-state {
   padding: 60px 20px;
-  color: #999;
+  color: var(--chalk-faint);
   font-size: 16px;
   font-style: italic;
 }

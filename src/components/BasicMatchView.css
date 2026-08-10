@@ -8,22 +8,24 @@
 /* ========== SECCIONS ========== */
 .boxscore-section,
 .quarters-grid-section {
-  background: white;
-  border-radius: 12px;
-  padding: 30px;
-  margin-bottom: 30px;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-  border-top: 4px solid #c41230;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-top: 2px solid var(--badalones-red);
+  border-radius: 6px;
+  padding: 24px;
+  margin-bottom: 24px;
+  box-shadow: none;
 }
 
 .boxscore-section h2,
 .quarters-grid-section h2 {
-  color: #1a1a1a;
-  font-size: 24px;
+  color: var(--chalk);
+  font-family: var(--font-display);
+  font-size: 22px;
   font-weight: 700;
-  margin-bottom: 25px;
+  margin-bottom: 20px;
   text-transform: uppercase;
-  letter-spacing: 1px;
+  letter-spacing: 0.01em;
 }
 
 /* ========== WRAPPERS PER SCROLL ========== */
@@ -31,7 +33,7 @@
 .quarters-table-wrapper {
   overflow-x: auto;
   border-radius: 8px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  box-shadow: none;
 }
 
 /* ========== TAULES - ESTIL BASE ========== */
@@ -40,14 +42,14 @@
   width: 100%;
   border-collapse: separate;
   border-spacing: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif;
+  font-family: var(--font-body);
   font-size: 14px;
 }
 
 /* ========== HEADERS ========== */
 .boxscore-table thead,
 .quarters-table thead {
-  background: linear-gradient(135deg, #c41230 0%, #a00f26 100%);
+  background: var(--badalones-red);
   color: white;
   position: sticky;
   top: 0;
@@ -95,13 +97,13 @@
 /* ========== FILES DE DADES ========== */
 .boxscore-table tbody tr,
 .quarters-table tbody tr {
-  border-bottom: 1px solid #e5e5e5;
+  border-bottom: 1px solid var(--line);
   transition: all 0.2s ease;
 }
 
 .boxscore-table tbody tr:hover,
 .quarters-table tbody tr:hover {
-  background-color: #fff5f5;
+  background-color: var(--surface-raised);
   cursor: pointer;
 }
 
@@ -112,7 +114,7 @@
 
 .boxscore-table tbody tr:nth-child(even):hover,
 .quarters-table tbody tr:nth-child(even):hover {
-  background-color: #fff5f5;
+  background-color: var(--surface-raised);
 }
 
 /* ========== CEL·LES ========== */
@@ -121,15 +123,15 @@
   padding: 10px;
   text-align: center;
   font-size: 13px;
-  color: #333;
-  border-bottom: 1px solid #e5e5e5;
+  color: var(--chalk);
+  border-bottom: 1px solid var(--line);
 }
 
 /* ========== DORSAL ========== */
 .dorsal-cell {
   font-weight: bold;
   font-size: 15px;
-  background: linear-gradient(135deg, #c41230 0%, #a00f26 100%);
+  background: var(--badalones-red);
   color: white !important;
   text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
   min-width: 60px;
@@ -139,7 +141,7 @@
 .dorsal-cell-grid {
   font-weight: 700;
   font-size: 16px;
-  color: #c41230;
+  color: var(--badalones-red);
   min-width: 80px;
 }
 
@@ -148,7 +150,7 @@
   text-align: left !important;
   padding-left: 15px !important;
   font-weight: 600;
-  color: #1a1a1a;
+  color: var(--chalk);
   font-size: 14px;
   white-space: nowrap;
 }
@@ -157,7 +159,7 @@
   text-align: left !important;
   padding-left: 20px !important;
   font-weight: 600;
-  color: #1a1a1a;
+  color: var(--chalk);
   font-size: 14px;
   white-space: nowrap;
   min-width: 200px;
@@ -166,7 +168,7 @@
 /* ========== BADGE CAPITÀ ========== */
 .captain-badge {
   display: inline-block;
-  background: #c41230;
+  background: var(--badalones-red);
   color: white;
   font-size: 10px;
   font-weight: 700;
@@ -180,19 +182,19 @@
 .points-cell {
   font-weight: 700;
   font-size: 16px;
-  color: #c41230;
-  background-color: #fff5f5;
+  color: var(--badalones-red);
+  background-color: var(--surface-raised);
 }
 
 /* ========== TITULAR ========== */
 .titular-row {
-  background-color: #fff0f0 !important;
-  border-left: 4px solid #c41230;
+  background-color: var(--surface-raised) !important;
+  border-left: 4px solid var(--badalones-red);
   font-weight: 600;
 }
 
 .titular-row:hover {
-  background-color: #ffe5e5 !important;
+  background-color: var(--surface-raised) !important;
 }
 
 /* ========== GRAELLA DE QUARTS ========== */
@@ -206,7 +208,7 @@
 }
 
 .played-mark {
-  color: #c41230;
+  color: var(--badalones-red);
   font-size: 20px;
   font-weight: 700;
   display: inline-block;

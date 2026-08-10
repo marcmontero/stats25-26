@@ -1,24 +1,26 @@
 .player-stats-container {
   text-align: center;
-  margin: 30px auto;
-  width: 95%;
+  margin: 0 auto 24px;
+  width: 100%;
   max-width: 1400px;
-  background: white;
-  border-radius: 12px;
-  padding: 35px;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-  border-top: 4px solid #c41230;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-top: 2px solid var(--badalones-red);
+  border-radius: 6px;
+  padding: 26px;
+  box-shadow: none;
 }
 
 .player-stats-container h2 {
-  color: #1a1a1a;
-  font-size: 26px;
+  color: var(--chalk);
+  font-family: var(--font-display);
+  font-size: 24px;
   font-weight: 700;
-  margin-bottom: 30px;
+  margin-bottom: 24px;
   text-transform: uppercase;
-  letter-spacing: 1.2px;
+  letter-spacing: 0.01em;
   position: relative;
-  padding-bottom: 15px;
+  padding-bottom: 14px;
 }
 
 .player-stats-container h2::after {
@@ -29,7 +31,7 @@
   transform: translateX(-50%);
   width: 60px;
   height: 3px;
-  background: #c41230;
+  background: var(--badalones-red);
   border-radius: 2px;
 }
 
@@ -44,7 +46,7 @@
 .player-selector label {
   font-size: 15px;
   font-weight: 600;
-  color: #1a1a1a;
+  color: var(--chalk);
   text-transform: uppercase;
   letter-spacing: 0.8px;
 }
@@ -52,24 +54,24 @@
 .player-selector select {
   padding: 12px 24px;
   font-size: 15px;
-  border: 2px solid #e0e0e0;
+  border: 2px solid var(--line);
   border-radius: 8px;
-  background: white;
-  color: #1a1a1a;
+  background: var(--surface);
+  color: var(--chalk);
   cursor: pointer;
   transition: all 0.3s ease;
   min-width: 300px;
   font-weight: 500;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  box-shadow: none;
   outline: none;
 }
 
 .player-selector select:hover {
-  border-color: #c41230;
+  border-color: var(--badalones-red);
 }
 
 .player-selector select:focus {
-  border-color: #c41230;
+  border-color: var(--badalones-red);
   box-shadow: 0 0 0 3px rgba(196, 18, 48, 0.1);
 }
 
@@ -83,7 +85,7 @@
 }
 
 .player-stats-table thead {
-  background: linear-gradient(135deg, #c41230 0%, #a00f26 100%);
+  background: var(--badalones-red);
   color: white;
 }
 
@@ -109,13 +111,13 @@
 
 .player-stats-table tbody tr {
   transition: all 0.2s ease;
-  border-bottom: 1px solid #f0f0f0;
+  border-bottom: 1px solid var(--line);
 }
 
 .player-stats-table tbody tr:not(.average-row):hover {
-  background-color: #fff8f8;
-  transform: scale(1.005);
-  box-shadow: 0 2px 8px rgba(196, 18, 48, 0.08);
+  background-color: var(--surface-raised);
+  
+  box-shadow: none;
 }
 
 .player-stats-table tbody tr:last-child {
@@ -125,18 +127,18 @@
 .player-stats-table td {
   padding: 16px 12px;
   font-size: 14px;
-  color: #333;
+  color: var(--chalk);
   text-align: center;
-  font-family: 'Courier New', monospace;
+  font-family: var(--font-mono);
   font-weight: 500;
 }
 
 .player-stats-table td:first-child {
   text-align: left;
   padding-left: 24px;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif;
+  font-family: var(--font-body);
   font-weight: 500;
-  color: #333;
+  color: var(--chalk);
   font-size: 13px;
   max-width: 400px;
   overflow: hidden;
@@ -147,26 +149,26 @@
 /* Columna de puntos destacada */
 .player-stats-table td:nth-child(3) {
   font-weight: 700;
-  color: #c41230;
+  color: var(--badalones-red);
   font-size: 16px;
 }
 
 /* Fila de promedio destacada */
 .average-row {
-  background: linear-gradient(135deg, #f8f8f8 0%, #f0f0f0 100%) !important;
+  background: linear-gradient(135deg, var(--surface-raised) 0%, var(--line) 100%) !important;
   font-weight: 700 !important;
-  border-top: 3px solid #c41230 !important;
+  border-top: 3px solid var(--badalones-red) !important;
 }
 
 .average-row td {
   border-bottom: none !important;
   padding: 18px 12px;
   font-size: 15px;
-  color: #1a1a1a;
+  color: var(--chalk);
 }
 
 .average-row td:first-child {
-  color: #c41230;
+  color: var(--badalones-red);
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.8px;
@@ -175,14 +177,14 @@
 
 /* Colorear el más/menos */
 .player-stats-table .positive {
-  color: #28a745 !important;
+  color: #6fbf8a !important;
   font-weight: 700;
   font-size: 15px;
   background: transparent !important;
 }
 
 .player-stats-table .negative {
-  color: #dc3545 !important;
+  color: #e0637a !important;
   font-weight: 700;
   font-size: 15px;
   background: transparent !important;
