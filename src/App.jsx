@@ -11,87 +11,21 @@ import PlayerEvolutionCharts from "./components/PlayerEvolutionCharts.jsx";
 import TopQuintetsAnalysis from "./components/TopQuintetsAnalysis.jsx";
 import ExportReports from "./components/ExportReports.jsx";
 import QuartersAnalysis from './components/QuartersAnalysis.jsx';
+import { supabase, usernameToInternalEmail } from './supabaseClient.js';
 import './App.css';
 
 //imports imgs
 import funtaimg from "../public/img/funtane.png";
-import juliimg from "../public/img/juli.png";
-import teixidoimg from "../public/img/teixido.png";
 import entrenaimg from "../public/img/entrena.png";
-import manelimg from "../public/img/manel.png";
 import aleximg from "../public/img/alex.png";
 
 
-// Importar imatges de perfil (si estan a src/img/)
-// Si les imatges NO existeixen, comenta aquestes línies
-
-
-// ========== CONFIGURACIÓ D'USUARIS I PERMISOS ==========
-const USERS_CONFIG = {
-  'uri.entrena': {
-    password: 'uri2025',
-    name: 'Uri Entrena',
-    role: 'admin',
-    position: 'Director Tècnic',
-    profileImage: entrenaimg, // Importada des de src/img/
-    teams: 'all'
-  },
-  'juli.jimenez': {
-    password: 'juli2025',
-    name: 'Juli Jimenez',
-    role: 'coach',
-    position: 'Entrenador Senior A Masculí',
-    profileImage: juliimg,
-    teams: ['senior-a-masc', 'senior-b-masc']
-  },
-  'lluis.carreras': {
-    password: 'lluis2025',
-    name: 'Lluis Carreras',
-    role: 'coach',
-    position: 'Ajudant Senior A Masculí',
-    profileImage: "",
-    teams: ['senior-a-masc', 'senior-b-masc']
-  },
-  'manel.padilla': {
-    password: 'manel2025',
-    name: 'Manel Padilla',
-    role: 'coach',
-    position: 'Entrenador Senior Femení, U20 Masculí i Cadet A Masculí',
-    profileImage: manelimg,
-    teams: ['senior-c-masc', 'u20-masc', 'senior-fem', 'cadet-masc']
-  },
-  'marc.funtane': {
-    password: 'marc2025',
-    name: 'Marc Funtané',
-    role: 'coach',
-    position: 'Entrenador Senior B Masculí',
-    profileImage: funtaimg,
-    teams: ['senior-a-masc', 'senior-b-masc', 'senior-c-masc']
-  },
-  'jordi.serra': {
-    password: 'jordi2025',
-    name: 'Jordi Serra',
-    role: 'coach',
-    position: 'Ajudant Senior B Masculí i Senior C Masculí',
-    profileImage: '',
-    teams: ['senior-a-masc', 'senior-b-masc', 'senior-c-masc', 'u20-masc']
-  },
-  'carles.teixido': {
-    password: 'carles2025',
-    name: 'Carles Teixidó',
-    role: 'coach',
-    position: 'Entrenador Senior C Masculí',
-    profileImage: teixidoimg,
-    teams: ['senior-b-masc', 'senior-c-masc', 'u20-masc']
-  },
-  'alex.medialdea': {
-    password: 'alex2025',
-    name: 'Alex Medialdea',
-    role: 'coach',
-    position: 'Entrenador Cadet B Masculí',
-    profileImage: aleximg,
-    teams: ['cadet-masc']
-  }
+// ========== FOTOS DE PERFIL (opcional per usuari; si no n'hi ha, ==========
+// ========== es mostra un cercle amb la inicial del nom) ==========
+const IMAGE_MAP = {
+  'uri.entrena': entrenaimg,
+  'marc.funtane': funtaimg,
+  'alex.medialdea': aleximg,
 };
 
 const TEAMS_CONFIG = {
@@ -288,7 +222,13 @@ const App = () => {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
   const [loginError, setLoginError] = useState("");
-  const [rememberMe, setRememberMe] = useState(false);
+  const [loginLoading, setLoginLoading] = useState(false);
+
+  // Canvi de contrasenya
+  const [showChangePassword, setShowChangePassword] = useState(false);
+  const [newPassword, setNewPassword] = useState("");
+  const [confirmPassword, setConfirmPassword] = useState("");
+  const [changePasswordMsg, setChangePasswordMsg] = useState(null);
 
   // Config d'equips: comen\u00e7a amb els partits escrits a m\u00e0 (TEAMS_CONFIG)
   // i s'hi van afegint els descoberts autom\u00e0ticament (veure projecte
@@ -306,19 +246,51 @@ const App = () => {
   const [showTopQuintets, setShowTopQuintets] = useState(false);
   const [showExport, setShowExport] = useState(false);
 
-  // ========== EFECTE PER RECUPERAR SESSIÓ ==========
+  // ========== EFECTE PER RECUPERAR SESSIÓ (Supabase la gestiona sola) ==========
   React.useEffect(() => {
-    const savedUser = localStorage.getItem('badalones_user');
-    if (savedUser) {
-      try {
-        const userData = JSON.parse(savedUser);
-        setIsAuthenticated(true);
-        setCurrentUser(userData);
-      } catch (error) {
-        console.error('Error al recuperar sessió:', error);
-        localStorage.removeItem('badalones_user');
+    const loadSession = async (session) => {
+      if (!session?.user) {
+        setIsAuthenticated(false);
+        setCurrentUser(null);
+        return;
       }
-    }
+
+      // L'email intern porta el nom d'usuari al davant (usuari@badalones-app.local)
+      const uname = session.user.email.split('@')[0];
+
+      const { data: profile, error } = await supabase
+        .from('profiles')
+        .select('*')
+        .eq('username', uname)
+        .single();
+
+      if (error || !profile) {
+        console.error('No s\'ha trobat el perfil per aquest usuari:', error);
+        setIsAuthenticated(false);
+        setCurrentUser(null);
+        return;
+      }
+
+      setCurrentUser({
+        username: profile.username,
+        name: profile.name,
+        role: profile.role,
+        position: profile.position,
+        profileImage: IMAGE_MAP[profile.username] || "",
+        teams: profile.teams,
+      });
+      setIsAuthenticated(true);
+    };
+
+    // Sessió ja activa (recarregar la pàgina, per exemple)
+    supabase.auth.getSession().then(({ data: { session } }) => loadSession(session));
+
+    // Escoltem canvis (login, logout...) en temps real
+    const { data: listener } = supabase.auth.onAuthStateChange((_event, session) => {
+      loadSession(session);
+    });
+
+    return () => listener.subscription.unsubscribe();
   }, []);
 
   // ========== EFECTE PER FUSIONAR LES URLS DESCOBERTES AUTOMÀTICAMENT ==========
@@ -361,36 +333,25 @@ const App = () => {
   }, []);
 
   // ========== FUNCIONS D'AUTENTICACIÓ ==========
-  const handleLogin = (e) => {
+  const handleLogin = async (e) => {
     e.preventDefault();
     setLoginError("");
+    setLoginLoading(true);
 
-    const user = USERS_CONFIG[username.toLowerCase().trim()];
+    const email = usernameToInternalEmail(username);
+    const { error } = await supabase.auth.signInWithPassword({ email, password });
 
-    if (user && user.password === password) {
-      const userData = {
-        username: username.toLowerCase().trim(),
-        name: user.name,
-        role: user.role,
-        position: user.position,
-        profileImage: user.profileImage,
-        teams: user.teams
-      };
-      
-      setIsAuthenticated(true);
-      setCurrentUser(userData);
-      
-      if (rememberMe) {
-        localStorage.setItem('badalones_user', JSON.stringify(userData));
-      }
-    } else {
+    setLoginLoading(false);
+
+    if (error) {
       setLoginError("Usuari o contrasenya incorrectes");
     }
+    // Si no hi ha error, l'onAuthStateChange de dalt ja s'encarrega
+    // d'actualitzar isAuthenticated/currentUser automàticament.
   };
 
-  const handleLogout = () => {
-    setIsAuthenticated(false);
-    setCurrentUser(null);
+  const handleLogout = async () => {
+    await supabase.auth.signOut();
     setUsername("");
     setPassword("");
     setSelectedTeam(null);
@@ -401,8 +362,15 @@ const App = () => {
     setShowEvolution(false);
     setShowTopQuintets(false);
     setShowExport(false);
-    
-    localStorage.removeItem('badalones_user');
+  };
+
+  // ========== CANVIAR CONTRASENYA ==========
+  const handleChangePassword = async (newPassword) => {
+    const { error } = await supabase.auth.updateUser({ password: newPassword });
+    if (error) {
+      return { success: false, message: error.message };
+    }
+    return { success: true };
   };
 
   // ========== CONTROL D'ACCÉS ==========
@@ -518,37 +486,7 @@ const App = () => {
                 autoComplete="current-password"
               />
             </div>
-            <div style={{
-              display: 'flex',
-              alignItems: 'center',
-              gap: '8px',
-              marginTop: '15px',
-              marginBottom: '10px'
-            }}>
-              <input
-                type="checkbox"
-                id="rememberMe"
-                checked={rememberMe}
-                onChange={(e) => setRememberMe(e.target.checked)}
-                style={{
-                  width: '18px',
-                  height: '18px',
-                  cursor: 'pointer',
-                  accentColor: '#c41230'
-                }}
-              />
-              <label 
-                htmlFor="rememberMe"
-                style={{
-                  fontSize: '14px',
-                  color: '#555',
-                  cursor: 'pointer',
-                  userSelect: 'none'
-                }}
-              >
-                Recordar la meva sessió
-              </label>
-            </div>
+            <div style={{ marginTop: '15px', marginBottom: '10px' }} />
             {loginError && (
               <div style={{
                 color: '#c41230',
@@ -560,8 +498,8 @@ const App = () => {
                 {loginError}
               </div>
             )}
-            <button className="login-button" type="submit">
-              Entrar
+            <button className="login-button" type="submit" disabled={loginLoading}>
+              {loginLoading ? 'Entrant...' : 'Entrar'}
             </button>
           </form>
         </div>
@@ -633,23 +571,110 @@ const App = () => {
               </div>
             </div>
           </div>
-          <button
-            onClick={handleLogout}
-            style={{
-              padding: '10px 20px',
-              background: '#c41230',
-              color: 'white',
-              border: 'none',
-              borderRadius: '8px',
-              cursor: 'pointer',
-              fontSize: '14px',
-              fontWeight: '600',
-              transition: 'all 0.3s'
-            }}
-          >
-            Tancar Sessió
-          </button>
+          <div style={{ display: 'flex', gap: '10px' }}>
+            <button
+              onClick={() => {
+                setShowChangePassword(!showChangePassword);
+                setChangePasswordMsg(null);
+                setNewPassword("");
+                setConfirmPassword("");
+              }}
+              style={{
+                padding: '10px 20px',
+                background: '#f0f0f0',
+                color: '#333',
+                border: 'none',
+                borderRadius: '8px',
+                cursor: 'pointer',
+                fontSize: '14px',
+                fontWeight: '600',
+                transition: 'all 0.3s'
+              }}
+            >
+              🔑 Canviar Contrasenya
+            </button>
+            <button
+              onClick={handleLogout}
+              style={{
+                padding: '10px 20px',
+                background: '#c41230',
+                color: 'white',
+                border: 'none',
+                borderRadius: '8px',
+                cursor: 'pointer',
+                fontSize: '14px',
+                fontWeight: '600',
+                transition: 'all 0.3s'
+              }}
+            >
+              Tancar Sessió
+            </button>
+          </div>
         </div>
+
+        {showChangePassword && (
+          <div style={{
+            background: 'white',
+            borderRadius: '10px',
+            boxShadow: '0 2px 8px rgba(0,0,0,0.1)',
+            padding: '20px',
+            marginBottom: '20px',
+            maxWidth: '400px'
+          }}>
+            <h3 style={{ marginTop: 0, marginBottom: '15px' }}>Canviar contrasenya</h3>
+            <div className="input-group">
+              <label>Contrasenya nova</label>
+              <input
+                type="password"
+                value={newPassword}
+                onChange={(e) => setNewPassword(e.target.value)}
+                placeholder="Mínim 6 caràcters"
+              />
+            </div>
+            <div className="input-group">
+              <label>Repeteix-la</label>
+              <input
+                type="password"
+                value={confirmPassword}
+                onChange={(e) => setConfirmPassword(e.target.value)}
+                placeholder="Repeteix la contrasenya nova"
+              />
+            </div>
+            {changePasswordMsg && (
+              <div style={{
+                color: changePasswordMsg.success ? '#2e7d32' : '#c41230',
+                fontSize: '14px',
+                marginBottom: '10px',
+                fontWeight: '600'
+              }}>
+                {changePasswordMsg.text}
+              </div>
+            )}
+            <button
+              className="login-button"
+              onClick={async () => {
+                if (newPassword.length < 6) {
+                  setChangePasswordMsg({ success: false, text: 'Ha de tenir com a mínim 6 caràcters' });
+                  return;
+                }
+                if (newPassword !== confirmPassword) {
+                  setChangePasswordMsg({ success: false, text: 'Les contrasenyes no coincideixen' });
+                  return;
+                }
+                const result = await handleChangePassword(newPassword);
+                if (result.success) {
+                  setChangePasswordMsg({ success: true, text: 'Contrasenya actualitzada correctament!' });
+                  setNewPassword("");
+                  setConfirmPassword("");
+                } else {
+                  setChangePasswordMsg({ success: false, text: result.message });
+                }
+              }}
+            >
+              Guardar contrasenya nova
+            </button>
+          </div>
+        )}
 
         <img 
           src="https://i.imghippo.com/files/XfcX1130LYo.png" 
