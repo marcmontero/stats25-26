@@ -31,7 +31,7 @@ const IMAGE_MAP = {
 const TEAMS_CONFIG = {
   'senior-a-masc': {
     name: 'Senior A Masculí',
-    icon: '🏀',
+    code: 'SR·A',
     keywords: ['badalones', 'corbacho'],
     statsType: 'advanced', // Stats completes amb quintets
     urls: [
@@ -48,7 +48,7 @@ const TEAMS_CONFIG = {
   },
   'senior-fem': {
     name: 'Senior Femení',
-    icon: '🏀',
+    code: 'SR·F',
     keywords: ['badalones', 'corbacho'],
     statsType: 'advanced',
     urls: [
@@ -63,7 +63,7 @@ const TEAMS_CONFIG = {
   },
   'senior-b-masc': {
     name: 'Senior B Masculí',
-    icon: '🏀',
+    code: 'SR·B',
     keywords: ['badalones', 'corbacho'],
     statsType: 'advanced',
     urls: [
@@ -81,7 +81,7 @@ const TEAMS_CONFIG = {
   },
   'senior-c-masc': {
     name: 'Senior C Masculí',
-    icon: '🏀',
+    code: 'SR·C',
     keywords: ['badalones', 'corbacho'],
     statsType: 'advanced',
     urls: [
@@ -105,14 +105,14 @@ const TEAMS_CONFIG = {
   },
   'u25-masc': {
     name: 'U25 Masculí',
-    icon: '🏀',
+    code: 'U25',
     keywords: ['badalones', 'corbacho'],
     statsType: 'advanced',
     urls: []
   },
   'u20-masc': {
     name: 'U20 Masculí',
-    icon: '🏀',
+    code: 'U20',
     keywords: ['badalones', 'corbacho'],
     statsType: 'advanced',
     urls: [
@@ -127,28 +127,28 @@ const TEAMS_CONFIG = {
   },
   'junior-masc': {
     name: 'Júnior Masculí',
-    icon: '🏀',
+    code: 'JUN',
     keywords: ['badalones', 'corbacho'],
     statsType: 'advanced',
     urls: []
   },
   'cadet-masc': {
     name: 'Cadet Masculí',
-    icon: '🏀',
+    code: 'CAD',
     keywords: ['badalones', 'corbacho'],
     statsType: 'advanced',
     urls: []
   },
   'infantil-masc': {
     name: 'Infantil Masculí',
-    icon: '⛹️',
+    code: 'INF',
     keywords: ['badalones', 'corbacho'],
     statsType: 'basic',
     urls: []
   },
   'preinfantil-masc': {
     name: 'Preinfantil Masculí',
-    icon: '⛹️',
+    code: 'PRE',
     keywords: ['badalones', 'corbacho'],
     statsType: 'basic',
     urls: [
@@ -164,28 +164,28 @@ const TEAMS_CONFIG = {
   },
   'preinfantil-fem': {
     name: 'Preinfantil Femení',
-    icon: '🏀',
+    code: 'PRE·F',
     keywords: ['badalones', 'corbacho'],
     statsType: 'basic',
     urls: []
   },
   'mini-negre-fem': {
     name: 'Mini Negre Femení',
-    icon: '🏀',
+    code: 'MN·N',
     keywords: ['badalones', 'corbacho'],
     statsType: 'basic',
     urls: []
   },
   'mini-vermell-fem': {
     name: 'Mini Vermell Femení',
-    icon: '🏀',
+    code: 'MN·V',
     keywords: ['badalones', 'corbacho'],
     statsType: 'basic',
     urls: []
   },
   'mini-masc': {
     name: 'Mini Masculí',
-    icon: '⛹️',
+    code: 'MINI',
     keywords: ['badalones', 'corbacho'],
     statsType: 'basic',
     urls: [
@@ -194,21 +194,21 @@ const TEAMS_CONFIG = {
   },
   'premini-negre-masc': {
     name: 'Pre-Mini Negre Masculí',
-    icon: '🏀',
+    code: 'PM·N',
     keywords: ['badalones', 'corbacho'],
     statsType: 'basic',
     urls: []
   },
   'premini-vermell-masc': {
     name: 'Pre-Mini Vermell Masculí',
-    icon: '🏀',
+    code: 'PM·V',
     keywords: ['badalones', 'corbacho'],
     statsType: 'basic',
     urls: []
   },
   'u25-fem': {
     name: 'U25 Femení',
-    icon: '🏀',
+    code: 'U25·F',
     keywords: ['badalones', 'corbacho'],
     statsType: 'advanced',
     urls: []
@@ -458,7 +458,11 @@ const App = () => {
             alt="AE Badalonès" 
             className="club-logo"
           />
-          <h1>Inicia Sessió</h1>
+          <div className="scoreboard-eyebrow">
+            <span className="scoreboard-dot"></span>
+            Consola d'estadístiques
+          </div>
+          <h1 className="login-title">Inicia sessió</h1>
           <form onSubmit={handleLogin}>
             <div className="input-group">
               <label>Usuari</label>
@@ -513,115 +517,48 @@ const App = () => {
   if (!selectedTeam) {
     return (
       <div className="app">
-        <div style={{
-          display: 'flex',
-          justifyContent: 'space-between',
-          alignItems: 'center',
-          marginBottom: '20px',
-          padding: '15px 20px',
-          background: 'white',
-          borderRadius: '10px',
-          boxShadow: '0 2px 8px rgba(0,0,0,0.1)'
-        }}>
-          <div style={{ display: 'flex', alignItems: 'center', gap: '15px' }}>
+        <div className="welcome-bar">
+          <div className="welcome-identity">
             {currentUser.profileImage ? (
-              <img 
-                src={currentUser.profileImage} 
+              <img
+                src={currentUser.profileImage}
                 alt={currentUser.name}
-                style={{
-                  width: '100px',
-                  height: '100px',
-                  borderRadius: '50%',
-                  objectFit: 'cover',
-                  border: '3px solid #c41230',
-                  boxShadow: '0 2px 8px rgba(196, 18, 48, 0.3)'
-                }}
+                className="welcome-avatar"
                 onError={(e) => {
                   e.target.style.display = 'none';
                 }}
               />
             ) : (
-              <div style={{
-                width: '60px',
-                height: '60px',
-                borderRadius: '50%',
-                background: 'linear-gradient(135deg, #c41230 0%, #a00f26 100%)',
-                display: 'flex',
-                alignItems: 'center',
-                justifyContent: 'center',
-                color: 'white',
-                fontSize: '24px',
-                fontWeight: '700',
-                boxShadow: '0 2px 8px rgba(196, 18, 48, 0.3)'
-              }}>
+              <div className="welcome-avatar welcome-avatar--fallback">
                 {currentUser.name.charAt(0)}
               </div>
             )}
             <div>
-              <div style={{ fontSize: '18px', fontWeight: '700', color: '#1a1a1a' }}>
-                Benvingut, {currentUser.name}
-              </div>
-              <div style={{ 
-                fontSize: '13px', 
-                color: '#666', 
-                marginTop: '3px',
-                lineHeight: '1.4'
-              }}>
-                {currentUser.position}
-              </div>
+              <div className="welcome-name">{currentUser.name}</div>
+              <div className="welcome-position">{currentUser.position}</div>
             </div>
           </div>
-          <div style={{ display: 'flex', gap: '10px' }}>
+          <div className="welcome-actions">
             <button
+              className="ghost-button"
               onClick={() => {
                 setShowChangePassword(!showChangePassword);
                 setChangePasswordMsg(null);
                 setNewPassword("");
                 setConfirmPassword("");
               }}
-              style={{
-                padding: '10px 20px',
-                background: '#f0f0f0',
-                color: '#333',
-                border: 'none',
-                borderRadius: '8px',
-                cursor: 'pointer',
-                fontSize: '14px',
-                fontWeight: '600',
-                transition: 'all 0.3s'
-              }}
             >
-              🔑 Canviar Contrasenya
+              Canviar contrasenya
             </button>
-            <button
-              onClick={handleLogout}
-              style={{
-                padding: '10px 20px',
-                background: '#c41230',
-                color: 'white',
-                border: 'none',
-                borderRadius: '8px',
-                cursor: 'pointer',
-                fontSize: '14px',
-                fontWeight: '600',
-                transition: 'all 0.3s'
-              }}
-            >
-              Tancar Sessió
+            <button className="ghost-button ghost-button--danger" onClick={handleLogout}>
+              Tancar sessió
             </button>
           </div>
         </div>
 
         {showChangePassword && (
-          <div style={{
-            background: 'white',
-            borderRadius: '10px',
-            boxShadow: '0 2px 8px rgba(0,0,0,0.1)',
-            padding: '20px',
-            marginBottom: '20px',
-            maxWidth: '400px'
-          }}>
-            <h3 style={{ marginTop: 0, marginBottom: '15px' }}>Canviar contrasenya</h3>
+          <div className="panel panel--narrow">
+            <h3 className="panel-title">Canviar contrasenya</h3>
             <div className="input-group">
               <label>Contrasenya nova</label>
               <input
@@ -641,12 +578,7 @@ const App = () => {
               />
             </div>
             {changePasswordMsg && (
-              <div style={{
-                color: changePasswordMsg.success ? '#2e7d32' : '#c41230',
-                fontSize: '14px',
-                marginBottom: '10px',
-                fontWeight: '600'
-              }}>
+              <div className={`form-message ${changePasswordMsg.success ? 'form-message--success' : 'form-message--error'}`}>
                 {changePasswordMsg.text}
               </div>
             )}
@@ -681,8 +613,8 @@ const App = () => {
           alt="AE Badalonès" 
           className="club-logo"
         />
-        <h1>Estadístiques AE Badalonès 2025-2026</h1>
-        <h2>#somDimonis</h2>
+        <h1 className="page-title">Estadístiques AE Badalonès</h1>
+        <div className="page-subtitle">Temporada 2025-2026 · #somDimonis</div>
         
         <div className="teams-grid">
           {Object.entries(availableTeams).map(([teamId, team]) => (
@@ -692,14 +624,14 @@ const App = () => {
               disabled={team.urls.length === 0}
               className="team-card"
             >
-              <span className="team-card-icon">{team.icon}</span>
+              <span className="team-card-code">{team.code}</span>
               <span className="team-card-name">{team.name}</span>
               {team.urls.length > 0 ? (
                 <span className="team-card-matches">
                   {team.urls.length} {team.urls.length === 1 ? 'partit' : 'partits'}
                 </span>
               ) : (
-                <span className="team-card-matches" style={{ color: '#999' }}>
+                <span className="team-card-matches team-card-matches--empty">
                   Sense partits
                 </span>
               )}
@@ -708,12 +640,7 @@ const App = () => {
         </div>
 
         {Object.keys(availableTeams).length === 0 && (
-          <div style={{
-            textAlign: 'center',
-            padding: '40px',
-            color: '#666',
-            fontSize: '16px'
-          }}>
+          <div className="empty-state">
             No tens accés a cap equip
           </div>
         )}
@@ -760,34 +687,29 @@ const App = () => {
 
       {!selectedMatch && (
         <div className="buttons-container">
-          <h3 className="menu-title">Opcions d'Anàlisi</h3>
+          <h3 className="menu-title">Opcions d'anàlisi</h3>
           <div className="menu-options">
-            <button className="stats-button" onClick={() => setShowStats(!showStats)}>
-              <span className="menu-icon">📊</span>
-              <span>{showStats ? "Ocultar Mitjana Stats" : "Mitjana Stats"}</span>
+            <button className={`tab-button ${showStats ? 'tab-button--active' : ''}`} onClick={() => setShowStats(!showStats)}>
+              Mitjana stats
             </button>
 
-            <button className="player-stats-button" onClick={() => setShowPlayerStats(!showPlayerStats)}>
-              <span className="menu-icon">👤</span>
-              <span>{showPlayerStats ? "Ocultar Stats Jugadora" : "Stats per Jugadora"}</span>
+            <button className={`tab-button ${showPlayerStats ? 'tab-button--active' : ''}`} onClick={() => setShowPlayerStats(!showPlayerStats)}>
+              Stats per jugadora
             </button>
 
-            <button className="stats-button" onClick={() => setShowEvolution(!showEvolution)}>
-              <span className="menu-icon">📈</span>
-              <span>{showEvolution ? "Ocultar Gràfics" : "Gràfics d'Evolució"}</span>
+            <button className={`tab-button ${showEvolution ? 'tab-button--active' : ''}`} onClick={() => setShowEvolution(!showEvolution)}>
+              Gràfics d'evolució
             </button>
 
             {/* OPCIONS PER STATSTYPE ADVANCED */}
             {currentTeam.statsType === 'advanced' && (
-              <button className="player-stats-button" onClick={() => setShowTopQuintets(!showTopQuintets)}>
-                <span className="menu-icon">🏆</span>
-                <span>{showTopQuintets ? "Ocultar Top Quintets" : "Top Quintets"}</span>
+              <button className={`tab-button ${showTopQuintets ? 'tab-button--active' : ''}`} onClick={() => setShowTopQuintets(!showTopQuintets)}>
+                Top quintets
               </button>
             )}
 
-            <button className="stats-button" onClick={() => setShowExport(!showExport)}>
-              <span className="menu-icon">📥</span>
-              <span>{showExport ? "Ocultar Exportació" : "Exportar Informes"}</span>
+            <button className={`tab-button ${showExport ? 'tab-button--active' : ''}`} onClick={() => setShowExport(!showExport)}>
+              Exportar informes
             </button>
           </div>
         </div>
