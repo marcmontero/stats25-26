@@ -58,7 +58,7 @@ const USERS_CONFIG = {
     role: 'coach',
     position: 'Entrenador Senior Femení, U20 Masculí i Cadet A Masculí',
     profileImage: manelimg,
-    teams: ['senior-c-masc', 'u20-masc', 'senior-fem', 'cadet-a-masc']
+    teams: ['senior-c-masc', 'u20-masc', 'senior-fem', 'cadet-masc']
   },
   'marc.funtane': {
     password: 'marc2025',
@@ -90,7 +90,7 @@ const USERS_CONFIG = {
     role: 'coach',
     position: 'Entrenador Cadet B Masculí',
     profileImage: aleximg,
-    teams: ['cadet-b-masc']
+    teams: ['cadet-masc']
   }
 };
 
@@ -169,6 +169,13 @@ const TEAMS_CONFIG = {
 
     ]
   },
+  'u25-masc': {
+    name: 'U25 Masculí',
+    icon: '🏀',
+    keywords: ['badalones', 'corbacho'],
+    statsType: 'advanced',
+    urls: []
+  },
   'u20-masc': {
     name: 'U20 Masculí',
     icon: '🏀',
@@ -184,45 +191,26 @@ const TEAMS_CONFIG = {
       'https://msstats.optimalwayconsulting.com/v1/fcbq/getJsonWithMatchStats/691a1297edca8300012f171e?currentSeason=true'
     ]
   },
-  'cadet-a-masc': {
-    name: 'Cadet A Masculí',
+  'junior-masc': {
+    name: 'Júnior Masculí',
     icon: '🏀',
     keywords: ['badalones', 'corbacho'],
     statsType: 'advanced',
-    urls: [
-      'https://msstats.optimalwayconsulting.com/v1/fcbq/getJsonWithMatchStats/68e109131c33a2000130eb71?currentSeason=true',
-      'https://msstats.optimalwayconsulting.com/v1/fcbq/getJsonWithMatchStats/68ebc8fd2ea75e0001d07299?currentSeason=true',
-      'https://msstats.optimalwayconsulting.com/v1/fcbq/getJsonWithMatchStats/68fe694d1497f200018907fb?currentSeason=true',
-      'https://msstats.optimalwayconsulting.com/v1/fcbq/getJsonWithMatchStats/690fa4a0530d2e000153b72e?currentSeason=true',
-      'https://msstats.optimalwayconsulting.com/v1/fcbq/getJsonWithMatchStats/6919f99cedca8300012f0796?currentSeason=true'
-    ]
+    urls: []
   },
-  'cadet-b-masc': {
-    name: 'Cadet B Masculí',
+  'cadet-masc': {
+    name: 'Cadet Masculí',
     icon: '🏀',
     keywords: ['badalones', 'corbacho'],
     statsType: 'advanced',
-    urls: [
-      'https://msstats.optimalwayconsulting.com/v1/fcbq/getJsonWithMatchStats/68e2464d1c33a20001313d9d?currentSeason=true',
-      'https://msstats.optimalwayconsulting.com/v1/fcbq/getJsonWithMatchStats/68eb94962ea75e0001d062f6?currentSeason=true',
-      'https://msstats.optimalwayconsulting.com/v1/fcbq/getJsonWithMatchStats/68f4a41f104e420001aeb3af?currentSeason=true',
-      'https://msstats.optimalwayconsulting.com/v1/fcbq/getJsonWithMatchStats/68fe125101d7c6000111edf4?currentSeason=true',
-      'https://msstats.optimalwayconsulting.com/v1/fcbq/getJsonWithMatchStats/690f92d0530d2e000153ad4e?currentSeason=true',
-      'https://msstats.optimalwayconsulting.com/v1/fcbq/getJsonWithMatchStats/6919cbc75ac4ad0001775f3f?currentSeason=true'
-    ]
+    urls: []
   },
-  'infantil-fem': {
-    name: 'Infantil Femení',
-    icon: '🏀',
+  'infantil-masc': {
+    name: 'Infantil Masculí',
+    icon: '⛹️',
     keywords: ['badalones', 'corbacho'],
-    statsType: 'basic', // Stats simplificades per categories de base
-    urls: [
-      'https://msstats.optimalwayconsulting.com/v1/fcbq/getJsonWithMatchStats/68e14a021c33a20001310b6b?currentSeason=true',
-      'https://msstats.optimalwayconsulting.com/v1/fcbq/getJsonWithMatchStats/68ea46732ea75e0001d00cc7?currentSeason=true',
-      'https://msstats.optimalwayconsulting.com/v1/fcbq/getJsonWithMatchStats/68fcb2ca1497f200013e2143?currentSeason=true',
-      'https://msstats.optimalwayconsulting.com/v1/fcbq/getJsonWithMatchStats/690f3c30530d2e000153786b?currentSeason=true',
-      'https://msstats.optimalwayconsulting.com/v1/fcbq/getJsonWithMatchStats/6918739a5ac4ad000176d4a4?currentSeason=true'
-    ]
+    statsType: 'basic',
+    urls: []
   },
   'preinfantil-masc': {
     name: 'Preinfantil Masculí',
@@ -239,6 +227,13 @@ const TEAMS_CONFIG = {
       'https://msstats.optimalwayconsulting.com/v1/fcbq/getJsonWithMatchStats/693e97fa4741c10001403543?currentSeason=true'
       
     ]
+  },
+  'preinfantil-fem': {
+    name: 'Preinfantil Femení',
+    icon: '🏀',
+    keywords: ['badalones', 'corbacho'],
+    statsType: 'basic',
+    urls: []
   },
   'mini-negre-fem': {
     name: 'Mini Negre Femení',
@@ -277,11 +272,11 @@ const TEAMS_CONFIG = {
     statsType: 'basic',
     urls: []
   },
-  'premini-fem': {
-    name: 'Pre-Mini Femení',
-    icon: '⛹️',
+  'u25-fem': {
+    name: 'U25 Femení',
+    icon: '🏀',
     keywords: ['badalones', 'corbacho'],
-    statsType: 'basic',
+    statsType: 'advanced',
     urls: []
   }
 };
@@ -294,6 +289,11 @@ const App = () => {
   const [password, setPassword] = useState("");
   const [loginError, setLoginError] = useState("");
   const [rememberMe, setRememberMe] = useState(false);
+
+  // Config d'equips: comen\u00e7a amb els partits escrits a m\u00e0 (TEAMS_CONFIG)
+  // i s'hi van afegint els descoberts autom\u00e0ticament (veure projecte
+  // calendari-fcbq-sync) sense esborrar mai els que ja hi havia.
+  const [teamsConfig, setTeamsConfig] = useState(TEAMS_CONFIG);
 
   // Estats de l'aplicació
   const [selectedTeam, setSelectedTeam] = useState(null);
@@ -319,6 +319,45 @@ const App = () => {
         localStorage.removeItem('badalones_user');
       }
     }
+  }, []);
+
+  // ========== EFECTE PER FUSIONAR LES URLS DESCOBERTES AUTOMÀTICAMENT ==========
+  React.useEffect(() => {
+    const mergeDiscoveredUrls = async () => {
+      try {
+        const res = await fetch(`/discoveredUrls.json?t=${Date.now()}`);
+        if (!res.ok) return;
+        const { teams: discovered } = await res.json();
+        if (!discovered) return;
+
+        setTeamsConfig((prev) => {
+          const merged = { ...prev };
+          Object.entries(discovered).forEach(([teamKey, urls]) => {
+            if (!merged[teamKey] || !Array.isArray(urls) || urls.length === 0) return;
+            const existingUrls = merged[teamKey].urls || [];
+            const existingIds = new Set(
+              existingUrls.map((u) => (u.match(/getJsonWithMatchStats\/([a-zA-Z0-9]+)/) || [])[1])
+            );
+            const newUrls = urls.filter(
+              (u) => !existingIds.has((u.match(/getJsonWithMatchStats\/([a-zA-Z0-9]+)/) || [])[1])
+            );
+            if (newUrls.length > 0) {
+              merged[teamKey] = {
+                ...merged[teamKey],
+                urls: [...existingUrls, ...newUrls],
+              };
+            }
+          });
+          return merged;
+        });
+      } catch (error) {
+        // Si el fitxer no existeix encara o falla la crida, no passa res:
+        // simplement es queden les URLs que ja teníem escrites a mà.
+        console.warn('No s\'han pogut carregar les URLs descobertes automàticament:', error);
+      }
+    };
+
+    mergeDiscoveredUrls();
   }, []);
 
   // ========== FUNCIONS D'AUTENTICACIÓ ==========
@@ -375,12 +414,12 @@ const App = () => {
 
   const getAvailableTeams = () => {
     if (!currentUser) return {};
-    if (currentUser.teams === 'all') return TEAMS_CONFIG;
+    if (currentUser.teams === 'all') return teamsConfig;
 
     const availableTeams = {};
     currentUser.teams.forEach(teamId => {
-      if (TEAMS_CONFIG[teamId]) {
-        availableTeams[teamId] = TEAMS_CONFIG[teamId];
+      if (teamsConfig[teamId]) {
+        availableTeams[teamId] = teamsConfig[teamId];
       }
     });
     return availableTeams;
@@ -393,7 +432,7 @@ const App = () => {
       return;
     }
 
-    const team = TEAMS_CONFIG[teamId];
+    const team = teamsConfig[teamId];
     
     if (team.urls.length === 0) {
       alert(`No hi ha partits configurats per ${team.name}`);
@@ -657,7 +696,7 @@ const App = () => {
     );
   }
 
-  const currentTeam = TEAMS_CONFIG[selectedTeam];
+  const currentTeam = teamsConfig[selectedTeam];
 
   // ========== PANTALLA DE LOADING ==========
   if (loading) {
