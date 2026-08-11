@@ -614,7 +614,7 @@ const App = () => {
           className="club-logo"
         />
         <h1 className="page-title">Estadístiques AE Badalonès</h1>
-        <div className="page-subtitle">Temporada 2025-2026 · #somDimonis</div>
+        <div className="page-subtitle">Temporada 2026-2027 · #somDimonis</div>
         
         <div className="teams-grid">
           {Object.entries(availableTeams).map(([teamId, team]) => (
