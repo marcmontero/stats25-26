@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, Suspense, lazy } from 'react';
 import { fetchStats } from './api/fechStats.js';
 import PlayerList from './components/playerList.jsx';
 import MatchSelector from './components/matchSelector.jsx';
@@ -7,17 +7,20 @@ import BasicMatchView from './components/BasicMatchView.jsx';
 import { getQuintetStats } from './utils/QuintetStats.jsx';
 import StatsTable from "./components/StatsTables.jsx";
 import PlayerStatsByMatch from "./components/PlayerStatsByMatch.jsx";
-import PlayerEvolutionCharts from "./components/PlayerEvolutionCharts.jsx";
-import TopQuintetsAnalysis from "./components/TopQuintetsAnalysis.jsx";
-import ExportReports from "./components/ExportReports.jsx";
+// Aquests tres porten llibreries pesades (gràfics, PDF, Excel) que només
+// calen si l'usuari les obre de veritat: es carreguen a demanda perquè
+// l'aplicació arrenqui molt més ràpid.
+const PlayerEvolutionCharts = lazy(() => import("./components/PlayerEvolutionCharts.jsx"));
+const TopQuintetsAnalysis = lazy(() => import("./components/TopQuintetsAnalysis.jsx"));
+const ExportReports = lazy(() => import("./components/ExportReports.jsx"));
 import QuartersAnalysis from './components/QuartersAnalysis.jsx';
 import { supabase, usernameToInternalEmail } from './supabaseClient.js';
 import './App.css';
 
 //imports imgs
-import funtaimg from "../public/img/funtane.png";
-import entrenaimg from "../public/img/entrena.png";
-import aleximg from "../public/img/alex.png";
+import funtaimg from "../public/img/funtane.jpg";
+import entrenaimg from "../public/img/entrena.jpg";
+import aleximg from "../public/img/alex.jpg";
 
 
 // ========== FOTOS DE PERFIL (opcional per usuari; si no n'hi ha, ==========
@@ -240,11 +243,10 @@ const App = () => {
   const [matches, setMatches] = useState([]);
   const [selectedMatch, setSelectedMatch] = useState(null);
   const [loading, setLoading] = useState(false);
-  const [showPlayerStats, setShowPlayerStats] = useState(false);
-  const [showStats, setShowStats] = useState(false);
-  const [showEvolution, setShowEvolution] = useState(false);
-  const [showTopQuintets, setShowTopQuintets] = useState(false);
-  const [showExport, setShowExport] = useState(false);
+  // Vista activa del menú d'anàlisi: només una alhora (com un menú de
+  // veritat, no botons que s'acumulen). null = cap vista oberta.
+  const [activeView, setActiveView] = useState(null);
+  const toggleView = (view) => setActiveView((prev) => (prev === view ? null : view));
 
   // ========== EFECTE PER RECUPERAR SESSIÓ (Supabase la gestiona sola) ==========
   React.useEffect(() => {
@@ -357,11 +359,7 @@ const App = () => {
     setSelectedTeam(null);
     setSelectedMatch(null);
     setMatches([]);
-    setShowPlayerStats(false);
-    setShowStats(false);
-    setShowEvolution(false);
-    setShowTopQuintets(false);
-    setShowExport(false);
+    setActiveView(null);
   };
 
   // ========== CANVIAR CONTRASENYA ==========
@@ -409,11 +407,7 @@ const App = () => {
 
     setSelectedTeam(teamId);
     setLoading(true);
-    setShowPlayerStats(false);
-    setShowStats(false);
-    setShowEvolution(false);
-    setShowTopQuintets(false);
-    setShowExport(false);
+    setActiveView(null);
     setSelectedMatch(null);
 
     try {
@@ -432,20 +426,12 @@ const App = () => {
     setSelectedTeam(null);
     setSelectedMatch(null);
     setMatches([]);
-    setShowPlayerStats(false);
-    setShowStats(false);
-    setShowEvolution(false);
-    setShowTopQuintets(false);
-    setShowExport(false);
+    setActiveView(null);
   };
 
   const handleBackToMatches = () => {
     setSelectedMatch(null);
-    setShowStats(false);
-    setShowPlayerStats(false);
-    setShowEvolution(false);
-    setShowTopQuintets(false);
-    setShowExport(false);
+    setActiveView(null);
   };
 
   // ========== PANTALLA DE LOGIN ==========
@@ -614,7 +600,7 @@ const App = () => {
           className="club-logo"
         />
         <h1 className="page-title">Estadístiques AE Badalonès</h1>
-        <div className="page-subtitle">Temporada 2026-2027 · #somDimonis</div>
+        <div className="page-subtitle">Temporada 2025-2026 · #somDimonis</div>
         
         <div className="teams-grid">
           {Object.entries(availableTeams).map(([teamId, team]) => (
@@ -689,37 +675,39 @@ const App = () => {
         <div className="buttons-container">
           <h3 className="menu-title">Opcions d'anàlisi</h3>
           <div className="menu-options">
-            <button className={`tab-button ${showStats ? 'tab-button--active' : ''}`} onClick={() => setShowStats(!showStats)}>
+            <button className={`tab-button ${activeView === 'stats' ? 'tab-button--active' : ''}`} onClick={() => toggleView('stats')}>
               Mitjana stats
             </button>
 
-            <button className={`tab-button ${showPlayerStats ? 'tab-button--active' : ''}`} onClick={() => setShowPlayerStats(!showPlayerStats)}>
+            <button className={`tab-button ${activeView === 'playerStats' ? 'tab-button--active' : ''}`} onClick={() => toggleView('playerStats')}>
               Stats per jugadora
             </button>
 
-            <button className={`tab-button ${showEvolution ? 'tab-button--active' : ''}`} onClick={() => setShowEvolution(!showEvolution)}>
+            <button className={`tab-button ${activeView === 'evolution' ? 'tab-button--active' : ''}`} onClick={() => toggleView('evolution')}>
               Gràfics d'evolució
             </button>
 
             {/* OPCIONS PER STATSTYPE ADVANCED */}
             {currentTeam.statsType === 'advanced' && (
-              <button className={`tab-button ${showTopQuintets ? 'tab-button--active' : ''}`} onClick={() => setShowTopQuintets(!showTopQuintets)}>
+              <button className={`tab-button ${activeView === 'topQuintets' ? 'tab-button--active' : ''}`} onClick={() => toggleView('topQuintets')}>
                 Top quintets
               </button>
             )}
 
-            <button className={`tab-button ${showExport ? 'tab-button--active' : ''}`} onClick={() => setShowExport(!showExport)}>
+            <button className={`tab-button ${activeView === 'export' ? 'tab-button--active' : ''}`} onClick={() => toggleView('export')}>
               Exportar informes
             </button>
           </div>
         </div>
       )}
 
-      {showStats && <StatsTable matches={matches} />}
-      {showPlayerStats && <PlayerStatsByMatch matches={matches} />}
-      {showEvolution && <PlayerEvolutionCharts matches={matches} />}
-      {showTopQuintets && currentTeam.statsType === 'advanced' && <TopQuintetsAnalysis matches={matches} />}
-      {showExport && <ExportReports matches={matches} teamName={currentTeam.name} />}
+      <Suspense fallback={<div className="loading-container"><div className="loading-spinner"></div></div>}>
+        {activeView === 'stats' && <StatsTable matches={matches} />}
+        {activeView === 'playerStats' && <PlayerStatsByMatch matches={matches} />}
+        {activeView === 'evolution' && <PlayerEvolutionCharts matches={matches} />}
+        {activeView === 'topQuintets' && currentTeam.statsType === 'advanced' && <TopQuintetsAnalysis matches={matches} />}
+        {activeView === 'export' && <ExportReports matches={matches} teamName={currentTeam.name} />}
+      </Suspense>
 
       {!selectedMatch ? (
         <MatchSelector matches={matches} onSelectMatch={setSelectedMatch} />

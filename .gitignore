@@ -26,3 +26,6 @@ dist-ssr
 # Variables d'entorn locals
 .env
 .env.local
+
+# vite-plugin-pwa (generat en dev, no cal pujar-ho)
+dev-dist

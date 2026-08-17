@@ -31,6 +31,40 @@
   box-sizing: border-box;
 }
 
+/* ==========================================================================
+   COMPORTAMENT NATIU quan s'obre com a app instal·lada (des de la pantalla
+   d'inici), no com a pàgina web normal dins Safari/Chrome.
+   ========================================================================== */
+html, body {
+  /* Sense rebot elàstic en fer scroll fins dalt/baix de tot (com a les apps
+     natives; a Safari normal aquest "rebot" és el comportament esperat). */
+  overscroll-behavior-y: none;
+  -webkit-tap-highlight-color: transparent;
+}
+
+button, a {
+  /* Sense el menú de "Copiar / Compartir" en mantenir premut, i sense
+     ressaltat blau en tocar (com un botó natiu, no un enllaç web). */
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+input, textarea {
+  -webkit-user-select: text;
+  user-select: text;
+}
+
+/* Marges de seguretat perquè el contingut no quedi tapat per la barra de
+   notificacions (notch) ni per l'indicador d'inici de l'iPhone quan l'app
+   corre a pantalla completa (mode standalone). */
+@media (display-mode: standalone) {
+  body {
+    padding-top: env(safe-area-inset-top);
+    padding-bottom: env(safe-area-inset-bottom);
+  }
+}
+
 body {
   font-family: var(--font-body);
   background: var(--ink);
