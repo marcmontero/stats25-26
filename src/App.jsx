@@ -17,19 +17,8 @@ import QuartersAnalysis from './components/QuartersAnalysis.jsx';
 import { supabase, usernameToInternalEmail } from './supabaseClient.js';
 import './App.css';
 
-//imports imgs
-import funtaimg from "../public/img/funtane.jpg";
-import entrenaimg from "../public/img/entrena.jpg";
-import aleximg from "../public/img/alex.jpg";
-
-
-// ========== FOTOS DE PERFIL (opcional per usuari; si no n'hi ha, ==========
-// ========== es mostra un cercle amb la inicial del nom) ==========
-const IMAGE_MAP = {
-  'uri.entrena': entrenaimg,
-  'marc.funtane': funtaimg,
-  'alex.medialdea': aleximg,
-};
+// Les fotos de perfil ja no viuen al codi: cada usuari puja/canvia la seva
+// des de l'app (es guarden a Supabase Storage, bucket "avatars").
 
 const TEAMS_CONFIG = {
   'senior-a-masc': {
@@ -232,6 +221,8 @@ const App = () => {
   const [newPassword, setNewPassword] = useState("");
   const [confirmPassword, setConfirmPassword] = useState("");
   const [changePasswordMsg, setChangePasswordMsg] = useState(null);
+  const [photoUploading, setPhotoUploading] = useState(false);
+  const [photoMsg, setPhotoMsg] = useState(null);
 
   // Config d'equips: comen\u00e7a amb els partits escrits a m\u00e0 (TEAMS_CONFIG)
   // i s'hi van afegint els descoberts autom\u00e0ticament (veure projecte
@@ -278,7 +269,7 @@ const App = () => {
         name: profile.name,
         role: profile.role,
         position: profile.position,
-        profileImage: IMAGE_MAP[profile.username] || "",
+        profileImage: profile.profile_image_url || "",
         teams: profile.teams,
       });
       setIsAuthenticated(true);
@@ -368,6 +359,45 @@ const App = () => {
     if (error) {
       return { success: false, message: error.message };
     }
+    return { success: true };
+  };
+
+  // ========== CANVIAR FOTO DE PERFIL ==========
+  const handleChangePhoto = async (file) => {
+    if (!file || !currentUser) return { success: false, message: 'Cap fitxer seleccionat' };
+    if (!file.type.startsWith('image/')) {
+      return { success: false, message: 'Ha de ser una imatge' };
+    }
+    if (file.size > 5 * 1024 * 1024) {
+      return { success: false, message: "La imatge no pot pesar més de 5MB" };
+    }
+
+    const { error: uploadError } = await supabase.storage
+      .from('avatars')
+      .upload(currentUser.username, file, { upsert: true, contentType: file.type });
+
+    if (uploadError) {
+      return { success: false, message: uploadError.message };
+    }
+
+    const { data: publicUrlData } = supabase.storage
+      .from('avatars')
+      .getPublicUrl(currentUser.username);
+
+    // "Cache-busting": sense això, el navegador podria seguir mostrant la
+    // foto vella durant un temps perquè la URL no ha canviat de text.
+    const freshUrl = `${publicUrlData.publicUrl}?t=${Date.now()}`;
+
+    const { error: dbError } = await supabase
+      .from('profiles')
+      .update({ profile_image_url: freshUrl })
+      .eq('username', currentUser.username);
+
+    if (dbError) {
+      return { success: false, message: dbError.message };
+    }
+
+    setCurrentUser((prev) => ({ ...prev, profileImage: freshUrl }));
     return { success: true };
   };
 
@@ -505,23 +535,44 @@ const App = () => {
       <div className="app">
         <div className="welcome-bar">
           <div className="welcome-identity">
-            {currentUser.profileImage ? (
-              <img
-                src={currentUser.profileImage}
-                alt={currentUser.name}
-                className="welcome-avatar"
-                onError={(e) => {
-                  e.target.style.display = 'none';
+            <label className="avatar-upload" title="Canviar foto">
+              {currentUser.profileImage ? (
+                <img
+                  src={currentUser.profileImage}
+                  alt={currentUser.name}
+                  className="welcome-avatar"
+                  onError={(e) => {
+                    e.target.style.display = 'none';
+                  }}
+                />
+              ) : (
+                <div className="welcome-avatar welcome-avatar--fallback">
+                  {currentUser.name.charAt(0)}
+                </div>
+              )}
+              <span className="avatar-upload-badge">{photoUploading ? '···' : '✎'}</span>
+              <input
+                type="file"
+                accept="image/*"
+                disabled={photoUploading}
+                onChange={async (e) => {
+                  const file = e.target.files?.[0];
+                  e.target.value = ''; // permet tornar a triar el mateix fitxer despres
+                  if (!file) return;
+                  setPhotoUploading(true);
+                  setPhotoMsg(null);
+                  const result = await handleChangePhoto(file);
+                  setPhotoUploading(false);
+                  if (!result.success) {
+                    setPhotoMsg(result.message);
+                  }
                 }}
               />
-            ) : (
-              <div className="welcome-avatar welcome-avatar--fallback">
-                {currentUser.name.charAt(0)}
-              </div>
-            )}
+            </label>
             <div>
               <div className="welcome-name">{currentUser.name}</div>
               <div className="welcome-position">{currentUser.position}</div>
+              {photoMsg && <div className="form-message form-message--error" style={{ marginTop: 4 }}>{photoMsg}</div>}
             </div>
           </div>
           <div className="welcome-actions">
