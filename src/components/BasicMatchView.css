@@ -109,7 +109,7 @@
 
 .boxscore-table tbody tr:nth-child(even),
 .quarters-table tbody tr:nth-child(even) {
-  background-color: #fafafa;
+  background-color: #f7ecd6;
 }
 
 .boxscore-table tbody tr:nth-child(even):hover,
