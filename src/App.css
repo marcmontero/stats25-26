@@ -1,28 +1,33 @@
 @import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@600;700;800&family=Work+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap');
 
 /* ==========================================================================
-   TOKENS — estètica de marcador de bàsquet: pista fosca sota els llums de
-   pavelló, vermell del club com a accent precís, parquet com a segon accent.
+   TOKENS — estètica de pista de parquet a ple dia: fusta clara com a base
+   (no el marcador fosc d'abans), vermell del club com a accent precís,
+   taronja de la zona de tirs lliures com a segon accent.
    ========================================================================== */
 :root {
-  --ink: #14110d;
-  --surface: #1e1a15;
-  --surface-raised: #262019;
-  --line: #33291e;
+  --ink: #f3e4c4;
+  --surface: #fffaf1;
+  --surface-raised: #f8ecd2;
+  --line: #ddc48f;
 
   --badalones-red: #c41230;
   --badalones-red-dark: #8f0d23;
-  --parquet: #c98a3e;
+  --parquet: #a3661f;
 
-  --chalk: #f2ece0;
-  --chalk-dim: #a79c8a;
-  --chalk-faint: #6e6353;
+  --chalk: #2b2013;
+  --chalk-dim: #6b5c42;
+  --chalk-faint: #9c8a68;
+
+  --on-accent: #fdf6ea;
+  --positive: #1f8a5f;
+  --negative: #c4392b;
 
   --font-display: 'Big Shoulders Display', 'Arial Narrow', sans-serif;
   --font-body: 'Work Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
   --font-mono: 'IBM Plex Mono', 'SF Mono', Consolas, monospace;
 
-  --radius: 6px;
+  --radius: 10px;
 }
 
 * {
@@ -168,7 +173,7 @@ button {
   content: '';
   position: absolute;
   inset: 0;
-  background: radial-gradient(circle at 50% 15%, rgba(201, 138, 62, 0.09), transparent 55%);
+  background: radial-gradient(circle at 50% 15%, rgba(163, 102, 31, 0.10), transparent 55%);
   pointer-events: none;
 }
 
@@ -233,7 +238,7 @@ button {
 
 .login-button {
   background: var(--badalones-red);
-  color: var(--chalk);
+  color: var(--on-accent);
   border: none;
   border-radius: 4px;
   padding: 13px;
@@ -263,8 +268,8 @@ button {
   font-weight: 500;
 }
 
-.form-message--error { color: #e0637a; }
-.form-message--success { color: #6fbf8a; }
+.form-message--error { color: var(--negative); }
+.form-message--success { color: var(--positive); }
 
 /* ==========================================================================
    BARRA DE BENVINGUDA
@@ -330,7 +335,7 @@ button {
   height: 20px;
   border-radius: 50%;
   background: var(--badalones-red);
-  color: var(--chalk);
+  color: var(--on-accent);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -377,7 +382,7 @@ button {
 
 .ghost-button--danger:hover {
   border-color: var(--badalones-red);
-  color: #e0637a;
+  color: var(--negative);
 }
 
 /* ==========================================================================
@@ -613,7 +618,7 @@ button {
 .tab-button--active {
   background: var(--badalones-red);
   border-color: var(--badalones-red);
-  color: var(--chalk);
+  color: var(--on-accent);
 }
 
 /* ==========================================================================
