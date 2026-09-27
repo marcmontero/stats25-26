@@ -1,0 +1,279 @@
+{
+  "updatedAt": "2026-09-27T23:48:41.411339+02:00",
+  "teams": {
+    "senior-a-masc": {
+      "matchId": "3830",
+      "date": "04/10/2026",
+      "time": "12:30",
+      "opponent": "LIMA-HORTA BARCELONA",
+      "isHome": false,
+      "category": "C.C. SEGONA CATEGORIA MASCULINA",
+      "venueName": "POLIESPORTIU SA.FA. HORTA",
+      "venueAddress": "TORRENT DEL CARMEL, 1",
+      "ownStanding": {
+        "rank": "7",
+        "played": "1",
+        "won": "1",
+        "lost": "0",
+        "notPresented": "0",
+        "pointsFor": "76",
+        "pointsAgainst": "72",
+        "leaguePoints": "2",
+        "streak": [
+          "win"
+        ]
+      },
+      "opponentStanding": {
+        "rank": "5",
+        "played": "1",
+        "won": "1",
+        "lost": "0",
+        "notPresented": "0",
+        "pointsFor": "81",
+        "pointsAgainst": "71",
+        "leaguePoints": "2",
+        "streak": [
+          "win"
+        ]
+      }
+    },
+    "senior-b-masc": {
+      "matchId": "8549",
+      "date": "04/10/2026",
+      "time": "17:45",
+      "opponent": "MEDIBAIX - CB GAVÀ",
+      "isHome": true,
+      "category": "1A. TERRITORIAL SÈNIOR MASCULÍ",
+      "venueName": "PAVELLO PAISOS CATALANS",
+      "venueAddress": "AUSIAS MARCH, 61-77",
+      "ownStanding": {
+        "rank": "1",
+        "played": "1",
+        "won": "1",
+        "lost": "0",
+        "notPresented": "0",
+        "pointsFor": "77",
+        "pointsAgainst": "55",
+        "leaguePoints": "2",
+        "streak": [
+          "win"
+        ]
+      },
+      "opponentStanding": {
+        "rank": "5",
+        "played": "1",
+        "won": "1",
+        "lost": "0",
+        "notPresented": "0",
+        "pointsFor": "59",
+        "pointsAgainst": "45",
+        "leaguePoints": "2",
+        "streak": [
+          "win"
+        ]
+      }
+    },
+    "senior-c-masc": {
+      "matchId": "10184",
+      "date": "27/09/2026",
+      "time": "12:00",
+      "opponent": "ADE FUSTER",
+      "isHome": false,
+      "category": "2A. TERRITORIAL SÈNIOR MASCULÍ",
+      "venueName": "PAVELLO DEL RAVAL",
+      "venueAddress": "GINESTA S/N, PARC DELS PINS",
+      "ownStanding": {
+        "rank": "14",
+        "played": "1",
+        "won": "0",
+        "lost": "1",
+        "notPresented": "0",
+        "pointsFor": "40",
+        "pointsAgainst": "66",
+        "leaguePoints": "1",
+        "streak": [
+          "loss"
+        ]
+      },
+      "opponentStanding": {
+        "rank": "1",
+        "played": "1",
+        "won": "1",
+        "lost": "0",
+        "notPresented": "0",
+        "pointsFor": "66",
+        "pointsAgainst": "40",
+        "leaguePoints": "2",
+        "streak": [
+          "win"
+        ]
+      }
+    },
+    "u25-masc": {
+      "matchId": "10556",
+      "date": "11/10/2026",
+      "time": "16:15",
+      "opponent": "CLUB BÀSQUET ARGENTONA",
+      "isHome": false,
+      "category": "C.C. SOTS-25 MASCULÍ NIVELL A",
+      "venueName": "PAVELLO D'ESPORTS D'ARGENTONA",
+      "venueAddress": "CTRA. VILASSAR, S/N",
+      "ownStanding": {
+        "rank": "4",
+        "played": "1",
+        "won": "1",
+        "lost": "0",
+        "notPresented": "0",
+        "pointsFor": "60",
+        "pointsAgainst": "51",
+        "leaguePoints": "2",
+        "streak": [
+          "win"
+        ]
+      },
+      "opponentStanding": {
+        "rank": "10",
+        "played": "1",
+        "won": "0",
+        "lost": "1",
+        "notPresented": "0",
+        "pointsFor": "48",
+        "pointsAgainst": "82",
+        "leaguePoints": "1",
+        "streak": [
+          "loss"
+        ]
+      }
+    },
+    "u20-masc": {
+      "matchId": "19362",
+      "date": "04/10/2026",
+      "time": "16:00",
+      "opponent": "UER PINEDA DE MAR",
+      "isHome": false,
+      "category": "C.C. SOTS-20 MASCULÍ NIVELL A-1",
+      "venueName": "PAVELLO NINO BUSCATO",
+      "venueAddress": "BARCELONA, 33-35"
+    },
+    "junior-masc": {
+      "matchId": "29224",
+      "date": "03/10/2026",
+      "time": "17:45",
+      "opponent": "CN CALDES BLANC",
+      "isHome": false,
+      "category": "C.T. JÚNIOR MASCULÍ PROMOCIÓ",
+      "venueName": "PAV. MUNICIPAL LES CREMADES",
+      "venueAddress": "ZONA ESPORTIVA (PISCINES)"
+    },
+    "cadet-masc": {
+      "matchId": "30537",
+      "date": "04/10/2026",
+      "time": "16:00",
+      "opponent": "CB LES FRANQUESES NEGRE",
+      "isHome": true,
+      "category": "C.T. CADET MASCULÍ PROMOCIÓ",
+      "venueName": "POLIESPORTIU MONTIGALA",
+      "venueAddress": "ROSSINI, S/N"
+    },
+    "infantil-masc": {
+      "matchId": "31529",
+      "date": "03/10/2026",
+      "time": "13:00",
+      "opponent": "UB SANT ADRIA BLAU",
+      "isHome": false,
+      "category": "C.T. INFANTIL MASCULÍ PROMOCIÓ",
+      "venueName": "SANT GABRIEL SANT ADRIA",
+      "venueAddress": "RICART, 8-14"
+    },
+    "preinfantil-masc": {
+      "matchId": "32319",
+      "date": "03/10/2026",
+      "time": "10:45",
+      "opponent": "CB PARETS",
+      "isHome": false,
+      "category": "C.T. PRE-INFANTIL MASCULÍ",
+      "venueName": "PAVELLO MUNICIPAL PARETS",
+      "venueAddress": "AV. FRANCESC MACIA, S/N"
+    },
+    "mini-masc": {
+      "matchId": "33842",
+      "date": "04/10/2026",
+      "time": "09:00",
+      "opponent": "CB VILA DE MONTORNÈS",
+      "isHome": true,
+      "category": "C.T. MINI MASCULÍ",
+      "venueName": "PAVELLO PAISOS CATALANS",
+      "venueAddress": "AUSIAS MARCH, 61-77"
+    },
+    "premini-negre-masc": {
+      "matchId": "34693",
+      "date": "03/10/2026",
+      "time": "09:00",
+      "opponent": "C.B. SANTA COLOMA A",
+      "isHome": false,
+      "category": "C.T. PRE-MINI MASCULÍ",
+      "venueName": "PISTES POLIESPORTIVES PRAT DE LA RIBA",
+      "venueAddress": "Carrer de Prat de la Riba, 107-163"
+    },
+    "premini-vermell-masc": {
+      "matchId": "35453",
+      "date": "11/10/2026",
+      "time": "12:30",
+      "opponent": "CB MANYANET LES CORTS VERD",
+      "isHome": true,
+      "category": "C.T. PRE-MINI MASCULÍ",
+      "venueName": "PAVELLO PAISOS CATALANS",
+      "venueAddress": "AUSIAS MARCH, 61-77"
+    },
+    "senior-fem": {
+      "matchId": "14863",
+      "date": "27/09/2026",
+      "time": "12:30",
+      "opponent": "CN CALDES B",
+      "isHome": false,
+      "category": "2A. TERRITORIAL SÈNIOR FEMENÍ",
+      "venueName": "PAV. MUNICIPAL LES CREMADES",
+      "venueAddress": "ZONA ESPORTIVA (PISCINES)"
+    },
+    "u25-fem": {
+      "matchId": "24855",
+      "date": "29/09/2026",
+      "time": "21:45",
+      "opponent": "AE MINGUELLA - PURE CUISINE",
+      "isHome": true,
+      "category": "C.C. SOTS-25 FEMENÍ",
+      "venueName": "POLIESPORTIU MONTIGALA",
+      "venueAddress": "ROSSINI, S/N"
+    },
+    "preinfantil-fem": {
+      "matchId": "27349",
+      "date": "03/10/2026",
+      "time": "12:30",
+      "opponent": "ARESA SHIPYARD ARENYS BÀSQUET",
+      "isHome": true,
+      "category": "C.T. PRE-INFANTIL FEMENÍ",
+      "venueName": "PAVELLO POMAR",
+      "venueAddress": "CTRA. DE POMAR, S/N"
+    },
+    "mini-negre-fem": {
+      "matchId": "28199",
+      "date": "03/10/2026",
+      "time": "10:45",
+      "opponent": "U.E. GAUDI-FORUS SARDENYA",
+      "isHome": true,
+      "category": "C.T. MINI FEMENÍ",
+      "venueName": "PAVELLO POMAR",
+      "venueAddress": "CTRA. DE POMAR, S/N"
+    },
+    "mini-vermell-fem": {
+      "matchId": "28279",
+      "date": "03/10/2026",
+      "time": "09:00",
+      "opponent": "C.B.VILASSAR DE MAR 1984 VERD",
+      "isHome": true,
+      "category": "C.T. MINI FEMENÍ 1R. ANY",
+      "venueName": "PAVELLO POMAR",
+      "venueAddress": "CTRA. DE POMAR, S/N"
+    }
+  }
+}
