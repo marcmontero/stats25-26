@@ -63,7 +63,9 @@ const stintsIndexByUuid = (stintsSide) => {
 const buildQuintets = (lineupsSide) =>
   (lineupsSide || [])
     .map((entry) => ({
-      lineup: (entry.players || []).map((p) => p.actorName).sort(),
+      lineup: (entry.players || [])
+        .map((p) => ({ dorsal: p.dorsal, name: p.actorName }))
+        .sort((a, b) => a.name.localeCompare(b.name)),
       plusMinus: entry.onCourtPlusMinus || 0,
     }))
     .sort((a, b) => b.plusMinus - a.plusMinus);
@@ -125,8 +127,8 @@ export const adaptMatchResponse = (data, index, keywords) => {
   );
 
   const teams = [
-    { name: header.localTeam.name, teamIdIntern: localUuid, players: localPlayers },
-    { name: header.visitorTeam.name, teamIdIntern: visitUuid, players: visitPlayers },
+    { name: header.localTeam.name, teamIdIntern: localUuid, players: localPlayers, quintets: buildQuintets(lineups?.local) },
+    { name: header.visitorTeam.name, teamIdIntern: visitUuid, players: visitPlayers, quintets: buildQuintets(lineups?.visitor) },
   ];
 
   // Cerca de l'equip propi, exactament igual que abans (per keywords, amb
