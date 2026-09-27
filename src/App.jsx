@@ -26,17 +26,11 @@ const TEAMS_CONFIG = {
     code: 'SR·A',
     keywords: ['badalones', 'corbacho'],
     statsType: 'advanced', // Stats completes amb quintets
-    urls: [
-      'https://msstats.optimalwayconsulting.com/v1/fcbq/getJsonWithMatchStats/68d837bf74669700015de350?currentSeason=true',
-      'https://msstats.optimalwayconsulting.com/v1/fcbq/getJsonWithMatchStats/68e2a8ac1c33a20001316262?currentSeason=true',
-      'https://msstats.optimalwayconsulting.com/v1/fcbq/getJsonWithMatchStats/68eaad84891381000122f075?currentSeason=true',
-      'https://msstats.optimalwayconsulting.com/v1/fcbq/getJsonWithMatchStats/68f3f2c39ebdaf000182d13a?currentSeason=true',
-      'https://msstats.optimalwayconsulting.com/v1/fcbq/getJsonWithMatchStats/68fd22f101d7c6000167d505?currentSeason=true',
-      'https://msstats.optimalwayconsulting.com/v1/fcbq/getJsonWithMatchStats/6910d6b3530d2e0001540b97?currentSeason=true',
-      'https://msstats.optimalwayconsulting.com/v1/fcbq/getJsonWithMatchStats/6918e1e05ac4ad0001771ed0?currentSeason=true',
-      'https://msstats.optimalwayconsulting.com/v1/fcbq/getJsonWithMatchStats/69236e1b5ac4ad0001792697?currentSeason=true',
-      'https://msstats.optimalwayconsulting.com/v1/fcbq/getJsonWithMatchStats/693eb6d14741c10001404c6a?currentSeason=true'
-    ]
+    // Les URLs antigues (temporada passada) queden fora: apuntaven
+    // directament a msstats i el navegador les bloqueja per CORS. Ara
+    // només es fan servir les que arriben via discoveredUrls.json
+    // (camins locals com /stats/<match_id>.json).
+    urls: []
   },
   'senior-fem': {
     name: 'Senior Femení',
