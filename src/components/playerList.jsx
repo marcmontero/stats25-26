@@ -65,6 +65,23 @@ const splitName = (fullName = "") => {
   return { first: words[0] || "", rest: words.slice(1).join(" ") };
 };
 
+const TeamToggle = ({ teamA, teamB, selectedKey, onSelectTeam }) => (
+  <div className="team-toggle">
+    <button
+      className={selectedKey === "A" ? "active" : ""}
+      onClick={() => onSelectTeam("A")}
+    >
+      {teamA?.name}
+    </button>
+    <button
+      className={selectedKey === "B" ? "active" : ""}
+      onClick={() => onSelectTeam("B")}
+    >
+      {teamB?.name}
+    </button>
+  </div>
+);
+
 // ========== PESTANYA: ESTADÍSTIQUES ==========
 const StatsTab = ({ teamA, teamB, selectedKey, onSelectTeam }) => {
   const team = selectedKey === "A" ? teamA : teamB;
@@ -79,14 +96,7 @@ const StatsTab = ({ teamA, teamB, selectedKey, onSelectTeam }) => {
             <span className="legend-dot" /> Cinc inicial
           </span>
         </div>
-        <select
-          className="team-select"
-          value={selectedKey}
-          onChange={(e) => onSelectTeam(e.target.value)}
-        >
-          <option value="A">{teamA?.name}</option>
-          <option value="B">{teamB?.name}</option>
-        </select>
+        <TeamToggle teamA={teamA} teamB={teamB} selectedKey={selectedKey} onSelectTeam={onSelectTeam} />
       </div>
 
       <div className="stats-table-wrapper">
@@ -150,10 +160,7 @@ const RotationsTab = ({ teamA, teamB, selectedKey, onSelectTeam }) => {
           <h3>Rotacions</h3>
           <span className="legend">Intervals en pista per jugador</span>
         </div>
-        <select className="team-select" value={selectedKey} onChange={(e) => onSelectTeam(e.target.value)}>
-          <option value="A">{teamA?.name}</option>
-          <option value="B">{teamB?.name}</option>
-        </select>
+        <TeamToggle teamA={teamA} teamB={teamB} selectedKey={selectedKey} onSelectTeam={onSelectTeam} />
       </div>
 
       <div className="rotations-list">
@@ -207,10 +214,7 @@ const QuintetsTab = ({ match, selectedKey, teamA, teamB, onSelectTeam }) => {
             <h3>Més/menys per quintet</h3>
             <span className="legend">Diferència de punts mentre els cinc jugadors són a pista.</span>
           </div>
-          <select className="team-select" value={selectedKey} onChange={(e) => onSelectTeam(e.target.value)}>
-            <option value="A">{teamA?.name}</option>
-            <option value="B">{teamB?.name}</option>
-          </select>
+          <TeamToggle teamA={teamA} teamB={teamB} selectedKey={selectedKey} onSelectTeam={onSelectTeam} />
         </div>
         <p className="empty-state">No hi ha dades de quintets per a aquest equip.</p>
       </div>
@@ -225,10 +229,7 @@ const QuintetsTab = ({ match, selectedKey, teamA, teamB, onSelectTeam }) => {
           <span className="legend">Diferència de punts mentre els cinc jugadors són a pista.</span>
         </div>
         <div className="quintets-header-controls">
-          <select className="team-select" value={selectedKey} onChange={(e) => onSelectTeam(e.target.value)}>
-            <option value="A">{teamA?.name}</option>
-            <option value="B">{teamB?.name}</option>
-          </select>
+          <TeamToggle teamA={teamA} teamB={teamB} selectedKey={selectedKey} onSelectTeam={onSelectTeam} />
           <button
             className="sort-toggle"
             onClick={() => setSortDir((d) => (d === "desc" ? "asc" : "desc"))}
@@ -275,7 +276,7 @@ const QuintetsTab = ({ match, selectedKey, teamA, teamB, onSelectTeam }) => {
   );
 };
 
-const PlayerList = ({ match }) => {
+const PlayerList = ({ match, onBack }) => {
   if (!match?.teams || match.teams.length < 2) {
     return <p className="empty-state">No hi ha dades disponibles</p>;
   }
@@ -285,43 +286,52 @@ const PlayerList = ({ match }) => {
   const [selectedKey, setSelectedKey] = useState(ownIsTeamA ? "A" : "B");
   const [activeTab, setActiveTab] = useState("stats");
 
-  const heroTeam = selectedKey === "A" ? teamA : teamB;
-  const heroTotals = teamTotals(heroTeam?.players);
-  const [heroMainName, ...heroRest] = (heroTeam?.name || "").split(" - ");
-  const heroSubName = heroRest.join(" - ");
+  const totalsA = teamTotals(teamA?.players);
+  const totalsB = teamTotals(teamB?.players);
+  const ownWon = ownIsTeamA ? totalsA.pts > totalsB.pts : totalsB.pts > totalsA.pts;
+
+  const [teamAName, ...teamARest] = (teamA?.name || "").split(" - ");
+  const [teamBName, ...teamBRest] = (teamB?.name || "").split(" - ");
+  const teamASub = teamARest.join(" - ");
+  const teamBSub = teamBRest.join(" - ");
 
   return (
     <div className="match-detail">
+      <div className="match-detail-topbar">
+        <h2 className="match-detail-title">El partit, al detall</h2>
+        {onBack && (
+          <button className="match-back-button" onClick={onBack}>
+            ← Tornar a partits
+          </button>
+        )}
+      </div>
+
       <div className="match-hero">
-        <div className="match-hero-badge">
-          {match.category ? `${match.category} · ` : ""}Partit finalitzat
+        <div className="match-hero-badges">
+          {match.category && <span className="match-hero-category">{match.category}</span>}
+          <span className="match-hero-status">Finalitzat</span>
         </div>
-        <div className="match-hero-main">
-          <div className="match-hero-team">
-            <span className="match-hero-accent" />
-            <div>
-              <div className="match-hero-team-name">{heroMainName}</div>
-              {heroSubName && <div className="match-hero-team-sub">{heroSubName}</div>}
-            </div>
+        <div className="match-hero-scoreboard">
+          <div className="match-hero-side">
+            <div className="match-hero-team-name">{teamAName}</div>
+            {teamASub && <div className="match-hero-team-sub">{teamASub}</div>}
+            <span className="match-hero-role">Local</span>
           </div>
-          <div className="match-hero-stats">
-            <div className="hero-stat">
-              <span className="hero-stat-value">{heroTotals.pts}</span>
-              <span className="hero-stat-label">Punts</span>
-            </div>
-            <div className="hero-stat">
-              <span className="hero-stat-value">{heroTotals.t3m}</span>
-              <span className="hero-stat-label">Triples</span>
-            </div>
-            <div className="hero-stat">
-              <span className="hero-stat-value">{heroTotals.tlm}/{heroTotals.tla}</span>
-              <span className="hero-stat-label">Tirs lliures</span>
-            </div>
-            <div className="hero-stat">
-              <span className="hero-stat-value">{heroTotals.fc}</span>
-              <span className="hero-stat-label">Faltes</span>
-            </div>
+          <div className="match-hero-score">
+            <span>{totalsA.pts}</span>
+            <span className="match-hero-score-dash">—</span>
+            <span>{totalsB.pts}</span>
           </div>
+          <div className="match-hero-side match-hero-side--right">
+            <div className="match-hero-team-name">{teamBName}</div>
+            {teamBSub && <div className="match-hero-team-sub">{teamBSub}</div>}
+            <span className="match-hero-role">Visitant</span>
+          </div>
+        </div>
+        <div className="match-hero-result">
+          <span className={`result-pill ${ownWon ? "win" : "loss"}`}>
+            {ownWon ? "🏆 Victòria" : "Derrota"} AEB
+          </span>
         </div>
       </div>
 
