@@ -1,0 +1,145 @@
+.next-opponent-card {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-left: 3px solid var(--badalones-red);
+  border-radius: var(--radius);
+  padding: 16px 20px;
+  margin-bottom: 20px;
+}
+
+.next-opponent-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 8px;
+}
+
+.next-opponent-eyebrow {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--parquet);
+}
+
+.next-opponent-countdown {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  font-weight: 600;
+  color: var(--chalk-dim);
+}
+
+.next-opponent-main {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-bottom: 6px;
+}
+
+.next-opponent-name {
+  font-family: var(--font-display);
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--chalk);
+  text-transform: uppercase;
+}
+
+.next-opponent-venue-tag {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  padding: 2px 8px;
+  border-radius: 10px;
+}
+
+.next-opponent-venue-tag.home {
+  background: rgba(31, 138, 95, 0.14);
+  color: var(--positive);
+}
+
+.next-opponent-venue-tag.away {
+  background: rgba(163, 102, 31, 0.14);
+  color: var(--parquet);
+}
+
+.next-opponent-details {
+  font-family: var(--font-body);
+  font-size: 13px;
+  color: var(--chalk-dim);
+}
+
+.next-opponent-standings {
+  margin-top: 12px;
+  padding-top: 12px;
+  border-top: 1px solid var(--line);
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.next-opponent-standing {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 12.5px;
+}
+
+.next-opponent-standing-label {
+  font-family: var(--font-mono);
+  font-weight: 700;
+  color: var(--chalk);
+  min-width: 90px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.next-opponent-standing-rank {
+  font-family: var(--font-mono);
+  color: var(--parquet);
+  font-weight: 600;
+}
+
+.next-opponent-standing-record {
+  font-family: var(--font-mono);
+  color: var(--chalk-dim);
+}
+
+.next-opponent-standing-pts {
+  font-family: var(--font-mono);
+  color: var(--chalk-faint);
+}
+
+.streak-dots {
+  display: inline-flex;
+  gap: 3px;
+  margin-left: auto;
+}
+
+.streak-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+}
+
+.streak-dot.win {
+  background: var(--positive);
+}
+
+.streak-dot.loss {
+  background: var(--negative);
+}
+
+@media (max-width: 480px) {
+  .next-opponent-card {
+    padding: 14px 16px;
+  }
+
+  .next-opponent-name {
+    font-size: 17px;
+  }
+}
