@@ -55,7 +55,7 @@
 }
 
 .quintet.positive {
-  border-left-color: #6fbf8a;
+  border-left-color: var(--positive);
 }
 
 .quintet.negative {
@@ -91,11 +91,11 @@
 }
 
 .quintet.positive p:last-child {
-  color: #6fbf8a;
+  color: var(--positive);
 }
 
 .quintet.negative p:last-child {
-  color: #e0637a;
+  color: var(--negative);
 }
 
 /* Mensaje cuando no hay datos */
