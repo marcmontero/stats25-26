@@ -91,6 +91,7 @@ const adaptPlayer = (player, teamIdIntern, stintsByUuid) => {
       shotsOfTwoAttempted: acc.t2a || 0,
       shotsOfThreeSuccessful: acc.t3m || 0,
       shotsOfThreeAttempted: acc.t3a || 0,
+      personalFouls: acc.fc || 0,
       // No disponible a l'API nova.
       totalRebounds: 0,
       assists: 0,
