@@ -111,14 +111,14 @@
 
 /* Colorear el más/menos */
 .stats-table .positive {
-  color: #6fbf8a !important;
+  color: var(--positive) !important;
   font-weight: 700;
   font-size: 15px;
   background: transparent !important;
 }
 
 .stats-table .negative {
-  color: #e0637a !important;
+  color: var(--negative) !important;
   font-weight: 700;
   font-size: 15px;
   background: transparent !important;
