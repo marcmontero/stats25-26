@@ -184,11 +184,24 @@ export const adaptMatchResponse = (data, index, keywords) => {
 };
 
 export const fetchStats = async (urls, keywords = null) => {
-  try {
-    const responses = await Promise.all(urls.map((url) => axios.get(url)));
-    return responses.map((response, index) => adaptMatchResponse(response.data, index, keywords));
-  } catch (error) {
-    console.error("Error fetching stats:", error);
-    return [];
+  const settled = await Promise.allSettled(urls.map((url) => axios.get(url)));
+
+  const failedCount = settled.filter((r) => r.status === "rejected").length;
+  if (failedCount > 0) {
+    console.warn(
+      `⚠️ ${failedCount} de ${urls.length} URLs de stats han fallat (probablement bloqueig CORS d'URLs antigues); es continua amb la resta.`
+    );
   }
+
+  return settled
+    .filter((r) => r.status === "fulfilled")
+    .map((r, index) => {
+      try {
+        return adaptMatchResponse(r.value.data, index, keywords);
+      } catch (error) {
+        console.error("Error adaptant les dades d'un partit:", error);
+        return null;
+      }
+    })
+    .filter(Boolean);
 };
