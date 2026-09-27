@@ -1,4 +1,10 @@
 export const getQuintetStats = (matchData) => {
+    // Format nou: fetchStats.js ja aporta els quintets pre-calculats per
+    // l'API (més fiables que la reconstrucció d'aquí sota).
+    if (matchData?.quintets) {
+        return matchData.quintets;
+    }
+
     if (!matchData || !matchData.score || !matchData.teams) {
         console.warn("⚠️ Datos del partido incompletos.");
         return [];
