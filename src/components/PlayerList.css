@@ -169,14 +169,14 @@
 
 /* Plus/Minus - VERDE y ROJO solo en texto */
 .player-list-table .positive {
-  color: #6fbf8a !important;
+  color: var(--positive) !important;
   font-weight: bold;
   font-size: 14px;
   background: transparent !important;
 }
 
 .player-list-table .negative {
-  color: #e0637a !important;
+  color: var(--negative) !important;
   font-weight: bold;
   font-size: 14px;
   background: transparent !important;
