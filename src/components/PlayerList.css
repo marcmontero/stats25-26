@@ -386,56 +386,61 @@
 .quintets-list {
   display: flex;
   flex-direction: column;
+  gap: 10px;
 }
 
 .quintet-row {
-  display: flex;
+  display: grid;
+  grid-template-columns: 26px 1fr auto;
+  grid-template-areas: "rank players pm" ". tag .";
   align-items: center;
-  gap: 18px;
-  padding: 14px 2px;
-  border-bottom: 1px solid var(--line);
-  position: relative;
-  flex-wrap: wrap;
-}
-
-.quintet-row:last-child {
-  border-bottom: none;
+  gap: 6px 14px;
+  padding: 14px 16px;
+  background: var(--surface-raised);
+  border: 1px solid var(--line);
+  border-radius: 8px;
 }
 
 .quintet-rank {
+  grid-area: rank;
   font-family: var(--font-display);
-  font-size: 18px;
+  font-size: 17px;
   font-weight: 700;
   color: var(--chalk-dim);
-  width: 22px;
-  flex-shrink: 0;
 }
 
 .quintet-players {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 16px;
-  flex: 1;
+  grid-area: players;
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 8px;
   min-width: 0;
 }
 
 .quintet-chip {
   display: flex;
+  flex-direction: column;
   align-items: center;
-  gap: 8px;
+  gap: 5px;
+  padding: 8px 4px;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  text-align: center;
+  min-width: 0;
 }
 
 .quintet-chip-dorsal {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 26px;
-  height: 26px;
+  width: 24px;
+  height: 24px;
   border-radius: 50%;
   background: var(--surface-raised);
   border: 1px solid var(--line);
   font-family: var(--font-mono);
-  font-size: 11.5px;
+  font-size: 11px;
   font-weight: 600;
   color: var(--chalk-dim);
   flex-shrink: 0;
@@ -444,26 +449,33 @@
 .quintet-chip-name {
   display: flex;
   flex-direction: column;
-  font-size: 12.5px;
+  font-size: 11.5px;
   font-weight: 600;
   color: var(--chalk);
   line-height: 1.25;
+  width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
   white-space: nowrap;
 }
 
 .quintet-chip-lastname {
-  font-size: 11px;
+  font-size: 10px;
   font-weight: 400;
   color: var(--chalk-dim);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
 .quintet-pm {
-  flex-shrink: 0;
-  margin-left: auto;
+  grid-area: pm;
 }
 
 .best-tag {
+  grid-area: tag;
   display: inline-block;
+  justify-self: start;
   background: var(--badalones-red);
   color: var(--on-accent);
   font-family: var(--font-mono);
@@ -473,9 +485,6 @@
   text-transform: uppercase;
   padding: 3px 8px;
   border-radius: 4px;
-  width: 100%;
-  order: 10;
-  margin-top: -4px;
 }
 
 /* ========== RESUM (llegat, encara disponible si es reutilitza) ========== */
@@ -564,9 +573,14 @@
 
 /* ========== RESPONSIVE ========== */
 @media (max-width: 767px) {
+  .match-hero {
+    padding: 16px 16px 18px;
+  }
+
   .match-hero-main {
     flex-direction: column;
     align-items: flex-start;
+    gap: 16px;
   }
 
   .match-hero-stats {
@@ -577,15 +591,35 @@
 
   .hero-stat {
     padding-left: 10px;
+    align-items: flex-start;
   }
 
   .hero-stat-value {
-    font-size: 24px;
+    font-size: 22px;
   }
 
   .match-tabs {
-    gap: 16px;
+    gap: 14px;
     overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .match-tabs button {
+    white-space: nowrap;
+    padding: 10px 2px 12px;
+  }
+
+  .stats-card {
+    padding: 16px 14px 6px;
+  }
+
+  .stats-card-header {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .team-select {
+    width: 100%;
   }
 
   .stats-table {
@@ -593,6 +627,54 @@
   }
 
   .rotation-player {
-    min-width: 140px;
+    min-width: 100%;
+  }
+
+  .rotation-row {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 6px;
+  }
+
+  .quintets-header-controls {
+    width: 100%;
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .quintet-row {
+    grid-template-columns: 20px 1fr auto;
+    padding: 12px;
+    gap: 4px 10px;
+  }
+
+  .quintet-players {
+    grid-template-columns: repeat(auto-fit, minmax(64px, 1fr));
+    gap: 6px;
+  }
+
+  .quintet-chip-name,
+  .quintet-chip-lastname {
+    white-space: normal;
+    overflow-wrap: break-word;
+  }
+}
+
+@media (max-width: 420px) {
+  .hero-stat-value {
+    font-size: 19px;
+  }
+
+  .hero-stat-label {
+    font-size: 9px;
+  }
+
+  .team-box-header,
+  .match-hero {
+    padding: 14px;
+  }
+
+  .quintet-players {
+    grid-template-columns: repeat(2, 1fr);
   }
 }
