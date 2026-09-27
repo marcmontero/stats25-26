@@ -359,7 +359,126 @@
   font-style: italic;
 }
 
-/* ========== RESUM ========== */
+/* ========== QUINTETS ========== */
+.quintets-header-controls {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.sort-toggle {
+  padding: 8px 12px;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  font-family: var(--font-body);
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--chalk);
+  cursor: pointer;
+}
+
+.sort-toggle:hover {
+  border-color: var(--chalk-dim);
+}
+
+.quintets-list {
+  display: flex;
+  flex-direction: column;
+}
+
+.quintet-row {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  padding: 14px 2px;
+  border-bottom: 1px solid var(--line);
+  position: relative;
+  flex-wrap: wrap;
+}
+
+.quintet-row:last-child {
+  border-bottom: none;
+}
+
+.quintet-rank {
+  font-family: var(--font-display);
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--chalk-dim);
+  width: 22px;
+  flex-shrink: 0;
+}
+
+.quintet-players {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  flex: 1;
+  min-width: 0;
+}
+
+.quintet-chip {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.quintet-chip-dorsal {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  background: var(--surface-raised);
+  border: 1px solid var(--line);
+  font-family: var(--font-mono);
+  font-size: 11.5px;
+  font-weight: 600;
+  color: var(--chalk-dim);
+  flex-shrink: 0;
+}
+
+.quintet-chip-name {
+  display: flex;
+  flex-direction: column;
+  font-size: 12.5px;
+  font-weight: 600;
+  color: var(--chalk);
+  line-height: 1.25;
+  white-space: nowrap;
+}
+
+.quintet-chip-lastname {
+  font-size: 11px;
+  font-weight: 400;
+  color: var(--chalk-dim);
+}
+
+.quintet-pm {
+  flex-shrink: 0;
+  margin-left: auto;
+}
+
+.best-tag {
+  display: inline-block;
+  background: var(--badalones-red);
+  color: var(--on-accent);
+  font-family: var(--font-mono);
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  padding: 3px 8px;
+  border-radius: 4px;
+  width: 100%;
+  order: 10;
+  margin-top: -4px;
+}
+
+/* ========== RESUM (llegat, encara disponible si es reutilitza) ========== */
 .periods-row {
   display: flex;
   gap: 8px;
