@@ -1,8 +1,13 @@
+// Cada element del "lineup" pot ser un nom (format antic, reconstruït) o un
+// objecte {dorsal, name} (format nou, ja calculat per l'API). Traiem sempre
+// el nom per generar una clau d'agrupació consistent.
+const nameOf = (player) => (typeof player === "string" ? player : player.name);
+
 export const getTopQuintets = (matches) => {
     const quintetos = {};
 
     const addQuintet = (lineup, plusMinus) => {
-      const lineupKey = lineup.join("-");
+      const lineupKey = lineup.map(nameOf).join("-");
       if (!quintetos[lineupKey]) {
         quintetos[lineupKey] = { lineup, plusMinus: 0 };
       }
