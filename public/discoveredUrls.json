@@ -1,12 +1,14 @@
 {
-  "updatedAt": "2026-09-27T11:18:42.998334+02:00",
+  "updatedAt": "2026-09-27T12:20:36.477585+02:00",
   "teams": {
     "senior-a-masc": [
-      "https://msstats.optimalwayconsulting.com/v1/fcbq/matches/2b5cd3f4-2158-4ada-a4d6-ec5bbbc4080f/stats?currentSeason=true",
       "/stats/10855.json"
     ],
     "senior-b-masc": [
       "/stats/8546.json"
+    ],
+    "u25-masc": [
+      "/stats/10547.json"
     ]
   }
 }
