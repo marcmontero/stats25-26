@@ -38,8 +38,6 @@ const formatIntervals = (inOutsList = []) => {
   return intervals;
 };
 
-const PLAYERS_PAGE_SIZE = 8;
-
 const teamTotals = (players = []) =>
   players.reduce(
     (acc, p) => {
@@ -60,12 +58,17 @@ const teamTotals = (players = []) =>
 const sortByDorsal = (players = []) =>
   [...players].sort((a, b) => (parseInt(a.dorsal) || 999) - (parseInt(b.dorsal) || 999));
 
+// "MARC LLAMAS JORDAN" -> { first: "Marc", rest: "Llamas Jordan" }
+const splitName = (fullName = "") => {
+  const toTitleCase = (s) => s.charAt(0) + s.slice(1).toLowerCase();
+  const words = fullName.trim().split(/\s+/).map(toTitleCase);
+  return { first: words[0] || "", rest: words.slice(1).join(" ") };
+};
+
 // ========== PESTANYA: ESTADÍSTIQUES ==========
 const StatsTab = ({ teamA, teamB, selectedKey, onSelectTeam }) => {
-  const [showAll, setShowAll] = useState(false);
   const team = selectedKey === "A" ? teamA : teamB;
   const sortedPlayers = sortByDorsal(team?.players);
-  const visiblePlayers = showAll ? sortedPlayers : sortedPlayers.slice(0, PLAYERS_PAGE_SIZE);
 
   return (
     <div className="stats-card">
@@ -79,10 +82,7 @@ const StatsTab = ({ teamA, teamB, selectedKey, onSelectTeam }) => {
         <select
           className="team-select"
           value={selectedKey}
-          onChange={(e) => {
-            onSelectTeam(e.target.value);
-            setShowAll(false);
-          }}
+          onChange={(e) => onSelectTeam(e.target.value)}
         >
           <option value="A">{teamA?.name}</option>
           <option value="B">{teamB?.name}</option>
@@ -106,7 +106,7 @@ const StatsTab = ({ teamA, teamB, selectedKey, onSelectTeam }) => {
             </tr>
           </thead>
           <tbody>
-            {visiblePlayers.map((player, index) => {
+            {sortedPlayers.map((player, index) => {
               const plusMinus = player.inOut ?? 0;
               return (
                 <tr key={`${player.dorsal}-${index}`}>
@@ -134,15 +134,6 @@ const StatsTab = ({ teamA, teamB, selectedKey, onSelectTeam }) => {
           </tbody>
         </table>
       </div>
-
-      {!showAll && sortedPlayers.length > PLAYERS_PAGE_SIZE && (
-        <div className="stats-table-footer">
-          <span>Mostrant {visiblePlayers.length} de {sortedPlayers.length} jugadors</span>
-          <button className="show-all-button" onClick={() => setShowAll(true)}>
-            Veure tots els jugadors →
-          </button>
-        </div>
-      )}
     </div>
   );
 };
@@ -194,58 +185,92 @@ const RotationsTab = ({ teamA, teamB, selectedKey, onSelectTeam }) => {
   );
 };
 
-// ========== PESTANYA: RESUM ==========
-const SummaryTab = ({ match, teamA, teamB }) => {
-  const totalsA = teamTotals(teamA?.players);
-  const totalsB = teamTotals(teamB?.players);
-  const periods = match.periods || [];
+// ========== PESTANYA: QUINTETS ==========
+const QUINTETS_PAGE_SIZE = 5;
 
-  const rows = [
-    { label: "Punts", a: totalsA.pts, b: totalsB.pts },
-    { label: "Tirs de 2", a: `${totalsA.t2m}/${totalsA.t2a}`, b: `${totalsB.t2m}/${totalsB.t2a}` },
-    { label: "Triples", a: `${totalsA.t3m}/${totalsA.t3a}`, b: `${totalsB.t3m}/${totalsB.t3a}` },
-    { label: "Tirs lliures", a: `${totalsA.tlm}/${totalsA.tla}`, b: `${totalsB.tlm}/${totalsB.tla}` },
-    { label: "Faltes", a: totalsA.fc, b: totalsB.fc },
-  ];
+const QuintetsTab = ({ match, selectedKey, teamA, teamB, onSelectTeam }) => {
+  const [showAll, setShowAll] = useState(false);
+  const [sortDir, setSortDir] = useState("desc");
+
+  const team = selectedKey === "A" ? teamA : teamB;
+  const quintets = team?.quintets || [];
+  const sorted = [...quintets].sort((a, b) =>
+    sortDir === "desc" ? b.plusMinus - a.plusMinus : a.plusMinus - b.plusMinus
+  );
+  const visible = showAll ? sorted : sorted.slice(0, QUINTETS_PAGE_SIZE);
+
+  if (quintets.length === 0) {
+    return (
+      <div className="stats-card">
+        <div className="stats-card-header">
+          <div>
+            <h3>Més/menys per quintet</h3>
+            <span className="legend">Diferència de punts mentre els cinc jugadors són a pista.</span>
+          </div>
+          <select className="team-select" value={selectedKey} onChange={(e) => onSelectTeam(e.target.value)}>
+            <option value="A">{teamA?.name}</option>
+            <option value="B">{teamB?.name}</option>
+          </select>
+        </div>
+        <p className="empty-state">No hi ha dades de quintets per a aquest equip.</p>
+      </div>
+    );
+  }
 
   return (
     <div className="stats-card">
       <div className="stats-card-header">
         <div>
-          <h3>Resum del partit</h3>
-          <span className="legend">Comparativa d'equips</span>
+          <h3>Més/menys per quintet</h3>
+          <span className="legend">Diferència de punts mentre els cinc jugadors són a pista.</span>
+        </div>
+        <div className="quintets-header-controls">
+          <select className="team-select" value={selectedKey} onChange={(e) => onSelectTeam(e.target.value)}>
+            <option value="A">{teamA?.name}</option>
+            <option value="B">{teamB?.name}</option>
+          </select>
+          <button
+            className="sort-toggle"
+            onClick={() => setSortDir((d) => (d === "desc" ? "asc" : "desc"))}
+          >
+            Més/menys {sortDir === "desc" ? "↓" : "↑"}
+          </button>
         </div>
       </div>
 
-      {periods.length > 0 && (
-        <div className="periods-row">
-          {periods.map((p) => (
-            <div className="period-chip" key={p.period}>
-              <span className="period-chip-label">P{p.period}</span>
-              <span className="period-chip-score">{p.local}-{p.visitor}</span>
+      <div className="quintets-list">
+        {visible.map((quintet, index) => (
+          <div className="quintet-row" key={index}>
+            <span className="quintet-rank">{index + 1}</span>
+            <div className="quintet-players">
+              {quintet.lineup.map((player, i) => {
+                const { first, rest } = splitName(player.name);
+                return (
+                  <div className="quintet-chip" key={i}>
+                    <span className="quintet-chip-dorsal">{player.dorsal}</span>
+                    <span className="quintet-chip-name">
+                      {first}
+                      <span className="quintet-chip-lastname">{rest}</span>
+                    </span>
+                  </div>
+                );
+              })}
             </div>
-          ))}
+            <span className={`pm-pill quintet-pm ${quintet.plusMinus >= 0 ? "positive" : "negative"}`}>
+              {quintet.plusMinus > 0 ? `+${quintet.plusMinus}` : quintet.plusMinus}
+            </span>
+            {index === 0 && sortDir === "desc" && <span className="best-tag">Millor balanç</span>}
+          </div>
+        ))}
+      </div>
+
+      {!showAll && sorted.length > QUINTETS_PAGE_SIZE && (
+        <div className="stats-table-footer">
+          <button className="show-all-button" onClick={() => setShowAll(true)}>
+            Veure tots els quintets →
+          </button>
         </div>
       )}
-
-      <table className="summary-table">
-        <thead>
-          <tr>
-            <th className="col-name">{teamA?.name}</th>
-            <th></th>
-            <th>{teamB?.name}</th>
-          </tr>
-        </thead>
-        <tbody>
-          {rows.map((row) => (
-            <tr key={row.label}>
-              <td className="summary-value">{row.a}</td>
-              <td className="summary-label">{row.label}</td>
-              <td className="summary-value">{row.b}</td>
-            </tr>
-          ))}
-        </tbody>
-      </table>
     </div>
   );
 };
@@ -307,8 +332,8 @@ const PlayerList = ({ match }) => {
         <button className={activeTab === "rotations" ? "active" : ""} onClick={() => setActiveTab("rotations")}>
           Rotacions
         </button>
-        <button className={activeTab === "summary" ? "active" : ""} onClick={() => setActiveTab("summary")}>
-          Resum
+        <button className={activeTab === "quintets" ? "active" : ""} onClick={() => setActiveTab("quintets")}>
+          Quintets
         </button>
       </div>
 
@@ -318,7 +343,9 @@ const PlayerList = ({ match }) => {
       {activeTab === "rotations" && (
         <RotationsTab teamA={teamA} teamB={teamB} selectedKey={selectedKey} onSelectTeam={setSelectedKey} />
       )}
-      {activeTab === "summary" && <SummaryTab match={match} teamA={teamA} teamB={teamB} />}
+      {activeTab === "quintets" && (
+        <QuintetsTab match={match} teamA={teamA} teamB={teamB} selectedKey={selectedKey} onSelectTeam={setSelectedKey} />
+      )}
     </div>
   );
 };
