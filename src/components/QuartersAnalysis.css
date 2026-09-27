@@ -76,17 +76,17 @@
 }
 
 .summary-item-value.positive {
-  color: #ffffff;
+  color: var(--positive);
 }
 
 .summary-item-value.negative {
-  color: #ffffff;
+  color: var(--negative);
 }
 
 .summary-divider {
   width: 2px;
   height: 60px;
-  background: #d0d0d0;
+  background: var(--line);
 }
 
 /* ========== GRID DE QUARTS ========== */
@@ -195,11 +195,11 @@
 }
 
 .pm-value.positive {
-  color: #ffffff;
+  color: var(--positive);
 }
 
 .pm-value.negative {
-  color: #ffffff;
+  color: var(--negative);
 }
 
 /* ========== JUGADORES DEL QUART ========== */
