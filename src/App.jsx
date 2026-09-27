@@ -144,6 +144,37 @@ const TEAMS_CONFIG = {
   }
 };
 
+const TopBar = ({ variant = "default", teamName, onBackToTeams, onLogout }) => (
+  <header className="site-topbar">
+    <div className="site-topbar-inner">
+      <div className="site-topbar-brand">
+        <img
+          src="https://i.imghippo.com/files/Wnel8089NE.png"
+          alt="AE Badalonès"
+          className="site-topbar-logo"
+        />
+        <span className="site-topbar-name">A.E. Badalonès</span>
+      </div>
+
+      {variant === "team" && (
+        <div className="site-topbar-crumbs">
+          <button className="site-topbar-crumb-link" onClick={onBackToTeams}>
+            Equips
+          </button>
+          <span className="site-topbar-crumb-sep">/</span>
+          <span className="site-topbar-crumb-current">{teamName}</span>
+        </div>
+      )}
+
+      {variant === "team" && (
+        <button className="site-topbar-logout" onClick={onLogout}>
+          Tancar sessió
+        </button>
+      )}
+    </div>
+  </header>
+);
+
 const App = () => {
   // Estats d'autenticació
   const [isAuthenticated, setIsAuthenticated] = useState(false);
@@ -404,7 +435,9 @@ const App = () => {
   // ========== PANTALLA DE LOGIN ==========
   if (!isAuthenticated) {
     return (
-      <div className="login-wrapper">
+      <>
+        <TopBar variant="login" />
+        <div className="login-wrapper">
         <div className="login-container">
           <img 
             src="https://i.imghippo.com/files/XfcX1130LYo.png" 
@@ -460,7 +493,8 @@ const App = () => {
             </button>
           </form>
         </div>
-      </div>
+        </div>
+      </>
     );
   }
 
@@ -469,7 +503,9 @@ const App = () => {
   // ========== PANTALLA DE SELECCIÓ D'EQUIPS ==========
   if (!selectedTeam) {
     return (
-      <div className="app">
+      <>
+        <TopBar variant="teams" />
+        <div className="app">
         <div className="welcome-bar">
           <div className="welcome-identity">
             <label className="avatar-upload" title="Canviar foto">
@@ -618,7 +654,8 @@ const App = () => {
             No tens accés a cap equip
           </div>
         )}
-      </div>
+        </div>
+      </>
     );
   }
 
@@ -627,37 +664,33 @@ const App = () => {
   // ========== PANTALLA DE LOADING ==========
   if (loading) {
     return (
-      <div className="app">
-        <div className="loading-container">
-          <div className="loading-spinner"></div>
-          <h2 className="loading-text">Carregant {currentTeam.name}...</h2>
+      <>
+        <TopBar variant="team" teamName={currentTeam.name} onBackToTeams={handleBackToTeams} onLogout={handleLogout} />
+        <div className="app">
+          <div className="loading-container">
+            <div className="loading-spinner"></div>
+            <h2 className="loading-text">Carregant {currentTeam.name}...</h2>
+          </div>
         </div>
-      </div>
+      </>
     );
   }
 
   // ========== PANTALLA PRINCIPAL AMB ESTADÍSTIQUES ==========
   return (
-    <div className="app">
-      <div className="team-header">
-        <button onClick={handleBackToTeams} className="team-header-button">
-          Tornar a Equips
-        </button>
-        <h1 className="team-header-title">
-          <img 
-            src="https://i.imghippo.com/files/Wnel8089NE.png" 
-            alt="AE Badalonès" 
-            className="team-logo"
-          />
-          {currentTeam.name}
-        </h1>
-        <button
-          onClick={handleLogout}
-          className="team-header-button"
-        >
-          Tancar Sessió
-        </button>
-      </div>
+    <>
+      <TopBar variant="team" teamName={currentTeam.name} onBackToTeams={handleBackToTeams} onLogout={handleLogout} />
+      <div className="app">
+        <div className="team-header">
+          <h1 className="team-header-title">
+            <img 
+              src="https://i.imghippo.com/files/Wnel8089NE.png" 
+              alt="AE Badalonès" 
+              className="team-logo"
+            />
+            {currentTeam.name}
+          </h1>
+        </div>
 
       {!selectedMatch && (
         <div className="buttons-container">
@@ -720,7 +753,8 @@ const App = () => {
           )}
         </>
       )}
-    </div>
+      </div>
+    </>
   );
 };
 
