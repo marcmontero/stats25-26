@@ -701,22 +701,21 @@ const App = () => {
         <MatchSelector matches={matches} onSelectMatch={setSelectedMatch} />
       ) : (
         <>
-          <div className="match-title-container">
-            <h2>{selectedMatch?.matchResult}</h2>
-          </div>
-          <button className="back-button" onClick={handleBackToMatches}>
-            Tornar a Partits
-          </button>
-          
           {/* Mostrar vistes segons statsType */}
           {currentTeam.statsType === 'basic' ? (
             <>
+              <div className="match-title-container">
+                <h2>{selectedMatch?.matchResult}</h2>
+              </div>
+              <button className="back-button" onClick={handleBackToMatches}>
+                Tornar a Partits
+              </button>
               <QuartersAnalysis match={selectedMatch} />
               <BasicMatchView match={selectedMatch} />
             </>
           ) : (
             <>
-              <PlayerList match={selectedMatch} />
+              <PlayerList match={selectedMatch} onBack={handleBackToMatches} />
             </>
           )}
         </>
