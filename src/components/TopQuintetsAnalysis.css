@@ -1,14 +1,18 @@
 .top-quintets-container {
-  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
   margin: 0 auto 24px;
   width: 100%;
-  max-width: 1400px;
-  background: var(--surface);
-  border: 1px solid var(--line);
-  border-top: 2px solid var(--badalones-red);
-  border-radius: 6px;
-  padding: 26px;
-  box-shadow: none;
+  max-width: 1000px;
+}
+
+.top-quintets-container .stats-card > h3 {
+  font-family: var(--font-body);
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--chalk);
+  margin-bottom: 14px;
 }
 
 .top-quintets-container h2 {
