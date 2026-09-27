@@ -3,95 +3,194 @@
   margin: 0 auto 24px;
 }
 
+.match-detail-topbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+.match-detail-title {
+  font-family: var(--font-display);
+  font-size: 24px;
+  font-weight: 700;
+  color: var(--chalk);
+  text-transform: uppercase;
+}
+
+.match-back-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 10px 16px;
+  background: var(--surface);
+  border: 1px solid var(--badalones-red);
+  border-radius: 6px;
+  color: var(--badalones-red);
+  font-family: var(--font-body);
+  font-size: 13.5px;
+  font-weight: 600;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.match-back-button:hover {
+  background: var(--badalones-red);
+  color: var(--on-accent);
+}
+
 /* ========== TARGETA FOSCA DE RESUM ========== */
 .match-hero {
   background: var(--chalk);
   border-radius: var(--radius);
-  padding: 18px 24px 22px;
+  padding: 20px 24px 22px;
   margin-bottom: 18px;
 }
 
-.match-hero-badge {
+.match-hero-badges {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 18px;
+}
+
+.match-hero-category {
   font-family: var(--font-mono);
   font-size: 11px;
   font-weight: 600;
   letter-spacing: 0.08em;
   text-transform: uppercase;
   color: var(--chalk-faint);
-  margin-bottom: 16px;
 }
 
-.match-hero-main {
+.match-hero-status {
+  font-family: var(--font-mono);
+  font-size: 10.5px;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: var(--on-accent);
+  background: rgba(253, 246, 234, 0.12);
+  padding: 3px 10px;
+  border-radius: 10px;
+}
+
+.match-hero-scoreboard {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
+  gap: 28px;
   flex-wrap: wrap;
-  gap: 20px;
 }
 
-.match-hero-team {
+.match-hero-side {
   display: flex;
+  flex-direction: column;
   align-items: center;
-  gap: 12px;
+  gap: 4px;
+  min-width: 140px;
 }
 
-.match-hero-accent {
-  width: 4px;
-  align-self: stretch;
-  min-height: 40px;
-  background: var(--badalones-red);
-  border-radius: 2px;
+.match-hero-side--right {
+  align-items: center;
 }
 
 .match-hero-team-name {
   font-family: var(--font-display);
-  font-size: 24px;
+  font-size: 19px;
   font-weight: 700;
   color: var(--on-accent);
   line-height: 1.15;
+  text-align: center;
 }
 
 .match-hero-team-sub {
   font-family: var(--font-body);
-  font-size: 14px;
+  font-size: 12.5px;
   color: var(--chalk-dim);
-  margin-top: 2px;
+  text-align: center;
 }
 
-.match-hero-stats {
-  display: flex;
-  align-items: center;
-  gap: 24px;
-}
-
-.hero-stat {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding-left: 24px;
-  border-left: 1px solid rgba(253, 246, 234, 0.15);
-}
-
-.hero-stat:first-child {
-  border-left: none;
-  padding-left: 0;
-}
-
-.hero-stat-value {
-  font-family: var(--font-display);
-  font-size: 30px;
-  font-weight: 700;
-  color: var(--on-accent);
-  line-height: 1;
-}
-
-.hero-stat-label {
+.match-hero-role {
   font-family: var(--font-mono);
   font-size: 10px;
   letter-spacing: 0.06em;
   text-transform: uppercase;
   color: var(--chalk-faint);
-  margin-top: 6px;
+  margin-top: 4px;
+}
+
+.match-hero-score {
+  display: flex;
+  align-items: baseline;
+  gap: 14px;
+  font-family: var(--font-display);
+  font-size: 46px;
+  font-weight: 700;
+  color: var(--on-accent);
+  line-height: 1;
+}
+
+.match-hero-score-dash {
+  color: var(--chalk-faint);
+  font-size: 30px;
+}
+
+.match-hero-result {
+  display: flex;
+  justify-content: center;
+  margin-top: 16px;
+}
+
+.result-pill {
+  font-family: var(--font-body);
+  font-size: 13px;
+  font-weight: 700;
+  padding: 6px 16px;
+  border-radius: 20px;
+}
+
+.result-pill.win {
+  background: rgba(31, 138, 95, 0.18);
+  color: #3fcf94;
+}
+
+.result-pill.loss {
+  background: rgba(196, 57, 43, 0.18);
+  color: #e0796d;
+}
+
+/* ========== SELECTOR D'EQUIP (botons) ========== */
+.team-toggle {
+  display: inline-flex;
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+.team-toggle button {
+  padding: 8px 14px;
+  background: var(--surface);
+  border: none;
+  border-left: 1px solid var(--line);
+  font-family: var(--font-body);
+  font-size: 12.5px;
+  font-weight: 600;
+  color: var(--chalk-dim);
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.team-toggle button:first-child {
+  border-left: none;
+}
+
+.team-toggle button.active {
+  background: var(--badalones-red);
+  color: var(--on-accent);
 }
 
 /* ========== PESTANYES ========== */
@@ -164,17 +263,6 @@
   height: 7px;
   border-radius: 50%;
   background: var(--badalones-red);
-}
-
-.team-select {
-  padding: 8px 12px;
-  background: var(--ink);
-  border: 1px solid var(--line);
-  border-radius: 6px;
-  font-family: var(--font-body);
-  font-size: 13.5px;
-  color: var(--chalk);
-  cursor: pointer;
 }
 
 /* ========== TAULA D'ESTADÍSTIQUES ========== */
@@ -573,28 +661,32 @@
 
 /* ========== RESPONSIVE ========== */
 @media (max-width: 767px) {
+  .match-detail-title {
+    font-size: 19px;
+  }
+
   .match-hero {
     padding: 16px 16px 18px;
   }
 
-  .match-hero-main {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 16px;
+  .match-hero-scoreboard {
+    gap: 14px;
   }
 
-  .match-hero-stats {
-    width: 100%;
-    justify-content: space-between;
+  .match-hero-side {
+    min-width: 0;
+  }
+
+  .match-hero-team-name {
+    font-size: 15px;
+  }
+
+  .match-hero-score {
+    font-size: 34px;
     gap: 8px;
   }
 
-  .hero-stat {
-    padding-left: 10px;
-    align-items: flex-start;
-  }
-
-  .hero-stat-value {
+  .match-hero-score-dash {
     font-size: 22px;
   }
 
@@ -618,8 +710,12 @@
     align-items: stretch;
   }
 
-  .team-select {
+  .team-toggle {
     width: 100%;
+  }
+
+  .team-toggle button {
+    flex: 1;
   }
 
   .stats-table {
@@ -661,12 +757,14 @@
 }
 
 @media (max-width: 420px) {
-  .hero-stat-value {
-    font-size: 19px;
+  .match-hero-scoreboard {
+    flex-direction: column;
+    gap: 10px;
   }
 
-  .hero-stat-label {
-    font-size: 9px;
+  .match-hero-score {
+    order: -1;
+    font-size: 38px;
   }
 
   .team-box-header,
