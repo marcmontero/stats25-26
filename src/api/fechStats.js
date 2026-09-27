@@ -169,6 +169,8 @@ export const adaptMatchResponse = (data, index, keywords) => {
   return {
     matchId: `Partido ${index + 1}`,
     date: header.date,
+    category: header.categoryName,
+    periods: header.periods || [],
     matchResult,
     idTeam: targetTeam ? targetTeam.teamIdIntern : null,
     players: targetTeam ? targetTeam.players : [],
