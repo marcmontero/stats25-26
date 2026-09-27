@@ -12,6 +12,7 @@ const PlayerEvolutionCharts = lazy(() => import("./components/PlayerEvolutionCha
 const TopQuintetsAnalysis = lazy(() => import("./components/TopQuintetsAnalysis.jsx"));
 const ExportReports = lazy(() => import("./components/ExportReports.jsx"));
 import QuartersAnalysis from './components/QuartersAnalysis.jsx';
+import NextOpponent from './components/NextOpponent.jsx';
 import { supabase, usernameToInternalEmail } from './supabaseClient.js';
 import './App.css';
 
@@ -691,6 +692,8 @@ const App = () => {
             {currentTeam.name}
           </h1>
         </div>
+
+      {!selectedMatch && <NextOpponent teamKey={selectedTeam} />}
 
       {!selectedMatch && (
         <div className="buttons-container">
