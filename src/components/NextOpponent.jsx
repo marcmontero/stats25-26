@@ -40,9 +40,52 @@ const TeamStanding = ({ label, standing }) => {
   );
 };
 
+const RosterTable = ({ roster = [], opponentName }) => (
+  <div className="opponent-roster-wrapper">
+    <table className="opponent-roster-table">
+      <thead>
+        <tr>
+          <th className="col-dorsal">#</th>
+          <th className="col-name">Jugador/a</th>
+          <th>PJ</th>
+          <th>Min/P</th>
+          <th>Pts/P</th>
+          <th>T2/P</th>
+          <th>T3/P</th>
+          <th>TL</th>
+          <th>FC/P</th>
+          <th>±/P</th>
+        </tr>
+      </thead>
+      <tbody>
+        {roster.map((p, i) => (
+          <tr key={i}>
+            <td className="col-dorsal">{p.dorsal}</td>
+            <td className="col-name">{p.name}</td>
+            <td>{p.gamesPlayed}</td>
+            <td>{p.avgMinutes}</td>
+            <td className="col-pts">{p.avgPoints}</td>
+            <td>{p.avgT2m}</td>
+            <td>{p.avgT3m}</td>
+            <td>{p.totalFtm}/{p.totalFta} ({p.ftPer}%)</td>
+            <td>{p.avgFouls}</td>
+            <td className={p.avgPlusMinus >= 0 ? "positive" : "negative"}>
+              {p.avgPlusMinus > 0 ? `+${p.avgPlusMinus}` : p.avgPlusMinus}
+            </td>
+          </tr>
+        ))}
+      </tbody>
+    </table>
+    <p className="opponent-roster-note">
+      L'API de temporada no dona els intents de tir de 2/3 — només els encistellats (T2/P, T3/P). El % només es pot calcular per als tirs lliures.
+    </p>
+  </div>
+);
+
 const NextOpponent = ({ teamKey }) => {
   const [data, setData] = useState(null);
   const [checked, setChecked] = useState(false);
+  const [showFullRoster, setShowFullRoster] = useState(false);
 
   useEffect(() => {
     let cancelled = false;
@@ -110,6 +153,19 @@ const NextOpponent = ({ teamKey }) => {
               </span>
             ))}
           </div>
+          {data.opponentSeason.roster?.length > 0 && (
+            <>
+              <button
+                className="show-roster-button"
+                onClick={() => setShowFullRoster((v) => !v)}
+              >
+                {showFullRoster ? "Amagar" : "Veure"} tota la plantilla de {data.opponent} →
+              </button>
+              {showFullRoster && (
+                <RosterTable roster={data.opponentSeason.roster} opponentName={data.opponent} />
+              )}
+            </>
+          )}
         </div>
       )}
       {!data.opponentSeason && data.opponentTopScorers?.length > 0 && (

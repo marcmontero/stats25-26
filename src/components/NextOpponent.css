@@ -134,6 +134,124 @@
   background: var(--negative);
 }
 
+.next-opponent-scorers {
+  margin-top: 12px;
+  padding-top: 12px;
+  border-top: 1px solid var(--line);
+}
+
+.next-opponent-scorers-label {
+  display: block;
+  font-family: var(--font-mono);
+  font-size: 10.5px;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: var(--chalk-dim);
+  margin-bottom: 8px;
+}
+
+.next-opponent-scorers-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.scorer-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 12.5px;
+  color: var(--chalk);
+  background: var(--surface-raised);
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  padding: 4px 10px 4px 4px;
+}
+
+.show-roster-button {
+  display: block;
+  margin-top: 10px;
+  background: none;
+  border: none;
+  color: var(--badalones-red);
+  font-family: var(--font-body);
+  font-size: 12.5px;
+  font-weight: 600;
+  cursor: pointer;
+  padding: 0;
+}
+
+.show-roster-button:hover {
+  text-decoration: underline;
+}
+
+.opponent-roster-wrapper {
+  margin-top: 10px;
+  overflow-x: auto;
+}
+
+.opponent-roster-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-family: var(--font-body);
+  font-size: 12px;
+}
+
+.opponent-roster-table thead th {
+  text-align: center;
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.03em;
+  color: var(--chalk-dim);
+  padding: 0 6px 8px;
+  border-bottom: 1px solid var(--line);
+  white-space: nowrap;
+}
+
+.opponent-roster-table th.col-name,
+.opponent-roster-table td.col-name {
+  text-align: left;
+}
+
+.opponent-roster-table td {
+  text-align: center;
+  padding: 7px 6px;
+  border-bottom: 1px solid var(--line);
+  color: var(--chalk);
+  white-space: nowrap;
+}
+
+.opponent-roster-table .col-dorsal {
+  color: var(--chalk-dim);
+  width: 24px;
+}
+
+.opponent-roster-table .col-pts {
+  font-weight: 700;
+}
+
+.opponent-roster-note {
+  font-size: 10.5px;
+  color: var(--chalk-faint);
+  margin-top: 8px;
+  font-style: italic;
+}
+
+.scorer-dorsal {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  font-family: var(--font-mono);
+  font-size: 10px;
+  color: var(--chalk-dim);
+}
+
 @media (max-width: 480px) {
   .next-opponent-card {
     padding: 14px 16px;
