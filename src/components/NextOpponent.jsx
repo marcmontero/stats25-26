@@ -95,6 +95,60 @@ const NextOpponent = ({ teamKey }) => {
           <TeamStanding label={data.opponent} standing={data.opponentStanding} />
         </div>
       )}
+      {data.opponentSeason && (
+        <div className="next-opponent-scorers">
+          <span className="next-opponent-scorers-label">
+            Temporada de {data.opponent} — {data.opponentSeason.wins}V-{data.opponentSeason.losses}D
+            {data.opponentSeason.avgPointsFor != null &&
+              ` · ${data.opponentSeason.avgPointsFor}-${data.opponentSeason.avgPointsAgainst} punts/partit`}
+          </span>
+          <div className="next-opponent-scorers-list">
+            {data.opponentSeason.topScorers?.map((p, i) => (
+              <span className="scorer-chip" key={i}>
+                <span className="scorer-dorsal">{p.dorsal}</span>
+                {p.name} <strong>{p.avgPoints} p/p</strong>
+              </span>
+            ))}
+          </div>
+        </div>
+      )}
+      {!data.opponentSeason && data.opponentTopScorers?.length > 0 && (
+        <div className="next-opponent-scorers">
+          <span className="next-opponent-scorers-label">Màximes anotadores {data.opponent}</span>
+          <div className="next-opponent-scorers-list">
+            {data.opponentTopScorers.map((p, i) => (
+              <span className="scorer-chip" key={i}>
+                <span className="scorer-dorsal">{p.dorsal}</span>
+                {p.name} <strong>{p.points}p</strong>
+              </span>
+            ))}
+          </div>
+        </div>
+      )}
+    </div>
+  );
+};
+
+export default NextOpponent;
+        <span className="next-opponent-eyebrow">Proper rival</span>
+        {countdownLabel && <span className="next-opponent-countdown">{countdownLabel}</span>}
+      </div>
+      <div className="next-opponent-main">
+        <span className="next-opponent-name">{data.opponent}</span>
+        <span className={`next-opponent-venue-tag ${data.isHome ? "home" : "away"}`}>
+          {data.isHome ? "A casa" : "Fora"}
+        </span>
+      </div>
+      <div className="next-opponent-details">
+        {formatDayLabel(data.date)} · {data.time}
+        {data.venueName ? ` · ${data.venueName}` : ""}
+      </div>
+      {(data.ownStanding || data.opponentStanding) && (
+        <div className="next-opponent-standings">
+          <TeamStanding label="AEB" standing={data.ownStanding} />
+          <TeamStanding label={data.opponent} standing={data.opponentStanding} />
+        </div>
+      )}
     </div>
   );
 };
