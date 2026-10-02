@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-02T18:26:13.122394+02:00",
+  "updatedAt": "2026-10-02T18:34:00.338382+02:00",
   "teams": {
     "senior-a-masc": {
       "matchId": "3830",
@@ -38,6 +38,47 @@
         "streak": [
           "win",
           "loss"
+        ]
+      },
+      "opponentSeason": {
+        "category": "C.C. SEGONA CATEGORIA MASCULINA",
+        "venueName": "POLIESPORTIU SA.FA. HORTA",
+        "gamesPlayed": 1,
+        "wins": 1,
+        "losses": 0,
+        "avgPointsFor": 81.0,
+        "avgPointsAgainst": 71.0,
+        "topScorers": [
+          {
+            "name": "MIQUEL ORPI ANDORRA",
+            "dorsal": "14",
+            "gamesPlayed": 1,
+            "avgPoints": 31.0
+          },
+          {
+            "name": "JOSÉ DAVID HEREDIA CRUZ",
+            "dorsal": "13",
+            "gamesPlayed": 1,
+            "avgPoints": 13.0
+          },
+          {
+            "name": "NICOLAU TORREGO CERVANTES",
+            "dorsal": "33",
+            "gamesPlayed": 1,
+            "avgPoints": 10.0
+          },
+          {
+            "name": "CARLOS MEDEIROS MUIÑO",
+            "dorsal": "9",
+            "gamesPlayed": 1,
+            "avgPoints": 8.0
+          },
+          {
+            "name": "XAVIER SANCHO - TELLO I BAYARRI",
+            "dorsal": "22",
+            "gamesPlayed": 1,
+            "avgPoints": 5.0
+          }
         ]
       }
     },
@@ -79,6 +120,47 @@
           "win",
           "loss"
         ]
+      },
+      "opponentSeason": {
+        "category": "1A. TERRITORIAL SÈNIOR MASCULÍ",
+        "venueName": "PAVELLO CAN TINTORE",
+        "gamesPlayed": 1,
+        "wins": 1,
+        "losses": 0,
+        "avgPointsFor": 59.0,
+        "avgPointsAgainst": 45.0,
+        "topScorers": [
+          {
+            "name": "JORGE JESÚS LOPES DA SILVA FERNANDEZ",
+            "dorsal": "12",
+            "gamesPlayed": 1,
+            "avgPoints": 13.0
+          },
+          {
+            "name": "VICTOR PECH SEANA",
+            "dorsal": "19",
+            "gamesPlayed": 1,
+            "avgPoints": 12.0
+          },
+          {
+            "name": "JOAN ORTIZ FERNANDEZ",
+            "dorsal": "5",
+            "gamesPlayed": 1,
+            "avgPoints": 9.0
+          },
+          {
+            "name": "PABLO GONZALEZ ORTIZ",
+            "dorsal": "33",
+            "gamesPlayed": 1,
+            "avgPoints": 7.0
+          },
+          {
+            "name": "CRISTIAN ESQUERRER BLANCO",
+            "dorsal": "93",
+            "gamesPlayed": 1,
+            "avgPoints": 5.0
+          }
+        ]
       }
     },
     "senior-c-masc": {
@@ -119,6 +201,47 @@
           "win",
           "loss"
         ]
+      },
+      "opponentSeason": {
+        "category": "2A. TERRITORIAL SÈNIOR MASCULÍ",
+        "venueName": "PODIUM VILADECANSESPORTS JOAN MASGRAU",
+        "gamesPlayed": 1,
+        "wins": 1,
+        "losses": 0,
+        "avgPointsFor": 74.0,
+        "avgPointsAgainst": 67.0,
+        "topScorers": [
+          {
+            "name": "ADRIA LEON LLOPIS",
+            "dorsal": "5",
+            "gamesPlayed": 1,
+            "avgPoints": 14.0
+          },
+          {
+            "name": "HECTOR URBINA MARTINEZ",
+            "dorsal": "34",
+            "gamesPlayed": 1,
+            "avgPoints": 13.0
+          },
+          {
+            "name": "ADRIA RIERA LLIGADAS",
+            "dorsal": "12",
+            "gamesPlayed": 1,
+            "avgPoints": 12.0
+          },
+          {
+            "name": "CARLOS JIMENEZ ALGARRA",
+            "dorsal": "15",
+            "gamesPlayed": 1,
+            "avgPoints": 10.0
+          },
+          {
+            "name": "XAVIER ROSELL BAUTISTA",
+            "dorsal": "6",
+            "gamesPlayed": 1,
+            "avgPoints": 7.0
+          }
+        ]
       }
     },
     "u25-masc": {
@@ -158,6 +281,47 @@
         "streak": [
           "loss",
           "loss"
+        ]
+      },
+      "opponentSeason": {
+        "category": "C.C. SOTS-25 MASCULÍ NIVELL A",
+        "venueName": "PAVELLO D'ESPORTS D'ARGENTONA",
+        "gamesPlayed": 1,
+        "wins": 0,
+        "losses": 1,
+        "avgPointsFor": 48.0,
+        "avgPointsAgainst": 82.0,
+        "topScorers": [
+          {
+            "name": "PAU CARBONELL PLANA",
+            "dorsal": "14",
+            "gamesPlayed": 1,
+            "avgPoints": 9.0
+          },
+          {
+            "name": "MARC COLLANTES PAREDES",
+            "dorsal": "4",
+            "gamesPlayed": 1,
+            "avgPoints": 8.0
+          },
+          {
+            "name": "HUGO RODRIGUEZ RODRIGUEZ",
+            "dorsal": "5",
+            "gamesPlayed": 1,
+            "avgPoints": 7.0
+          },
+          {
+            "name": "ADRIAN SERRAN MARTIN",
+            "dorsal": "33",
+            "gamesPlayed": 1,
+            "avgPoints": 6.0
+          },
+          {
+            "name": "GERARD MARFA HERNANDEZ",
+            "dorsal": "30",
+            "gamesPlayed": 1,
+            "avgPoints": 5.0
+          }
         ]
       }
     },
