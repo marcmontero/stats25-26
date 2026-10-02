@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-02T18:40:59.555983+02:00",
+  "updatedAt": "2026-10-02T20:02:29.762043+02:00",
   "teams": {
     "senior-a-masc": {
       "matchId": "3830",
@@ -41,6 +41,7 @@
         ]
       },
       "opponentSeason": {
+        "season": "2026-2027",
         "category": "C.C. SEGONA CATEGORIA MASCULINA",
         "venueName": "POLIESPORTIU SA.FA. HORTA",
         "gamesPlayed": 1,
@@ -122,6 +123,7 @@
         ]
       },
       "opponentSeason": {
+        "season": "2026-2027",
         "category": "1A. TERRITORIAL SÈNIOR MASCULÍ",
         "venueName": "PAVELLO CAN TINTORE",
         "gamesPlayed": 1,
@@ -203,6 +205,7 @@
         ]
       },
       "opponentSeason": {
+        "season": "2026-2027",
         "category": "2A. TERRITORIAL SÈNIOR MASCULÍ",
         "venueName": "PODIUM VILADECANSESPORTS JOAN MASGRAU",
         "gamesPlayed": 1,
@@ -284,6 +287,7 @@
         ]
       },
       "opponentSeason": {
+        "season": "2026-2027",
         "category": "C.C. SOTS-25 MASCULÍ NIVELL A",
         "venueName": "PAVELLO D'ESPORTS D'ARGENTONA",
         "gamesPlayed": 1,
