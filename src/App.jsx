@@ -13,6 +13,7 @@ const TopQuintetsAnalysis = lazy(() => import("./components/TopQuintetsAnalysis.
 const ExportReports = lazy(() => import("./components/ExportReports.jsx"));
 import QuartersAnalysis from './components/QuartersAnalysis.jsx';
 import NextOpponent from './components/NextOpponent.jsx';
+import { isFeminineTeam, playerWord } from './utils/genderWords.js';
 import { supabase, usernameToInternalEmail } from './supabaseClient.js';
 import './App.css';
 
@@ -704,7 +705,7 @@ const App = () => {
             </button>
 
             <button className={`tab-button ${activeView === 'playerStats' ? 'tab-button--active' : ''}`} onClick={() => toggleView('playerStats')}>
-              Stats per jugadora
+              Stats per {playerWord(isFeminineTeam(selectedTeam), false)}
             </button>
 
             <button className={`tab-button ${activeView === 'evolution' ? 'tab-button--active' : ''}`} onClick={() => toggleView('evolution')}>
@@ -726,11 +727,11 @@ const App = () => {
       )}
 
       <Suspense fallback={<div className="loading-container"><div className="loading-spinner"></div></div>}>
-        {activeView === 'stats' && <StatsTable matches={matches} />}
-        {activeView === 'playerStats' && <PlayerStatsByMatch matches={matches} />}
-        {activeView === 'evolution' && <PlayerEvolutionCharts matches={matches} />}
+        {activeView === 'stats' && <StatsTable matches={matches} isFeminine={isFeminineTeam(selectedTeam)} />}
+        {activeView === 'playerStats' && <PlayerStatsByMatch matches={matches} isFeminine={isFeminineTeam(selectedTeam)} />}
+        {activeView === 'evolution' && <PlayerEvolutionCharts matches={matches} isFeminine={isFeminineTeam(selectedTeam)} />}
         {activeView === 'topQuintets' && currentTeam.statsType === 'advanced' && <TopQuintetsAnalysis matches={matches} />}
-        {activeView === 'export' && <ExportReports matches={matches} teamName={currentTeam.name} />}
+        {activeView === 'export' && <ExportReports matches={matches} teamName={currentTeam.name} isFeminine={isFeminineTeam(selectedTeam)} />}
       </Suspense>
 
       {!selectedMatch ? (
@@ -746,12 +747,12 @@ const App = () => {
               <button className="back-button" onClick={handleBackToMatches}>
                 Tornar a Partits
               </button>
-              <QuartersAnalysis match={selectedMatch} />
-              <BasicMatchView match={selectedMatch} />
+              <QuartersAnalysis match={selectedMatch} isFeminine={isFeminineTeam(selectedTeam)} />
+              <BasicMatchView match={selectedMatch} isFeminine={isFeminineTeam(selectedTeam)} />
             </>
           ) : (
             <>
-              <PlayerList match={selectedMatch} onBack={handleBackToMatches} />
+              <PlayerList match={selectedMatch} onBack={handleBackToMatches} isFeminine={isFeminineTeam(selectedTeam)} />
             </>
           )}
         </>

@@ -1,7 +1,9 @@
 import React from "react";
 import "./QuartersAnalysis.css";
 
-const QuartersAnalysis = ({ match }) => {
+import { playerWord, playersWord } from "../utils/genderWords.js";
+
+const QuartersAnalysis = ({ match, isFeminine }) => {
   if (!match || !match.score || !match.teams) {
     return <p>No hi ha dades disponibles per analitzar els quarts</p>;
   }
@@ -188,7 +190,7 @@ const QuartersAnalysis = ({ match }) => {
 
             {/* Jugadores en pista */}
             <div className="quarter-players">
-              <h4>{quarter.players.length} {quarter.players.length === 1 ? 'Jugadora' : 'Jugadores'} a pista:</h4>
+              <h4>{quarter.players.length} {quarter.players.length === 1 ? playerWord(isFeminine) : playersWord(isFeminine)} a pista:</h4>
               <div className="players-list">
                 {quarter.players.length > 0 ? (
                   quarter.players.map((player, idx) => (

@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import "./PlayerList.css";
+import { playerWord, playersWord } from "../utils/genderWords.js";
 
 // Convertir minutos decimales a MM:SS
 const formatMinutesSeconds = (decimalMinutes) => {
@@ -83,7 +84,7 @@ const TeamToggle = ({ teamA, teamB, selectedKey, onSelectTeam }) => (
 );
 
 // ========== PESTANYA: ESTADÍSTIQUES ==========
-const StatsTab = ({ teamA, teamB, selectedKey, onSelectTeam }) => {
+const StatsTab = ({ teamA, teamB, selectedKey, onSelectTeam, isFeminine }) => {
   const team = selectedKey === "A" ? teamA : teamB;
   const sortedPlayers = sortByDorsal(team?.players);
 
@@ -91,7 +92,7 @@ const StatsTab = ({ teamA, teamB, selectedKey, onSelectTeam }) => {
     <div className="stats-card">
       <div className="stats-card-header">
         <div>
-          <h3>Estadístiques dels jugadors</h3>
+          <h3>Estadístiques dels {playersWord(isFeminine, false)}</h3>
           <span className="legend">
             <span className="legend-dot" /> Cinc inicial
           </span>
@@ -104,7 +105,7 @@ const StatsTab = ({ teamA, teamB, selectedKey, onSelectTeam }) => {
           <thead>
             <tr>
               <th className="col-dorsal">#</th>
-              <th className="col-name">Jugador</th>
+              <th className="col-name">{playerWord(isFeminine)}</th>
               <th>Min</th>
               <th>Pts</th>
               <th>T2</th>
@@ -149,7 +150,7 @@ const StatsTab = ({ teamA, teamB, selectedKey, onSelectTeam }) => {
 };
 
 // ========== PESTANYA: ROTACIONS ==========
-const RotationsTab = ({ teamA, teamB, selectedKey, onSelectTeam }) => {
+const RotationsTab = ({ teamA, teamB, selectedKey, onSelectTeam, isFeminine }) => {
   const team = selectedKey === "A" ? teamA : teamB;
   const sortedPlayers = sortByDorsal(team?.players);
 
@@ -158,7 +159,7 @@ const RotationsTab = ({ teamA, teamB, selectedKey, onSelectTeam }) => {
       <div className="stats-card-header">
         <div>
           <h3>Rotacions</h3>
-          <span className="legend">Intervals en pista per jugador</span>
+          <span className="legend">Intervals en pista per {playerWord(isFeminine, false)}</span>
         </div>
         <TeamToggle teamA={teamA} teamB={teamB} selectedKey={selectedKey} onSelectTeam={onSelectTeam} />
       </div>
@@ -195,7 +196,7 @@ const RotationsTab = ({ teamA, teamB, selectedKey, onSelectTeam }) => {
 // ========== PESTANYA: QUINTETS ==========
 const QUINTETS_PAGE_SIZE = 5;
 
-const QuintetsTab = ({ match, selectedKey, teamA, teamB, onSelectTeam }) => {
+const QuintetsTab = ({ match, selectedKey, teamA, teamB, onSelectTeam, isFeminine }) => {
   const [showAll, setShowAll] = useState(false);
   const [sortDir, setSortDir] = useState("desc");
 
@@ -212,7 +213,7 @@ const QuintetsTab = ({ match, selectedKey, teamA, teamB, onSelectTeam }) => {
         <div className="stats-card-header">
           <div>
             <h3>Més/menys per quintet</h3>
-            <span className="legend">Diferència de punts mentre els cinc jugadors són a pista.</span>
+            <span className="legend">Diferència de punts mentre els cinc {playersWord(isFeminine, false)} són a pista.</span>
           </div>
           <TeamToggle teamA={teamA} teamB={teamB} selectedKey={selectedKey} onSelectTeam={onSelectTeam} />
         </div>
@@ -226,7 +227,7 @@ const QuintetsTab = ({ match, selectedKey, teamA, teamB, onSelectTeam }) => {
       <div className="stats-card-header">
         <div>
           <h3>Més/menys per quintet</h3>
-          <span className="legend">Diferència de punts mentre els cinc jugadors són a pista.</span>
+          <span className="legend">Diferència de punts mentre els cinc {playersWord(isFeminine, false)} són a pista.</span>
         </div>
         <div className="quintets-header-controls">
           <TeamToggle teamA={teamA} teamB={teamB} selectedKey={selectedKey} onSelectTeam={onSelectTeam} />
@@ -276,7 +277,7 @@ const QuintetsTab = ({ match, selectedKey, teamA, teamB, onSelectTeam }) => {
   );
 };
 
-const PlayerList = ({ match, onBack }) => {
+const PlayerList = ({ match, onBack, isFeminine }) => {
   if (!match?.teams || match.teams.length < 2) {
     return <p className="empty-state">No hi ha dades disponibles</p>;
   }
@@ -348,13 +349,13 @@ const PlayerList = ({ match, onBack }) => {
       </div>
 
       {activeTab === "stats" && (
-        <StatsTab teamA={teamA} teamB={teamB} selectedKey={selectedKey} onSelectTeam={setSelectedKey} />
+        <StatsTab teamA={teamA} teamB={teamB} selectedKey={selectedKey} onSelectTeam={setSelectedKey} isFeminine={isFeminine} />
       )}
       {activeTab === "rotations" && (
-        <RotationsTab teamA={teamA} teamB={teamB} selectedKey={selectedKey} onSelectTeam={setSelectedKey} />
+        <RotationsTab teamA={teamA} teamB={teamB} selectedKey={selectedKey} onSelectTeam={setSelectedKey} isFeminine={isFeminine} />
       )}
       {activeTab === "quintets" && (
-        <QuintetsTab match={match} teamA={teamA} teamB={teamB} selectedKey={selectedKey} onSelectTeam={setSelectedKey} />
+        <QuintetsTab match={match} teamA={teamA} teamB={teamB} selectedKey={selectedKey} onSelectTeam={setSelectedKey} isFeminine={isFeminine} />
       )}
     </div>
   );

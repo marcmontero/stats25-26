@@ -1,7 +1,9 @@
 import React, { useState } from "react";
 import "./PlayerStatsByMatch.css";
 
-const PlayerStatsByMatch = ({ matches }) => {
+import { playerWord } from "../utils/genderWords.js";
+
+const PlayerStatsByMatch = ({ matches, isFeminine }) => {
   const [selectedPlayer, setSelectedPlayer] = useState(null);
 
   // Obtener la lista de jugadores únicos
@@ -54,7 +56,7 @@ const PlayerStatsByMatch = ({ matches }) => {
 
       {/* Selector de Jugadora */}
       <div className="player-selector">
-        <label>Selecciona una jugadora:</label>
+        <label>Selecciona {isFeminine ? "una" : "un"} {playerWord(isFeminine, false)}:</label>
         <select onChange={(e) => setSelectedPlayer(e.target.value)} value={selectedPlayer || ""}>
           <option value="">-- Seleccionar --</option>
           {playersList.map((player, index) => (

@@ -95,6 +95,36 @@ const NextOpponent = ({ teamKey }) => {
           <TeamStanding label={data.opponent} standing={data.opponentStanding} />
         </div>
       )}
+      {data.opponentSeason && (
+        <div className="next-opponent-scorers">
+          <span className="next-opponent-scorers-label">
+            Temporada {data.opponentSeason.season ? `${data.opponentSeason.season} ` : ""}de {data.opponent} — {data.opponentSeason.wins}V-{data.opponentSeason.losses}D
+            {data.opponentSeason.avgPointsFor != null &&
+              ` · ${data.opponentSeason.avgPointsFor}-${data.opponentSeason.avgPointsAgainst} punts/partit`}
+          </span>
+          <div className="next-opponent-scorers-list">
+            {data.opponentSeason.topScorers?.map((p, i) => (
+              <span className="scorer-chip" key={i}>
+                <span className="scorer-dorsal">{p.dorsal}</span>
+                {p.name} <strong>{p.avgPoints} p/p</strong>
+              </span>
+            ))}
+          </div>
+        </div>
+      )}
+      {!data.opponentSeason && data.opponentTopScorers?.length > 0 && (
+        <div className="next-opponent-scorers">
+          <span className="next-opponent-scorers-label">Màximes anotadores {data.opponent}</span>
+          <div className="next-opponent-scorers-list">
+            {data.opponentTopScorers.map((p, i) => (
+              <span className="scorer-chip" key={i}>
+                <span className="scorer-dorsal">{p.dorsal}</span>
+                {p.name} <strong>{p.points}p</strong>
+              </span>
+            ))}
+          </div>
+        </div>
+      )}
     </div>
   );
 };

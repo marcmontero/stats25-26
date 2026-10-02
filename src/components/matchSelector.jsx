@@ -2,28 +2,22 @@ import React from "react";
 import "./matchSelector.css";
 
 const MatchSelector = ({ matches, onSelectMatch }) => {
-  // Función para formatear el nombre del equipo
-  const formatTeamName = (name) => {
-    if (!name) return "";
-    return name.includes("CORBACHO") ? "Senior Fem" : name;
-  };
-
   return (
     <div className="match-selector">
       <div className="button-container">
         {matches
-          .sort((a, b) => new Date(a.date) - new Date(b.date)) // Ordenar por fecha
+          .sort((a, b) => new Date(a.date) - new Date(b.date)) // Ordenar per data
           .map((match, index) => {
-            const localTeam = formatTeamName(match.teamA?.name);
-            const awayTeam = formatTeamName(match.teamB?.name);
-            const matchResult = match.matchResult || "Resultado Desconocido";
+            const ownIsTeamA = match.teamA?.teamIdIntern === match.idTeam;
+            const opponent = ownIsTeamA ? match.teamB?.name : match.teamA?.name;
+            const matchResult = match.matchResult || "Resultat desconegut";
 
             return (
               <button key={match.matchId} className="match-button" onClick={() => onSelectMatch(match)}>
                 <span className="match-day">Jornada {index + 1}</span>
-                <span className="team-name">{localTeam}</span>
+                {match.category && <span className="team-name">{match.category}</span>}
                 <span className="match-result">{matchResult}</span>
-                <span className="team-name">{awayTeam}</span>
+                {opponent && <span className="team-name">vs {opponent}</span>}
               </button>
             );
           })}

@@ -4,7 +4,9 @@ import "jspdf-autotable";
 import * as XLSX from "xlsx";
 import "./ExportReports.css";
 
-const ExportReports = ({ matches, teamName }) => {
+const ExportReports = ({ matches, teamName, isFeminine }) => {
+  const playerLabel = isFeminine ? "Jugadora" : "Jugador";
+  const playersLabel = isFeminine ? "Jugadores" : "Jugadors";
   const [exporting, setExporting] = useState(false);
 
   // Calcular estadísticas generales
@@ -90,13 +92,13 @@ const ExportReports = ({ matches, teamName }) => {
       });
       doc.text(`Data: ${today}`, 14, 45);
       doc.text(`Partits analitzats: ${matches.length}`, 14, 50);
-      doc.text(`Jugadores: ${getTeamStats().length}`, 14, 55);
+      doc.text(`${playersLabel}: ${getTeamStats().length}`, 14, 55);
       
       // Subtítulo para la tabla
       doc.setFontSize(14);
       doc.setFont(undefined, 'bold');
       doc.setTextColor(196, 18, 48);
-      doc.text('Estadistiques per Jugadora', 14, 65);
+      doc.text(`Estadistiques per ${playerLabel}`, 14, 65);
       
       // Tabla de estadísticas
       const tableData = getTeamStats().map(player => [
@@ -112,7 +114,7 @@ const ExportReports = ({ matches, teamName }) => {
       
       doc.autoTable({
         startY: 70,
-        head: [['Jugadora', 'PJ', 'Min', 'Pts', 'TL%', 'T2%', 'T3%', '±']],
+        head: [[playerLabel, 'PJ', 'Min', 'Pts', 'TL%', 'T2%', 'T3%', '±']],
         body: tableData,
         theme: 'grid',
         headStyles: {
@@ -184,7 +186,7 @@ const ExportReports = ({ matches, teamName }) => {
         [''],
         ['Data:', new Date().toLocaleDateString('ca-ES')],
         ['Partits Analitzats:', matches.length],
-        ['Jugadores:', getTeamStats().length],
+        [`${playersLabel}:`, getTeamStats().length],
         [''],
         [''],
       ];
@@ -196,11 +198,11 @@ const ExportReports = ({ matches, teamName }) => {
       XLSX.utils.sheet_add_aoa(ws1, [
         ['ESTADISTIQUES PER JUGADORA'],
         [''],
-        ['Jugadora', 'Partits', 'Min/P', 'Pts/P', 'TL%', 'T2%', 'T3%', '±/P']
+        [playerLabel, 'Partits', 'Min/P', 'Pts/P', 'TL%', 'T2%', 'T3%', '±/P']
       ], { origin: 'A9' });
       
       XLSX.utils.sheet_add_json(ws1, playerData.map(p => ({
-        'Jugadora': p.name,
+        [playerLabel]: p.name,
         'Partits': p.gamesPlayed,
         'Min/P': p.avgMinutes,
         'Pts/P': p.avgPoints,
@@ -224,7 +226,7 @@ const ExportReports = ({ matches, teamName }) => {
       playerData.forEach(player => {
         // Header de jugadora
         detailedPlayerData.push({
-          'Jugadora': player.name,
+          [playerLabel]: player.name,
           'Partits Jugats': player.gamesPlayed,
           'Promig Minuts': player.avgMinutes,
           'Promig Punts': player.avgPoints,
@@ -239,7 +241,7 @@ const ExportReports = ({ matches, teamName }) => {
           const playerInMatch = match.players.find(p => p.name === player.name);
           if (playerInMatch) {
             detailedPlayerData.push({
-              'Jugadora': `  J${idx + 1}: ${match.matchResult.substring(0, 30)}...`,
+              [playerLabel]: `  J${idx + 1}: ${match.matchResult.substring(0, 30)}...`,
               'Partits Jugats': '',
               'Promig Minuts': playerInMatch.timePlayed?.toFixed(1) || 0,
               'Promig Punts': playerInMatch.data?.score || 0,
@@ -261,7 +263,7 @@ const ExportReports = ({ matches, teamName }) => {
         { wch: 10 }, { wch: 10 }, { wch: 10 }, { wch: 10 }
       ];
       
-      XLSX.utils.book_append_sheet(workbook, ws2, 'Detall Jugadores');
+      XLSX.utils.book_append_sheet(workbook, ws2, `Detall ${playersLabel}`);
       
       // === HOJA 3: DETALL PER PARTIT ===
       const matchDetailsData = [];
@@ -270,7 +272,7 @@ const ExportReports = ({ matches, teamName }) => {
         matchDetailsData.push({
           'Jornada': `JORNADA ${index + 1}`,
           'Partit': match.matchResult,
-          'Jugadora': '',
+          [playerLabel]: '',
           'Minuts': '',
           'Punts': '',
           'TL': '',
@@ -285,7 +287,7 @@ const ExportReports = ({ matches, teamName }) => {
             matchDetailsData.push({
               'Jornada': '',
               'Partit': '',
-              'Jugadora': player.name,
+              [playerLabel]: player.name,
               'Minuts': player.timePlayed?.toFixed(1) || 0,
               'Punts': player.data?.score || 0,
               'TL': `${player.data?.shotsOfOneSuccessful || 0}/${player.data?.shotsOfOneAttempted || 0}`,
@@ -370,7 +372,7 @@ const ExportReports = ({ matches, teamName }) => {
             <strong>{matches.length}</strong> partits
           </span>
           <span className="info-badge">
-            <strong>{getTeamStats().length}</strong> jugadores
+            <strong>{getTeamStats().length}</strong> {playersLabel.toLowerCase()}
           </span>
         </div>
       </div>

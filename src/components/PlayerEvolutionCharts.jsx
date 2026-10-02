@@ -2,7 +2,9 @@ import React, { useState } from "react";
 import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer } from "recharts";
 import "./PlayerEvolutionCharts.css";
 
-const PlayerEvolutionCharts = ({ matches }) => {
+import { playerWord } from "../utils/genderWords.js";
+
+const PlayerEvolutionCharts = ({ matches, isFeminine }) => {
   const [selectedPlayer, setSelectedPlayer] = useState(null);
   const [selectedMetric, setSelectedMetric] = useState("points");
 
@@ -53,7 +55,7 @@ const PlayerEvolutionCharts = ({ matches }) => {
 
       <div className="charts-controls">
         <div className="control-group">
-          <label>Selecciona una Jugadora:</label>
+          <label>Selecciona {isFeminine ? "una" : "un"} {playerWord(isFeminine, false)}:</label>
           <select onChange={(e) => setSelectedPlayer(e.target.value)} value={selectedPlayer || ""}>
             <option value="">-- Seleccionar --</option>
             {playersList.map((player, index) => (
@@ -144,7 +146,7 @@ const PlayerEvolutionCharts = ({ matches }) => {
 
       {!selectedPlayer && (
         <div className="empty-state">
-          <p>Selecciona una jugadora per veure la seva evolució</p>
+          <p>Selecciona {isFeminine ? "una" : "un"} {playerWord(isFeminine, false)} per veure la seva evolució</p>
         </div>
       )}
     </div>

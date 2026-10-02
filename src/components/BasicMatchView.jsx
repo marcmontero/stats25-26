@@ -1,7 +1,9 @@
 import React from 'react';
 import './BasicMatchView.css';
 
-const BasicMatchView = ({ match }) => {
+import { playerWord, playersWord } from "../utils/genderWords.js";
+
+const BasicMatchView = ({ match, isFeminine }) => {
   if (!match || !match.players) {
     return <p>No hi ha dades disponibles</p>;
   }
@@ -79,7 +81,7 @@ const BasicMatchView = ({ match }) => {
             <thead>
               <tr>
                 <th>Dorsal</th>
-                <th>Nom del Jugador</th>
+                <th>Nom del {playerWord(isFeminine, false)}</th>
                 <th>Minuts</th>
                 <th>Punts</th>
                 <th>TL</th>
@@ -123,8 +125,8 @@ const BasicMatchView = ({ match }) => {
           <table className="quarters-table">
             <thead>
               <tr>
-                <th className="player-column">Nom dels Jugadors</th>
-                <th className="dorsal-column">Núm. del Jugador</th>
+                <th className="player-column">Nom dels {playersWord(isFeminine, false)}</th>
+                <th className="dorsal-column">Núm. del {playerWord(isFeminine, false)}</th>
                 {Array.from({ length: maxQuarters }, (_, i) => (
                   <th key={i} className="quarter-column">{i + 1}</th>
                 ))}

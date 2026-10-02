@@ -1,7 +1,9 @@
 import React from "react";
 import "./StatsTables.css";
 
-const StatsTable = ({ matches }) => {
+import { playerWord } from "../utils/genderWords.js";
+
+const StatsTable = ({ matches, isFeminine }) => {
   if (matches.length === 0) {
     return <p>Cargando datos...</p>;
   }
@@ -64,7 +66,7 @@ const StatsTable = ({ matches }) => {
       <table>
         <thead>
           <tr>
-            <th>Jugadora</th>
+            <th>{playerWord(isFeminine)}</th>
             <th>Min</th>
             <th>Punts</th>
             <th>TL</th>
