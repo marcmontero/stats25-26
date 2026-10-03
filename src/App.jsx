@@ -11,7 +11,6 @@ import PlayerStatsByMatch from "./components/PlayerStatsByMatch.jsx";
 const PlayerEvolutionCharts = lazy(() => import("./components/PlayerEvolutionCharts.jsx"));
 const TopQuintetsAnalysis = lazy(() => import("./components/TopQuintetsAnalysis.jsx"));
 const ExportReports = lazy(() => import("./components/ExportReports.jsx"));
-import QuartersAnalysis from './components/QuartersAnalysis.jsx';
 import NextOpponent from './components/NextOpponent.jsx';
 import { isFeminineTeam, playerWord } from './utils/genderWords.js';
 import { supabase, usernameToInternalEmail } from './supabaseClient.js';
@@ -747,8 +746,7 @@ const App = () => {
               <button className="back-button" onClick={handleBackToMatches}>
                 Tornar a Partits
               </button>
-              <QuartersAnalysis match={selectedMatch} isFeminine={isFeminineTeam(selectedTeam)} />
-              <BasicMatchView match={selectedMatch} isFeminine={isFeminineTeam(selectedTeam)} />
+              <BasicMatchView match={selectedMatch} />
             </>
           ) : (
             <>

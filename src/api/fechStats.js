@@ -127,8 +127,16 @@ export const adaptMatchResponse = (data, index, keywords) => {
   );
 
   const teams = [
-    { name: header.localTeam.name, teamIdIntern: localUuid, players: localPlayers, quintets: buildQuintets(lineups?.local) },
-    { name: header.visitorTeam.name, teamIdIntern: visitUuid, players: visitPlayers, quintets: buildQuintets(lineups?.visitor) },
+    {
+      name: header.localTeam.name, teamIdIntern: localUuid, players: localPlayers,
+      quintets: buildQuintets(lineups?.local),
+      scoringDistribution: totals.local?.scoringDistribution || null,
+    },
+    {
+      name: header.visitorTeam.name, teamIdIntern: visitUuid, players: visitPlayers,
+      quintets: buildQuintets(lineups?.visitor),
+      scoringDistribution: totals.visitor?.scoringDistribution || null,
+    },
   ];
 
   // Cerca de l'equip propi, exactament igual que abans (per keywords, amb

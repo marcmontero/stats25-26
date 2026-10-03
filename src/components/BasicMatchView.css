@@ -1,311 +1,149 @@
-/* ========== CONTENIDOR PRINCIPAL ========== */
 .basic-match-container {
-  max-width: 1400px;
-  margin: 0 auto;
-  padding: 20px;
+  max-width: 800px;
+  margin: 0 auto 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
 }
 
-/* ========== SECCIONS ========== */
-.boxscore-section,
-.quarters-grid-section {
+.periods-section,
+.distribution-section {
   background: var(--surface);
   border: 1px solid var(--line);
-  border-top: 2px solid var(--badalones-red);
-  border-radius: 6px;
-  padding: 24px;
-  margin-bottom: 24px;
-  box-shadow: none;
+  border-radius: var(--radius);
+  padding: 20px 22px;
 }
 
-.boxscore-section h2,
-.quarters-grid-section h2 {
-  color: var(--chalk);
-  font-family: var(--font-display);
-  font-size: 22px;
-  font-weight: 700;
-  margin-bottom: 20px;
-  text-transform: uppercase;
-  letter-spacing: 0.01em;
-}
-
-/* ========== WRAPPERS PER SCROLL ========== */
-.boxscore-table-wrapper,
-.quarters-table-wrapper {
-  overflow-x: auto;
-  border-radius: 8px;
-  box-shadow: none;
-}
-
-/* ========== TAULES - ESTIL BASE ========== */
-.boxscore-table,
-.quarters-table {
-  width: 100%;
-  border-collapse: separate;
-  border-spacing: 0;
+.periods-section h2,
+.distribution-section h2 {
   font-family: var(--font-body);
-  font-size: 14px;
-}
-
-/* ========== HEADERS ========== */
-.boxscore-table thead,
-.quarters-table thead {
-  background: var(--badalones-red);
-  color: white;
-  position: sticky;
-  top: 0;
-  z-index: 10;
-}
-
-.boxscore-table th,
-.quarters-table th {
-  padding: 12px 10px;
-  text-align: center;
-  font-weight: 700;
-  font-size: 13px;
-  text-transform: uppercase;
-  letter-spacing: 0.5px;
-  border-right: 1px solid rgba(255, 255, 255, 0.2);
-}
-
-.boxscore-table th:first-child,
-.quarters-table th:first-child {
-  border-top-left-radius: 8px;
-}
-
-.boxscore-table th:last-child,
-.quarters-table th:last-child {
-  border-top-right-radius: 8px;
-  border-right: none;
-}
-
-/* ========== COLUMNES ESPECÍFIQUES ========== */
-.player-column {
-  text-align: left !important;
-  min-width: 200px;
-  padding-left: 20px !important;
-}
-
-.dorsal-column {
-  min-width: 80px;
-}
-
-.quarter-column {
-  min-width: 50px;
-  width: 50px;
-}
-
-/* ========== FILES DE DADES ========== */
-.boxscore-table tbody tr,
-.quarters-table tbody tr {
-  border-bottom: 1px solid var(--line);
-  transition: all 0.2s ease;
-}
-
-.boxscore-table tbody tr:hover,
-.quarters-table tbody tr:hover {
-  background-color: var(--surface-raised);
-  cursor: pointer;
-}
-
-.boxscore-table tbody tr:nth-child(even),
-.quarters-table tbody tr:nth-child(even) {
-  background-color: #f7ecd6;
-}
-
-.boxscore-table tbody tr:nth-child(even):hover,
-.quarters-table tbody tr:nth-child(even):hover {
-  background-color: var(--surface-raised);
-}
-
-/* ========== CEL·LES ========== */
-.boxscore-table td,
-.quarters-table td {
-  padding: 10px;
-  text-align: center;
-  font-size: 13px;
-  color: var(--chalk);
-  border-bottom: 1px solid var(--line);
-}
-
-/* ========== DORSAL ========== */
-.dorsal-cell {
-  font-weight: bold;
-  font-size: 15px;
-  background: var(--badalones-red);
-  color: white !important;
-  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
-  min-width: 60px;
-  width: 60px;
-}
-
-.dorsal-cell-grid {
-  font-weight: 700;
   font-size: 16px;
-  color: var(--badalones-red);
-  min-width: 80px;
-}
-
-/* ========== NOM DEL JUGADOR ========== */
-.player-name-cell {
-  text-align: left !important;
-  padding-left: 15px !important;
-  font-weight: 600;
-  color: var(--chalk);
-  font-size: 14px;
-  white-space: nowrap;
-}
-
-.player-name-cell-grid {
-  text-align: left !important;
-  padding-left: 20px !important;
-  font-weight: 600;
-  color: var(--chalk);
-  font-size: 14px;
-  white-space: nowrap;
-  min-width: 200px;
-}
-
-/* ========== BADGE CAPITÀ ========== */
-.captain-badge {
-  display: inline-block;
-  background: var(--badalones-red);
-  color: white;
-  font-size: 10px;
   font-weight: 700;
-  padding: 2px 6px;
+  color: var(--chalk);
+  margin-bottom: 4px;
+}
+
+.distribution-subtitle {
+  font-size: 12.5px;
+  color: var(--chalk-dim);
+  margin-bottom: 16px;
+}
+
+/* ===== Taula de parcials ===== */
+.periods-table-wrapper {
+  overflow-x: auto;
+  margin-top: 12px;
+}
+
+.periods-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-family: var(--font-body);
+  font-size: 13.5px;
+}
+
+.periods-table th {
+  text-align: center;
+  font-size: 11px;
+  font-weight: 600;
+  color: var(--chalk-dim);
+  padding: 0 8px 8px;
+  border-bottom: 1px solid var(--line);
+}
+
+.periods-table td {
+  text-align: center;
+  padding: 10px 8px;
+  border-bottom: 1px solid var(--line);
+  color: var(--chalk);
+  font-family: var(--font-mono);
+}
+
+.col-team-name {
+  text-align: left !important;
+  font-family: var(--font-body) !important;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.col-total {
+  font-weight: 700;
+  color: var(--badalones-red);
+}
+
+/* ===== Repartiment de punts ===== */
+.dist-row {
+  margin-bottom: 16px;
+}
+
+.dist-row:last-child {
+  margin-bottom: 0;
+}
+
+.dist-row-header {
+  margin-bottom: 6px;
+}
+
+.dist-team-name {
+  font-family: var(--font-body);
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--chalk);
+}
+
+.dist-bar {
+  display: flex;
+  width: 100%;
+  height: 16px;
   border-radius: 4px;
-  margin-left: 8px;
+  overflow: hidden;
+  background: var(--surface-raised);
+  border: 1px solid var(--line);
+}
+
+.dist-segment {
+  height: 100%;
+}
+
+.dist-t2 { background: var(--badalones-red); }
+.dist-t3 { background: var(--parquet); }
+.dist-ft { background: var(--chalk-faint); }
+
+.dist-legend-values {
+  display: flex;
+  gap: 16px;
+  margin-top: 6px;
+  font-family: var(--font-mono);
+  font-size: 11.5px;
+  color: var(--chalk-dim);
+}
+
+.dist-dot {
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  border-radius: 2px;
+  margin-right: 4px;
   vertical-align: middle;
 }
 
-/* ========== PUNTS DESTACATS ========== */
-.points-cell {
-  font-weight: 700;
-  font-size: 16px;
-  color: var(--badalones-red);
-  background-color: var(--surface-raised);
-}
-
-/* ========== TITULAR ========== */
-.titular-row {
-  background-color: var(--surface-raised) !important;
-  border-left: 4px solid var(--badalones-red);
-  font-weight: 600;
-}
-
-.titular-row:hover {
-  background-color: var(--surface-raised) !important;
-}
-
-/* ========== GRAELLA DE QUARTS ========== */
-.quarter-cell {
-  font-size: 18px;
-  font-weight: 700;
-  padding: 8px !important;
-  width: 50px;
-  min-width: 50px;
-  max-width: 50px;
-}
-
-.played-mark {
-  color: var(--badalones-red);
-  font-size: 20px;
-  font-weight: 700;
-  display: inline-block;
-}
-
-.not-played {
-  display: inline-block;
-  width: 20px;
-  height: 20px;
-}
-
-/* ========== RESPONSIVE ========== */
-@media (max-width: 1024px) {
-  .basic-match-container {
-    padding: 15px;
-  }
-
-  .boxscore-section,
-  .quarters-grid-section {
-    padding: 20px 15px;
-    overflow-x: auto;
-  }
-
-  .boxscore-table,
-  .quarters-table {
-    min-width: 800px;
-  }
-}
-
-@media (max-width: 768px) {
-  .basic-match-container {
-    padding: 10px;
-  }
-
-  .boxscore-section h2,
-  .quarters-grid-section h2 {
-    font-size: 20px;
-  }
-
-  .boxscore-table,
-  .quarters-table {
-    font-size: 12px;
-  }
-
-  .boxscore-table th,
-  .quarters-table th {
-    font-size: 11px;
-    padding: 10px 6px;
-  }
-
-  .boxscore-table td,
-  .quarters-table td {
-    font-size: 12px;
-    padding: 8px 5px;
-  }
-
-  .player-name-cell {
-    font-size: 12px;
-  }
-
-  .quarter-column {
-    min-width: 40px;
-    width: 40px;
-  }
-
-  .quarter-cell {
-    width: 40px;
-    min-width: 40px;
-    max-width: 40px;
-    font-size: 16px;
-  }
+/* ===== Nota ===== */
+.basic-match-note {
+  font-size: 11.5px;
+  color: var(--chalk-faint);
+  font-style: italic;
+  text-align: center;
+  padding: 0 10px;
 }
 
 @media (max-width: 480px) {
-  .boxscore-section,
-  .quarters-grid-section {
-    padding: 15px 10px;
+  .periods-section,
+  .distribution-section {
+    padding: 16px;
   }
 
-  .boxscore-section h2,
-  .quarters-grid-section h2 {
-    font-size: 18px;
-  }
-
-  .boxscore-table,
-  .quarters-table {
-    font-size: 11px;
-  }
-
-  .quarter-column {
-    min-width: 35px;
-    width: 35px;
-  }
-
-  .quarter-cell {
-    width: 35px;
-    min-width: 35px;
-    max-width: 35px;
+  .dist-legend-values {
+    flex-wrap: wrap;
+    gap: 8px 14px;
   }
 }

@@ -1,165 +1,98 @@
 import React from 'react';
 import './BasicMatchView.css';
 
-import { playerWord, playersWord } from "../utils/genderWords.js";
+// Categories de promoció: el marcador electrònic només registra el
+// resultat per quart i, com a molt, d'on vénen els punts de l'equip
+// (tirs de 2/3/lliures) — no hi ha dades individuals de cap jugador/a
+// (ni punts, ni minuts, ni faltes), ni res de pista (quintets,
+// rotacions, mapa de tirs). Per això aquesta vista només mostra el que
+// de debò existeix, en comptes d'una taula de jugadores buida.
 
-const BasicMatchView = ({ match, isFeminine }) => {
-  if (!match || !match.players) {
-    return <p>No hi ha dades disponibles</p>;
+const DistributionBar = ({ label, teamName, distribution }) => {
+  if (!distribution) return null;
+  const t2 = distribution.t2?.distPts ?? 0;
+  const t3 = distribution.t3?.distPts ?? 0;
+  const ft = distribution.ft?.distPts ?? 0;
+
+  return (
+    <div className="dist-row">
+      <div className="dist-row-header">
+        <span className="dist-team-name">{teamName}</span>
+      </div>
+      <div className="dist-bar">
+        {t2 > 0 && <div className="dist-segment dist-t2" style={{ width: `${t2}%` }} title={`Tirs de 2: ${t2}%`} />}
+        {t3 > 0 && <div className="dist-segment dist-t3" style={{ width: `${t3}%` }} title={`Tirs de 3: ${t3}%`} />}
+        {ft > 0 && <div className="dist-segment dist-ft" style={{ width: `${ft}%` }} title={`Tirs lliures: ${ft}%`} />}
+      </div>
+      <div className="dist-legend-values">
+        <span><span className="dist-dot dist-t2" /> T2: {t2}%</span>
+        <span><span className="dist-dot dist-t3" /> T3: {t3}%</span>
+        <span><span className="dist-dot dist-ft" /> TL: {ft}%</span>
+      </div>
+    </div>
+  );
+};
+
+const BasicMatchView = ({ match }) => {
+  if (!match?.teams || match.teams.length < 2) {
+    return <p className="empty-state">No hi ha dades disponibles</p>;
   }
 
-  // Ordenar jugadors per dorsal
-  const sortedPlayers = [...match.players].sort((a, b) => {
-    const dorsalA = parseInt(a.dorsal) || 999;
-    const dorsalB = parseInt(b.dorsal) || 999;
-    return dorsalA - dorsalB;
-  });
-
-  // Determinar quants quarts té el partit (normalment 8 per categories base)
-  const maxQuarters = 8;
-
-  // Funció per determinar si un jugador va jugar en un quart específic
-  const playedInQuarter = (player, quarterNumber) => {
-    if (!player.inOutsList || player.inOutsList.length === 0) return false;
-
-    // Duració del partit en minuts (48 minuts per categories base)
-    const totalMinutes = 48;
-    // Cada quart dura: 48 minuts / 8 quarts = 6 minuts
-    const quarterDuration = totalMinutes / maxQuarters;
-    
-    // Temps d'inici i final del quart
-    const quarterStart = (quarterNumber - 1) * quarterDuration;
-    const quarterEnd = quarterNumber * quarterDuration;
-
-    // Ordenar events per temps
-    const sortedEvents = [...player.inOutsList].sort((a, b) => 
-      (a.minuteAbsolut || 0) - (b.minuteAbsolut || 0)
-    );
-
-    // Comprovar si el jugador estava dins de la pista durant aquest quart
-    let isOnCourt = false;
-    
-    for (const event of sortedEvents) {
-      const eventTime = event.minuteAbsolut || 0;
-      
-      // Si l'event és abans del quart, només actualitzem l'estat
-      if (eventTime < quarterStart) {
-        isOnCourt = event.type === "IN_TYPE";
-        continue;
-      }
-      
-      // Si l'event és dins del quart
-      if (eventTime >= quarterStart && eventTime < quarterEnd) {
-        if (event.type === "IN_TYPE") {
-          return true; // Va entrar durant aquest quart
-        }
-        isOnCourt = event.type === "IN_TYPE";
-      }
-      
-      // Si l'event és després del quart, parem
-      if (eventTime >= quarterEnd) {
-        break;
-      }
-    }
-    
-    // Si estava a pista abans del quart i no va sortir durant el quart
-    return isOnCourt;
-  };
-
-  // Determinar si és capità
-  const isCaptain = (player) => {
-    return player.captain === true || player.isCaptain === true;
-  };
+  const [teamA, teamB] = match.teams;
+  const periods = match.periods || [];
+  const hasDistribution = teamA.scoringDistribution || teamB.scoringDistribution;
 
   return (
     <div className="basic-match-container">
-      {/* BOXSCORE */}
-      <div className="boxscore-section">
-        <h2>📊 Boxscore</h2>
-        <div className="boxscore-table-wrapper">
-          <table className="boxscore-table">
-            <thead>
-              <tr>
-                <th>Dorsal</th>
-                <th>Nom del {playerWord(isFeminine, false)}</th>
-                <th>Minuts</th>
-                <th>Punts</th>
-                <th>TL</th>
-                <th>T2</th>
-                <th>T3</th>
-                <th>REB</th>
-                <th>AST</th>
-              </tr>
-            </thead>
-            <tbody>
-              {sortedPlayers.map((player, index) => (
-                <tr key={index} className={player.starting ? 'titular-row' : ''}>
-                  <td className="dorsal-cell">{player.dorsal}</td>
-                  <td className="player-name-cell">
-                    {player.name} {isCaptain(player) && <span className="captain-badge">C</span>}
-                  </td>
-                  <td>{player.timePlayed?.toFixed(0) || 0}'</td>
-                  <td className="points-cell">{player.data?.score || 0}</td>
-                  <td>
-                    {player.data?.shotsOfOneSuccessful || 0}/{player.data?.shotsOfOneAttempted || 0}
-                  </td>
-                  <td>
-                    {player.data?.shotsOfTwoSuccessful || 0}/{player.data?.shotsOfTwoAttempted || 0}
-                  </td>
-                  <td>
-                    {player.data?.shotsOfThreeSuccessful || 0}/{player.data?.shotsOfThreeAttempted || 0}
-                  </td>
-                  <td>{player.data?.totalRebounds || 0}</td>
-                  <td>{player.data?.assists || 0}</td>
+      {periods.length > 0 && (
+        <div className="periods-section">
+          <h2>Resultat per quart</h2>
+          <div className="periods-table-wrapper">
+            <table className="periods-table">
+              <thead>
+                <tr>
+                  <th className="col-team-name"></th>
+                  {periods.map((p) => (
+                    <th key={p.period}>Q{p.period}</th>
+                  ))}
+                  <th className="col-total">Total</th>
                 </tr>
-              ))}
-            </tbody>
-          </table>
+              </thead>
+              <tbody>
+                <tr>
+                  <td className="col-team-name">{teamA.name}</td>
+                  {periods.map((p) => (
+                    <td key={p.period}>{p.local}</td>
+                  ))}
+                  <td className="col-total">{periods.reduce((s, p) => s + p.local, 0)}</td>
+                </tr>
+                <tr>
+                  <td className="col-team-name">{teamB.name}</td>
+                  {periods.map((p) => (
+                    <td key={p.period}>{p.visitor}</td>
+                  ))}
+                  <td className="col-total">{periods.reduce((s, p) => s + p.visitor, 0)}</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
         </div>
-      </div>
+      )}
 
-      {/* GRAELLA DE QUARTS */}
-      <div className="quarters-grid-section">
-        <h2>🕐 Entrades per Quart</h2>
-        <div className="quarters-table-wrapper">
-          <table className="quarters-table">
-            <thead>
-              <tr>
-                <th className="player-column">Nom dels {playersWord(isFeminine, false)}</th>
-                <th className="dorsal-column">Núm. del {playerWord(isFeminine, false)}</th>
-                {Array.from({ length: maxQuarters }, (_, i) => (
-                  <th key={i} className="quarter-column">{i + 1}</th>
-                ))}
-              </tr>
-            </thead>
-            <tbody>
-              {sortedPlayers.map((player, index) => {
-                const isPlayerCaptain = isCaptain(player);
-                return (
-                  <tr key={index}>
-                    <td className="player-name-cell-grid">
-                      {player.name} {isPlayerCaptain && <span className="captain-badge">C</span>}
-                    </td>
-                    <td className="dorsal-cell-grid">{player.dorsal}</td>
-                    {Array.from({ length: maxQuarters }, (_, quarterIndex) => {
-                      const played = playedInQuarter(player, quarterIndex + 1);
-                      return (
-                        <td key={quarterIndex} className="quarter-cell">
-                          {played ? (
-                            <span className="played-mark">✕</span>
-                          ) : (
-                            <span className="not-played"></span>
-                          )}
-                        </td>
-                      );
-                    })}
-                  </tr>
-                );
-              })}
-            </tbody>
-          </table>
+      {hasDistribution && (
+        <div className="distribution-section">
+          <h2>D'on vénen els punts</h2>
+          <p className="distribution-subtitle">Percentatge de punts de cada equip segons el tipus de tir.</p>
+          <DistributionBar teamName={teamA.name} distribution={teamA.scoringDistribution} />
+          <DistributionBar teamName={teamB.name} distribution={teamB.scoringDistribution} />
         </div>
-      </div>
+      )}
+
+      <p className="basic-match-note">
+        Aquesta categoria no té estadístiques individuals disponibles (ni punts, ni minuts, ni
+        faltes per jugador/a) — l'acta digital d'aquest nivell només recull el resultat i el
+        repartiment de punts de l'equip.
+      </p>
     </div>
   );
 };
