@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-03T16:08:39.690992+02:00",
+  "updatedAt": "2026-10-03T20:31:25.845908+02:00",
   "teams": {
     "senior-a-masc": {
       "matchId": "3830",
@@ -503,7 +503,7 @@
       },
       "opponentStanding": {
         "teamId": "89243",
-        "rank": "4",
+        "rank": "5",
         "played": "1",
         "won": "1",
         "lost": "0",
