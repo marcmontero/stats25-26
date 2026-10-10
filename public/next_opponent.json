@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-05T00:11:19.866062+02:00",
+  "updatedAt": "2026-10-10T17:05:09.646128+02:00",
   "teams": {
     "senior-a-masc": {
       "matchId": "3840",
@@ -22,6 +22,7 @@
         "leaguePoints": "2",
         "streak": [
           "win",
+          "loss",
           "loss"
         ]
       },
@@ -37,26 +38,10 @@
         "leaguePoints": "3",
         "streak": [
           "loss",
-          "win"
+          "win",
+          "loss"
         ]
       },
-      "opponentTopScorers": [
-        {
-          "name": "ROGER SAUMELL PORTILLO",
-          "dorsal": "11",
-          "points": 15
-        },
-        {
-          "name": "RAMON ANGUERA DOMINGUEZ",
-          "dorsal": "71",
-          "points": 13
-        },
-        {
-          "name": "ALEX BALAYLA CERES",
-          "dorsal": "3",
-          "points": 12
-        }
-      ],
       "opponentSeason": {
         "season": "2026-2027",
         "category": "C.C. SEGONA CATEGORIA MASCULINA",
@@ -277,7 +262,8 @@
         "leaguePoints": "4",
         "streak": [
           "win",
-          "win"
+          "win",
+          "loss"
         ]
       },
       "opponentStanding": {
@@ -291,6 +277,7 @@
         "pointsAgainst": "59",
         "leaguePoints": "1",
         "streak": [
+          "loss",
           "loss",
           "loss"
         ]
@@ -501,6 +488,7 @@
         "leaguePoints": "2",
         "streak": [
           "loss",
+          "loss",
           "loss"
         ]
       },
@@ -516,26 +504,10 @@
         "leaguePoints": "3",
         "streak": [
           "loss",
-          "win"
+          "win",
+          "loss"
         ]
       },
-      "opponentTopScorers": [
-        {
-          "name": "ADRIA SALVAT TORRES",
-          "dorsal": "18",
-          "points": 27
-        },
-        {
-          "name": "NIL AREGALL FABRA",
-          "dorsal": "6",
-          "points": 10
-        },
-        {
-          "name": "GUILLEM PAZ GARCIA",
-          "dorsal": "10",
-          "points": 10
-        }
-      ],
       "opponentSeason": {
         "season": "2026-2027",
         "category": "2A. TERRITORIAL SÈNIOR MASCULÍ",
@@ -756,6 +728,7 @@
         "leaguePoints": "2",
         "streak": [
           "win",
+          "loss",
           "loss"
         ]
       },
@@ -770,6 +743,7 @@
         "pointsAgainst": "82",
         "leaguePoints": "1",
         "streak": [
+          "loss",
           "loss",
           "loss"
         ]
@@ -1026,12 +1000,12 @@
     "mini-masc": {
       "matchId": "33843",
       "date": "10/10/2026",
-      "time": "10:45",
+      "time": "10:30",
       "opponent": "RIO LOGISTIC CB LLIÇÀ D'AMUNT",
       "isHome": false,
       "category": "C.T. MINI MASCULÍ",
-      "venueName": "ESCOLA PICOTS",
-      "venueAddress": "C/ JAUME I, 32-34"
+      "venueName": "PAV. D'ESPORTS LLIÇA D'AMUNT",
+      "venueAddress": "JAUME I, 30"
     },
     "premini-negre-masc": {
       "matchId": "34694",
@@ -1064,14 +1038,14 @@
       "venueAddress": "AUSIAS MARCH, 61-77"
     },
     "u25-fem": {
-      "matchId": "24855",
-      "date": "06/10/2026",
-      "time": "21:45",
-      "opponent": "AE MINGUELLA - PURE CUISINE",
-      "isHome": true,
+      "matchId": "19626",
+      "date": "11/10/2026",
+      "time": "17:45",
+      "opponent": "UE BARBERA",
+      "isHome": false,
       "category": "C.C. SOTS-25 FEMENÍ",
-      "venueName": "POLIESPORTIU MONTIGALA",
-      "venueAddress": "ROSSINI, S/N"
+      "venueName": "POLIESPORTIU CAN SERRA",
+      "venueAddress": "PASSEIG DR. MORAGAS, 112"
     },
     "preinfantil-fem": {
       "matchId": "27353",
