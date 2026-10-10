@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-10T17:05:09.646128+02:00",
+  "updatedAt": "2026-10-10T21:15:57.505809+02:00",
   "teams": {
     "senior-a-masc": {
       "matchId": "3840",
@@ -253,13 +253,13 @@
       "ownStanding": {
         "teamId": "88834",
         "rank": "1",
-        "played": "2",
+        "played": "3",
         "won": "2",
-        "lost": "0",
+        "lost": "1",
         "notPresented": "0",
-        "pointsFor": "158",
-        "pointsAgainst": "103",
-        "leaguePoints": "4",
+        "pointsFor": "218",
+        "pointsAgainst": "168",
+        "leaguePoints": "5",
         "streak": [
           "win",
           "win",
@@ -268,201 +268,232 @@
       },
       "opponentStanding": {
         "teamId": "89404",
-        "rank": "11",
-        "played": "1",
-        "won": "0",
+        "rank": "7",
+        "played": "2",
+        "won": "1",
         "lost": "1",
         "notPresented": "0",
-        "pointsFor": "45",
-        "pointsAgainst": "59",
-        "leaguePoints": "1",
+        "pointsFor": "110",
+        "pointsAgainst": "119",
+        "leaguePoints": "3",
         "streak": [
           "loss",
           "loss",
-          "loss"
+          "win"
         ]
       },
+      "opponentTopScorers": [
+        {
+          "name": "ORIOL COSTA IBAÑEZ",
+          "dorsal": "24",
+          "points": 20
+        },
+        {
+          "name": "ÀLEX CRUZ NÚÑEZ",
+          "dorsal": "7",
+          "points": 11
+        },
+        {
+          "name": "ALEJANDRO DAMEÁ SÁNCHEZ",
+          "dorsal": "17",
+          "points": 9
+        }
+      ],
       "opponentSeason": {
         "season": "2026-2027",
         "category": "1A. TERRITORIAL SÈNIOR MASCULÍ",
         "venueName": "CENTRE CATOLIC DE L'HOSPITALET",
-        "gamesPlayed": 1,
-        "wins": 0,
+        "gamesPlayed": 2,
+        "wins": 1,
         "losses": 1,
-        "avgPointsFor": 45.0,
-        "avgPointsAgainst": 59.0,
+        "avgPointsFor": 55.0,
+        "avgPointsAgainst": 59.5,
         "topScorers": [
+          {
+            "name": "ORIOL COSTA IBAÑEZ",
+            "dorsal": "98",
+            "gamesPlayed": 2,
+            "avgPoints": 14.0
+          },
           {
             "name": "ÀLEX CRUZ NÚÑEZ",
             "dorsal": "7",
+            "gamesPlayed": 2,
+            "avgPoints": 10.5
+          },
+          {
+            "name": "ADRIA MAS PEREZ",
+            "dorsal": "19",
             "gamesPlayed": 1,
-            "avgPoints": 10.0
+            "avgPoints": 7.0
           },
           {
             "name": "IAN CAZALILLA CERRO",
             "dorsal": "45",
-            "gamesPlayed": 1,
-            "avgPoints": 9.0
+            "gamesPlayed": 2,
+            "avgPoints": 7.0
           },
           {
-            "name": "ORIOL COSTA IBAÑEZ",
-            "dorsal": "98",
-            "gamesPlayed": 1,
-            "avgPoints": 8.0
-          },
-          {
-            "name": "POL MASIP LLAURADO",
-            "dorsal": "32",
-            "gamesPlayed": 1,
-            "avgPoints": 5.0
-          },
-          {
-            "name": "BIEL SINGLA PASTOR",
-            "dorsal": "23",
-            "gamesPlayed": 1,
-            "avgPoints": 4.0
+            "name": "ALEJANDRO DAMEÁ SÁNCHEZ",
+            "dorsal": "17",
+            "gamesPlayed": 2,
+            "avgPoints": 6.0
           }
         ],
         "roster": [
           {
-            "name": "ÀLEX CRUZ NÚÑEZ",
-            "dorsal": "7",
-            "gamesPlayed": 1,
-            "avgMinutes": 19.7,
-            "avgPoints": 10.0,
-            "avgT2m": 2.0,
-            "avgT3m": 2.0,
-            "totalFtm": 0,
-            "totalFta": 0,
-            "ftPer": 0.0,
-            "avgFouls": 3.0,
-            "avgPlusMinus": -6.0
-          },
-          {
-            "name": "IAN CAZALILLA CERRO",
-            "dorsal": "45",
-            "gamesPlayed": 1,
-            "avgMinutes": 20.3,
-            "avgPoints": 9.0,
-            "avgT2m": 1.0,
-            "avgT3m": 2.0,
-            "totalFtm": 1,
-            "totalFta": 2,
-            "ftPer": 50.0,
-            "avgFouls": 0.0,
-            "avgPlusMinus": -8.0
-          },
-          {
             "name": "ORIOL COSTA IBAÑEZ",
             "dorsal": "98",
-            "gamesPlayed": 1,
-            "avgMinutes": 22.4,
-            "avgPoints": 8.0,
-            "avgT2m": 2.0,
+            "gamesPlayed": 2,
+            "avgMinutes": 24.8,
+            "avgPoints": 14.0,
+            "avgT2m": 5.5,
             "avgT3m": 0.0,
-            "totalFtm": 4,
-            "totalFta": 5,
-            "ftPer": 80.0,
-            "avgFouls": 2.0,
-            "avgPlusMinus": -4.0
+            "totalFtm": 6,
+            "totalFta": 10,
+            "ftPer": 60.0,
+            "avgFouls": 1.5,
+            "avgPlusMinus": 1.5
           },
           {
-            "name": "POL MASIP LLAURADO",
-            "dorsal": "32",
+            "name": "ÀLEX CRUZ NÚÑEZ",
+            "dorsal": "7",
+            "gamesPlayed": 2,
+            "avgMinutes": 19.7,
+            "avgPoints": 10.5,
+            "avgT2m": 2.0,
+            "avgT3m": 2.0,
+            "totalFtm": 1,
+            "totalFta": 4,
+            "ftPer": 25.0,
+            "avgFouls": 2.0,
+            "avgPlusMinus": -2.5
+          },
+          {
+            "name": "ADRIA MAS PEREZ",
+            "dorsal": "19",
             "gamesPlayed": 1,
-            "avgMinutes": 17.3,
-            "avgPoints": 5.0,
-            "avgT2m": 1.0,
+            "avgMinutes": 25.1,
+            "avgPoints": 7.0,
+            "avgT2m": 2.0,
             "avgT3m": 1.0,
             "totalFtm": 0,
             "totalFta": 2,
             "ftPer": 0.0,
-            "avgFouls": 2.0,
-            "avgPlusMinus": -12.0
+            "avgFouls": 3.0,
+            "avgPlusMinus": 9.0
           },
           {
-            "name": "BIEL SINGLA PASTOR",
-            "dorsal": "23",
-            "gamesPlayed": 1,
-            "avgMinutes": 14.3,
-            "avgPoints": 4.0,
+            "name": "IAN CAZALILLA CERRO",
+            "dorsal": "45",
+            "gamesPlayed": 2,
+            "avgMinutes": 17.0,
+            "avgPoints": 7.0,
             "avgT2m": 1.0,
-            "avgT3m": 0.0,
+            "avgT3m": 1.5,
+            "totalFtm": 1,
+            "totalFta": 2,
+            "ftPer": 50.0,
+            "avgFouls": 0.5,
+            "avgPlusMinus": -4.5
+          },
+          {
+            "name": "ALEJANDRO DAMEÁ SÁNCHEZ",
+            "dorsal": "17",
+            "gamesPlayed": 2,
+            "avgMinutes": 22.1,
+            "avgPoints": 6.0,
+            "avgT2m": 1.0,
+            "avgT3m": 1.0,
             "totalFtm": 2,
-            "totalFta": 3,
-            "ftPer": 66.7,
-            "avgFouls": 1.0,
-            "avgPlusMinus": -7.0
+            "totalFta": 4,
+            "ftPer": 50.0,
+            "avgFouls": 4.0,
+            "avgPlusMinus": -4.5
+          },
+          {
+            "name": "DANIEL LAFUENTE LARROSA",
+            "dorsal": "14",
+            "gamesPlayed": 2,
+            "avgMinutes": 27.1,
+            "avgPoints": 4.5,
+            "avgT2m": 2.0,
+            "avgT3m": 0.0,
+            "totalFtm": 1,
+            "totalFta": 7,
+            "ftPer": 14.3,
+            "avgFouls": 2.5,
+            "avgPlusMinus": 2.0
+          },
+          {
+            "name": "POL MASIP LLAURADO",
+            "dorsal": "32",
+            "gamesPlayed": 2,
+            "avgMinutes": 13.6,
+            "avgPoints": 3.5,
+            "avgT2m": 1.0,
+            "avgT3m": 0.5,
+            "totalFtm": 0,
+            "totalFta": 4,
+            "ftPer": 0.0,
+            "avgFouls": 1.5,
+            "avgPlusMinus": -7.5
           },
           {
             "name": "MARTI CRUZ GIL",
             "dorsal": "2",
-            "gamesPlayed": 1,
-            "avgMinutes": 24.2,
-            "avgPoints": 3.0,
+            "gamesPlayed": 2,
+            "avgMinutes": 20.7,
+            "avgPoints": 2.5,
             "avgT2m": 1.0,
             "avgT3m": 0.0,
             "totalFtm": 1,
             "totalFta": 4,
             "ftPer": 25.0,
-            "avgFouls": 2.0,
-            "avgPlusMinus": -5.0
+            "avgFouls": 1.5,
+            "avgPlusMinus": -3.5
           },
           {
-            "name": "ALEJANDRO DAMEÁ SÁNCHEZ",
-            "dorsal": "17",
-            "gamesPlayed": 1,
-            "avgMinutes": 20.3,
-            "avgPoints": 3.0,
-            "avgT2m": 0.0,
-            "avgT3m": 1.0,
-            "totalFtm": 0,
-            "totalFta": 2,
-            "ftPer": 0.0,
-            "avgFouls": 3.0,
-            "avgPlusMinus": -14.0
-          },
-          {
-            "name": "DANIEL LAFUENTE LARROSA",
-            "dorsal": "14",
-            "gamesPlayed": 1,
-            "avgMinutes": 24.1,
+            "name": "BIEL SINGLA PASTOR",
+            "dorsal": "23",
+            "gamesPlayed": 2,
+            "avgMinutes": 9.2,
             "avgPoints": 2.0,
-            "avgT2m": 1.0,
+            "avgT2m": 0.5,
             "avgT3m": 0.0,
-            "totalFtm": 0,
-            "totalFta": 2,
-            "ftPer": 0.0,
-            "avgFouls": 2.0,
-            "avgPlusMinus": -4.0
+            "totalFtm": 2,
+            "totalFta": 3,
+            "ftPer": 66.7,
+            "avgFouls": 1.0,
+            "avgPlusMinus": -2.0
           },
           {
             "name": "FERRAN PATRON RAMOS",
             "dorsal": "11",
-            "gamesPlayed": 1,
-            "avgMinutes": 26.4,
-            "avgPoints": 1.0,
-            "avgT2m": 0.0,
+            "gamesPlayed": 2,
+            "avgMinutes": 24.9,
+            "avgPoints": 1.5,
+            "avgT2m": 0.5,
             "avgT3m": 0.0,
             "totalFtm": 1,
             "totalFta": 2,
             "ftPer": 50.0,
-            "avgFouls": 3.0,
-            "avgPlusMinus": -4.0
+            "avgFouls": 2.0,
+            "avgPlusMinus": -2.5
           },
           {
             "name": "ROGER CABALLERO ALFONSO",
             "dorsal": "95",
-            "gamesPlayed": 1,
-            "avgMinutes": 10.9,
+            "gamesPlayed": 2,
+            "avgMinutes": 8.2,
             "avgPoints": 0.0,
             "avgT2m": 0.0,
             "avgT3m": 0.0,
             "totalFtm": 0,
             "totalFta": 0,
             "ftPer": 0.0,
-            "avgFouls": 2.0,
-            "avgPlusMinus": -6.0
+            "avgFouls": 1.0,
+            "avgPlusMinus": -3.5
           }
         ]
       }
@@ -718,7 +749,7 @@
       "venueAddress": "CTRA. VILASSAR, S/N",
       "ownStanding": {
         "teamId": "88830",
-        "rank": "6",
+        "rank": "8",
         "played": "1",
         "won": "1",
         "lost": "0",
@@ -734,7 +765,7 @@
       },
       "opponentStanding": {
         "teamId": "89811",
-        "rank": "11",
+        "rank": "12",
         "played": "1",
         "won": "0",
         "lost": "1",
