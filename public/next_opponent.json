@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-11T02:05:49.088184+02:00",
+  "updatedAt": "2026-10-11T17:20:30.613294+02:00",
   "teams": {
     "senior-a-masc": {
       "matchId": "3840",
@@ -509,7 +509,7 @@
       "venueAddress": "CANIGO 9",
       "ownStanding": {
         "teamId": "88832",
-        "rank": "13",
+        "rank": "14",
         "played": "2",
         "won": "0",
         "lost": "2",
@@ -525,7 +525,7 @@
       },
       "opponentStanding": {
         "teamId": "90835",
-        "rank": "2",
+        "rank": "7",
         "played": "2",
         "won": "1",
         "lost": "1",
