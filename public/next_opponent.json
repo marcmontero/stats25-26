@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-10T21:15:57.505809+02:00",
+  "updatedAt": "2026-10-11T02:05:49.088184+02:00",
   "teams": {
     "senior-a-masc": {
       "matchId": "3840",
@@ -12,7 +12,7 @@
       "venueAddress": "LA PLANA, S/N",
       "ownStanding": {
         "teamId": "88829",
-        "rank": "9",
+        "rank": "10",
         "played": "1",
         "won": "1",
         "lost": "0",
@@ -242,14 +242,14 @@
       }
     },
     "senior-b-masc": {
-      "matchId": "8556",
-      "date": "10/10/2026",
-      "time": "19:30",
-      "opponent": "CENTRE CATÒLIC L'H B",
-      "isHome": false,
+      "matchId": "8562",
+      "date": "18/10/2026",
+      "time": "17:45",
+      "opponent": "AEEC CULTURAL BADALONA",
+      "isHome": true,
       "category": "1A. TERRITORIAL SÈNIOR MASCULÍ",
-      "venueName": "CENTRE CATOLIC DE L'HOSPITALET",
-      "venueAddress": "RAMBLA JUST OLIVERES, 34",
+      "venueName": "PAVELLO PAISOS CATALANS",
+      "venueAddress": "AUSIAS MARCH, 61-77",
       "ownStanding": {
         "teamId": "88834",
         "rank": "1",
@@ -267,233 +267,233 @@
         ]
       },
       "opponentStanding": {
-        "teamId": "89404",
-        "rank": "7",
+        "teamId": "89081",
+        "rank": "3",
         "played": "2",
-        "won": "1",
-        "lost": "1",
+        "won": "2",
+        "lost": "0",
         "notPresented": "0",
-        "pointsFor": "110",
-        "pointsAgainst": "119",
-        "leaguePoints": "3",
+        "pointsFor": "155",
+        "pointsAgainst": "130",
+        "leaguePoints": "4",
         "streak": [
-          "loss",
+          "win",
           "loss",
           "win"
         ]
       },
       "opponentTopScorers": [
         {
-          "name": "ORIOL COSTA IBAÑEZ",
-          "dorsal": "24",
-          "points": 20
+          "name": "ENRIC MARTÍN BAHI",
+          "dorsal": "16",
+          "points": 16
         },
         {
-          "name": "ÀLEX CRUZ NÚÑEZ",
-          "dorsal": "7",
-          "points": 11
+          "name": "POL TORRA CABRERA",
+          "dorsal": "1",
+          "points": 15
         },
         {
-          "name": "ALEJANDRO DAMEÁ SÁNCHEZ",
-          "dorsal": "17",
+          "name": "MARC SANGIL MUNTET",
+          "dorsal": "5",
           "points": 9
         }
       ],
       "opponentSeason": {
         "season": "2026-2027",
         "category": "1A. TERRITORIAL SÈNIOR MASCULÍ",
-        "venueName": "CENTRE CATOLIC DE L'HOSPITALET",
+        "venueName": "PAVELLO POMAR",
         "gamesPlayed": 2,
-        "wins": 1,
-        "losses": 1,
-        "avgPointsFor": 55.0,
-        "avgPointsAgainst": 59.5,
+        "wins": 2,
+        "losses": 0,
+        "avgPointsFor": 77.5,
+        "avgPointsAgainst": 65.0,
         "topScorers": [
           {
-            "name": "ORIOL COSTA IBAÑEZ",
-            "dorsal": "98",
-            "gamesPlayed": 2,
-            "avgPoints": 14.0
-          },
-          {
-            "name": "ÀLEX CRUZ NÚÑEZ",
-            "dorsal": "7",
-            "gamesPlayed": 2,
-            "avgPoints": 10.5
-          },
-          {
-            "name": "ADRIA MAS PEREZ",
-            "dorsal": "19",
+            "name": "ARNAU RUBIO HOMS",
+            "dorsal": "23",
             "gamesPlayed": 1,
-            "avgPoints": 7.0
+            "avgPoints": 18.0
           },
           {
-            "name": "IAN CAZALILLA CERRO",
-            "dorsal": "45",
+            "name": "POL TORRA CABRERA",
+            "dorsal": "1",
+            "gamesPlayed": 2,
+            "avgPoints": 15.5
+          },
+          {
+            "name": "ENRIC MARTÍN BAHI",
+            "dorsal": "16",
+            "gamesPlayed": 2,
+            "avgPoints": 13.5
+          },
+          {
+            "name": "DIDAC POVEDA DIAZ",
+            "dorsal": "8",
             "gamesPlayed": 2,
             "avgPoints": 7.0
           },
           {
-            "name": "ALEJANDRO DAMEÁ SÁNCHEZ",
-            "dorsal": "17",
+            "name": "ALVARO PONCE HIDALGO",
+            "dorsal": "10",
             "gamesPlayed": 2,
-            "avgPoints": 6.0
+            "avgPoints": 7.0
           }
         ],
         "roster": [
           {
-            "name": "ORIOL COSTA IBAÑEZ",
-            "dorsal": "98",
-            "gamesPlayed": 2,
-            "avgMinutes": 24.8,
-            "avgPoints": 14.0,
-            "avgT2m": 5.5,
-            "avgT3m": 0.0,
-            "totalFtm": 6,
-            "totalFta": 10,
-            "ftPer": 60.0,
-            "avgFouls": 1.5,
-            "avgPlusMinus": 1.5
-          },
-          {
-            "name": "ÀLEX CRUZ NÚÑEZ",
-            "dorsal": "7",
-            "gamesPlayed": 2,
-            "avgMinutes": 19.7,
-            "avgPoints": 10.5,
-            "avgT2m": 2.0,
-            "avgT3m": 2.0,
-            "totalFtm": 1,
-            "totalFta": 4,
-            "ftPer": 25.0,
-            "avgFouls": 2.0,
-            "avgPlusMinus": -2.5
-          },
-          {
-            "name": "ADRIA MAS PEREZ",
-            "dorsal": "19",
+            "name": "ARNAU RUBIO HOMS",
+            "dorsal": "23",
             "gamesPlayed": 1,
-            "avgMinutes": 25.1,
-            "avgPoints": 7.0,
-            "avgT2m": 2.0,
+            "avgMinutes": 20.7,
+            "avgPoints": 18.0,
+            "avgT2m": 5.0,
+            "avgT3m": 2.0,
+            "totalFtm": 2,
+            "totalFta": 2,
+            "ftPer": 100.0,
+            "avgFouls": 0.0,
+            "avgPlusMinus": 7.0
+          },
+          {
+            "name": "POL TORRA CABRERA",
+            "dorsal": "1",
+            "gamesPlayed": 2,
+            "avgMinutes": 25.0,
+            "avgPoints": 15.5,
+            "avgT2m": 5.0,
             "avgT3m": 1.0,
+            "totalFtm": 5,
+            "totalFta": 11,
+            "ftPer": 45.5,
+            "avgFouls": 1.0,
+            "avgPlusMinus": 6.0
+          },
+          {
+            "name": "ENRIC MARTÍN BAHI",
+            "dorsal": "16",
+            "gamesPlayed": 2,
+            "avgMinutes": 24.9,
+            "avgPoints": 13.5,
+            "avgT2m": 1.5,
+            "avgT3m": 3.5,
             "totalFtm": 0,
             "totalFta": 2,
             "ftPer": 0.0,
-            "avgFouls": 3.0,
-            "avgPlusMinus": 9.0
+            "avgFouls": 1.0,
+            "avgPlusMinus": 5.5
           },
           {
-            "name": "IAN CAZALILLA CERRO",
-            "dorsal": "45",
+            "name": "DIDAC POVEDA DIAZ",
+            "dorsal": "8",
             "gamesPlayed": 2,
-            "avgMinutes": 17.0,
+            "avgMinutes": 19.1,
             "avgPoints": 7.0,
             "avgT2m": 1.0,
             "avgT3m": 1.5,
             "totalFtm": 1,
             "totalFta": 2,
             "ftPer": 50.0,
-            "avgFouls": 0.5,
-            "avgPlusMinus": -4.5
+            "avgFouls": 2.0,
+            "avgPlusMinus": 15.0
           },
           {
-            "name": "ALEJANDRO DAMEÁ SÁNCHEZ",
-            "dorsal": "17",
+            "name": "ALVARO PONCE HIDALGO",
+            "dorsal": "10",
             "gamesPlayed": 2,
-            "avgMinutes": 22.1,
-            "avgPoints": 6.0,
-            "avgT2m": 1.0,
-            "avgT3m": 1.0,
-            "totalFtm": 2,
-            "totalFta": 4,
-            "ftPer": 50.0,
-            "avgFouls": 4.0,
-            "avgPlusMinus": -4.5
-          },
-          {
-            "name": "DANIEL LAFUENTE LARROSA",
-            "dorsal": "14",
-            "gamesPlayed": 2,
-            "avgMinutes": 27.1,
-            "avgPoints": 4.5,
-            "avgT2m": 2.0,
-            "avgT3m": 0.0,
-            "totalFtm": 1,
-            "totalFta": 7,
-            "ftPer": 14.3,
-            "avgFouls": 2.5,
-            "avgPlusMinus": 2.0
-          },
-          {
-            "name": "POL MASIP LLAURADO",
-            "dorsal": "32",
-            "gamesPlayed": 2,
-            "avgMinutes": 13.6,
-            "avgPoints": 3.5,
-            "avgT2m": 1.0,
+            "avgMinutes": 15.2,
+            "avgPoints": 7.0,
+            "avgT2m": 2.5,
             "avgT3m": 0.5,
-            "totalFtm": 0,
-            "totalFta": 4,
-            "ftPer": 0.0,
-            "avgFouls": 1.5,
-            "avgPlusMinus": -7.5
+            "totalFtm": 1,
+            "totalFta": 1,
+            "ftPer": 100.0,
+            "avgFouls": 0.5,
+            "avgPlusMinus": -1.0
           },
           {
-            "name": "MARTI CRUZ GIL",
+            "name": "MARC RIOPEDRE PINO",
             "dorsal": "2",
             "gamesPlayed": 2,
-            "avgMinutes": 20.7,
-            "avgPoints": 2.5,
+            "avgMinutes": 22.6,
+            "avgPoints": 5.5,
             "avgT2m": 1.0,
-            "avgT3m": 0.0,
-            "totalFtm": 1,
-            "totalFta": 4,
-            "ftPer": 25.0,
-            "avgFouls": 1.5,
-            "avgPlusMinus": -3.5
-          },
-          {
-            "name": "BIEL SINGLA PASTOR",
-            "dorsal": "23",
-            "gamesPlayed": 2,
-            "avgMinutes": 9.2,
-            "avgPoints": 2.0,
-            "avgT2m": 0.5,
-            "avgT3m": 0.0,
-            "totalFtm": 2,
-            "totalFta": 3,
-            "ftPer": 66.7,
-            "avgFouls": 1.0,
-            "avgPlusMinus": -2.0
-          },
-          {
-            "name": "FERRAN PATRON RAMOS",
-            "dorsal": "11",
-            "gamesPlayed": 2,
-            "avgMinutes": 24.9,
-            "avgPoints": 1.5,
-            "avgT2m": 0.5,
-            "avgT3m": 0.0,
+            "avgT3m": 1.0,
             "totalFtm": 1,
             "totalFta": 2,
             "ftPer": 50.0,
             "avgFouls": 2.0,
-            "avgPlusMinus": -2.5
+            "avgPlusMinus": 4.5
           },
           {
-            "name": "ROGER CABALLERO ALFONSO",
-            "dorsal": "95",
+            "name": "MARC SANGIL MUNTET",
+            "dorsal": "5",
             "gamesPlayed": 2,
-            "avgMinutes": 8.2,
-            "avgPoints": 0.0,
-            "avgT2m": 0.0,
+            "avgMinutes": 20.7,
+            "avgPoints": 5.5,
+            "avgT2m": 0.5,
+            "avgT3m": 1.5,
+            "totalFtm": 0,
+            "totalFta": 0,
+            "ftPer": 0.0,
+            "avgFouls": 3.5,
+            "avgPlusMinus": 11.5
+          },
+          {
+            "name": "DANIEL RUANO VILLALBA",
+            "dorsal": "6",
+            "gamesPlayed": 2,
+            "avgMinutes": 12.7,
+            "avgPoints": 5.0,
+            "avgT2m": 1.0,
+            "avgT3m": 0.5,
+            "totalFtm": 3,
+            "totalFta": 4,
+            "ftPer": 75.0,
+            "avgFouls": 2.5,
+            "avgPlusMinus": 5.0
+          },
+          {
+            "name": "JAN PEREZ COSTA",
+            "dorsal": "21",
+            "gamesPlayed": 2,
+            "avgMinutes": 24.5,
+            "avgPoints": 4.0,
+            "avgT2m": 1.5,
+            "avgT3m": 0.0,
+            "totalFtm": 2,
+            "totalFta": 4,
+            "ftPer": 50.0,
+            "avgFouls": 1.5,
+            "avgPlusMinus": 1.0
+          },
+          {
+            "name": "QUIRZE PLANET SUÑOL",
+            "dorsal": "13",
+            "gamesPlayed": 2,
+            "avgMinutes": 12.2,
+            "avgPoints": 3.5,
+            "avgT2m": 1.5,
+            "avgT3m": 0.0,
+            "totalFtm": 1,
+            "totalFta": 2,
+            "ftPer": 50.0,
+            "avgFouls": 3.5,
+            "avgPlusMinus": 6.5
+          },
+          {
+            "name": "ARNAU FERNANDEZ JEREZ",
+            "dorsal": "32",
+            "gamesPlayed": 2,
+            "avgMinutes": 12.7,
+            "avgPoints": 2.0,
+            "avgT2m": 1.0,
             "avgT3m": 0.0,
             "totalFtm": 0,
             "totalFta": 0,
             "ftPer": 0.0,
-            "avgFouls": 1.0,
-            "avgPlusMinus": -3.5
+            "avgFouls": 1.5,
+            "avgPlusMinus": 5.0
           }
         ]
       }
@@ -509,7 +509,7 @@
       "venueAddress": "CANIGO 9",
       "ownStanding": {
         "teamId": "88832",
-        "rank": "12",
+        "rank": "13",
         "played": "2",
         "won": "0",
         "lost": "2",
@@ -749,7 +749,7 @@
       "venueAddress": "CTRA. VILASSAR, S/N",
       "ownStanding": {
         "teamId": "88830",
-        "rank": "8",
+        "rank": "9",
         "played": "1",
         "won": "1",
         "lost": "0",
@@ -765,7 +765,7 @@
       },
       "opponentStanding": {
         "teamId": "89811",
-        "rank": "12",
+        "rank": "13",
         "played": "1",
         "won": "0",
         "lost": "1",
@@ -999,14 +999,14 @@
       "venueAddress": "CTRA. DE POMAR, S/N"
     },
     "cadet-masc": {
-      "matchId": "30539",
-      "date": "10/10/2026",
-      "time": "09:00",
-      "opponent": "EL CÍRCOL B 11",
-      "isHome": false,
+      "matchId": "30543",
+      "date": "25/10/2026",
+      "time": "16:00",
+      "opponent": "CB BOET MATARÓ TARONJA",
+      "isHome": true,
       "category": "C.T. CADET MASCULÍ PROMOCIÓ",
-      "venueName": "PAVELLO LA COLINA",
-      "venueAddress": "GRAN BRETANYA, S/N"
+      "venueName": "POLIESPORTIU MONTIGALA",
+      "venueAddress": "ROSSINI, S/N"
     },
     "infantil-masc": {
       "matchId": "31530",
@@ -1029,14 +1029,14 @@
       "venueAddress": "AUSIAS MARCH, 61-77"
     },
     "mini-masc": {
-      "matchId": "33843",
-      "date": "10/10/2026",
-      "time": "10:30",
-      "opponent": "RIO LOGISTIC CB LLIÇÀ D'AMUNT",
-      "isHome": false,
+      "matchId": "33845",
+      "date": "18/10/2026",
+      "time": "09:00",
+      "opponent": "AULA EDUCACIÓ - UE BÀSQUET MARTORELLES MIXTE",
+      "isHome": true,
       "category": "C.T. MINI MASCULÍ",
-      "venueName": "PAV. D'ESPORTS LLIÇA D'AMUNT",
-      "venueAddress": "JAUME I, 30"
+      "venueName": "PAVELLO PAISOS CATALANS",
+      "venueAddress": "AUSIAS MARCH, 61-77"
     },
     "premini-negre-masc": {
       "matchId": "34694",
@@ -1079,34 +1079,34 @@
       "venueAddress": "PASSEIG DR. MORAGAS, 112"
     },
     "preinfantil-fem": {
-      "matchId": "27353",
-      "date": "10/10/2026",
-      "time": "13:30",
-      "opponent": "NOMÉS PUNTES - AECAM",
+      "matchId": "27354",
+      "date": "18/10/2026",
+      "time": "09:00",
+      "opponent": "SANT GERVASI 2",
       "isHome": false,
       "category": "C.T. PRE-INFANTIL FEMENÍ",
-      "venueName": "PAV. MUNICIPAL GERMANS MARGALL",
-      "venueAddress": "C/ GIRONA, S/N"
+      "venueName": "ESCOLA SANT GERVASI",
+      "venueAddress": "SABADELL, 41"
     },
     "mini-negre-fem": {
-      "matchId": "28203",
-      "date": "10/10/2026",
-      "time": "12:30",
-      "opponent": "CLUB BÀSQUET COLL",
+      "matchId": "28204",
+      "date": "17/10/2026",
+      "time": "11:00",
+      "opponent": "BÀSQUET PALCAM",
       "isHome": false,
       "category": "C.T. MINI FEMENÍ",
-      "venueName": "PISTA CREUETA DEL COLL",
-      "venueAddress": "CASTELLTERÇOL, S/N"
+      "venueName": "DINAMIS",
+      "venueAddress": "TRAVESSERA DE GRACIA, 419"
     },
     "mini-vermell-fem": {
-      "matchId": "28281",
-      "date": "10/10/2026",
+      "matchId": "28282",
+      "date": "17/10/2026",
       "time": "10:30",
-      "opponent": "CB VILASSAR DE DALT",
+      "opponent": "BASQUET NEUS B",
       "isHome": false,
       "category": "C.T. MINI FEMENÍ 1R. ANY",
-      "venueName": "PAVELLO ESPORTIU CAN BANUS",
-      "venueAddress": "C/ SANTS MARTIRS, S/N"
+      "venueName": "PISTES POLIESPORTIVES PRAT DE LA RIBA",
+      "venueAddress": "Carrer de Prat de la Riba, 107-163"
     }
   }
 }
