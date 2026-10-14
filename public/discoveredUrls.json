@@ -1,8 +1,9 @@
 {
-  "updatedAt": "2026-10-11T17:20:30.617020+02:00",
+  "updatedAt": "2026-10-14T11:09:35.061785+02:00",
   "teams": {
     "senior-a-masc": [
-      "/stats/10855.json"
+      "/stats/10855.json",
+      "/stats/3840.json"
     ],
     "senior-b-masc": [
       "/stats/8546.json",
@@ -10,14 +11,17 @@
       "/stats/8556.json"
     ],
     "u25-masc": [
-      "/stats/10547.json"
+      "/stats/10547.json",
+      "/stats/10556.json"
     ],
     "senior-c-masc": [
       "/stats/10184.json",
-      "/stats/10187.json"
+      "/stats/10187.json",
+      "/stats/10194.json"
     ],
     "senior-fem": [
-      "/stats/14863.json"
+      "/stats/14863.json",
+      "/stats/14873.json"
     ],
     "infantil-masc": [
       "/stats/31529.json",
@@ -46,7 +50,8 @@
       "/stats/33843.json"
     ],
     "u25-fem": [
-      "/stats/24855.json"
+      "/stats/24855.json",
+      "/stats/19626.json"
     ],
     "u20-masc": [
       "/stats/19366.json"
