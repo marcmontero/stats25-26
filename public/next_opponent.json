@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-18T01:55:58.417214+02:00",
+  "updatedAt": "2026-10-18T02:18:09.350027+02:00",
   "teams": {
     "senior-a-masc": {
       "standings": [
@@ -270,7 +270,7 @@
           "isUs": false
         }
       ],
-      "standingsUpdatedAt": "2026-10-18T01:50:52.188384+02:00",
+      "standingsUpdatedAt": "2026-10-18T02:13:15.066735+02:00",
       "matchId": "3854",
       "date": "25/10/2026",
       "time": "16:00",
@@ -781,7 +781,7 @@
           "isUs": false
         }
       ],
-      "standingsUpdatedAt": "2026-10-18T01:51:02.963339+02:00",
+      "standingsUpdatedAt": "2026-10-18T02:13:25.285035+02:00",
       "matchId": "8562",
       "date": "18/10/2026",
       "time": "17:45",
@@ -1292,7 +1292,7 @@
           "isUs": false
         }
       ],
-      "standingsUpdatedAt": "2026-10-18T01:51:13.196749+02:00",
+      "standingsUpdatedAt": "2026-10-18T02:13:35.484445+02:00",
       "matchId": "10200",
       "date": "18/10/2026",
       "time": "16:00",
@@ -1780,7 +1780,7 @@
           "isUs": false
         }
       ],
-      "standingsUpdatedAt": "2026-10-18T01:51:25.856290+02:00",
+      "standingsUpdatedAt": "2026-10-18T02:13:45.463698+02:00",
       "matchId": "10561",
       "date": "18/10/2026",
       "time": "19:30",
@@ -2267,7 +2267,7 @@
           "isUs": true
         }
       ],
-      "standingsUpdatedAt": "2026-10-18T01:51:36.046149+02:00",
+      "standingsUpdatedAt": "2026-10-18T02:13:55.433183+02:00",
       "matchId": "19381",
       "date": "24/10/2026",
       "time": "12:30",
@@ -2665,7 +2665,7 @@
           "isUs": true
         }
       ],
-      "standingsUpdatedAt": "2026-10-18T01:51:53.416620+02:00",
+      "standingsUpdatedAt": "2026-10-18T02:14:12.609555+02:00",
       "matchId": "29230",
       "date": "18/10/2026",
       "time": "09:30",
@@ -2950,7 +2950,7 @@
           "isUs": true
         }
       ],
-      "standingsUpdatedAt": "2026-10-18T01:52:03.390124+02:00",
+      "standingsUpdatedAt": "2026-10-18T02:14:22.641073+02:00",
       "matchId": "30543",
       "date": "25/10/2026",
       "time": "16:00",
@@ -3083,7 +3083,7 @@
           "isUs": false
         }
       ],
-      "standingsUpdatedAt": "2026-10-18T01:52:13.316466+02:00",
+      "standingsUpdatedAt": "2026-10-18T02:14:32.783188+02:00",
       "matchId": "31535",
       "date": "18/10/2026",
       "time": "10:45",
@@ -3202,7 +3202,7 @@
           "isUs": true
         }
       ],
-      "standingsUpdatedAt": "2026-10-18T01:52:23.361822+02:00",
+      "standingsUpdatedAt": "2026-10-18T02:14:42.775030+02:00",
       "matchId": "32324",
       "date": "24/10/2026",
       "time": "16:00",
@@ -3321,7 +3321,7 @@
           "isUs": false
         }
       ],
-      "standingsUpdatedAt": "2026-10-18T01:52:33.618481+02:00",
+      "standingsUpdatedAt": "2026-10-18T02:14:52.565890+02:00",
       "matchId": "33845",
       "date": "18/10/2026",
       "time": "09:00",
@@ -3454,7 +3454,7 @@
           "isUs": false
         }
       ],
-      "standingsUpdatedAt": "2026-10-18T01:52:48.070340+02:00",
+      "standingsUpdatedAt": "2026-10-18T02:15:02.615742+02:00",
       "matchId": "34699",
       "date": "18/10/2026",
       "time": "10:45",
@@ -3756,7 +3756,7 @@
           "isUs": false
         }
       ],
-      "standingsUpdatedAt": "2026-10-18T01:53:02.016396+02:00",
+      "standingsUpdatedAt": "2026-10-18T02:15:13.611375+02:00",
       "matchId": "14879",
       "date": "18/10/2026",
       "time": "17:45",
@@ -4122,7 +4122,7 @@
           "isUs": false
         }
       ],
-      "standingsUpdatedAt": "2026-10-18T01:53:13.108211+02:00",
+      "standingsUpdatedAt": "2026-10-18T02:15:24.938498+02:00",
       "matchId": "27354",
       "date": "18/10/2026",
       "time": "09:00",
@@ -4255,7 +4255,7 @@
           "isUs": false
         }
       ],
-      "standingsUpdatedAt": "2026-10-18T01:53:22.668337+02:00",
+      "standingsUpdatedAt": "2026-10-18T02:15:34.924330+02:00",
       "matchId": "28209",
       "date": "24/10/2026",
       "time": "10:30",
@@ -4374,7 +4374,7 @@
           "isUs": true
         }
       ],
-      "standingsUpdatedAt": "2026-10-18T01:53:34.756193+02:00",
+      "standingsUpdatedAt": "2026-10-18T02:15:44.882849+02:00",
       "matchId": "28286",
       "date": "07/11/2026",
       "time": "10:45",
