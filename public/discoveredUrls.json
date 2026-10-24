@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-19T13:56:29.985586+02:00",
+  "updatedAt": "2026-10-24T15:08:46.663503+02:00",
   "teams": {
     "senior-a-masc": [
       "/stats/10855.json",
@@ -36,7 +36,8 @@
     "premini-negre-masc": [
       "/stats/34693.json",
       "/stats/34694.json",
-      "/stats/34699.json"
+      "/stats/34699.json",
+      "/stats/34701.json"
     ],
     "preinfantil-fem": [
       "/stats/27349.json",
@@ -46,7 +47,8 @@
     "mini-negre-fem": [
       "/stats/28199.json",
       "/stats/28203.json",
-      "/stats/28204.json"
+      "/stats/28204.json",
+      "/stats/28209.json"
     ],
     "mini-vermell-fem": [
       "/stats/28279.json",
@@ -58,7 +60,8 @@
     ],
     "mini-masc": [
       "/stats/33843.json",
-      "/stats/33845.json"
+      "/stats/33845.json",
+      "/stats/33848.json"
     ],
     "u25-fem": [
       "/stats/24855.json",
@@ -66,7 +69,8 @@
       "/stats/19632.json"
     ],
     "u20-masc": [
-      "/stats/19366.json"
+      "/stats/19366.json",
+      "/stats/19381.json"
     ],
     "junior-masc": [
       "/stats/29225.json",
@@ -76,7 +80,8 @@
       "/stats/32320.json"
     ],
     "premini-vermell-masc": [
-      "/stats/35456.json"
+      "/stats/35456.json",
+      "/stats/35458.json"
     ]
   }
 }
