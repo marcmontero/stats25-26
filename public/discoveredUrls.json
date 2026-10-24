@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-24T15:08:46.663503+02:00",
+  "updatedAt": "2026-10-24T19:52:36.150177+02:00",
   "teams": {
     "senior-a-masc": [
       "/stats/10855.json",
@@ -77,7 +77,8 @@
       "/stats/29230.json"
     ],
     "preinfantil-masc": [
-      "/stats/32320.json"
+      "/stats/32320.json",
+      "/stats/32324.json"
     ],
     "premini-vermell-masc": [
       "/stats/35456.json",
