@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-24T19:52:36.150177+02:00",
+  "updatedAt": "2026-10-24T23:28:53.401263+02:00",
   "teams": {
     "senior-a-masc": [
       "/stats/10855.json",
@@ -74,7 +74,8 @@
     ],
     "junior-masc": [
       "/stats/29225.json",
-      "/stats/29230.json"
+      "/stats/29230.json",
+      "/stats/29232.json"
     ],
     "preinfantil-masc": [
       "/stats/32320.json",
