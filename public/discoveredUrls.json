@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-25T21:05:44.714380+01:00",
+  "updatedAt": "2026-10-31T10:26:48.527280+01:00",
   "teams": {
     "senior-a-masc": [
       "/stats/10855.json",
@@ -30,7 +30,8 @@
     "senior-fem": [
       "/stats/14863.json",
       "/stats/14873.json",
-      "/stats/14879.json"
+      "/stats/14879.json",
+      "/stats/14888.json"
     ],
     "infantil-masc": [
       "/stats/31529.json",
