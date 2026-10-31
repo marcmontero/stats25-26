@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-31T10:26:48.007145+01:00",
+  "updatedAt": "2026-10-31T16:13:09.107760+01:00",
   "teams": {
     "senior-a-masc": {
       "standings": [
@@ -284,7 +284,7 @@
           "isUs": false
         }
       ],
-      "standingsUpdatedAt": "2026-10-31T10:20:24.912024+01:00",
+      "standingsUpdatedAt": "2026-10-31T15:56:40.852982+01:00",
       "matchId": "3860",
       "date": "07/11/2026",
       "time": "18:45",
@@ -842,7 +842,7 @@
           "isUs": false
         }
       ],
-      "standingsUpdatedAt": "2026-10-31T10:20:42.978095+01:00",
+      "standingsUpdatedAt": "2026-10-31T15:56:58.349657+01:00",
       "matchId": "8577",
       "date": "08/11/2026",
       "time": "12:45",
@@ -1442,7 +1442,7 @@
           "isUs": true
         }
       ],
-      "standingsUpdatedAt": "2026-10-31T10:21:00.768728+01:00",
+      "standingsUpdatedAt": "2026-10-31T15:57:15.759620+01:00",
       "matchId": "10215",
       "date": "08/11/2026",
       "time": "18:15",
@@ -2017,7 +2017,7 @@
           "isUs": false
         }
       ],
-      "standingsUpdatedAt": "2026-10-31T10:21:18.261157+01:00",
+      "standingsUpdatedAt": "2026-10-31T15:57:32.955513+01:00",
       "matchId": "10574",
       "date": "08/11/2026",
       "time": "17:45",
@@ -2421,8 +2421,28 @@
           "isUs": false
         },
         {
-          "teamId": "93188",
+          "teamId": "92051",
           "rank": "8",
+          "played": "5",
+          "won": "1",
+          "lost": "4",
+          "notPresented": "0",
+          "pointsFor": "226",
+          "pointsAgainst": "360",
+          "leaguePoints": "6",
+          "streak": [
+            "loss",
+            "win",
+            "loss",
+            "loss",
+            "loss"
+          ],
+          "name": "CB MANYANET LES CORTS",
+          "isUs": false
+        },
+        {
+          "teamId": "93188",
+          "rank": "9",
           "played": "4",
           "won": "1",
           "lost": "3",
@@ -2442,7 +2462,7 @@
         },
         {
           "teamId": "90641",
-          "rank": "9",
+          "rank": "10",
           "played": "4",
           "won": "1",
           "lost": "3",
@@ -2462,14 +2482,14 @@
         },
         {
           "teamId": "89415",
-          "rank": "10",
-          "played": "4",
+          "rank": "11",
+          "played": "5",
           "won": "0",
-          "lost": "4",
+          "lost": "5",
           "notPresented": "0",
-          "pointsFor": "202",
-          "pointsAgainst": "295",
-          "leaguePoints": "4",
+          "pointsFor": "252",
+          "pointsAgainst": "352",
+          "leaguePoints": "5",
           "streak": [
             "loss",
             "loss",
@@ -2478,26 +2498,6 @@
             "loss"
           ],
           "name": "HAVANA 66 - CB GAVÀ",
-          "isUs": false
-        },
-        {
-          "teamId": "92051",
-          "rank": "11",
-          "played": "4",
-          "won": "0",
-          "lost": "4",
-          "notPresented": "0",
-          "pointsFor": "169",
-          "pointsAgainst": "310",
-          "leaguePoints": "4",
-          "streak": [
-            "loss",
-            "loss",
-            "loss",
-            "loss",
-            "loss"
-          ],
-          "name": "CB MANYANET LES CORTS",
           "isUs": false
         },
         {
@@ -2521,7 +2521,7 @@
           "isUs": true
         }
       ],
-      "standingsUpdatedAt": "2026-10-31T10:21:40.986603+01:00",
+      "standingsUpdatedAt": "2026-10-31T15:57:59.953763+01:00",
       "matchId": "19375",
       "date": "01/11/2026",
       "time": "19:30",
@@ -2550,7 +2550,7 @@
       },
       "opponentStanding": {
         "teamId": "93188",
-        "rank": "8",
+        "rank": "9",
         "played": "4",
         "won": "1",
         "lost": "3",
@@ -2913,7 +2913,7 @@
           "isUs": true
         }
       ],
-      "standingsUpdatedAt": "2026-10-31T10:22:07.448275+01:00",
+      "standingsUpdatedAt": "2026-10-31T15:58:23.766896+01:00",
       "matchId": "29224",
       "date": "31/10/2026",
       "time": "17:45",
@@ -3231,7 +3231,7 @@
           "isUs": false
         }
       ],
-      "standingsUpdatedAt": "2026-10-31T10:22:27.661698+01:00",
+      "standingsUpdatedAt": "2026-10-31T15:58:42.496004+01:00",
       "matchId": "30545",
       "date": "08/11/2026",
       "time": "09:00",
@@ -3364,7 +3364,7 @@
           "isUs": false
         }
       ],
-      "standingsUpdatedAt": "2026-10-31T10:22:38.451338+01:00",
+      "standingsUpdatedAt": "2026-10-31T15:58:53.019380+01:00",
       "matchId": "31540",
       "date": "08/11/2026",
       "time": "10:45",
@@ -3413,8 +3413,22 @@
     "preinfantil-masc": {
       "standings": [
         {
-          "teamId": "89553",
+          "teamId": "92470",
           "rank": "1",
+          "played": "3",
+          "won": "3",
+          "lost": "0",
+          "notPresented": "0",
+          "pointsFor": "223",
+          "pointsAgainst": "111",
+          "leaguePoints": "6",
+          "streak": [],
+          "name": "CB PARETS",
+          "isUs": false
+        },
+        {
+          "teamId": "89553",
+          "rank": "2",
           "played": "3",
           "won": "3",
           "lost": "0",
@@ -3428,7 +3442,7 @@
         },
         {
           "teamId": "89614",
-          "rank": "2",
+          "rank": "3",
           "played": "4",
           "won": "2",
           "lost": "2",
@@ -3441,22 +3455,22 @@
           "isUs": false
         },
         {
-          "teamId": "92470",
-          "rank": "3",
-          "played": "2",
-          "won": "2",
-          "lost": "0",
+          "teamId": "88839",
+          "rank": "4",
+          "played": "3",
+          "won": "0",
+          "lost": "3",
           "notPresented": "0",
-          "pointsFor": "141",
-          "pointsAgainst": "61",
-          "leaguePoints": "4",
+          "pointsFor": "148",
+          "pointsAgainst": "206",
+          "leaguePoints": "3",
           "streak": [],
-          "name": "CB PARETS",
-          "isUs": false
+          "name": "A.E. BADALONÈS - PINTURAS CORBACHO",
+          "isUs": true
         },
         {
           "teamId": "88535",
-          "rank": "4",
+          "rank": "5",
           "played": "3",
           "won": "0",
           "lost": "3",
@@ -3467,23 +3481,9 @@
           "streak": [],
           "name": "SFERIC 14 GROC",
           "isUs": false
-        },
-        {
-          "teamId": "88839",
-          "rank": "5",
-          "played": "2",
-          "won": "0",
-          "lost": "2",
-          "notPresented": "0",
-          "pointsFor": "98",
-          "pointsAgainst": "124",
-          "leaguePoints": "2",
-          "streak": [],
-          "name": "A.E. BADALONÈS - PINTURAS CORBACHO",
-          "isUs": true
         }
       ],
-      "standingsUpdatedAt": "2026-10-31T10:22:49.098979+01:00",
+      "standingsUpdatedAt": "2026-10-31T15:59:03.299254+01:00",
       "matchId": "32319",
       "date": "31/10/2026",
       "time": "09:00",
@@ -3494,37 +3494,37 @@
       "venueAddress": "AV. FRANCESC MACIA, S/N",
       "ownStanding": {
         "teamId": "88839",
-        "rank": "5",
-        "played": "2",
+        "rank": "4",
+        "played": "3",
         "won": "0",
-        "lost": "2",
+        "lost": "3",
         "notPresented": "0",
-        "pointsFor": "98",
-        "pointsAgainst": "124",
-        "leaguePoints": "2",
+        "pointsFor": "148",
+        "pointsAgainst": "206",
+        "leaguePoints": "3",
         "streak": []
       },
       "opponentStanding": {
         "teamId": "92470",
-        "rank": "3",
-        "played": "2",
-        "won": "2",
+        "rank": "1",
+        "played": "3",
+        "won": "3",
         "lost": "0",
         "notPresented": "0",
-        "pointsFor": "141",
-        "pointsAgainst": "61",
-        "leaguePoints": "4",
+        "pointsFor": "223",
+        "pointsAgainst": "111",
+        "leaguePoints": "6",
         "streak": []
       },
       "opponentSeason": {
         "season": "2026-2027",
         "category": "C.T. PRE-INFANTIL MASCULÍ",
         "venueName": "PAVELLO MUNICIPAL PARETS",
-        "gamesPlayed": 2,
-        "wins": 2,
+        "gamesPlayed": 3,
+        "wins": 3,
         "losses": 0,
-        "avgPointsFor": 76.0,
-        "avgPointsAgainst": 30.5,
+        "avgPointsFor": 78.0,
+        "avgPointsAgainst": 37.0,
         "topScorers": [],
         "roster": []
       }
@@ -3602,7 +3602,7 @@
           "isUs": false
         }
       ],
-      "standingsUpdatedAt": "2026-10-31T10:22:59.082564+01:00",
+      "standingsUpdatedAt": "2026-10-31T15:59:13.531274+01:00",
       "matchId": "33842",
       "date": "07/11/2026",
       "time": "09:00",
@@ -3735,7 +3735,7 @@
           "isUs": false
         }
       ],
-      "standingsUpdatedAt": "2026-10-31T10:23:09.229908+01:00",
+      "standingsUpdatedAt": "2026-10-31T15:59:29.720007+01:00",
       "matchId": "34704",
       "date": "08/11/2026",
       "time": "10:45",
@@ -3854,7 +3854,7 @@
           "isUs": false
         }
       ],
-      "standingsUpdatedAt": "2026-10-31T10:23:19.363190+01:00",
+      "standingsUpdatedAt": "2026-10-31T15:59:40.004193+01:00",
       "matchId": "35459",
       "date": "08/11/2026",
       "time": "09:00",
@@ -4158,7 +4158,7 @@
           "isUs": false
         }
       ],
-      "standingsUpdatedAt": "2026-10-31T10:23:29.541278+01:00",
+      "standingsUpdatedAt": "2026-10-31T15:59:50.378125+01:00",
       "matchId": "14894",
       "date": "08/11/2026",
       "time": "19:00",
@@ -4690,7 +4690,7 @@
           "isUs": false
         }
       ],
-      "standingsUpdatedAt": "2026-10-31T10:23:47.073077+01:00",
+      "standingsUpdatedAt": "2026-10-31T16:00:07.608895+01:00",
       "matchId": "19641",
       "date": "07/11/2026",
       "time": "19:00",
@@ -4982,22 +4982,36 @@
           "isUs": false
         },
         {
-          "teamId": "88831",
+          "teamId": "93993",
           "rank": "4",
           "played": "3",
-          "won": "0",
-          "lost": "3",
+          "won": "1",
+          "lost": "2",
           "notPresented": "0",
-          "pointsFor": "114",
-          "pointsAgainst": "198",
-          "leaguePoints": "3",
+          "pointsFor": "107",
+          "pointsAgainst": "163",
+          "leaguePoints": "4",
+          "streak": [],
+          "name": "NIBE BOMBAS DE CALOR - LA VALLALTA BC",
+          "isUs": false
+        },
+        {
+          "teamId": "88831",
+          "rank": "5",
+          "played": "4",
+          "won": "0",
+          "lost": "4",
+          "notPresented": "0",
+          "pointsFor": "153",
+          "pointsAgainst": "241",
+          "leaguePoints": "4",
           "streak": [],
           "name": "A.E. BADALONÈS - PINTURAS CORBACHO",
           "isUs": true
         },
         {
           "teamId": "90910",
-          "rank": "5",
+          "rank": "6",
           "played": "3",
           "won": "0",
           "lost": "3",
@@ -5008,23 +5022,9 @@
           "streak": [],
           "name": "UB MIR B",
           "isUs": false
-        },
-        {
-          "teamId": "93993",
-          "rank": "6",
-          "played": "2",
-          "won": "0",
-          "lost": "2",
-          "notPresented": "0",
-          "pointsFor": "64",
-          "pointsAgainst": "124",
-          "leaguePoints": "2",
-          "streak": [],
-          "name": "NIBE BOMBAS DE CALOR - LA VALLALTA BC",
-          "isUs": false
         }
       ],
-      "standingsUpdatedAt": "2026-10-31T10:24:04.241040+01:00",
+      "standingsUpdatedAt": "2026-10-31T16:00:25.100257+01:00",
       "matchId": "27359",
       "date": "31/10/2026",
       "time": "12:00",
@@ -5035,37 +5035,37 @@
       "venueAddress": "CTRA. DE POMAR, S/N",
       "ownStanding": {
         "teamId": "88831",
-        "rank": "4",
-        "played": "3",
+        "rank": "5",
+        "played": "4",
         "won": "0",
-        "lost": "3",
+        "lost": "4",
         "notPresented": "0",
-        "pointsFor": "114",
-        "pointsAgainst": "198",
-        "leaguePoints": "3",
+        "pointsFor": "153",
+        "pointsAgainst": "241",
+        "leaguePoints": "4",
         "streak": []
       },
       "opponentStanding": {
         "teamId": "93993",
-        "rank": "6",
-        "played": "2",
-        "won": "0",
+        "rank": "4",
+        "played": "3",
+        "won": "1",
         "lost": "2",
         "notPresented": "0",
-        "pointsFor": "64",
-        "pointsAgainst": "124",
-        "leaguePoints": "2",
+        "pointsFor": "107",
+        "pointsAgainst": "163",
+        "leaguePoints": "4",
         "streak": []
       },
       "opponentSeason": {
         "season": "2026-2027",
         "category": "C.T. PRE-INFANTIL FEMENÍ",
         "venueName": "PAVELLO MUNICIPAL SANT POL",
-        "gamesPlayed": 2,
-        "wins": 0,
+        "gamesPlayed": 3,
+        "wins": 1,
         "losses": 2,
-        "avgPointsFor": 32.0,
-        "avgPointsAgainst": 62.0,
+        "avgPointsFor": 35.7,
+        "avgPointsAgainst": 54.3,
         "topScorers": [],
         "roster": []
       }
@@ -5157,7 +5157,7 @@
           "isUs": false
         }
       ],
-      "standingsUpdatedAt": "2026-10-31T10:24:14.296818+01:00",
+      "standingsUpdatedAt": "2026-10-31T16:00:35.363130+01:00",
       "matchId": "28211",
       "date": "07/11/2026",
       "time": "10:30",
@@ -5276,7 +5276,7 @@
           "isUs": true
         }
       ],
-      "standingsUpdatedAt": "2026-10-31T10:24:24.356882+01:00",
+      "standingsUpdatedAt": "2026-10-31T16:00:45.795619+01:00",
       "matchId": "28286",
       "date": "07/11/2026",
       "time": "10:45",

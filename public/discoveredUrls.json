@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-31T10:26:48.527280+01:00",
+  "updatedAt": "2026-10-31T16:13:09.898232+01:00",
   "teams": {
     "senior-a-masc": [
       "/stats/10855.json",
@@ -48,7 +48,8 @@
     "preinfantil-fem": [
       "/stats/27349.json",
       "/stats/27353.json",
-      "/stats/27354.json"
+      "/stats/27354.json",
+      "/stats/27359.json"
     ],
     "mini-negre-fem": [
       "/stats/28199.json",
@@ -87,7 +88,8 @@
     ],
     "preinfantil-masc": [
       "/stats/32320.json",
-      "/stats/32324.json"
+      "/stats/32324.json",
+      "/stats/32319.json"
     ],
     "premini-vermell-masc": [
       "/stats/35456.json",
