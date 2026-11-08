@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-08T17:48:44.817774+01:00",
+  "updatedAt": "2026-11-08T21:20:08.608238+01:00",
   "teams": {
     "senior-a-masc": {
       "standings": [
@@ -64,8 +64,28 @@
           "isUs": false
         },
         {
-          "teamId": "90963",
+          "teamId": "88795",
           "rank": "4",
+          "played": "5",
+          "won": "4",
+          "lost": "1",
+          "notPresented": "0",
+          "pointsFor": "361",
+          "pointsAgainst": "300",
+          "leaguePoints": "9",
+          "streak": [
+            "win",
+            "loss",
+            "loss",
+            "win",
+            "win"
+          ],
+          "name": "BÀSQUET PB9 'A'",
+          "isUs": false
+        },
+        {
+          "teamId": "90963",
+          "rank": "5",
           "played": "4",
           "won": "4",
           "lost": "0",
@@ -85,7 +105,7 @@
         },
         {
           "teamId": "89066",
-          "rank": "5",
+          "rank": "6",
           "played": "5",
           "won": "3",
           "lost": "2",
@@ -104,35 +124,15 @@
           "isUs": false
         },
         {
-          "teamId": "88795",
-          "rank": "6",
-          "played": "4",
-          "won": "3",
-          "lost": "1",
-          "notPresented": "0",
-          "pointsFor": "277",
-          "pointsAgainst": "232",
-          "leaguePoints": "7",
-          "streak": [
-            "win",
-            "loss",
-            "loss",
-            "win",
-            "loss"
-          ],
-          "name": "BÀSQUET PB9 'A'",
-          "isUs": false
-        },
-        {
           "teamId": "89486",
           "rank": "7",
-          "played": "5",
+          "played": "6",
           "won": "2",
-          "lost": "3",
+          "lost": "4",
           "notPresented": "0",
-          "pointsFor": "385",
-          "pointsAgainst": "367",
-          "leaguePoints": "7",
+          "pointsFor": "453",
+          "pointsAgainst": "451",
+          "leaguePoints": "8",
           "streak": [
             "loss",
             "win",
@@ -204,8 +204,28 @@
           "isUs": false
         },
         {
-          "teamId": "89198",
+          "teamId": "88524",
           "rank": "11",
+          "played": "6",
+          "won": "0",
+          "lost": "6",
+          "notPresented": "0",
+          "pointsFor": "389",
+          "pointsAgainst": "451",
+          "leaguePoints": "6",
+          "streak": [
+            "loss",
+            "loss",
+            "loss",
+            "loss",
+            "loss"
+          ],
+          "name": "MARISTES ADEMAR B",
+          "isUs": false
+        },
+        {
+          "teamId": "89198",
+          "rank": "12",
           "played": "5",
           "won": "1",
           "lost": "4",
@@ -224,8 +244,28 @@
           "isUs": false
         },
         {
+          "teamId": "89588",
+          "rank": "13",
+          "played": "5",
+          "won": "1",
+          "lost": "4",
+          "notPresented": "0",
+          "pointsFor": "322",
+          "pointsAgainst": "392",
+          "leaguePoints": "6",
+          "streak": [
+            "loss",
+            "loss",
+            "loss",
+            "loss",
+            "win"
+          ],
+          "name": "MANTISE CB SANT JOSEP BADALONA - SBM",
+          "isUs": false
+        },
+        {
           "teamId": "88624",
-          "rank": "12",
+          "rank": "14",
           "played": "4",
           "won": "1",
           "lost": "3",
@@ -242,49 +282,9 @@
           ],
           "name": "AE BELLSPORT",
           "isUs": false
-        },
-        {
-          "teamId": "88524",
-          "rank": "13",
-          "played": "5",
-          "won": "0",
-          "lost": "5",
-          "notPresented": "0",
-          "pointsFor": "324",
-          "pointsAgainst": "379",
-          "leaguePoints": "5",
-          "streak": [
-            "loss",
-            "loss",
-            "loss",
-            "loss",
-            "loss"
-          ],
-          "name": "MARISTES ADEMAR B",
-          "isUs": false
-        },
-        {
-          "teamId": "89588",
-          "rank": "14",
-          "played": "4",
-          "won": "0",
-          "lost": "4",
-          "notPresented": "0",
-          "pointsFor": "250",
-          "pointsAgainst": "327",
-          "leaguePoints": "4",
-          "streak": [
-            "loss",
-            "loss",
-            "loss",
-            "loss",
-            "loss"
-          ],
-          "name": "MANTISE CB SANT JOSEP BADALONA - SBM",
-          "isUs": false
         }
       ],
-      "standingsUpdatedAt": "2026-11-08T17:32:39.619847+01:00",
+      "standingsUpdatedAt": "2026-11-08T21:13:21.267046+01:00",
       "matchId": "3868",
       "date": "14/11/2026",
       "time": "20:45",
@@ -313,38 +313,49 @@
       },
       "opponentStanding": {
         "teamId": "89588",
-        "rank": "14",
-        "played": "4",
-        "won": "0",
+        "rank": "13",
+        "played": "5",
+        "won": "1",
         "lost": "4",
         "notPresented": "0",
-        "pointsFor": "250",
-        "pointsAgainst": "327",
-        "leaguePoints": "4",
+        "pointsFor": "322",
+        "pointsAgainst": "392",
+        "leaguePoints": "6",
         "streak": [
           "loss",
           "loss",
           "loss",
           "loss",
-          "loss"
+          "win"
         ]
       },
+      "opponentTopScorers": [
+        {
+          "name": "PAU LAVIÑA TERMES",
+          "dorsal": "6",
+          "points": 16
+        },
+        {
+          "name": "HUGO CAMACHO BATALLER",
+          "dorsal": "16",
+          "points": 12
+        },
+        {
+          "name": "DANIEL ROJAS TORRES",
+          "dorsal": "10",
+          "points": 11
+        }
+      ],
       "opponentSeason": {
         "season": "2026-2027",
         "category": "C.C. SEGONA CATEGORIA MASCULINA",
         "venueName": "PAVELLO LA COLINA",
-        "gamesPlayed": 4,
-        "wins": 0,
+        "gamesPlayed": 5,
+        "wins": 1,
         "losses": 4,
-        "avgPointsFor": 62.5,
-        "avgPointsAgainst": 81.8,
+        "avgPointsFor": 64.4,
+        "avgPointsAgainst": 78.4,
         "topScorers": [
-          {
-            "name": "ALVARO NAVARRO SANCHEZ",
-            "dorsal": "5",
-            "gamesPlayed": 4,
-            "avgPoints": 12.0
-          },
           {
             "name": "POL PEÑA NAVARRETE",
             "dorsal": "14",
@@ -352,39 +363,31 @@
             "avgPoints": 11.0
           },
           {
+            "name": "ALVARO NAVARRO SANCHEZ",
+            "dorsal": "5",
+            "gamesPlayed": 5,
+            "avgPoints": 10.8
+          },
+          {
             "name": "ISAAC MIGUEL BEL",
             "dorsal": "24",
-            "gamesPlayed": 4,
-            "avgPoints": 9.8
+            "gamesPlayed": 5,
+            "avgPoints": 9.6
           },
           {
             "name": "HUGO CAMACHO BATALLER",
             "dorsal": "16",
-            "gamesPlayed": 4,
-            "avgPoints": 8.2
+            "gamesPlayed": 5,
+            "avgPoints": 9.0
           },
           {
-            "name": "FENIX VALENTINO EROLA",
-            "dorsal": "1",
-            "gamesPlayed": 4,
-            "avgPoints": 6.5
+            "name": "PAU LAVIÑA TERMES",
+            "dorsal": "6",
+            "gamesPlayed": 5,
+            "avgPoints": 7.8
           }
         ],
         "roster": [
-          {
-            "name": "ALVARO NAVARRO SANCHEZ",
-            "dorsal": "5",
-            "gamesPlayed": 4,
-            "avgMinutes": 24.6,
-            "avgPoints": 12.0,
-            "avgT2m": 3.5,
-            "avgT3m": 1.5,
-            "totalFtm": 2,
-            "totalFta": 6,
-            "ftPer": 33.3,
-            "avgFouls": 1.0,
-            "avgPlusMinus": -7.8
-          },
           {
             "name": "POL PEÑA NAVARRETE",
             "dorsal": "14",
@@ -400,158 +403,172 @@
             "avgPlusMinus": 3.0
           },
           {
+            "name": "ALVARO NAVARRO SANCHEZ",
+            "dorsal": "5",
+            "gamesPlayed": 5,
+            "avgMinutes": 25.5,
+            "avgPoints": 10.8,
+            "avgT2m": 3.4,
+            "avgT3m": 1.2,
+            "totalFtm": 2,
+            "totalFta": 8,
+            "ftPer": 25.0,
+            "avgFouls": 0.8,
+            "avgPlusMinus": -3.4
+          },
+          {
             "name": "ISAAC MIGUEL BEL",
             "dorsal": "24",
-            "gamesPlayed": 4,
-            "avgMinutes": 17.5,
-            "avgPoints": 9.8,
+            "gamesPlayed": 5,
+            "avgMinutes": 18.0,
+            "avgPoints": 9.6,
             "avgT2m": 3.0,
-            "avgT3m": 0.5,
+            "avgT3m": 0.6,
             "totalFtm": 9,
-            "totalFta": 13,
-            "ftPer": 69.2,
-            "avgFouls": 1.5,
-            "avgPlusMinus": -2.0
+            "totalFta": 14,
+            "ftPer": 64.3,
+            "avgFouls": 1.4,
+            "avgPlusMinus": 1.4
           },
           {
             "name": "HUGO CAMACHO BATALLER",
             "dorsal": "16",
-            "gamesPlayed": 4,
-            "avgMinutes": 21.6,
-            "avgPoints": 8.2,
-            "avgT2m": 3.8,
+            "gamesPlayed": 5,
+            "avgMinutes": 20.7,
+            "avgPoints": 9.0,
+            "avgT2m": 4.0,
             "avgT3m": 0.0,
-            "totalFtm": 3,
-            "totalFta": 9,
-            "ftPer": 33.3,
-            "avgFouls": 2.5,
-            "avgPlusMinus": -4.2
-          },
-          {
-            "name": "FENIX VALENTINO EROLA",
-            "dorsal": "1",
-            "gamesPlayed": 4,
-            "avgMinutes": 23.3,
-            "avgPoints": 6.5,
-            "avgT2m": 2.5,
-            "avgT3m": 0.2,
-            "totalFtm": 3,
-            "totalFta": 4,
-            "ftPer": 75.0,
-            "avgFouls": 2.0,
-            "avgPlusMinus": 2.5
+            "totalFtm": 5,
+            "totalFta": 11,
+            "ftPer": 45.5,
+            "avgFouls": 2.2,
+            "avgPlusMinus": -4.8
           },
           {
             "name": "PAU LAVIÑA TERMES",
             "dorsal": "6",
-            "gamesPlayed": 4,
-            "avgMinutes": 26.7,
-            "avgPoints": 5.8,
-            "avgT2m": 1.0,
-            "avgT3m": 1.0,
+            "gamesPlayed": 5,
+            "avgMinutes": 26.2,
+            "avgPoints": 7.8,
+            "avgT2m": 1.2,
+            "avgT3m": 1.6,
             "totalFtm": 3,
             "totalFta": 4,
             "ftPer": 75.0,
-            "avgFouls": 2.0,
-            "avgPlusMinus": -8.2
+            "avgFouls": 1.8,
+            "avgPlusMinus": -8.8
           },
           {
-            "name": "BERNAT LOPEZ ABAD",
-            "dorsal": "19",
-            "gamesPlayed": 3,
-            "avgMinutes": 7.9,
-            "avgPoints": 5.3,
-            "avgT2m": 0.7,
-            "avgT3m": 1.0,
+            "name": "FENIX VALENTINO EROLA",
+            "dorsal": "1",
+            "gamesPlayed": 5,
+            "avgMinutes": 22.3,
+            "avgPoints": 5.6,
+            "avgT2m": 2.2,
+            "avgT3m": 0.2,
             "totalFtm": 3,
-            "totalFta": 5,
-            "ftPer": 60.0,
-            "avgFouls": 0.3,
-            "avgPlusMinus": -4.3
+            "totalFta": 4,
+            "ftPer": 75.0,
+            "avgFouls": 1.8,
+            "avgPlusMinus": 2.8
           },
           {
             "name": "DANIEL ROJAS TORRES",
             "dorsal": "10",
-            "gamesPlayed": 4,
-            "avgMinutes": 15.9,
-            "avgPoints": 3.0,
-            "avgT2m": 0.5,
-            "avgT3m": 0.5,
-            "totalFtm": 2,
-            "totalFta": 3,
-            "ftPer": 66.7,
-            "avgFouls": 1.8,
-            "avgPlusMinus": -21.2
+            "gamesPlayed": 5,
+            "avgMinutes": 17.2,
+            "avgPoints": 4.6,
+            "avgT2m": 0.8,
+            "avgT3m": 0.6,
+            "totalFtm": 6,
+            "totalFta": 7,
+            "ftPer": 85.7,
+            "avgFouls": 1.6,
+            "avgPlusMinus": -15.8
           },
           {
-            "name": "BIEL PRATS SOLER",
-            "dorsal": "9",
+            "name": "BERNAT LOPEZ ABAD",
+            "dorsal": "19",
             "gamesPlayed": 4,
-            "avgMinutes": 16.1,
-            "avgPoints": 2.8,
-            "avgT2m": 1.0,
-            "avgT3m": 0.0,
+            "avgMinutes": 6.7,
+            "avgPoints": 4.0,
+            "avgT2m": 0.5,
+            "avgT3m": 0.8,
             "totalFtm": 3,
-            "totalFta": 6,
-            "ftPer": 50.0,
-            "avgFouls": 3.2,
-            "avgPlusMinus": -10.5
+            "totalFta": 5,
+            "ftPer": 60.0,
+            "avgFouls": 0.2,
+            "avgPlusMinus": -4.2
           },
           {
             "name": "E.E.O.",
             "dorsal": "11",
-            "gamesPlayed": 4,
-            "avgMinutes": 13.4,
-            "avgPoints": 2.8,
-            "avgT2m": 1.0,
+            "gamesPlayed": 5,
+            "avgMinutes": 15.0,
+            "avgPoints": 3.6,
+            "avgT2m": 1.2,
             "avgT3m": 0.0,
-            "totalFtm": 3,
-            "totalFta": 5,
-            "ftPer": 60.0,
-            "avgFouls": 1.2,
-            "avgPlusMinus": -11.0
+            "totalFtm": 6,
+            "totalFta": 9,
+            "ftPer": 66.7,
+            "avgFouls": 1.4,
+            "avgPlusMinus": -4.6
           },
           {
             "name": "IAN SOLER MÉNDEZ",
             "dorsal": "8",
-            "gamesPlayed": 3,
-            "avgMinutes": 18.0,
-            "avgPoints": 2.7,
-            "avgT2m": 0.7,
-            "avgT3m": 0.3,
+            "gamesPlayed": 4,
+            "avgMinutes": 19.6,
+            "avgPoints": 3.2,
+            "avgT2m": 0.8,
+            "avgT3m": 0.5,
             "totalFtm": 1,
             "totalFta": 4,
             "ftPer": 25.0,
-            "avgFouls": 3.0,
-            "avgPlusMinus": -15.7
+            "avgFouls": 2.8,
+            "avgPlusMinus": -11.5
           },
           {
-            "name": "ALEX ROJAS TORRES",
-            "dorsal": "23",
-            "gamesPlayed": 2,
-            "avgMinutes": 12.5,
-            "avgPoints": 2.5,
-            "avgT2m": 0.5,
-            "avgT3m": 0.5,
-            "totalFtm": 0,
-            "totalFta": 2,
-            "ftPer": 0.0,
-            "avgFouls": 1.5,
-            "avgPlusMinus": -16.0
+            "name": "BIEL PRATS SOLER",
+            "dorsal": "9",
+            "gamesPlayed": 5,
+            "avgMinutes": 15.4,
+            "avgPoints": 3.0,
+            "avgT2m": 1.2,
+            "avgT3m": 0.0,
+            "totalFtm": 3,
+            "totalFta": 6,
+            "ftPer": 50.0,
+            "avgFouls": 3.4,
+            "avgPlusMinus": -7.6
           },
           {
             "name": "BIEL BORDA PARÉS",
             "dorsal": "17",
-            "gamesPlayed": 3,
-            "avgMinutes": 12.6,
-            "avgPoints": 2.3,
-            "avgT2m": 1.0,
+            "gamesPlayed": 4,
+            "avgMinutes": 11.2,
+            "avgPoints": 1.8,
+            "avgT2m": 0.8,
             "avgT3m": 0.0,
             "totalFtm": 1,
             "totalFta": 6,
             "ftPer": 16.7,
-            "avgFouls": 1.3,
-            "avgPlusMinus": -15.0
+            "avgFouls": 1.0,
+            "avgPlusMinus": -13.2
+          },
+          {
+            "name": "ALEX ROJAS TORRES",
+            "dorsal": "23",
+            "gamesPlayed": 3,
+            "avgMinutes": 8.4,
+            "avgPoints": 1.7,
+            "avgT2m": 0.3,
+            "avgT3m": 0.3,
+            "totalFtm": 0,
+            "totalFta": 2,
+            "ftPer": 0.0,
+            "avgFouls": 1.0,
+            "avgPlusMinus": -10.7
           },
           {
             "name": "ARTURO TOVSTANOVSKYY",
@@ -573,8 +590,28 @@
     "senior-b-masc": {
       "standings": [
         {
-          "teamId": "88834",
+          "teamId": "90421",
           "rank": "1",
+          "played": "6",
+          "won": "6",
+          "lost": "0",
+          "notPresented": "0",
+          "pointsFor": "453",
+          "pointsAgainst": "390",
+          "leaguePoints": "12",
+          "streak": [
+            "win",
+            "win",
+            "win",
+            "win",
+            "win"
+          ],
+          "name": "BC SANT JOAN DESPI B",
+          "isUs": false
+        },
+        {
+          "teamId": "88834",
+          "rank": "2",
           "played": "6",
           "won": "5",
           "lost": "1",
@@ -594,7 +631,7 @@
         },
         {
           "teamId": "90544",
-          "rank": "2",
+          "rank": "3",
           "played": "6",
           "won": "4",
           "lost": "2",
@@ -610,26 +647,6 @@
             "win"
           ],
           "name": "BASQUET LLOR",
-          "isUs": false
-        },
-        {
-          "teamId": "90421",
-          "rank": "3",
-          "played": "5",
-          "won": "5",
-          "lost": "0",
-          "notPresented": "0",
-          "pointsFor": "377",
-          "pointsAgainst": "323",
-          "leaguePoints": "10",
-          "streak": [
-            "win",
-            "win",
-            "win",
-            "win",
-            "loss"
-          ],
-          "name": "BC SANT JOAN DESPI B",
           "isUs": false
         },
         {
@@ -653,8 +670,28 @@
           "isUs": false
         },
         {
-          "teamId": "90475",
+          "teamId": "89028",
           "rank": "5",
+          "played": "6",
+          "won": "4",
+          "lost": "2",
+          "notPresented": "0",
+          "pointsFor": "402",
+          "pointsAgainst": "402",
+          "leaguePoints": "10",
+          "streak": [
+            "win",
+            "win",
+            "loss",
+            "win",
+            "win"
+          ],
+          "name": "ESCOLAPIS SARRIÀ B",
+          "isUs": false
+        },
+        {
+          "teamId": "90475",
+          "rank": "6",
           "played": "6",
           "won": "4",
           "lost": "2",
@@ -673,8 +710,28 @@
           "isUs": false
         },
         {
+          "teamId": "90300",
+          "rank": "7",
+          "played": "6",
+          "won": "3",
+          "lost": "3",
+          "notPresented": "0",
+          "pointsFor": "400",
+          "pointsAgainst": "409",
+          "leaguePoints": "9",
+          "streak": [
+            "win",
+            "win",
+            "loss",
+            "win",
+            "loss"
+          ],
+          "name": "C.E.B. PALLEJÀ - AEGAS",
+          "isUs": false
+        },
+        {
           "teamId": "89081",
-          "rank": "6",
+          "rank": "8",
           "played": "6",
           "won": "3",
           "lost": "3",
@@ -690,46 +747,6 @@
             "loss"
           ],
           "name": "AEEC CULTURAL BADALONA",
-          "isUs": false
-        },
-        {
-          "teamId": "89028",
-          "rank": "7",
-          "played": "5",
-          "won": "3",
-          "lost": "2",
-          "notPresented": "0",
-          "pointsFor": "329",
-          "pointsAgainst": "333",
-          "leaguePoints": "8",
-          "streak": [
-            "win",
-            "win",
-            "loss",
-            "win",
-            "loss"
-          ],
-          "name": "ESCOLAPIS SARRIÀ B",
-          "isUs": false
-        },
-        {
-          "teamId": "90300",
-          "rank": "8",
-          "played": "5",
-          "won": "3",
-          "lost": "2",
-          "notPresented": "0",
-          "pointsFor": "331",
-          "pointsAgainst": "336",
-          "leaguePoints": "8",
-          "streak": [
-            "win",
-            "win",
-            "loss",
-            "win",
-            "loss"
-          ],
-          "name": "C.E.B. PALLEJÀ - AEGAS",
           "isUs": false
         },
         {
@@ -793,8 +810,28 @@
           "isUs": false
         },
         {
-          "teamId": "90619",
+          "teamId": "89468",
           "rank": "12",
+          "played": "6",
+          "won": "1",
+          "lost": "5",
+          "notPresented": "0",
+          "pointsFor": "398",
+          "pointsAgainst": "430",
+          "leaguePoints": "7",
+          "streak": [
+            "loss",
+            "loss",
+            "win",
+            "loss",
+            "loss"
+          ],
+          "name": "BF CORNELLÀ - GPC",
+          "isUs": false
+        },
+        {
+          "teamId": "90619",
+          "rank": "13",
           "played": "6",
           "won": "1",
           "lost": "5",
@@ -810,26 +847,6 @@
             "loss"
           ],
           "name": "OPENLLAR VILÀBASQUET VILADECANS SMB",
-          "isUs": false
-        },
-        {
-          "teamId": "89468",
-          "rank": "13",
-          "played": "5",
-          "won": "1",
-          "lost": "4",
-          "notPresented": "0",
-          "pointsFor": "331",
-          "pointsAgainst": "354",
-          "leaguePoints": "6",
-          "streak": [
-            "loss",
-            "loss",
-            "win",
-            "loss",
-            "loss"
-          ],
-          "name": "BF CORNELLÀ - GPC",
           "isUs": false
         },
         {
@@ -853,7 +870,7 @@
           "isUs": false
         }
       ],
-      "standingsUpdatedAt": "2026-11-08T17:33:25.206362+01:00",
+      "standingsUpdatedAt": "2026-11-08T21:13:39.852701+01:00",
       "matchId": "8577",
       "date": "08/11/2026",
       "time": "12:45",
@@ -864,7 +881,7 @@
       "venueAddress": "AV. JOSEP TARRADELLAS 17",
       "ownStanding": {
         "teamId": "88834",
-        "rank": "1",
+        "rank": "2",
         "played": "6",
         "won": "5",
         "lost": "1",
@@ -882,7 +899,7 @@
       },
       "opponentStanding": {
         "teamId": "90619",
-        "rank": "12",
+        "rank": "13",
         "played": "6",
         "won": "1",
         "lost": "5",
@@ -1201,8 +1218,28 @@
     "senior-c-masc": {
       "standings": [
         {
-          "teamId": "89243",
+          "teamId": "89300",
           "rank": "1",
+          "played": "6",
+          "won": "6",
+          "lost": "0",
+          "notPresented": "0",
+          "pointsFor": "393",
+          "pointsAgainst": "308",
+          "leaguePoints": "12",
+          "streak": [
+            "win",
+            "win",
+            "win",
+            "win",
+            "win"
+          ],
+          "name": "U.E. GAUDI-FORUS SARDENYA BLANC",
+          "isUs": false
+        },
+        {
+          "teamId": "89243",
+          "rank": "2",
           "played": "6",
           "won": "5",
           "lost": "1",
@@ -1222,7 +1259,7 @@
         },
         {
           "teamId": "88652",
-          "rank": "2",
+          "rank": "3",
           "played": "6",
           "won": "5",
           "lost": "1",
@@ -1238,26 +1275,6 @@
             "win"
           ],
           "name": "CB JOVENTUT CASTELLDEFELS",
-          "isUs": false
-        },
-        {
-          "teamId": "89300",
-          "rank": "3",
-          "played": "5",
-          "won": "5",
-          "lost": "0",
-          "notPresented": "0",
-          "pointsFor": "334",
-          "pointsAgainst": "251",
-          "leaguePoints": "10",
-          "streak": [
-            "win",
-            "win",
-            "win",
-            "win",
-            "loss"
-          ],
-          "name": "U.E. GAUDI-FORUS SARDENYA BLANC",
           "isUs": false
         },
         {
@@ -1301,8 +1318,48 @@
           "isUs": false
         },
         {
-          "teamId": "90860",
+          "teamId": "88998",
           "rank": "6",
+          "played": "6",
+          "won": "3",
+          "lost": "3",
+          "notPresented": "0",
+          "pointsFor": "377",
+          "pointsAgainst": "353",
+          "leaguePoints": "9",
+          "streak": [
+            "loss",
+            "loss",
+            "loss",
+            "win",
+            "win"
+          ],
+          "name": "ADE FUSTER",
+          "isUs": false
+        },
+        {
+          "teamId": "90652",
+          "rank": "7",
+          "played": "6",
+          "won": "3",
+          "lost": "3",
+          "notPresented": "0",
+          "pointsFor": "369",
+          "pointsAgainst": "361",
+          "leaguePoints": "9",
+          "streak": [
+            "win",
+            "win",
+            "win",
+            "loss",
+            "loss"
+          ],
+          "name": "BASKET ESPLUGUES A",
+          "isUs": false
+        },
+        {
+          "teamId": "90860",
+          "rank": "8",
           "played": "6",
           "won": "3",
           "lost": "3",
@@ -1321,28 +1378,8 @@
           "isUs": false
         },
         {
-          "teamId": "90652",
-          "rank": "7",
-          "played": "5",
-          "won": "3",
-          "lost": "2",
-          "notPresented": "0",
-          "pointsFor": "312",
-          "pointsAgainst": "302",
-          "leaguePoints": "8",
-          "streak": [
-            "win",
-            "win",
-            "win",
-            "loss",
-            "loss"
-          ],
-          "name": "BASKET ESPLUGUES A",
-          "isUs": false
-        },
-        {
           "teamId": "89390",
-          "rank": "8",
+          "rank": "9",
           "played": "6",
           "won": "2",
           "lost": "4",
@@ -1358,26 +1395,6 @@
             "loss"
           ],
           "name": "CB PEDAGOGIUM",
-          "isUs": false
-        },
-        {
-          "teamId": "88998",
-          "rank": "9",
-          "played": "5",
-          "won": "2",
-          "lost": "3",
-          "notPresented": "0",
-          "pointsFor": "308",
-          "pointsAgainst": "301",
-          "leaguePoints": "7",
-          "streak": [
-            "loss",
-            "loss",
-            "loss",
-            "win",
-            "loss"
-          ],
-          "name": "ADE FUSTER",
           "isUs": false
         },
         {
@@ -1401,35 +1418,15 @@
           "isUs": false
         },
         {
-          "teamId": "91292",
-          "rank": "11",
-          "played": "4",
-          "won": "2",
-          "lost": "2",
-          "notPresented": "0",
-          "pointsFor": "170",
-          "pointsAgainst": "210",
-          "leaguePoints": "6",
-          "streak": [
-            "loss",
-            "loss",
-            "loss",
-            "win",
-            "loss"
-          ],
-          "name": "MVP CERVELLO BLAU",
-          "isUs": false
-        },
-        {
           "teamId": "90277",
-          "rank": "12",
-          "played": "5",
+          "rank": "11",
+          "played": "6",
           "won": "1",
-          "lost": "4",
+          "lost": "5",
           "notPresented": "0",
-          "pointsFor": "325",
-          "pointsAgainst": "368",
-          "leaguePoints": "6",
+          "pointsFor": "385",
+          "pointsAgainst": "438",
+          "leaguePoints": "7",
           "streak": [
             "loss",
             "win",
@@ -1441,8 +1438,48 @@
           "isUs": false
         },
         {
-          "teamId": "91188",
+          "teamId": "91292",
+          "rank": "12",
+          "played": "5",
+          "won": "2",
+          "lost": "3",
+          "notPresented": "0",
+          "pointsFor": "222",
+          "pointsAgainst": "279",
+          "leaguePoints": "7",
+          "streak": [
+            "loss",
+            "loss",
+            "loss",
+            "win",
+            "loss"
+          ],
+          "name": "MVP CERVELLO BLAU",
+          "isUs": false
+        },
+        {
+          "teamId": "88832",
           "rank": "13",
+          "played": "6",
+          "won": "1",
+          "lost": "5",
+          "notPresented": "0",
+          "pointsFor": "307",
+          "pointsAgainst": "381",
+          "leaguePoints": "7",
+          "streak": [
+            "loss",
+            "loss",
+            "loss",
+            "loss",
+            "win"
+          ],
+          "name": "A.E. BADALONÈS - PINTURAS CORBACHO",
+          "isUs": true
+        },
+        {
+          "teamId": "91188",
+          "rank": "14",
           "played": "6",
           "won": "0",
           "lost": "6",
@@ -1459,29 +1496,9 @@
           ],
           "name": "A.BÀSQUET BUFALÀ",
           "isUs": false
-        },
-        {
-          "teamId": "88832",
-          "rank": "14",
-          "played": "5",
-          "won": "0",
-          "lost": "5",
-          "notPresented": "0",
-          "pointsFor": "237",
-          "pointsAgainst": "321",
-          "leaguePoints": "5",
-          "streak": [
-            "loss",
-            "loss",
-            "loss",
-            "loss",
-            "loss"
-          ],
-          "name": "A.E. BADALONÈS - PINTURAS CORBACHO",
-          "isUs": true
         }
       ],
-      "standingsUpdatedAt": "2026-11-08T17:34:33.897716+01:00",
+      "standingsUpdatedAt": "2026-11-08T21:13:57.614785+01:00",
       "matchId": "10215",
       "date": "08/11/2026",
       "time": "18:15",
@@ -1492,32 +1509,32 @@
       "venueAddress": "DELS ESPORTS, S/N",
       "ownStanding": {
         "teamId": "88832",
-        "rank": "14",
-        "played": "5",
-        "won": "0",
+        "rank": "13",
+        "played": "6",
+        "won": "1",
         "lost": "5",
         "notPresented": "0",
-        "pointsFor": "237",
-        "pointsAgainst": "321",
-        "leaguePoints": "5",
+        "pointsFor": "307",
+        "pointsAgainst": "381",
+        "leaguePoints": "7",
         "streak": [
           "loss",
           "loss",
           "loss",
           "loss",
-          "loss"
+          "win"
         ]
       },
       "opponentStanding": {
         "teamId": "90277",
-        "rank": "12",
-        "played": "5",
+        "rank": "11",
+        "played": "6",
         "won": "1",
-        "lost": "4",
+        "lost": "5",
         "notPresented": "0",
-        "pointsFor": "325",
-        "pointsAgainst": "368",
-        "leaguePoints": "6",
+        "pointsFor": "385",
+        "pointsAgainst": "438",
+        "leaguePoints": "7",
         "streak": [
           "loss",
           "win",
@@ -1526,21 +1543,38 @@
           "loss"
         ]
       },
+      "opponentTopScorers": [
+        {
+          "name": "ALBERT SANCHEZ LOPEZ",
+          "dorsal": "3",
+          "points": 21
+        },
+        {
+          "name": "ORIOL VALERO POYO",
+          "dorsal": "7",
+          "points": 8
+        },
+        {
+          "name": "GUILLERMO CHARRO MOYA",
+          "dorsal": "24",
+          "points": 7
+        }
+      ],
       "opponentSeason": {
         "season": "2026-2027",
         "category": "2A. TERRITORIAL SÈNIOR MASCULÍ",
         "venueName": "PAVELLO JAUME VIÑAS PI",
-        "gamesPlayed": 6,
+        "gamesPlayed": 7,
         "wins": 1,
-        "losses": 4,
-        "avgPointsFor": 54.2,
-        "avgPointsAgainst": 61.3,
+        "losses": 5,
+        "avgPointsFor": 55.0,
+        "avgPointsAgainst": 62.6,
         "topScorers": [
           {
             "name": "ALBERT SANCHEZ LOPEZ",
             "dorsal": "3",
-            "gamesPlayed": 5,
-            "avgPoints": 12.4
+            "gamesPlayed": 6,
+            "avgPoints": 13.8
           },
           {
             "name": "PAU HURTADO NIUBÒ",
@@ -1551,14 +1585,14 @@
           {
             "name": "GUILLERMO CHARRO MOYA",
             "dorsal": "24",
-            "gamesPlayed": 3,
-            "avgPoints": 10.3
+            "gamesPlayed": 4,
+            "avgPoints": 9.5
           },
           {
             "name": "JOAN BRUACH FRESNO",
             "dorsal": "10",
-            "gamesPlayed": 5,
-            "avgPoints": 9.4
+            "gamesPlayed": 6,
+            "avgPoints": 8.5
           },
           {
             "name": "HECTOR BERMEJO BAÑOS",
@@ -1571,16 +1605,16 @@
           {
             "name": "ALBERT SANCHEZ LOPEZ",
             "dorsal": "3",
-            "gamesPlayed": 5,
-            "avgMinutes": 20.2,
-            "avgPoints": 12.4,
-            "avgT2m": 2.4,
-            "avgT3m": 2.2,
-            "totalFtm": 5,
-            "totalFta": 10,
-            "ftPer": 50.0,
-            "avgFouls": 1.4,
-            "avgPlusMinus": 1.0
+            "gamesPlayed": 6,
+            "avgMinutes": 21.9,
+            "avgPoints": 13.8,
+            "avgT2m": 2.5,
+            "avgT3m": 2.5,
+            "totalFtm": 8,
+            "totalFta": 14,
+            "ftPer": 57.1,
+            "avgFouls": 1.7,
+            "avgPlusMinus": -0.2
           },
           {
             "name": "PAU HURTADO NIUBÒ",
@@ -1599,30 +1633,30 @@
           {
             "name": "GUILLERMO CHARRO MOYA",
             "dorsal": "24",
-            "gamesPlayed": 3,
-            "avgMinutes": 24.8,
-            "avgPoints": 10.3,
-            "avgT2m": 4.7,
+            "gamesPlayed": 4,
+            "avgMinutes": 24.2,
+            "avgPoints": 9.5,
+            "avgT2m": 4.2,
             "avgT3m": 0.0,
-            "totalFtm": 3,
-            "totalFta": 18,
-            "ftPer": 16.7,
-            "avgFouls": 1.3,
-            "avgPlusMinus": -6.3
+            "totalFtm": 4,
+            "totalFta": 21,
+            "ftPer": 19.0,
+            "avgFouls": 2.0,
+            "avgPlusMinus": -6.8
           },
           {
             "name": "JOAN BRUACH FRESNO",
             "dorsal": "10",
-            "gamesPlayed": 5,
-            "avgMinutes": 27.0,
-            "avgPoints": 9.4,
+            "gamesPlayed": 6,
+            "avgMinutes": 27.9,
+            "avgPoints": 8.5,
             "avgT2m": 2.0,
-            "avgT3m": 0.4,
+            "avgT3m": 0.3,
             "totalFtm": 21,
-            "totalFta": 30,
-            "ftPer": 70.0,
-            "avgFouls": 3.4,
-            "avgPlusMinus": -7.6
+            "totalFta": 32,
+            "ftPer": 65.6,
+            "avgFouls": 3.3,
+            "avgPlusMinus": -7.0
           },
           {
             "name": "HECTOR BERMEJO BAÑOS",
@@ -1641,86 +1675,86 @@
           {
             "name": "ORIOL VALERO POYO",
             "dorsal": "7",
-            "gamesPlayed": 4,
-            "avgMinutes": 15.7,
-            "avgPoints": 5.2,
-            "avgT2m": 1.5,
-            "avgT3m": 0.8,
-            "totalFtm": 0,
-            "totalFta": 2,
-            "ftPer": 0.0,
-            "avgFouls": 0.5,
-            "avgPlusMinus": -12.8
-          },
-          {
-            "name": "ADRIA OLIVER LOPEZ",
-            "dorsal": "8",
-            "gamesPlayed": 4,
-            "avgMinutes": 27.3,
-            "avgPoints": 4.5,
-            "avgT2m": 1.0,
-            "avgT3m": 0.8,
-            "totalFtm": 1,
-            "totalFta": 5,
-            "ftPer": 20.0,
-            "avgFouls": 2.8,
-            "avgPlusMinus": -7.2
-          },
-          {
-            "name": "ROGER LOPEZ ORTIZ",
-            "dorsal": "1",
             "gamesPlayed": 5,
-            "avgMinutes": 14.3,
-            "avgPoints": 4.0,
-            "avgT2m": 1.4,
-            "avgT3m": 0.2,
-            "totalFtm": 3,
-            "totalFta": 8,
-            "ftPer": 37.5,
-            "avgFouls": 1.8,
-            "avgPlusMinus": 0.0
+            "avgMinutes": 16.3,
+            "avgPoints": 5.8,
+            "avgT2m": 1.8,
+            "avgT3m": 0.6,
+            "totalFtm": 2,
+            "totalFta": 6,
+            "ftPer": 33.3,
+            "avgFouls": 1.2,
+            "avgPlusMinus": -10.2
           },
           {
             "name": "GUILLEM DE DIOS GRANE",
             "dorsal": "15",
-            "gamesPlayed": 1,
-            "avgMinutes": 7.1,
+            "gamesPlayed": 2,
+            "avgMinutes": 13.2,
+            "avgPoints": 5.0,
+            "avgT2m": 1.5,
+            "avgT3m": 0.5,
+            "totalFtm": 1,
+            "totalFta": 2,
+            "ftPer": 50.0,
+            "avgFouls": 2.0,
+            "avgPlusMinus": -7.0
+          },
+          {
+            "name": "ADRIA OLIVER LOPEZ",
+            "dorsal": "8",
+            "gamesPlayed": 5,
+            "avgMinutes": 25.4,
             "avgPoints": 4.0,
-            "avgT2m": 2.0,
+            "avgT2m": 1.0,
+            "avgT3m": 0.6,
+            "totalFtm": 1,
+            "totalFta": 5,
+            "ftPer": 20.0,
+            "avgFouls": 2.8,
+            "avgPlusMinus": -6.4
+          },
+          {
+            "name": "ROGER LOPEZ ORTIZ",
+            "dorsal": "1",
+            "gamesPlayed": 6,
+            "avgMinutes": 14.0,
+            "avgPoints": 3.8,
+            "avgT2m": 1.2,
+            "avgT3m": 0.3,
+            "totalFtm": 3,
+            "totalFta": 8,
+            "ftPer": 37.5,
+            "avgFouls": 2.2,
+            "avgPlusMinus": -0.3
+          },
+          {
+            "name": "LEONARDO MARTIN SACCO ALAIMO",
+            "dorsal": "99",
+            "gamesPlayed": 5,
+            "avgMinutes": 10.9,
+            "avgPoints": 3.0,
+            "avgT2m": 1.0,
             "avgT3m": 0.0,
-            "totalFtm": 0,
-            "totalFta": 0,
-            "ftPer": 0.0,
-            "avgFouls": 1.0,
+            "totalFtm": 5,
+            "totalFta": 8,
+            "ftPer": 62.5,
+            "avgFouls": 3.8,
             "avgPlusMinus": -6.0
           },
           {
             "name": "LLUÍS ALFARO MELERO",
             "dorsal": "13",
-            "gamesPlayed": 4,
-            "avgMinutes": 15.2,
-            "avgPoints": 2.8,
+            "gamesPlayed": 5,
+            "avgMinutes": 14.3,
+            "avgPoints": 2.6,
             "avgT2m": 0.8,
             "avgT3m": 0.2,
             "totalFtm": 2,
             "totalFta": 4,
             "ftPer": 50.0,
-            "avgFouls": 2.8,
-            "avgPlusMinus": -5.0
-          },
-          {
-            "name": "LEONARDO MARTIN SACCO ALAIMO",
-            "dorsal": "99",
-            "gamesPlayed": 4,
-            "avgMinutes": 10.4,
-            "avgPoints": 2.5,
-            "avgT2m": 1.2,
-            "avgT3m": 0.0,
-            "totalFtm": 0,
-            "totalFta": 2,
-            "ftPer": 0.0,
-            "avgFouls": 3.5,
-            "avgPlusMinus": -6.5
+            "avgFouls": 2.2,
+            "avgPlusMinus": -5.4
           },
           {
             "name": "PAUL PALACIOS ANDUJAR",
@@ -1739,30 +1773,44 @@
           {
             "name": "JOEL TORREBADELLA BULTA",
             "dorsal": "15",
-            "gamesPlayed": 4,
-            "avgMinutes": 10.7,
-            "avgPoints": 2.0,
-            "avgT2m": 1.0,
+            "gamesPlayed": 5,
+            "avgMinutes": 9.8,
+            "avgPoints": 1.6,
+            "avgT2m": 0.8,
             "avgT3m": 0.0,
             "totalFtm": 0,
             "totalFta": 0,
             "ftPer": 0.0,
-            "avgFouls": 2.2,
-            "avgPlusMinus": 2.2
+            "avgFouls": 1.8,
+            "avgPlusMinus": 1.0
           },
           {
             "name": "ORIOL CAÑETE VARGAS",
             "dorsal": "32",
-            "gamesPlayed": 3,
-            "avgMinutes": 9.9,
-            "avgPoints": 1.3,
-            "avgT2m": 0.7,
+            "gamesPlayed": 4,
+            "avgMinutes": 9.4,
+            "avgPoints": 1.0,
+            "avgT2m": 0.5,
             "avgT3m": 0.0,
             "totalFtm": 0,
             "totalFta": 0,
             "ftPer": 0.0,
-            "avgFouls": 0.7,
-            "avgPlusMinus": 2.0
+            "avgFouls": 0.5,
+            "avgPlusMinus": 0.0
+          },
+          {
+            "name": "ALEX HITA FERNANDEZ",
+            "dorsal": "97",
+            "gamesPlayed": 4,
+            "avgMinutes": 5.4,
+            "avgPoints": 0.5,
+            "avgT2m": 0.2,
+            "avgT3m": 0.0,
+            "totalFtm": 0,
+            "totalFta": 0,
+            "ftPer": 0.0,
+            "avgFouls": 0.5,
+            "avgPlusMinus": -5.2
           },
           {
             "name": "BIEL MASANA PEREZ",
@@ -1777,20 +1825,6 @@
             "ftPer": 0.0,
             "avgFouls": 1.5,
             "avgPlusMinus": -7.5
-          },
-          {
-            "name": "ALEX HITA FERNANDEZ",
-            "dorsal": "97",
-            "gamesPlayed": 3,
-            "avgMinutes": 4.5,
-            "avgPoints": 0.0,
-            "avgT2m": 0.0,
-            "avgT3m": 0.0,
-            "totalFtm": 0,
-            "totalFta": 0,
-            "ftPer": 0.0,
-            "avgFouls": 0.7,
-            "avgPlusMinus": -7.7
           }
         ]
       }
@@ -1798,8 +1832,68 @@
     "u25-masc": {
       "standings": [
         {
-          "teamId": "89069",
+          "teamId": "90602",
           "rank": "1",
+          "played": "6",
+          "won": "4",
+          "lost": "2",
+          "notPresented": "0",
+          "pointsFor": "398",
+          "pointsAgainst": "342",
+          "leaguePoints": "10",
+          "streak": [
+            "win",
+            "loss",
+            "win",
+            "win",
+            "win"
+          ],
+          "name": "BASQUET NEUS",
+          "isUs": false
+        },
+        {
+          "teamId": "88852",
+          "rank": "2",
+          "played": "5",
+          "won": "4",
+          "lost": "1",
+          "notPresented": "0",
+          "pointsFor": "326",
+          "pointsAgainst": "255",
+          "leaguePoints": "9",
+          "streak": [
+            "win",
+            "win",
+            "win",
+            "win",
+            "loss"
+          ],
+          "name": "C.E.LAIETÀ - ASCENSORES ENINTER - B",
+          "isUs": false
+        },
+        {
+          "teamId": "92378",
+          "rank": "3",
+          "played": "5",
+          "won": "4",
+          "lost": "1",
+          "notPresented": "0",
+          "pointsFor": "355",
+          "pointsAgainst": "304",
+          "leaguePoints": "9",
+          "streak": [
+            "loss",
+            "win",
+            "win",
+            "win",
+            "win"
+          ],
+          "name": "CB VILA DE MONTORNÈS",
+          "isUs": false
+        },
+        {
+          "teamId": "89069",
+          "rank": "4",
           "played": "6",
           "won": "3",
           "lost": "3",
@@ -1818,68 +1912,28 @@
           "isUs": false
         },
         {
-          "teamId": "88852",
-          "rank": "2",
-          "played": "4",
-          "won": "4",
-          "lost": "0",
-          "notPresented": "0",
-          "pointsFor": "273",
-          "pointsAgainst": "187",
-          "leaguePoints": "8",
-          "streak": [
-            "win",
-            "win",
-            "win",
-            "win",
-            "loss"
-          ],
-          "name": "C.E.LAIETÀ - ASCENSORES ENINTER - B",
-          "isUs": false
-        },
-        {
-          "teamId": "90602",
-          "rank": "3",
+          "teamId": "88830",
+          "rank": "5",
           "played": "5",
           "won": "3",
           "lost": "2",
           "notPresented": "0",
-          "pointsFor": "338",
-          "pointsAgainst": "303",
+          "pointsFor": "319",
+          "pointsAgainst": "322",
           "leaguePoints": "8",
           "streak": [
-            "win",
             "loss",
             "win",
             "win",
-            "loss"
-          ],
-          "name": "BASQUET NEUS",
-          "isUs": false
-        },
-        {
-          "teamId": "92378",
-          "rank": "4",
-          "played": "4",
-          "won": "3",
-          "lost": "1",
-          "notPresented": "0",
-          "pointsFor": "290",
-          "pointsAgainst": "242",
-          "leaguePoints": "7",
-          "streak": [
             "loss",
-            "win",
-            "win",
-            "win",
             "loss"
           ],
-          "name": "CB VILA DE MONTORNÈS",
-          "isUs": false
+          "name": "A.E. BADALONÈS - PINTURAS CORBACHO",
+          "isUs": true
         },
         {
           "teamId": "89494",
-          "rank": "5",
+          "rank": "6",
           "played": "4",
           "won": "3",
           "lost": "1",
@@ -1899,7 +1953,7 @@
         },
         {
           "teamId": "88857",
-          "rank": "6",
+          "rank": "7",
           "played": "4",
           "won": "3",
           "lost": "1",
@@ -1918,28 +1972,28 @@
           "isUs": false
         },
         {
-          "teamId": "88830",
-          "rank": "7",
+          "teamId": "90419",
+          "rank": "8",
           "played": "4",
           "won": "3",
           "lost": "1",
           "notPresented": "0",
-          "pointsFor": "257",
-          "pointsAgainst": "257",
+          "pointsFor": "270",
+          "pointsAgainst": "250",
           "leaguePoints": "7",
           "streak": [
-            "loss",
-            "win",
             "win",
             "loss",
-            "loss"
+            "loss",
+            "win",
+            "win"
           ],
-          "name": "A.E. BADALONÈS - PINTURAS CORBACHO",
-          "isUs": true
+          "name": "BC SANT JOAN DESPI C",
+          "isUs": false
         },
         {
           "teamId": "91187",
-          "rank": "8",
+          "rank": "9",
           "played": "5",
           "won": "2",
           "lost": "3",
@@ -1958,8 +2012,28 @@
           "isUs": false
         },
         {
+          "teamId": "89000",
+          "rank": "10",
+          "played": "6",
+          "won": "1",
+          "lost": "5",
+          "notPresented": "0",
+          "pointsFor": "322",
+          "pointsAgainst": "369",
+          "leaguePoints": "7",
+          "streak": [
+            "win",
+            "loss",
+            "loss",
+            "loss",
+            "loss"
+          ],
+          "name": "ADE FUSTER",
+          "isUs": false
+        },
+        {
           "teamId": "89526",
-          "rank": "9",
+          "rank": "11",
           "played": "4",
           "won": "2",
           "lost": "2",
@@ -1975,46 +2049,6 @@
             "win"
           ],
           "name": "AB PREMIÀ",
-          "isUs": false
-        },
-        {
-          "teamId": "89000",
-          "rank": "10",
-          "played": "5",
-          "won": "1",
-          "lost": "4",
-          "notPresented": "0",
-          "pointsFor": "283",
-          "pointsAgainst": "309",
-          "leaguePoints": "6",
-          "streak": [
-            "win",
-            "loss",
-            "loss",
-            "loss",
-            "loss"
-          ],
-          "name": "ADE FUSTER",
-          "isUs": false
-        },
-        {
-          "teamId": "90419",
-          "rank": "11",
-          "played": "3",
-          "won": "2",
-          "lost": "1",
-          "notPresented": "0",
-          "pointsFor": "202",
-          "pointsAgainst": "197",
-          "leaguePoints": "5",
-          "streak": [
-            "win",
-            "loss",
-            "loss",
-            "win",
-            "loss"
-          ],
-          "name": "BC SANT JOAN DESPI C",
           "isUs": false
         },
         {
@@ -2058,7 +2092,7 @@
           "isUs": false
         }
       ],
-      "standingsUpdatedAt": "2026-11-08T17:35:11.953988+01:00",
+      "standingsUpdatedAt": "2026-11-08T21:14:15.640236+01:00",
       "matchId": "10574",
       "date": "08/11/2026",
       "time": "17:45",
@@ -2069,14 +2103,14 @@
       "venueAddress": "C/ CASTANYERS 5",
       "ownStanding": {
         "teamId": "88830",
-        "rank": "7",
-        "played": "4",
+        "rank": "5",
+        "played": "5",
         "won": "3",
-        "lost": "1",
+        "lost": "2",
         "notPresented": "0",
-        "pointsFor": "257",
-        "pointsAgainst": "257",
-        "leaguePoints": "7",
+        "pointsFor": "319",
+        "pointsAgainst": "322",
+        "leaguePoints": "8",
         "streak": [
           "loss",
           "win",
@@ -2087,133 +2121,164 @@
       },
       "opponentStanding": {
         "teamId": "92378",
-        "rank": "4",
-        "played": "4",
-        "won": "3",
+        "rank": "3",
+        "played": "5",
+        "won": "4",
         "lost": "1",
         "notPresented": "0",
-        "pointsFor": "290",
-        "pointsAgainst": "242",
-        "leaguePoints": "7",
+        "pointsFor": "355",
+        "pointsAgainst": "304",
+        "leaguePoints": "9",
         "streak": [
           "loss",
           "win",
           "win",
           "win",
-          "loss"
+          "win"
         ]
       },
+      "opponentTopScorers": [
+        {
+          "name": "POL BERMEJO SÁNCHEZ",
+          "dorsal": "80",
+          "points": 22
+        },
+        {
+          "name": "XAVIER ESPIN MALDONADO",
+          "dorsal": "5",
+          "points": 20
+        },
+        {
+          "name": "FERNANDO BLANCO FERNANDEZ",
+          "dorsal": "90",
+          "points": 9
+        }
+      ],
       "opponentSeason": {
         "season": "2026-2027",
         "category": "C.C. SOTS-25 MASCULÍ NIVELL A",
         "venueName": "PAVELLO D'ESPORTS DE MONTORNES",
-        "gamesPlayed": 4,
-        "wins": 3,
+        "gamesPlayed": 5,
+        "wins": 4,
         "losses": 1,
-        "avgPointsFor": 72.5,
-        "avgPointsAgainst": 60.5,
+        "avgPointsFor": 71.0,
+        "avgPointsAgainst": 60.8,
         "topScorers": [
           {
             "name": "FERNANDO BLANCO FERNANDEZ",
             "dorsal": "90",
-            "gamesPlayed": 4,
-            "avgPoints": 20.8
+            "gamesPlayed": 5,
+            "avgPoints": 18.4
           },
           {
             "name": "POL BERMEJO SÁNCHEZ",
             "dorsal": "6",
-            "gamesPlayed": 4,
-            "avgPoints": 16.5
+            "gamesPlayed": 5,
+            "avgPoints": 17.6
           },
           {
             "name": "XAVIER ESPIN MALDONADO",
             "dorsal": "5",
-            "gamesPlayed": 4,
-            "avgPoints": 16.0
-          },
-          {
-            "name": "JULIAN PERUCHA HERNANDEZ",
-            "dorsal": "46",
-            "gamesPlayed": 3,
-            "avgPoints": 6.3
+            "gamesPlayed": 5,
+            "avgPoints": 16.8
           },
           {
             "name": "ERIC SANCHEZ CARREIRA",
             "dorsal": "28",
+            "gamesPlayed": 5,
+            "avgPoints": 6.0
+          },
+          {
+            "name": "JULIAN PERUCHA HERNANDEZ",
+            "dorsal": "46",
             "gamesPlayed": 4,
-            "avgPoints": 6.2
+            "avgPoints": 5.8
           }
         ],
         "roster": [
           {
             "name": "FERNANDO BLANCO FERNANDEZ",
             "dorsal": "90",
-            "gamesPlayed": 4,
-            "avgMinutes": 32.8,
-            "avgPoints": 20.8,
-            "avgT2m": 8.2,
+            "gamesPlayed": 5,
+            "avgMinutes": 32.3,
+            "avgPoints": 18.4,
+            "avgT2m": 7.4,
             "avgT3m": 0.0,
-            "totalFtm": 17,
-            "totalFta": 26,
-            "ftPer": 65.4,
-            "avgFouls": 2.2,
-            "avgPlusMinus": 20.8
+            "totalFtm": 18,
+            "totalFta": 28,
+            "ftPer": 64.3,
+            "avgFouls": 2.4,
+            "avgPlusMinus": 17.2
           },
           {
             "name": "POL BERMEJO SÁNCHEZ",
             "dorsal": "6",
-            "gamesPlayed": 4,
-            "avgMinutes": 29.9,
-            "avgPoints": 16.5,
+            "gamesPlayed": 5,
+            "avgMinutes": 30.8,
+            "avgPoints": 17.6,
             "avgT2m": 4.8,
             "avgT3m": 1.0,
-            "totalFtm": 16,
-            "totalFta": 25,
-            "ftPer": 64.0,
-            "avgFouls": 2.5,
-            "avgPlusMinus": 5.5
+            "totalFtm": 25,
+            "totalFta": 40,
+            "ftPer": 62.5,
+            "avgFouls": 2.6,
+            "avgPlusMinus": 4.0
           },
           {
             "name": "XAVIER ESPIN MALDONADO",
             "dorsal": "5",
-            "gamesPlayed": 4,
-            "avgMinutes": 35.8,
-            "avgPoints": 16.0,
-            "avgT2m": 2.8,
-            "avgT3m": 2.5,
-            "totalFtm": 12,
-            "totalFta": 19,
-            "ftPer": 63.2,
-            "avgFouls": 3.5,
-            "avgPlusMinus": 13.5
-          },
-          {
-            "name": "JULIAN PERUCHA HERNANDEZ",
-            "dorsal": "46",
-            "gamesPlayed": 3,
-            "avgMinutes": 24.2,
-            "avgPoints": 6.3,
-            "avgT2m": 2.7,
-            "avgT3m": 0.0,
-            "totalFtm": 3,
-            "totalFta": 6,
-            "ftPer": 50.0,
-            "avgFouls": 3.7,
-            "avgPlusMinus": 4.0
+            "gamesPlayed": 5,
+            "avgMinutes": 33.7,
+            "avgPoints": 16.8,
+            "avgT2m": 3.0,
+            "avgT3m": 2.6,
+            "totalFtm": 15,
+            "totalFta": 22,
+            "ftPer": 68.2,
+            "avgFouls": 3.8,
+            "avgPlusMinus": 13.8
           },
           {
             "name": "ERIC SANCHEZ CARREIRA",
             "dorsal": "28",
-            "gamesPlayed": 4,
-            "avgMinutes": 38.4,
-            "avgPoints": 6.2,
-            "avgT2m": 0.5,
-            "avgT3m": 1.5,
+            "gamesPlayed": 5,
+            "avgMinutes": 35.5,
+            "avgPoints": 6.0,
+            "avgT2m": 0.6,
+            "avgT3m": 1.4,
             "totalFtm": 3,
             "totalFta": 8,
             "ftPer": 37.5,
-            "avgFouls": 2.5,
-            "avgPlusMinus": 12.0
+            "avgFouls": 3.0,
+            "avgPlusMinus": 12.6
+          },
+          {
+            "name": "JULIAN PERUCHA HERNANDEZ",
+            "dorsal": "46",
+            "gamesPlayed": 4,
+            "avgMinutes": 26.6,
+            "avgPoints": 5.8,
+            "avgT2m": 2.5,
+            "avgT3m": 0.0,
+            "totalFtm": 3,
+            "totalFta": 8,
+            "ftPer": 37.5,
+            "avgFouls": 3.5,
+            "avgPlusMinus": 2.8
+          },
+          {
+            "name": "AITOR SANCHEZ BALBOA",
+            "dorsal": "11",
+            "gamesPlayed": 5,
+            "avgMinutes": 18.8,
+            "avgPoints": 3.6,
+            "avgT2m": 1.4,
+            "avgT3m": 0.2,
+            "totalFtm": 1,
+            "totalFta": 6,
+            "ftPer": 16.7,
+            "avgFouls": 2.2,
+            "avgPlusMinus": 6.4
           },
           {
             "name": "BJBAKARIY DEMBAGA SUSOKO",
@@ -2230,52 +2295,38 @@
             "avgPlusMinus": -1.5
           },
           {
-            "name": "AITOR SANCHEZ BALBOA",
-            "dorsal": "11",
-            "gamesPlayed": 4,
-            "avgMinutes": 19.2,
-            "avgPoints": 3.2,
-            "avgT2m": 1.2,
-            "avgT3m": 0.2,
-            "totalFtm": 0,
-            "totalFta": 2,
-            "ftPer": 0.0,
-            "avgFouls": 2.0,
-            "avgPlusMinus": 6.8
-          },
-          {
             "name": "CHARAF EDDINE HDIA",
             "dorsal": "2",
-            "gamesPlayed": 4,
-            "avgMinutes": 4.7,
-            "avgPoints": 2.0,
-            "avgT2m": 0.5,
+            "gamesPlayed": 5,
+            "avgMinutes": 4.4,
+            "avgPoints": 1.6,
+            "avgT2m": 0.4,
             "avgT3m": 0.2,
             "totalFtm": 1,
             "totalFta": 2,
             "ftPer": 50.0,
-            "avgFouls": 0.5,
-            "avgPlusMinus": 7.0
+            "avgFouls": 0.4,
+            "avgPlusMinus": 6.2
           },
           {
             "name": "JOAN PUIG NUÑEZ",
             "dorsal": "3",
-            "gamesPlayed": 3,
-            "avgMinutes": 8.5,
-            "avgPoints": 1.7,
-            "avgT2m": 0.3,
-            "avgT3m": 0.3,
+            "gamesPlayed": 4,
+            "avgMinutes": 12.0,
+            "avgPoints": 1.2,
+            "avgT2m": 0.2,
+            "avgT3m": 0.2,
             "totalFtm": 0,
             "totalFta": 0,
             "ftPer": 0.0,
-            "avgFouls": 0.3,
-            "avgPlusMinus": -5.7
+            "avgFouls": 0.5,
+            "avgPlusMinus": -6.8
           },
           {
             "name": "MARCEL PEREZ PALACIOS",
             "dorsal": "22",
-            "gamesPlayed": 1,
-            "avgMinutes": 2.5,
+            "gamesPlayed": 2,
+            "avgMinutes": 2.4,
             "avgPoints": 0.0,
             "avgT2m": 0.0,
             "avgT3m": 0.0,
@@ -2283,7 +2334,21 @@
             "totalFta": 0,
             "ftPer": 0.0,
             "avgFouls": 0.0,
-            "avgPlusMinus": -4.0
+            "avgPlusMinus": -4.5
+          },
+          {
+            "name": "ISMAEL SANCHEZ GRANDA",
+            "dorsal": "12",
+            "gamesPlayed": 1,
+            "avgMinutes": 7.6,
+            "avgPoints": 0.0,
+            "avgT2m": 0.0,
+            "avgT3m": 0.0,
+            "totalFtm": 0,
+            "totalFta": 0,
+            "ftPer": 0.0,
+            "avgFouls": 2.0,
+            "avgPlusMinus": -8.0
           },
           {
             "name": "PAU SANCHEZ CARREIRA",
@@ -2305,8 +2370,48 @@
     "u20-masc": {
       "standings": [
         {
-          "teamId": "89873",
+          "teamId": "89448",
           "rank": "1",
+          "played": "6",
+          "won": "5",
+          "lost": "1",
+          "notPresented": "0",
+          "pointsFor": "425",
+          "pointsAgainst": "313",
+          "leaguePoints": "11",
+          "streak": [
+            "win",
+            "win",
+            "win",
+            "loss",
+            "win"
+          ],
+          "name": "UB SANT ADRIA",
+          "isUs": false
+        },
+        {
+          "teamId": "93286",
+          "rank": "2",
+          "played": "6",
+          "won": "4",
+          "lost": "2",
+          "notPresented": "0",
+          "pointsFor": "392",
+          "pointsAgainst": "323",
+          "leaguePoints": "10",
+          "streak": [
+            "loss",
+            "loss",
+            "win",
+            "win",
+            "win"
+          ],
+          "name": "U.E. CLARET C",
+          "isUs": false
+        },
+        {
+          "teamId": "89873",
+          "rank": "3",
           "played": "6",
           "won": "4",
           "lost": "2",
@@ -2325,28 +2430,8 @@
           "isUs": false
         },
         {
-          "teamId": "89448",
-          "rank": "2",
-          "played": "5",
-          "won": "4",
-          "lost": "1",
-          "notPresented": "0",
-          "pointsFor": "351",
-          "pointsAgainst": "253",
-          "leaguePoints": "9",
-          "streak": [
-            "win",
-            "win",
-            "win",
-            "loss",
-            "loss"
-          ],
-          "name": "UB SANT ADRIA",
-          "isUs": false
-        },
-        {
           "teamId": "90404",
-          "rank": "3",
+          "rank": "4",
           "played": "5",
           "won": "4",
           "lost": "1",
@@ -2366,14 +2451,14 @@
         },
         {
           "teamId": "91389",
-          "rank": "4",
-          "played": "4",
+          "rank": "5",
+          "played": "5",
           "won": "4",
-          "lost": "0",
+          "lost": "1",
           "notPresented": "0",
-          "pointsFor": "292",
-          "pointsAgainst": "238",
-          "leaguePoints": "8",
+          "pointsFor": "352",
+          "pointsAgainst": "312",
+          "leaguePoints": "9",
           "streak": [
             "loss",
             "win",
@@ -2385,28 +2470,48 @@
           "isUs": false
         },
         {
-          "teamId": "93286",
-          "rank": "5",
+          "teamId": "93162",
+          "rank": "6",
+          "played": "5",
+          "won": "4",
+          "lost": "1",
+          "notPresented": "0",
+          "pointsFor": "328",
+          "pointsAgainst": "303",
+          "leaguePoints": "9",
+          "streak": [
+            "win",
+            "loss",
+            "win",
+            "win",
+            "win"
+          ],
+          "name": "JANGERTRANS - CB SANTA PERPÈTUA",
+          "isUs": false
+        },
+        {
+          "teamId": "88695",
+          "rank": "7",
           "played": "5",
           "won": "3",
           "lost": "2",
           "notPresented": "0",
-          "pointsFor": "312",
-          "pointsAgainst": "264",
+          "pointsFor": "345",
+          "pointsAgainst": "298",
           "leaguePoints": "8",
           "streak": [
             "loss",
-            "loss",
             "win",
+            "loss",
             "win",
             "loss"
           ],
-          "name": "U.E. CLARET C",
+          "name": "CB CIUTAT VELLA",
           "isUs": false
         },
         {
           "teamId": "93188",
-          "rank": "6",
+          "rank": "8",
           "played": "6",
           "won": "2",
           "lost": "4",
@@ -2426,7 +2531,7 @@
         },
         {
           "teamId": "90641",
-          "rank": "7",
+          "rank": "9",
           "played": "6",
           "won": "2",
           "lost": "4",
@@ -2445,48 +2550,28 @@
           "isUs": false
         },
         {
-          "teamId": "88695",
-          "rank": "8",
-          "played": "4",
-          "won": "3",
-          "lost": "1",
+          "teamId": "92051",
+          "rank": "10",
+          "played": "6",
+          "won": "1",
+          "lost": "5",
           "notPresented": "0",
-          "pointsFor": "286",
-          "pointsAgainst": "218",
-          "leaguePoints": "7",
-          "streak": [
-            "loss",
-            "win",
-            "loss",
-            "win",
-            "loss"
-          ],
-          "name": "CB CIUTAT VELLA",
-          "isUs": false
-        },
-        {
-          "teamId": "93162",
-          "rank": "9",
-          "played": "4",
-          "won": "3",
-          "lost": "1",
-          "notPresented": "0",
-          "pointsFor": "264",
-          "pointsAgainst": "252",
+          "pointsFor": "277",
+          "pointsAgainst": "424",
           "leaguePoints": "7",
           "streak": [
             "win",
             "loss",
-            "win",
-            "win",
+            "loss",
+            "loss",
             "loss"
           ],
-          "name": "JANGERTRANS - CB SANTA PERPÈTUA",
+          "name": "CB MANYANET LES CORTS",
           "isUs": false
         },
         {
           "teamId": "89415",
-          "rank": "10",
+          "rank": "11",
           "played": "6",
           "won": "0",
           "lost": "6",
@@ -2502,26 +2587,6 @@
             "loss"
           ],
           "name": "HAVANA 66 - CB GAVÀ",
-          "isUs": false
-        },
-        {
-          "teamId": "92051",
-          "rank": "11",
-          "played": "5",
-          "won": "1",
-          "lost": "4",
-          "notPresented": "0",
-          "pointsFor": "226",
-          "pointsAgainst": "360",
-          "leaguePoints": "6",
-          "streak": [
-            "win",
-            "loss",
-            "loss",
-            "loss",
-            "loss"
-          ],
-          "name": "CB MANYANET LES CORTS",
           "isUs": false
         },
         {
@@ -2545,7 +2610,7 @@
           "isUs": true
         }
       ],
-      "standingsUpdatedAt": "2026-11-08T17:35:38.985383+01:00",
+      "standingsUpdatedAt": "2026-11-08T21:14:33.599389+01:00",
       "matchId": "19387",
       "date": "08/11/2026",
       "time": "12:30",
@@ -2574,7 +2639,7 @@
       },
       "opponentStanding": {
         "teamId": "90641",
-        "rank": "7",
+        "rank": "9",
         "played": "6",
         "won": "2",
         "lost": "4",
@@ -2929,7 +2994,7 @@
           "isUs": false
         }
       ],
-      "standingsUpdatedAt": "2026-11-08T17:36:23.839997+01:00",
+      "standingsUpdatedAt": "2026-11-08T21:15:05.878202+01:00",
       "matchId": "29235",
       "date": "08/11/2026",
       "time": "09:30",
@@ -3305,7 +3370,7 @@
           "isUs": false
         }
       ],
-      "standingsUpdatedAt": "2026-11-08T17:37:05.762736+01:00",
+      "standingsUpdatedAt": "2026-11-08T21:15:23.406991+01:00",
       "matchId": "30545",
       "date": "08/11/2026",
       "time": "09:00",
@@ -3438,7 +3503,7 @@
           "isUs": false
         }
       ],
-      "standingsUpdatedAt": "2026-11-08T17:37:37.172227+01:00",
+      "standingsUpdatedAt": "2026-11-08T21:15:33.577399+01:00",
       "matchId": "31540",
       "date": "08/11/2026",
       "time": "10:45",
@@ -3557,7 +3622,7 @@
           "isUs": false
         }
       ],
-      "standingsUpdatedAt": "2026-11-08T17:37:59.627647+01:00",
+      "standingsUpdatedAt": "2026-11-08T21:15:43.673708+01:00",
       "matchId": "32327",
       "date": "08/11/2026",
       "time": "09:00",
@@ -3676,7 +3741,7 @@
           "isUs": false
         }
       ],
-      "standingsUpdatedAt": "2026-11-08T17:38:33.645584+01:00",
+      "standingsUpdatedAt": "2026-11-08T21:15:54.373239+01:00",
       "matchId": "33852",
       "date": "15/11/2026",
       "time": "09:30",
@@ -3809,7 +3874,7 @@
           "isUs": false
         }
       ],
-      "standingsUpdatedAt": "2026-11-08T17:38:58.800346+01:00",
+      "standingsUpdatedAt": "2026-11-08T21:16:04.856742+01:00",
       "matchId": "34704",
       "date": "08/11/2026",
       "time": "10:45",
@@ -3928,7 +3993,7 @@
           "isUs": false
         }
       ],
-      "standingsUpdatedAt": "2026-11-08T17:39:25.394912+01:00",
+      "standingsUpdatedAt": "2026-11-08T21:16:14.989957+01:00",
       "matchId": "35459",
       "date": "08/11/2026",
       "time": "09:00",
@@ -3977,8 +4042,28 @@
     "senior-fem": {
       "standings": [
         {
-          "teamId": "89514",
+          "teamId": "88501",
           "rank": "1",
+          "played": "5",
+          "won": "5",
+          "lost": "0",
+          "notPresented": "0",
+          "pointsFor": "318",
+          "pointsAgainst": "229",
+          "leaguePoints": "10",
+          "streak": [
+            "loss",
+            "win",
+            "win",
+            "win",
+            "win"
+          ],
+          "name": "EL RACÓ DE LA BODEGA - AECAM",
+          "isUs": false
+        },
+        {
+          "teamId": "89514",
+          "rank": "2",
           "played": "5",
           "won": "5",
           "lost": "0",
@@ -3998,14 +4083,14 @@
         },
         {
           "teamId": "92392",
-          "rank": "2",
-          "played": "5",
+          "rank": "3",
+          "played": "6",
           "won": "4",
-          "lost": "1",
+          "lost": "2",
           "notPresented": "0",
-          "pointsFor": "319",
-          "pointsAgainst": "259",
-          "leaguePoints": "9",
+          "pointsFor": "362",
+          "pointsAgainst": "307",
+          "leaguePoints": "10",
           "streak": [
             "win",
             "win",
@@ -4017,28 +4102,28 @@
           "isUs": false
         },
         {
-          "teamId": "88501",
-          "rank": "3",
-          "played": "4",
+          "teamId": "91390",
+          "rank": "4",
+          "played": "5",
           "won": "4",
-          "lost": "0",
+          "lost": "1",
           "notPresented": "0",
-          "pointsFor": "263",
-          "pointsAgainst": "183",
-          "leaguePoints": "8",
+          "pointsFor": "292",
+          "pointsAgainst": "261",
+          "leaguePoints": "9",
           "streak": [
+            "win",
+            "win",
+            "win",
             "loss",
-            "win",
-            "win",
-            "win",
-            "loss"
+            "win"
           ],
-          "name": "EL RACÓ DE LA BODEGA - AECAM",
+          "name": "INMOCAT UER PINEDA",
           "isUs": false
         },
         {
           "teamId": "91749",
-          "rank": "4",
+          "rank": "5",
           "played": "5",
           "won": "3",
           "lost": "2",
@@ -4058,14 +4143,14 @@
         },
         {
           "teamId": "93431",
-          "rank": "5",
-          "played": "4",
+          "rank": "6",
+          "played": "5",
           "won": "3",
-          "lost": "1",
+          "lost": "2",
           "notPresented": "0",
-          "pointsFor": "210",
-          "pointsAgainst": "178",
-          "leaguePoints": "7",
+          "pointsFor": "262",
+          "pointsAgainst": "244",
+          "leaguePoints": "8",
           "streak": [
             "win",
             "loss",
@@ -4078,7 +4163,7 @@
         },
         {
           "teamId": "90153",
-          "rank": "6",
+          "rank": "7",
           "played": "5",
           "won": "2",
           "lost": "3",
@@ -4097,28 +4182,48 @@
           "isUs": false
         },
         {
-          "teamId": "91390",
-          "rank": "7",
-          "played": "4",
-          "won": "3",
-          "lost": "1",
+          "teamId": "88840",
+          "rank": "8",
+          "played": "5",
+          "won": "2",
+          "lost": "3",
           "notPresented": "0",
-          "pointsFor": "226",
-          "pointsAgainst": "209",
+          "pointsFor": "248",
+          "pointsAgainst": "249",
           "leaguePoints": "7",
           "streak": [
-            "win",
-            "win",
-            "win",
             "loss",
+            "loss",
+            "loss",
+            "loss",
+            "win"
+          ],
+          "name": "A.E. BADALONÈS - PINTURAS CORBACHO",
+          "isUs": true
+        },
+        {
+          "teamId": "90900",
+          "rank": "9",
+          "played": "6",
+          "won": "1",
+          "lost": "5",
+          "notPresented": "0",
+          "pointsFor": "284",
+          "pointsAgainst": "319",
+          "leaguePoints": "7",
+          "streak": [
+            "loss",
+            "loss",
+            "loss",
+            "win",
             "loss"
           ],
-          "name": "INMOCAT UER PINEDA",
+          "name": "UB MIR",
           "isUs": false
         },
         {
           "teamId": "89350",
-          "rank": "8",
+          "rank": "10",
           "played": "4",
           "won": "2",
           "lost": "2",
@@ -4137,28 +4242,8 @@
           "isUs": false
         },
         {
-          "teamId": "90900",
-          "rank": "9",
-          "played": "5",
-          "won": "1",
-          "lost": "4",
-          "notPresented": "0",
-          "pointsFor": "238",
-          "pointsAgainst": "264",
-          "leaguePoints": "6",
-          "streak": [
-            "loss",
-            "loss",
-            "loss",
-            "win",
-            "loss"
-          ],
-          "name": "UB MIR",
-          "isUs": false
-        },
-        {
           "teamId": "89964",
-          "rank": "10",
+          "rank": "11",
           "played": "5",
           "won": "1",
           "lost": "4",
@@ -4178,7 +4263,7 @@
         },
         {
           "teamId": "90233",
-          "rank": "11",
+          "rank": "12",
           "played": "5",
           "won": "1",
           "lost": "4",
@@ -4195,26 +4280,6 @@
           ],
           "name": "EL CIRCOL B",
           "isUs": false
-        },
-        {
-          "teamId": "88840",
-          "rank": "12",
-          "played": "4",
-          "won": "1",
-          "lost": "3",
-          "notPresented": "0",
-          "pointsFor": "200",
-          "pointsAgainst": "206",
-          "leaguePoints": "5",
-          "streak": [
-            "loss",
-            "loss",
-            "loss",
-            "loss",
-            "loss"
-          ],
-          "name": "A.E. BADALONÈS - PINTURAS CORBACHO",
-          "isUs": true
         },
         {
           "teamId": "93785",
@@ -4237,7 +4302,7 @@
           "isUs": false
         }
       ],
-      "standingsUpdatedAt": "2026-11-08T17:40:03.878249+01:00",
+      "standingsUpdatedAt": "2026-11-08T21:16:25.252899+01:00",
       "matchId": "14894",
       "date": "08/11/2026",
       "time": "19:00",
@@ -4248,32 +4313,32 @@
       "venueAddress": "PARC LITORAL, S/N",
       "ownStanding": {
         "teamId": "88840",
-        "rank": "12",
-        "played": "4",
-        "won": "1",
+        "rank": "8",
+        "played": "5",
+        "won": "2",
         "lost": "3",
         "notPresented": "0",
-        "pointsFor": "200",
-        "pointsAgainst": "206",
-        "leaguePoints": "5",
+        "pointsFor": "248",
+        "pointsAgainst": "249",
+        "leaguePoints": "7",
         "streak": [
           "loss",
           "loss",
           "loss",
           "loss",
-          "loss"
+          "win"
         ]
       },
       "opponentStanding": {
         "teamId": "92392",
-        "rank": "2",
-        "played": "5",
+        "rank": "3",
+        "played": "6",
         "won": "4",
-        "lost": "1",
+        "lost": "2",
         "notPresented": "0",
-        "pointsFor": "319",
-        "pointsAgainst": "259",
-        "leaguePoints": "9",
+        "pointsFor": "362",
+        "pointsAgainst": "307",
+        "leaguePoints": "10",
         "streak": [
           "win",
           "win",
@@ -4282,21 +4347,38 @@
           "loss"
         ]
       },
+      "opponentTopScorers": [
+        {
+          "name": "ERICA GARCIA MARTIN",
+          "dorsal": "15",
+          "points": 10
+        },
+        {
+          "name": "ANNA MARIA MAINEGRE LOBATO",
+          "dorsal": "24",
+          "points": 10
+        },
+        {
+          "name": "NEREA BUCH MIR",
+          "dorsal": "7",
+          "points": 8
+        }
+      ],
       "opponentSeason": {
         "season": "2026-2027",
         "category": "2A. TERRITORIAL SÈNIOR FEMENÍ",
         "venueName": "PAVELLO MUNICIPAL SANT POL",
-        "gamesPlayed": 5,
+        "gamesPlayed": 6,
         "wins": 4,
-        "losses": 1,
-        "avgPointsFor": 63.8,
-        "avgPointsAgainst": 51.8,
+        "losses": 2,
+        "avgPointsFor": 60.3,
+        "avgPointsAgainst": 51.2,
         "topScorers": [
           {
             "name": "ERICA GARCIA MARTIN",
             "dorsal": "15",
-            "gamesPlayed": 5,
-            "avgPoints": 12.4
+            "gamesPlayed": 6,
+            "avgPoints": 12.0
           },
           {
             "name": "QUERALT MORELL ROIG",
@@ -4307,36 +4389,36 @@
           {
             "name": "ANNA MARIA MAINEGRE LOBATO",
             "dorsal": "24",
-            "gamesPlayed": 4,
-            "avgPoints": 9.2
+            "gamesPlayed": 5,
+            "avgPoints": 9.4
           },
           {
             "name": "CARLA QUINTANILLA BATAYE",
             "dorsal": "11",
-            "gamesPlayed": 3,
-            "avgPoints": 8.3
+            "gamesPlayed": 4,
+            "avgPoints": 7.2
           },
           {
             "name": "ALBA ANDREU GOMEZ",
             "dorsal": "10",
-            "gamesPlayed": 5,
-            "avgPoints": 6.6
+            "gamesPlayed": 6,
+            "avgPoints": 6.0
           }
         ],
         "roster": [
           {
             "name": "ERICA GARCIA MARTIN",
             "dorsal": "15",
-            "gamesPlayed": 5,
-            "avgMinutes": 26.9,
-            "avgPoints": 12.4,
-            "avgT2m": 2.8,
+            "gamesPlayed": 6,
+            "avgMinutes": 26.1,
+            "avgPoints": 12.0,
+            "avgT2m": 2.7,
             "avgT3m": 1.2,
-            "totalFtm": 16,
-            "totalFta": 21,
-            "ftPer": 76.2,
+            "totalFtm": 19,
+            "totalFta": 25,
+            "ftPer": 76.0,
             "avgFouls": 2.2,
-            "avgPlusMinus": 6.2
+            "avgPlusMinus": 6.0
           },
           {
             "name": "QUERALT MORELL ROIG",
@@ -4355,57 +4437,43 @@
           {
             "name": "ANNA MARIA MAINEGRE LOBATO",
             "dorsal": "24",
-            "gamesPlayed": 4,
-            "avgMinutes": 20.2,
-            "avgPoints": 9.2,
-            "avgT2m": 1.5,
-            "avgT3m": 1.5,
+            "gamesPlayed": 5,
+            "avgMinutes": 20.5,
+            "avgPoints": 9.4,
+            "avgT2m": 1.6,
+            "avgT3m": 1.6,
             "totalFtm": 7,
             "totalFta": 9,
             "ftPer": 77.8,
-            "avgFouls": 1.8,
-            "avgPlusMinus": 6.8
+            "avgFouls": 1.4,
+            "avgPlusMinus": 3.4
           },
           {
             "name": "CARLA QUINTANILLA BATAYE",
             "dorsal": "11",
-            "gamesPlayed": 3,
-            "avgMinutes": 23.2,
-            "avgPoints": 8.3,
-            "avgT2m": 1.3,
-            "avgT3m": 1.3,
+            "gamesPlayed": 4,
+            "avgMinutes": 22.7,
+            "avgPoints": 7.2,
+            "avgT2m": 1.5,
+            "avgT3m": 1.0,
             "totalFtm": 5,
-            "totalFta": 8,
-            "ftPer": 62.5,
-            "avgFouls": 1.0,
-            "avgPlusMinus": 4.3
+            "totalFta": 16,
+            "ftPer": 31.3,
+            "avgFouls": 1.2,
+            "avgPlusMinus": 4.0
           },
           {
             "name": "ALBA ANDREU GOMEZ",
             "dorsal": "10",
-            "gamesPlayed": 5,
-            "avgMinutes": 18.0,
-            "avgPoints": 6.6,
-            "avgT2m": 2.0,
+            "gamesPlayed": 6,
+            "avgMinutes": 16.8,
+            "avgPoints": 6.0,
+            "avgT2m": 1.7,
             "avgT3m": 0.8,
             "totalFtm": 1,
             "totalFta": 2,
             "ftPer": 50.0,
-            "avgFouls": 2.2,
-            "avgPlusMinus": 6.8
-          },
-          {
-            "name": "S.E.A.B.",
-            "dorsal": "13",
-            "gamesPlayed": 4,
-            "avgMinutes": 15.2,
-            "avgPoints": 6.0,
-            "avgT2m": 0.8,
-            "avgT3m": 1.5,
-            "totalFtm": 0,
-            "totalFta": 0,
-            "ftPer": 0.0,
-            "avgFouls": 2.2,
+            "avgFouls": 2.0,
             "avgPlusMinus": 4.8
           },
           {
@@ -4423,88 +4491,102 @@
             "avgPlusMinus": 20.0
           },
           {
-            "name": "ALEXIA COLL I GILI",
-            "dorsal": "17",
-            "gamesPlayed": 5,
-            "avgMinutes": 14.8,
-            "avgPoints": 5.2,
-            "avgT2m": 2.2,
-            "avgT3m": 0.0,
-            "totalFtm": 4,
-            "totalFta": 11,
-            "ftPer": 36.4,
-            "avgFouls": 0.2,
-            "avgPlusMinus": 4.6
-          },
-          {
             "name": "NEREA BUCH MIR",
             "dorsal": "7",
-            "gamesPlayed": 4,
+            "gamesPlayed": 5,
+            "avgMinutes": 14.9,
+            "avgPoints": 5.4,
+            "avgT2m": 1.2,
+            "avgT3m": 0.2,
+            "totalFtm": 12,
+            "totalFta": 18,
+            "ftPer": 66.7,
+            "avgFouls": 1.6,
+            "avgPlusMinus": 5.8
+          },
+          {
+            "name": "S.E.A.B.",
+            "dorsal": "13",
+            "gamesPlayed": 5,
             "avgMinutes": 14.9,
             "avgPoints": 4.8,
-            "avgT2m": 1.0,
-            "avgT3m": 0.2,
-            "totalFtm": 8,
-            "totalFta": 12,
-            "ftPer": 66.7,
-            "avgFouls": 1.2,
-            "avgPlusMinus": 5.0
+            "avgT2m": 0.6,
+            "avgT3m": 1.2,
+            "totalFtm": 0,
+            "totalFta": 0,
+            "ftPer": 0.0,
+            "avgFouls": 2.4,
+            "avgPlusMinus": 2.2
+          },
+          {
+            "name": "ALEXIA COLL I GILI",
+            "dorsal": "17",
+            "gamesPlayed": 6,
+            "avgMinutes": 14.0,
+            "avgPoints": 4.3,
+            "avgT2m": 1.8,
+            "avgT3m": 0.0,
+            "totalFtm": 4,
+            "totalFta": 13,
+            "ftPer": 30.8,
+            "avgFouls": 0.3,
+            "avgPlusMinus": 3.0
           },
           {
             "name": "RUT PERICH SIMON",
             "dorsal": "3",
-            "gamesPlayed": 5,
-            "avgMinutes": 20.7,
-            "avgPoints": 4.8,
+            "gamesPlayed": 6,
+            "avgMinutes": 21.1,
+            "avgPoints": 4.3,
             "avgT2m": 1.2,
-            "avgT3m": 0.4,
+            "avgT3m": 0.3,
             "totalFtm": 6,
-            "totalFta": 14,
-            "ftPer": 42.9,
-            "avgFouls": 2.4,
-            "avgPlusMinus": 5.4
-          },
-          {
-            "name": "ANNA DELGADO TEJEDOR",
-            "dorsal": "12",
-            "gamesPlayed": 5,
-            "avgMinutes": 17.1,
-            "avgPoints": 3.8,
-            "avgT2m": 1.6,
-            "avgT3m": 0.0,
-            "totalFtm": 3,
-            "totalFta": 7,
-            "ftPer": 42.9,
-            "avgFouls": 0.6,
-            "avgPlusMinus": 6.0
+            "totalFta": 16,
+            "ftPer": 37.5,
+            "avgFouls": 2.3,
+            "avgPlusMinus": 1.5
           },
           {
             "name": "CLAUDIA TEMPRADO GIL",
             "dorsal": "9",
-            "gamesPlayed": 5,
-            "avgMinutes": 22.5,
-            "avgPoints": 3.6,
-            "avgT2m": 1.2,
+            "gamesPlayed": 6,
+            "avgMinutes": 22.2,
+            "avgPoints": 4.0,
+            "avgT2m": 1.5,
             "avgT3m": 0.2,
             "totalFtm": 3,
             "totalFta": 4,
             "ftPer": 75.0,
             "avgFouls": 1.2,
-            "avgPlusMinus": 8.2
+            "avgPlusMinus": 8.3
+          },
+          {
+            "name": "ANNA DELGADO TEJEDOR",
+            "dorsal": "12",
+            "gamesPlayed": 6,
+            "avgMinutes": 16.4,
+            "avgPoints": 3.2,
+            "avgT2m": 1.3,
+            "avgT3m": 0.0,
+            "totalFtm": 3,
+            "totalFta": 7,
+            "ftPer": 42.9,
+            "avgFouls": 0.8,
+            "avgPlusMinus": 4.8
           },
           {
             "name": "SILVIA DANGLA GOMES",
             "dorsal": "0",
-            "gamesPlayed": 4,
-            "avgMinutes": 21.7,
-            "avgPoints": 3.5,
-            "avgT2m": 1.0,
+            "gamesPlayed": 5,
+            "avgMinutes": 23.2,
+            "avgPoints": 2.8,
+            "avgT2m": 0.8,
             "avgT3m": 0.0,
             "totalFtm": 6,
             "totalFta": 14,
             "ftPer": 42.9,
-            "avgFouls": 3.0,
-            "avgPlusMinus": -0.8
+            "avgFouls": 3.2,
+            "avgPlusMinus": -1.4
           }
         ]
       }
@@ -4752,7 +4834,7 @@
           "isUs": false
         }
       ],
-      "standingsUpdatedAt": "2026-11-08T17:40:30.049268+01:00",
+      "standingsUpdatedAt": "2026-11-08T21:16:43.318365+01:00",
       "matchId": "19648",
       "date": "15/11/2026",
       "time": "19:30",
@@ -5153,7 +5235,7 @@
           "isUs": false
         }
       ],
-      "standingsUpdatedAt": "2026-11-08T17:40:55.286220+01:00",
+      "standingsUpdatedAt": "2026-11-08T21:16:53.856987+01:00",
       "matchId": "27364",
       "date": "14/11/2026",
       "time": "09:00",
@@ -5286,7 +5368,7 @@
           "isUs": false
         }
       ],
-      "standingsUpdatedAt": "2026-11-08T17:41:19.685428+01:00",
+      "standingsUpdatedAt": "2026-11-08T21:17:04.321100+01:00",
       "matchId": "28214",
       "date": "14/11/2026",
       "time": "09:30",
@@ -5405,7 +5487,7 @@
           "isUs": true
         }
       ],
-      "standingsUpdatedAt": "2026-11-08T17:41:47.605183+01:00",
+      "standingsUpdatedAt": "2026-11-08T21:17:14.942155+01:00",
       "matchId": "28289",
       "date": "14/11/2026",
       "time": "09:00",
