@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-08T15:46:52.629929+01:00",
+  "updatedAt": "2026-11-08T17:48:44.817774+01:00",
   "teams": {
     "senior-a-masc": {
       "standings": [
@@ -284,7 +284,7 @@
           "isUs": false
         }
       ],
-      "standingsUpdatedAt": "2026-11-08T15:41:06.402873+01:00",
+      "standingsUpdatedAt": "2026-11-08T17:32:39.619847+01:00",
       "matchId": "3868",
       "date": "14/11/2026",
       "time": "20:45",
@@ -853,7 +853,7 @@
           "isUs": false
         }
       ],
-      "standingsUpdatedAt": "2026-11-08T15:41:17.400878+01:00",
+      "standingsUpdatedAt": "2026-11-08T17:33:25.206362+01:00",
       "matchId": "8577",
       "date": "08/11/2026",
       "time": "12:45",
@@ -1481,7 +1481,7 @@
           "isUs": true
         }
       ],
-      "standingsUpdatedAt": "2026-11-08T15:41:35.333888+01:00",
+      "standingsUpdatedAt": "2026-11-08T17:34:33.897716+01:00",
       "matchId": "10215",
       "date": "08/11/2026",
       "time": "18:15",
@@ -1798,8 +1798,28 @@
     "u25-masc": {
       "standings": [
         {
-          "teamId": "88852",
+          "teamId": "89069",
           "rank": "1",
+          "played": "6",
+          "won": "3",
+          "lost": "3",
+          "notPresented": "0",
+          "pointsFor": "324",
+          "pointsAgainst": "354",
+          "leaguePoints": "9",
+          "streak": [
+            "loss",
+            "win",
+            "win",
+            "win",
+            "loss"
+          ],
+          "name": "C.B. CIC",
+          "isUs": false
+        },
+        {
+          "teamId": "88852",
+          "rank": "2",
           "played": "4",
           "won": "4",
           "lost": "0",
@@ -1819,7 +1839,7 @@
         },
         {
           "teamId": "90602",
-          "rank": "2",
+          "rank": "3",
           "played": "5",
           "won": "3",
           "lost": "2",
@@ -1835,26 +1855,6 @@
             "loss"
           ],
           "name": "BASQUET NEUS",
-          "isUs": false
-        },
-        {
-          "teamId": "89069",
-          "rank": "3",
-          "played": "5",
-          "won": "3",
-          "lost": "2",
-          "notPresented": "0",
-          "pointsFor": "272",
-          "pointsAgainst": "300",
-          "leaguePoints": "8",
-          "streak": [
-            "loss",
-            "win",
-            "win",
-            "win",
-            "loss"
-          ],
-          "name": "C.B. CIC",
           "isUs": false
         },
         {
@@ -1898,8 +1898,28 @@
           "isUs": false
         },
         {
-          "teamId": "88830",
+          "teamId": "88857",
           "rank": "6",
+          "played": "4",
+          "won": "3",
+          "lost": "1",
+          "notPresented": "0",
+          "pointsFor": "280",
+          "pointsAgainst": "257",
+          "leaguePoints": "7",
+          "streak": [
+            "win",
+            "loss",
+            "win",
+            "loss",
+            "win"
+          ],
+          "name": "CB MANLLEU",
+          "isUs": false
+        },
+        {
+          "teamId": "88830",
+          "rank": "7",
           "played": "4",
           "won": "3",
           "lost": "1",
@@ -1919,7 +1939,7 @@
         },
         {
           "teamId": "91187",
-          "rank": "7",
+          "rank": "8",
           "played": "5",
           "won": "2",
           "lost": "3",
@@ -1939,7 +1959,7 @@
         },
         {
           "teamId": "89526",
-          "rank": "8",
+          "rank": "9",
           "played": "4",
           "won": "2",
           "lost": "2",
@@ -1959,7 +1979,7 @@
         },
         {
           "teamId": "89000",
-          "rank": "9",
+          "rank": "10",
           "played": "5",
           "won": "1",
           "lost": "4",
@@ -1975,26 +1995,6 @@
             "loss"
           ],
           "name": "ADE FUSTER",
-          "isUs": false
-        },
-        {
-          "teamId": "88857",
-          "rank": "10",
-          "played": "3",
-          "won": "2",
-          "lost": "1",
-          "notPresented": "0",
-          "pointsFor": "226",
-          "pointsAgainst": "205",
-          "leaguePoints": "5",
-          "streak": [
-            "win",
-            "loss",
-            "win",
-            "loss",
-            "loss"
-          ],
-          "name": "CB MANLLEU",
           "isUs": false
         },
         {
@@ -2058,7 +2058,7 @@
           "isUs": false
         }
       ],
-      "standingsUpdatedAt": "2026-11-08T15:41:55.858686+01:00",
+      "standingsUpdatedAt": "2026-11-08T17:35:11.953988+01:00",
       "matchId": "10574",
       "date": "08/11/2026",
       "time": "17:45",
@@ -2069,7 +2069,7 @@
       "venueAddress": "C/ CASTANYERS 5",
       "ownStanding": {
         "teamId": "88830",
-        "rank": "6",
+        "rank": "7",
         "played": "4",
         "won": "3",
         "lost": "1",
@@ -2345,8 +2345,28 @@
           "isUs": false
         },
         {
-          "teamId": "91389",
+          "teamId": "90404",
           "rank": "3",
+          "played": "5",
+          "won": "4",
+          "lost": "1",
+          "notPresented": "0",
+          "pointsFor": "346",
+          "pointsAgainst": "286",
+          "leaguePoints": "9",
+          "streak": [
+            "loss",
+            "win",
+            "loss",
+            "win",
+            "win"
+          ],
+          "name": "CEB SANT JORDI BLAU",
+          "isUs": false
+        },
+        {
+          "teamId": "91389",
+          "rank": "4",
           "played": "4",
           "won": "4",
           "lost": "0",
@@ -2366,7 +2386,7 @@
         },
         {
           "teamId": "93286",
-          "rank": "4",
+          "rank": "5",
           "played": "5",
           "won": "3",
           "lost": "2",
@@ -2385,8 +2405,28 @@
           "isUs": false
         },
         {
+          "teamId": "93188",
+          "rank": "6",
+          "played": "6",
+          "won": "2",
+          "lost": "4",
+          "notPresented": "0",
+          "pointsFor": "360",
+          "pointsAgainst": "361",
+          "leaguePoints": "8",
+          "streak": [
+            "loss",
+            "win",
+            "win",
+            "loss",
+            "loss"
+          ],
+          "name": "BÀSQUET PB9 - U20M",
+          "isUs": false
+        },
+        {
           "teamId": "90641",
-          "rank": "5",
+          "rank": "7",
           "played": "6",
           "won": "2",
           "lost": "4",
@@ -2406,7 +2446,7 @@
         },
         {
           "teamId": "88695",
-          "rank": "6",
+          "rank": "8",
           "played": "4",
           "won": "3",
           "lost": "1",
@@ -2425,28 +2465,8 @@
           "isUs": false
         },
         {
-          "teamId": "90404",
-          "rank": "7",
-          "played": "4",
-          "won": "3",
-          "lost": "1",
-          "notPresented": "0",
-          "pointsFor": "279",
-          "pointsAgainst": "226",
-          "leaguePoints": "7",
-          "streak": [
-            "loss",
-            "win",
-            "loss",
-            "win",
-            "loss"
-          ],
-          "name": "CEB SANT JORDI BLAU",
-          "isUs": false
-        },
-        {
           "teamId": "93162",
-          "rank": "8",
+          "rank": "9",
           "played": "4",
           "won": "3",
           "lost": "1",
@@ -2462,26 +2482,6 @@
             "loss"
           ],
           "name": "JANGERTRANS - CB SANTA PERPÈTUA",
-          "isUs": false
-        },
-        {
-          "teamId": "93188",
-          "rank": "9",
-          "played": "5",
-          "won": "2",
-          "lost": "3",
-          "notPresented": "0",
-          "pointsFor": "300",
-          "pointsAgainst": "294",
-          "leaguePoints": "7",
-          "streak": [
-            "loss",
-            "win",
-            "win",
-            "loss",
-            "loss"
-          ],
-          "name": "BÀSQUET PB9 - U20M",
           "isUs": false
         },
         {
@@ -2545,7 +2545,7 @@
           "isUs": true
         }
       ],
-      "standingsUpdatedAt": "2026-11-08T15:42:06.352339+01:00",
+      "standingsUpdatedAt": "2026-11-08T17:35:38.985383+01:00",
       "matchId": "19387",
       "date": "08/11/2026",
       "time": "12:30",
@@ -2574,7 +2574,7 @@
       },
       "opponentStanding": {
         "teamId": "90641",
-        "rank": "5",
+        "rank": "7",
         "played": "6",
         "won": "2",
         "lost": "4",
@@ -2929,7 +2929,7 @@
           "isUs": false
         }
       ],
-      "standingsUpdatedAt": "2026-11-08T15:42:25.539590+01:00",
+      "standingsUpdatedAt": "2026-11-08T17:36:23.839997+01:00",
       "matchId": "29235",
       "date": "08/11/2026",
       "time": "09:30",
@@ -3305,7 +3305,7 @@
           "isUs": false
         }
       ],
-      "standingsUpdatedAt": "2026-11-08T15:42:43.632699+01:00",
+      "standingsUpdatedAt": "2026-11-08T17:37:05.762736+01:00",
       "matchId": "30545",
       "date": "08/11/2026",
       "time": "09:00",
@@ -3438,7 +3438,7 @@
           "isUs": false
         }
       ],
-      "standingsUpdatedAt": "2026-11-08T15:42:54.061315+01:00",
+      "standingsUpdatedAt": "2026-11-08T17:37:37.172227+01:00",
       "matchId": "31540",
       "date": "08/11/2026",
       "time": "10:45",
@@ -3557,7 +3557,7 @@
           "isUs": false
         }
       ],
-      "standingsUpdatedAt": "2026-11-08T15:43:04.637286+01:00",
+      "standingsUpdatedAt": "2026-11-08T17:37:59.627647+01:00",
       "matchId": "32327",
       "date": "08/11/2026",
       "time": "09:00",
@@ -3676,7 +3676,7 @@
           "isUs": false
         }
       ],
-      "standingsUpdatedAt": "2026-11-08T15:43:15.119756+01:00",
+      "standingsUpdatedAt": "2026-11-08T17:38:33.645584+01:00",
       "matchId": "33852",
       "date": "15/11/2026",
       "time": "09:30",
@@ -3809,7 +3809,7 @@
           "isUs": false
         }
       ],
-      "standingsUpdatedAt": "2026-11-08T15:43:26.030186+01:00",
+      "standingsUpdatedAt": "2026-11-08T17:38:58.800346+01:00",
       "matchId": "34704",
       "date": "08/11/2026",
       "time": "10:45",
@@ -3928,7 +3928,7 @@
           "isUs": false
         }
       ],
-      "standingsUpdatedAt": "2026-11-08T15:43:36.296622+01:00",
+      "standingsUpdatedAt": "2026-11-08T17:39:25.394912+01:00",
       "matchId": "35459",
       "date": "08/11/2026",
       "time": "09:00",
@@ -3977,8 +3977,28 @@
     "senior-fem": {
       "standings": [
         {
-          "teamId": "92392",
+          "teamId": "89514",
           "rank": "1",
+          "played": "5",
+          "won": "5",
+          "lost": "0",
+          "notPresented": "0",
+          "pointsFor": "291",
+          "pointsAgainst": "206",
+          "leaguePoints": "10",
+          "streak": [
+            "win",
+            "win",
+            "win",
+            "win",
+            "win"
+          ],
+          "name": "AE MINGUELLA B - PURE CUISINE",
+          "isUs": false
+        },
+        {
+          "teamId": "92392",
+          "rank": "2",
           "played": "5",
           "won": "4",
           "lost": "1",
@@ -3998,7 +4018,7 @@
         },
         {
           "teamId": "88501",
-          "rank": "2",
+          "rank": "3",
           "played": "4",
           "won": "4",
           "lost": "0",
@@ -4017,35 +4037,15 @@
           "isUs": false
         },
         {
-          "teamId": "89514",
-          "rank": "3",
-          "played": "4",
-          "won": "4",
-          "lost": "0",
-          "notPresented": "0",
-          "pointsFor": "231",
-          "pointsAgainst": "158",
-          "leaguePoints": "8",
-          "streak": [
-            "win",
-            "win",
-            "win",
-            "win",
-            "loss"
-          ],
-          "name": "AE MINGUELLA B - PURE CUISINE",
-          "isUs": false
-        },
-        {
           "teamId": "91749",
           "rank": "4",
-          "played": "4",
+          "played": "5",
           "won": "3",
-          "lost": "1",
+          "lost": "2",
           "notPresented": "0",
-          "pointsFor": "255",
-          "pointsAgainst": "217",
-          "leaguePoints": "7",
+          "pointsFor": "303",
+          "pointsAgainst": "277",
+          "leaguePoints": "8",
           "streak": [
             "loss",
             "win",
@@ -4237,7 +4237,7 @@
           "isUs": false
         }
       ],
-      "standingsUpdatedAt": "2026-11-08T15:43:46.903732+01:00",
+      "standingsUpdatedAt": "2026-11-08T17:40:03.878249+01:00",
       "matchId": "14894",
       "date": "08/11/2026",
       "time": "19:00",
@@ -4266,7 +4266,7 @@
       },
       "opponentStanding": {
         "teamId": "92392",
-        "rank": "1",
+        "rank": "2",
         "played": "5",
         "won": "4",
         "lost": "1",
@@ -4752,7 +4752,7 @@
           "isUs": false
         }
       ],
-      "standingsUpdatedAt": "2026-11-08T15:43:56.927156+01:00",
+      "standingsUpdatedAt": "2026-11-08T17:40:30.049268+01:00",
       "matchId": "19648",
       "date": "15/11/2026",
       "time": "19:30",
@@ -5153,7 +5153,7 @@
           "isUs": false
         }
       ],
-      "standingsUpdatedAt": "2026-11-08T15:44:06.843751+01:00",
+      "standingsUpdatedAt": "2026-11-08T17:40:55.286220+01:00",
       "matchId": "27364",
       "date": "14/11/2026",
       "time": "09:00",
@@ -5286,7 +5286,7 @@
           "isUs": false
         }
       ],
-      "standingsUpdatedAt": "2026-11-08T15:44:16.828778+01:00",
+      "standingsUpdatedAt": "2026-11-08T17:41:19.685428+01:00",
       "matchId": "28214",
       "date": "14/11/2026",
       "time": "09:30",
@@ -5405,7 +5405,7 @@
           "isUs": true
         }
       ],
-      "standingsUpdatedAt": "2026-11-08T15:44:26.834677+01:00",
+      "standingsUpdatedAt": "2026-11-08T17:41:47.605183+01:00",
       "matchId": "28289",
       "date": "14/11/2026",
       "time": "09:00",
