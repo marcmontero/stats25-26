@@ -1,11 +1,31 @@
 {
-  "updatedAt": "2026-11-08T21:20:08.608238+01:00",
+  "updatedAt": "2026-11-08T22:03:05.864536+01:00",
   "teams": {
     "senior-a-masc": {
       "standings": [
         {
-          "teamId": "88829",
+          "teamId": "89495",
           "rank": "1",
+          "played": "6",
+          "won": "6",
+          "lost": "0",
+          "notPresented": "0",
+          "pointsFor": "431",
+          "pointsAgainst": "370",
+          "leaguePoints": "12",
+          "streak": [
+            "win",
+            "win",
+            "win",
+            "win",
+            "win"
+          ],
+          "name": "SANT IGNASI",
+          "isUs": false
+        },
+        {
+          "teamId": "88829",
+          "rank": "2",
           "played": "5",
           "won": "5",
           "lost": "0",
@@ -22,26 +42,6 @@
           ],
           "name": "A.E. BADALONÈS - PINTURAS CORBACHO",
           "isUs": true
-        },
-        {
-          "teamId": "89495",
-          "rank": "2",
-          "played": "5",
-          "won": "5",
-          "lost": "0",
-          "notPresented": "0",
-          "pointsFor": "366",
-          "pointsAgainst": "311",
-          "leaguePoints": "10",
-          "streak": [
-            "win",
-            "win",
-            "win",
-            "win",
-            "loss"
-          ],
-          "name": "SANT IGNASI",
-          "isUs": false
         },
         {
           "teamId": "88899",
@@ -64,8 +64,28 @@
           "isUs": false
         },
         {
-          "teamId": "88795",
+          "teamId": "89066",
           "rank": "4",
+          "played": "6",
+          "won": "4",
+          "lost": "2",
+          "notPresented": "0",
+          "pointsFor": "417",
+          "pointsAgainst": "375",
+          "leaguePoints": "10",
+          "streak": [
+            "win",
+            "loss",
+            "win",
+            "loss",
+            "win"
+          ],
+          "name": "C.B. CIC A",
+          "isUs": false
+        },
+        {
+          "teamId": "88795",
+          "rank": "5",
           "played": "5",
           "won": "4",
           "lost": "1",
@@ -85,7 +105,7 @@
         },
         {
           "teamId": "90963",
-          "rank": "5",
+          "rank": "6",
           "played": "4",
           "won": "4",
           "lost": "0",
@@ -101,26 +121,6 @@
             "win"
           ],
           "name": "LIMA-HORTA BARCELONA",
-          "isUs": false
-        },
-        {
-          "teamId": "89066",
-          "rank": "6",
-          "played": "5",
-          "won": "3",
-          "lost": "2",
-          "notPresented": "0",
-          "pointsFor": "354",
-          "pointsAgainst": "318",
-          "leaguePoints": "8",
-          "streak": [
-            "win",
-            "loss",
-            "win",
-            "loss",
-            "loss"
-          ],
-          "name": "C.B. CIC A",
           "isUs": false
         },
         {
@@ -144,8 +144,28 @@
           "isUs": false
         },
         {
-          "teamId": "89284",
+          "teamId": "92423",
           "rank": "8",
+          "played": "5",
+          "won": "2",
+          "lost": "3",
+          "notPresented": "0",
+          "pointsFor": "321",
+          "pointsAgainst": "328",
+          "leaguePoints": "7",
+          "streak": [
+            "loss",
+            "loss",
+            "win",
+            "win",
+            "loss"
+          ],
+          "name": "BASKET CORAS",
+          "isUs": false
+        },
+        {
+          "teamId": "89284",
+          "rank": "9",
           "played": "5",
           "won": "2",
           "lost": "3",
@@ -164,35 +184,15 @@
           "isUs": false
         },
         {
-          "teamId": "92423",
-          "rank": "9",
-          "played": "4",
-          "won": "2",
-          "lost": "2",
-          "notPresented": "0",
-          "pointsFor": "264",
-          "pointsAgainst": "265",
-          "leaguePoints": "6",
-          "streak": [
-            "loss",
-            "loss",
-            "win",
-            "win",
-            "loss"
-          ],
-          "name": "BASKET CORAS",
-          "isUs": false
-        },
-        {
           "teamId": "90084",
           "rank": "10",
-          "played": "5",
+          "played": "6",
           "won": "1",
-          "lost": "4",
+          "lost": "5",
           "notPresented": "0",
-          "pointsFor": "292",
-          "pointsAgainst": "354",
-          "leaguePoints": "6",
+          "pointsFor": "351",
+          "pointsAgainst": "419",
+          "leaguePoints": "7",
           "streak": [
             "loss",
             "loss",
@@ -284,7 +284,7 @@
           "isUs": false
         }
       ],
-      "standingsUpdatedAt": "2026-11-08T21:13:21.267046+01:00",
+      "standingsUpdatedAt": "2026-11-08T21:56:20.490856+01:00",
       "matchId": "3868",
       "date": "14/11/2026",
       "time": "20:45",
@@ -295,7 +295,7 @@
       "venueAddress": "LA PLANA, S/N",
       "ownStanding": {
         "teamId": "88829",
-        "rank": "1",
+        "rank": "2",
         "played": "5",
         "won": "5",
         "lost": "0",
@@ -870,7 +870,7 @@
           "isUs": false
         }
       ],
-      "standingsUpdatedAt": "2026-11-08T21:13:39.852701+01:00",
+      "standingsUpdatedAt": "2026-11-08T21:56:38.674610+01:00",
       "matchId": "8577",
       "date": "08/11/2026",
       "time": "12:45",
@@ -1498,7 +1498,7 @@
           "isUs": false
         }
       ],
-      "standingsUpdatedAt": "2026-11-08T21:13:57.614785+01:00",
+      "standingsUpdatedAt": "2026-11-08T21:56:57.969326+01:00",
       "matchId": "10215",
       "date": "08/11/2026",
       "time": "18:15",
@@ -2092,7 +2092,7 @@
           "isUs": false
         }
       ],
-      "standingsUpdatedAt": "2026-11-08T21:14:15.640236+01:00",
+      "standingsUpdatedAt": "2026-11-08T21:57:16.045540+01:00",
       "matchId": "10574",
       "date": "08/11/2026",
       "time": "17:45",
@@ -2610,7 +2610,7 @@
           "isUs": true
         }
       ],
-      "standingsUpdatedAt": "2026-11-08T21:14:33.599389+01:00",
+      "standingsUpdatedAt": "2026-11-08T21:57:34.143092+01:00",
       "matchId": "19387",
       "date": "08/11/2026",
       "time": "12:30",
@@ -2994,7 +2994,7 @@
           "isUs": false
         }
       ],
-      "standingsUpdatedAt": "2026-11-08T21:15:05.878202+01:00",
+      "standingsUpdatedAt": "2026-11-08T21:57:53.747464+01:00",
       "matchId": "29235",
       "date": "08/11/2026",
       "time": "09:30",
@@ -3370,7 +3370,7 @@
           "isUs": false
         }
       ],
-      "standingsUpdatedAt": "2026-11-08T21:15:23.406991+01:00",
+      "standingsUpdatedAt": "2026-11-08T21:58:11.527720+01:00",
       "matchId": "30545",
       "date": "08/11/2026",
       "time": "09:00",
@@ -3503,7 +3503,7 @@
           "isUs": false
         }
       ],
-      "standingsUpdatedAt": "2026-11-08T21:15:33.577399+01:00",
+      "standingsUpdatedAt": "2026-11-08T21:58:22.435402+01:00",
       "matchId": "31540",
       "date": "08/11/2026",
       "time": "10:45",
@@ -3622,7 +3622,7 @@
           "isUs": false
         }
       ],
-      "standingsUpdatedAt": "2026-11-08T21:15:43.673708+01:00",
+      "standingsUpdatedAt": "2026-11-08T21:58:32.848394+01:00",
       "matchId": "32327",
       "date": "08/11/2026",
       "time": "09:00",
@@ -3741,7 +3741,7 @@
           "isUs": false
         }
       ],
-      "standingsUpdatedAt": "2026-11-08T21:15:54.373239+01:00",
+      "standingsUpdatedAt": "2026-11-08T21:58:43.356251+01:00",
       "matchId": "33852",
       "date": "15/11/2026",
       "time": "09:30",
@@ -3874,7 +3874,7 @@
           "isUs": false
         }
       ],
-      "standingsUpdatedAt": "2026-11-08T21:16:04.856742+01:00",
+      "standingsUpdatedAt": "2026-11-08T21:58:54.062832+01:00",
       "matchId": "34704",
       "date": "08/11/2026",
       "time": "10:45",
@@ -3993,7 +3993,7 @@
           "isUs": false
         }
       ],
-      "standingsUpdatedAt": "2026-11-08T21:16:14.989957+01:00",
+      "standingsUpdatedAt": "2026-11-08T21:59:04.736770+01:00",
       "matchId": "35459",
       "date": "08/11/2026",
       "time": "09:00",
@@ -4302,7 +4302,7 @@
           "isUs": false
         }
       ],
-      "standingsUpdatedAt": "2026-11-08T21:16:25.252899+01:00",
+      "standingsUpdatedAt": "2026-11-08T21:59:15.246035+01:00",
       "matchId": "14894",
       "date": "08/11/2026",
       "time": "19:00",
@@ -4634,8 +4634,28 @@
           "isUs": false
         },
         {
-          "teamId": "93817",
+          "teamId": "90601",
           "rank": "3",
+          "played": "6",
+          "won": "5",
+          "lost": "1",
+          "notPresented": "0",
+          "pointsFor": "346",
+          "pointsAgainst": "242",
+          "leaguePoints": "11",
+          "streak": [
+            "loss",
+            "win",
+            "win",
+            "win",
+            "win"
+          ],
+          "name": "BASQUET NEUS",
+          "isUs": false
+        },
+        {
+          "teamId": "93817",
+          "rank": "4",
           "played": "6",
           "won": "5",
           "lost": "1",
@@ -4655,7 +4675,7 @@
         },
         {
           "teamId": "89919",
-          "rank": "4",
+          "rank": "5",
           "played": "6",
           "won": "4",
           "lost": "2",
@@ -4671,26 +4691,6 @@
             "loss"
           ],
           "name": "CAMPING BIANYA ROSER",
-          "isUs": false
-        },
-        {
-          "teamId": "90601",
-          "rank": "5",
-          "played": "5",
-          "won": "4",
-          "lost": "1",
-          "notPresented": "0",
-          "pointsFor": "290",
-          "pointsAgainst": "201",
-          "leaguePoints": "9",
-          "streak": [
-            "loss",
-            "win",
-            "win",
-            "win",
-            "loss"
-          ],
-          "name": "BASQUET NEUS",
           "isUs": false
         },
         {
@@ -4714,8 +4714,28 @@
           "isUs": false
         },
         {
-          "teamId": "89874",
+          "teamId": "91349",
           "rank": "7",
+          "played": "5",
+          "won": "2",
+          "lost": "3",
+          "notPresented": "0",
+          "pointsFor": "254",
+          "pointsAgainst": "223",
+          "leaguePoints": "7",
+          "streak": [
+            "loss",
+            "loss",
+            "loss",
+            "win",
+            "loss"
+          ],
+          "name": "RIO LOGISTIC CD LLIÇÀ D'AMUNT",
+          "isUs": false
+        },
+        {
+          "teamId": "89874",
+          "rank": "8",
           "played": "5",
           "won": "2",
           "lost": "3",
@@ -4731,26 +4751,6 @@
             "win"
           ],
           "name": "JESUÏTES CASP",
-          "isUs": false
-        },
-        {
-          "teamId": "91349",
-          "rank": "8",
-          "played": "4",
-          "won": "2",
-          "lost": "2",
-          "notPresented": "0",
-          "pointsFor": "213",
-          "pointsAgainst": "167",
-          "leaguePoints": "6",
-          "streak": [
-            "loss",
-            "loss",
-            "loss",
-            "win",
-            "loss"
-          ],
-          "name": "RIO LOGISTIC CD LLIÇÀ D'AMUNT",
           "isUs": false
         },
         {
@@ -4834,7 +4834,7 @@
           "isUs": false
         }
       ],
-      "standingsUpdatedAt": "2026-11-08T21:16:43.318365+01:00",
+      "standingsUpdatedAt": "2026-11-08T21:59:33.276820+01:00",
       "matchId": "19648",
       "date": "15/11/2026",
       "time": "19:30",
@@ -4863,147 +4863,178 @@
       },
       "opponentStanding": {
         "teamId": "90601",
-        "rank": "5",
-        "played": "5",
-        "won": "4",
+        "rank": "3",
+        "played": "6",
+        "won": "5",
         "lost": "1",
         "notPresented": "0",
-        "pointsFor": "290",
-        "pointsAgainst": "201",
-        "leaguePoints": "9",
+        "pointsFor": "346",
+        "pointsAgainst": "242",
+        "leaguePoints": "11",
         "streak": [
           "loss",
           "win",
           "win",
           "win",
-          "loss"
+          "win"
         ]
       },
+      "opponentTopScorers": [
+        {
+          "name": "AINA MIRANDA TORRES",
+          "dorsal": "8",
+          "points": 14
+        },
+        {
+          "name": "NAYARA ARROYO ORIHUELA",
+          "dorsal": "5",
+          "points": 8
+        },
+        {
+          "name": "LAIA FERNANDEZ CUELLO",
+          "dorsal": "4",
+          "points": 7
+        }
+      ],
       "opponentSeason": {
         "season": "2026-2027",
         "category": "C.C. SOTS-25 FEMENÍ",
         "venueName": "PAVELLO LA BASTIDA",
-        "gamesPlayed": 5,
-        "wins": 4,
+        "gamesPlayed": 6,
+        "wins": 5,
         "losses": 1,
-        "avgPointsFor": 58.0,
-        "avgPointsAgainst": 40.2,
+        "avgPointsFor": 57.7,
+        "avgPointsAgainst": 40.3,
         "topScorers": [
           {
             "name": "NAYARA ARROYO ORIHUELA",
             "dorsal": "5",
-            "gamesPlayed": 5,
-            "avgPoints": 11.0
+            "gamesPlayed": 6,
+            "avgPoints": 10.5
           },
           {
             "name": "AFRICA MARTIN GIMENO",
             "dorsal": "22",
-            "gamesPlayed": 5,
-            "avgPoints": 8.6
+            "gamesPlayed": 6,
+            "avgPoints": 8.2
           },
           {
-            "name": "LAURA GARCIA LATRE",
-            "dorsal": "14",
-            "gamesPlayed": 4,
-            "avgPoints": 7.0
-          },
-          {
-            "name": "LAIA MORA FERRAND",
-            "dorsal": "7",
-            "gamesPlayed": 5,
-            "avgPoints": 7.0
+            "name": "AINA MIRANDA TORRES",
+            "dorsal": "8",
+            "gamesPlayed": 6,
+            "avgPoints": 6.3
           },
           {
             "name": "NORA GUISADO MOYA",
             "dorsal": "2",
-            "gamesPlayed": 5,
+            "gamesPlayed": 6,
             "avgPoints": 6.2
+          },
+          {
+            "name": "LAURA GARCIA LATRE",
+            "dorsal": "14",
+            "gamesPlayed": 5,
+            "avgPoints": 5.8
           }
         ],
         "roster": [
           {
             "name": "NAYARA ARROYO ORIHUELA",
             "dorsal": "5",
-            "gamesPlayed": 5,
-            "avgMinutes": 18.4,
-            "avgPoints": 11.0,
-            "avgT2m": 2.8,
+            "gamesPlayed": 6,
+            "avgMinutes": 19.1,
+            "avgPoints": 10.5,
+            "avgT2m": 2.5,
             "avgT3m": 1.2,
-            "totalFtm": 9,
-            "totalFta": 15,
-            "ftPer": 60.0,
-            "avgFouls": 2.0,
-            "avgPlusMinus": 13.6
+            "totalFtm": 12,
+            "totalFta": 21,
+            "ftPer": 57.1,
+            "avgFouls": 2.3,
+            "avgPlusMinus": 12.5
           },
           {
             "name": "AFRICA MARTIN GIMENO",
             "dorsal": "22",
-            "gamesPlayed": 5,
-            "avgMinutes": 18.2,
-            "avgPoints": 8.6,
-            "avgT2m": 2.4,
-            "avgT3m": 0.2,
-            "totalFtm": 16,
-            "totalFta": 22,
-            "ftPer": 72.7,
-            "avgFouls": 2.8,
-            "avgPlusMinus": 8.8
-          },
-          {
-            "name": "LAURA GARCIA LATRE",
-            "dorsal": "14",
-            "gamesPlayed": 4,
-            "avgMinutes": 19.5,
-            "avgPoints": 7.0,
-            "avgT2m": 1.0,
-            "avgT3m": 0.8,
-            "totalFtm": 11,
-            "totalFta": 19,
-            "ftPer": 57.9,
-            "avgFouls": 2.5,
-            "avgPlusMinus": 11.5
-          },
-          {
-            "name": "LAIA MORA FERRAND",
-            "dorsal": "7",
-            "gamesPlayed": 5,
-            "avgMinutes": 17.7,
-            "avgPoints": 7.0,
-            "avgT2m": 1.4,
-            "avgT3m": 0.8,
-            "totalFtm": 9,
-            "totalFta": 14,
-            "ftPer": 64.3,
-            "avgFouls": 2.4,
-            "avgPlusMinus": 12.8
-          },
-          {
-            "name": "NORA GUISADO MOYA",
-            "dorsal": "2",
-            "gamesPlayed": 5,
-            "avgMinutes": 18.0,
-            "avgPoints": 6.2,
-            "avgT2m": 0.6,
-            "avgT3m": 1.2,
-            "totalFtm": 7,
-            "totalFta": 8,
-            "ftPer": 87.5,
-            "avgFouls": 1.2,
-            "avgPlusMinus": 8.8
+            "gamesPlayed": 6,
+            "avgMinutes": 17.1,
+            "avgPoints": 8.2,
+            "avgT2m": 2.0,
+            "avgT3m": 0.3,
+            "totalFtm": 19,
+            "totalFta": 26,
+            "ftPer": 73.1,
+            "avgFouls": 3.0,
+            "avgPlusMinus": 6.7
           },
           {
             "name": "AINA MIRANDA TORRES",
             "dorsal": "8",
+            "gamesPlayed": 6,
+            "avgMinutes": 22.5,
+            "avgPoints": 6.3,
+            "avgT2m": 2.0,
+            "avgT3m": 0.5,
+            "totalFtm": 5,
+            "totalFta": 8,
+            "ftPer": 62.5,
+            "avgFouls": 1.5,
+            "avgPlusMinus": 8.7
+          },
+          {
+            "name": "NORA GUISADO MOYA",
+            "dorsal": "2",
+            "gamesPlayed": 6,
+            "avgMinutes": 18.1,
+            "avgPoints": 6.2,
+            "avgT2m": 0.5,
+            "avgT3m": 1.3,
+            "totalFtm": 7,
+            "totalFta": 8,
+            "ftPer": 87.5,
+            "avgFouls": 1.3,
+            "avgPlusMinus": 7.2
+          },
+          {
+            "name": "LAURA GARCIA LATRE",
+            "dorsal": "14",
             "gamesPlayed": 5,
-            "avgMinutes": 22.1,
-            "avgPoints": 4.8,
-            "avgT2m": 1.6,
+            "avgMinutes": 19.6,
+            "avgPoints": 5.8,
+            "avgT2m": 0.8,
+            "avgT3m": 0.6,
+            "totalFtm": 12,
+            "totalFta": 21,
+            "ftPer": 57.1,
+            "avgFouls": 2.8,
+            "avgPlusMinus": 11.2
+          },
+          {
+            "name": "LAIA MORA FERRAND",
+            "dorsal": "7",
+            "gamesPlayed": 6,
+            "avgMinutes": 17.2,
+            "avgPoints": 5.8,
+            "avgT2m": 1.2,
+            "avgT3m": 0.7,
+            "totalFtm": 9,
+            "totalFta": 14,
+            "ftPer": 64.3,
+            "avgFouls": 2.5,
+            "avgPlusMinus": 11.7
+          },
+          {
+            "name": "LAIA FERNANDEZ CUELLO",
+            "dorsal": "4",
+            "gamesPlayed": 5,
+            "avgMinutes": 16.1,
+            "avgPoints": 4.4,
+            "avgT2m": 1.0,
             "avgT3m": 0.4,
-            "totalFtm": 2,
-            "totalFta": 4,
-            "ftPer": 50.0,
-            "avgFouls": 1.8,
-            "avgPlusMinus": 8.0
+            "totalFtm": 6,
+            "totalFta": 15,
+            "ftPer": 40.0,
+            "avgFouls": 2.0,
+            "avgPlusMinus": -0.4
           },
           {
             "name": "ADRIANA BATANERO MEDINA",
@@ -5036,58 +5067,44 @@
           {
             "name": "LAIA MARQUETA GASCONS",
             "dorsal": "10",
-            "gamesPlayed": 5,
-            "avgMinutes": 20.3,
-            "avgPoints": 3.8,
-            "avgT2m": 1.2,
+            "gamesPlayed": 6,
+            "avgMinutes": 20.1,
+            "avgPoints": 3.5,
+            "avgT2m": 1.0,
             "avgT3m": 0.2,
-            "totalFtm": 4,
-            "totalFta": 10,
-            "ftPer": 40.0,
-            "avgFouls": 1.8,
-            "avgPlusMinus": 8.0
-          },
-          {
-            "name": "LAIA FERNANDEZ CUELLO",
-            "dorsal": "4",
-            "gamesPlayed": 4,
-            "avgMinutes": 16.6,
-            "avgPoints": 3.8,
-            "avgT2m": 1.2,
-            "avgT3m": 0.0,
-            "totalFtm": 5,
-            "totalFta": 13,
-            "ftPer": 38.5,
-            "avgFouls": 2.2,
-            "avgPlusMinus": -2.8
+            "totalFtm": 6,
+            "totalFta": 12,
+            "ftPer": 50.0,
+            "avgFouls": 1.5,
+            "avgPlusMinus": 7.8
           },
           {
             "name": "KARLA GINES MACIAS",
             "dorsal": "15",
-            "gamesPlayed": 5,
-            "avgMinutes": 20.5,
-            "avgPoints": 3.4,
+            "gamesPlayed": 6,
+            "avgMinutes": 21.8,
+            "avgPoints": 3.5,
             "avgT2m": 1.2,
             "avgT3m": 0.0,
-            "totalFtm": 5,
-            "totalFta": 10,
-            "ftPer": 50.0,
-            "avgFouls": 2.8,
-            "avgPlusMinus": 5.8
+            "totalFtm": 7,
+            "totalFta": 12,
+            "ftPer": 58.3,
+            "avgFouls": 2.5,
+            "avgPlusMinus": 7.5
           },
           {
             "name": "MIRIAM MARTINEZ AMADOR",
             "dorsal": "19",
-            "gamesPlayed": 3,
-            "avgMinutes": 12.5,
-            "avgPoints": 2.0,
-            "avgT2m": 1.0,
+            "gamesPlayed": 4,
+            "avgMinutes": 14.4,
+            "avgPoints": 3.2,
+            "avgT2m": 1.5,
             "avgT3m": 0.0,
-            "totalFtm": 0,
-            "totalFta": 2,
-            "ftPer": 0.0,
+            "totalFtm": 1,
+            "totalFta": 6,
+            "ftPer": 16.7,
             "avgFouls": 1.0,
-            "avgPlusMinus": 4.0
+            "avgPlusMinus": 6.0
           },
           {
             "name": "MARIA DELGADO MESONERO",
@@ -5102,6 +5119,20 @@
             "ftPer": 16.7,
             "avgFouls": 3.8,
             "avgPlusMinus": 10.0
+          },
+          {
+            "name": "MARTA ALBA ALCAIDE",
+            "dorsal": "1",
+            "gamesPlayed": 2,
+            "avgMinutes": 9.6,
+            "avgPoints": 0.5,
+            "avgT2m": 0.0,
+            "avgT3m": 0.0,
+            "totalFtm": 1,
+            "totalFta": 2,
+            "ftPer": 50.0,
+            "avgFouls": 2.5,
+            "avgPlusMinus": -3.5
           },
           {
             "name": "LIDIA NAVARRO RUBIO",
@@ -5130,20 +5161,6 @@
             "ftPer": 0.0,
             "avgFouls": 0.5,
             "avgPlusMinus": 2.0
-          },
-          {
-            "name": "MARTA ALBA ALCAIDE",
-            "dorsal": "1",
-            "gamesPlayed": 1,
-            "avgMinutes": 13.0,
-            "avgPoints": 0.0,
-            "avgT2m": 0.0,
-            "avgT3m": 0.0,
-            "totalFtm": 0,
-            "totalFta": 0,
-            "ftPer": 0.0,
-            "avgFouls": 1.0,
-            "avgPlusMinus": -8.0
           }
         ]
       }
@@ -5235,7 +5252,7 @@
           "isUs": false
         }
       ],
-      "standingsUpdatedAt": "2026-11-08T21:16:53.856987+01:00",
+      "standingsUpdatedAt": "2026-11-08T21:59:51.016505+01:00",
       "matchId": "27364",
       "date": "14/11/2026",
       "time": "09:00",
@@ -5368,7 +5385,7 @@
           "isUs": false
         }
       ],
-      "standingsUpdatedAt": "2026-11-08T21:17:04.321100+01:00",
+      "standingsUpdatedAt": "2026-11-08T22:00:01.991071+01:00",
       "matchId": "28214",
       "date": "14/11/2026",
       "time": "09:30",
@@ -5487,7 +5504,7 @@
           "isUs": true
         }
       ],
-      "standingsUpdatedAt": "2026-11-08T21:17:14.942155+01:00",
+      "standingsUpdatedAt": "2026-11-08T22:00:12.112663+01:00",
       "matchId": "28289",
       "date": "14/11/2026",
       "time": "09:00",
