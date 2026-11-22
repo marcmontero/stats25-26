@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-18T21:18:19.100519+01:00",
+  "updatedAt": "2026-11-22T10:53:27.023931+01:00",
   "teams": {
     "senior-a-masc": [
       "/stats/10855.json",
@@ -16,7 +16,8 @@
       "/stats/8562.json",
       "/stats/8571.json",
       "/stats/8577.json",
-      "/stats/8585.json"
+      "/stats/8585.json",
+      "/stats/8592.json"
     ],
     "u25-masc": [
       "/stats/10547.json",
@@ -32,7 +33,8 @@
       "/stats/10200.json",
       "/stats/10209.json",
       "/stats/10215.json",
-      "/stats/10223.json"
+      "/stats/10223.json",
+      "/stats/10230.json"
     ],
     "senior-fem": [
       "/stats/14863.json",
@@ -48,7 +50,8 @@
       "/stats/31535.json",
       "/stats/31537.json",
       "/stats/31540.json",
-      "/stats/31544.json"
+      "/stats/31544.json",
+      "/stats/31545.json"
     ],
     "premini-negre-masc": [
       "/stats/34693.json",
@@ -56,7 +59,8 @@
       "/stats/34699.json",
       "/stats/34701.json",
       "/stats/34704.json",
-      "/stats/34708.json"
+      "/stats/34708.json",
+      "/stats/34709.json"
     ],
     "preinfantil-fem": [
       "/stats/27349.json",
@@ -64,7 +68,8 @@
       "/stats/27354.json",
       "/stats/27359.json",
       "/stats/27361.json",
-      "/stats/27364.json"
+      "/stats/27364.json",
+      "/stats/27368.json"
     ],
     "mini-negre-fem": [
       "/stats/28199.json",
@@ -79,7 +84,8 @@
       "/stats/28281.json",
       "/stats/28282.json",
       "/stats/28286.json",
-      "/stats/28289.json"
+      "/stats/28289.json",
+      "/stats/28291.json"
     ],
     "cadet-masc": [
       "/stats/30539.json",
@@ -92,7 +98,8 @@
       "/stats/33845.json",
       "/stats/33848.json",
       "/stats/33842.json",
-      "/stats/33852.json"
+      "/stats/33852.json",
+      "/stats/33853.json"
     ],
     "u25-fem": [
       "/stats/24855.json",
@@ -122,13 +129,15 @@
       "/stats/32324.json",
       "/stats/32319.json",
       "/stats/32327.json",
-      "/stats/32329.json"
+      "/stats/32329.json",
+      "/stats/32330.json"
     ],
     "premini-vermell-masc": [
       "/stats/35456.json",
       "/stats/35458.json",
       "/stats/35459.json",
-      "/stats/35453.json"
+      "/stats/35453.json",
+      "/stats/35463.json"
     ]
   }
 }
