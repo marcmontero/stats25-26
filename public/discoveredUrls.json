@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-22T10:53:27.023931+01:00",
+  "updatedAt": "2026-11-22T23:21:34.845769+01:00",
   "teams": {
     "senior-a-masc": [
       "/stats/10855.json",
@@ -7,7 +7,8 @@
       "/stats/3845.json",
       "/stats/3854.json",
       "/stats/3860.json",
-      "/stats/3868.json"
+      "/stats/3868.json",
+      "/stats/3875.json"
     ],
     "senior-b-masc": [
       "/stats/8546.json",
@@ -24,7 +25,8 @@
       "/stats/10556.json",
       "/stats/10561.json",
       "/stats/10568.json",
-      "/stats/10574.json"
+      "/stats/10574.json",
+      "/stats/10586.json"
     ],
     "senior-c-masc": [
       "/stats/10184.json",
@@ -42,7 +44,8 @@
       "/stats/14879.json",
       "/stats/14888.json",
       "/stats/14894.json",
-      "/stats/14902.json"
+      "/stats/14902.json",
+      "/stats/14909.json"
     ],
     "infantil-masc": [
       "/stats/31529.json",
@@ -77,7 +80,8 @@
       "/stats/28204.json",
       "/stats/28209.json",
       "/stats/28211.json",
-      "/stats/28214.json"
+      "/stats/28214.json",
+      "/stats/28218.json"
     ],
     "mini-vermell-fem": [
       "/stats/28279.json",
@@ -91,7 +95,8 @@
       "/stats/30539.json",
       "/stats/30543.json",
       "/stats/30545.json",
-      "/stats/30547.json"
+      "/stats/30547.json",
+      "/stats/30549.json"
     ],
     "mini-masc": [
       "/stats/33843.json",
@@ -107,14 +112,16 @@
       "/stats/19632.json",
       "/stats/19638.json",
       "/stats/19641.json",
-      "/stats/19648.json"
+      "/stats/19648.json",
+      "/stats/19652.json"
     ],
     "u20-masc": [
       "/stats/19366.json",
       "/stats/19381.json",
       "/stats/19375.json",
       "/stats/19387.json",
-      "/stats/19392.json"
+      "/stats/19392.json",
+      "/stats/19398.json"
     ],
     "junior-masc": [
       "/stats/29225.json",
@@ -122,7 +129,8 @@
       "/stats/29232.json",
       "/stats/29224.json",
       "/stats/29235.json",
-      "/stats/29239.json"
+      "/stats/29239.json",
+      "/stats/29240.json"
     ],
     "preinfantil-masc": [
       "/stats/32320.json",
